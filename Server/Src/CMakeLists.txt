@@ -4,7 +4,7 @@ set(CMAKE_VERBOSE_MAKEFILE OFF)
 # Add the source in project root directory
 aux_source_directory(. DIRSRCS)
 # Add header file include directories
-include_directories(./ ../../Common/protobuf/src ../../Common/Lua ../../Common/Sqlite ../../Common/Mysql )
+include_directories(../../Common/protobuf/src ./  ../../Common/Lua ../../Common/Sqlite ../../Common/Mysql )
 
 # Add block directories
 add_subdirectory(ServerEngine)

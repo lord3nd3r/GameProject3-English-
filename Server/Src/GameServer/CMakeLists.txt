@@ -3,7 +3,7 @@ project(GameServer)
 SET(PROJECT_ROOT_PATH ".")
 add_definitions(-std=c++11)
 add_definitions(-w)
-include_directories(./ ../StaticData ../../Common/Sqlite ../WatcherClient ../PublicData ../ServerEngine  ../ServerEngine/DBInterface ../../Common/protobuf/src ../../Common/Lua ../Message ../LogData ../ServerData ../WatcherClient)
+include_directories(../../Common/protobuf/src ./ ../StaticData ../../Common/Sqlite ../WatcherClient ../PublicData ../ServerEngine  ../ServerEngine/DBInterface  ../../Common/Lua ../Message ../LogData ../ServerData ../WatcherClient)
 link_directories(../../Common/lib /usr/lib64/mysql)	
 
 

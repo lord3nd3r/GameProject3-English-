@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(WatchServer)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ../ServerEngine  ../ServerEngine/DBInterface ../PublicData ../../Common/protobuf/src ../../Common/sqlite ../ServerData ../../Common/Mysql ../Message ../LogData ../ServerData)
+include_directories(../../Common/protobuf/src ./ ../ServerEngine  ../ServerEngine/DBInterface ../PublicData  ../../Common/sqlite ../ServerData ../../Common/Mysql ../Message ../LogData ../ServerData)
 link_directories(../../Common/lib /usr/lib64/mysql)
 
 

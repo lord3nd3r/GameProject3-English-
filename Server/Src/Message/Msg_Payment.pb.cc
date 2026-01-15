@@ -14,86 +14,78 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+class CreatePaymentReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreatePaymentReq> _instance;
+} _CreatePaymentReq_default_instance_;
+class CreatePaymentAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreatePaymentAck> _instance;
+} _CreatePaymentAck_default_instance_;
+static void InitDefaultsscc_info_CreatePaymentAck_Msg_5fPayment_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-PROTOBUF_PRAGMA_INIT_SEG
+  {
+    void* ptr = &::_CreatePaymentAck_default_instance_;
+    new (ptr) ::CreatePaymentAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::CreatePaymentAck::InitAsDefaultInstance();
+}
 
-namespace _pb = ::PROTOBUF_NAMESPACE_ID;
-namespace _pbi = _pb::internal;
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreatePaymentAck_Msg_5fPayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreatePaymentAck_Msg_5fPayment_2eproto}, {}};
 
-PROTOBUF_CONSTEXPR CreatePaymentReq::CreatePaymentReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.orderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.platform_)*/0
-  , /*decltype(_impl_.channel_)*/0
-  , /*decltype(_impl_.roleid_)*/uint64_t{0u}
-  , /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.serverid_)*/0
-  , /*decltype(_impl_.productid_)*/0
-  , /*decltype(_impl_.buyid_)*/0
-  , /*decltype(_impl_.proxyid_)*/0
-  , /*decltype(_impl_.clientid_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct CreatePaymentReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CreatePaymentReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CreatePaymentReqDefaultTypeInternal() {}
-  union {
-    CreatePaymentReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreatePaymentReqDefaultTypeInternal _CreatePaymentReq_default_instance_;
-PROTOBUF_CONSTEXPR CreatePaymentAck::CreatePaymentAck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.orderid_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct CreatePaymentAckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR CreatePaymentAckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~CreatePaymentAckDefaultTypeInternal() {}
-  union {
-    CreatePaymentAck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CreatePaymentAckDefaultTypeInternal _CreatePaymentAck_default_instance_;
-static ::_pb::Metadata file_level_metadata_Msg_5fPayment_2eproto[2];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Msg_5fPayment_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Msg_5fPayment_2eproto = nullptr;
+static void InitDefaultsscc_info_CreatePaymentReq_Msg_5fPayment_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-const uint32_t TableStruct_Msg_5fPayment_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  {
+    void* ptr = &::_CreatePaymentReq_default_instance_;
+    new (ptr) ::CreatePaymentReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::CreatePaymentReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreatePaymentReq_Msg_5fPayment_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreatePaymentReq_Msg_5fPayment_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Msg_5fPayment_2eproto[2];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Msg_5fPayment_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Msg_5fPayment_2eproto = nullptr;
+
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Msg_5fPayment_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.orderid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.platform_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.channel_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.roleid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.serverid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.productid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.buyid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.proxyid_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, _impl_.clientid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, orderid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, platform_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, channel_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, roleid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, serverid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, accountid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, productid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, buyid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, proxyid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentReq, clientid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::CreatePaymentAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentAck, _impl_.retcode_),
-  PROTOBUF_FIELD_OFFSET(::CreatePaymentAck, _impl_.orderid_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentAck, retcode_),
+  PROTOBUF_FIELD_OFFSET(::CreatePaymentAck, orderid_),
 };
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::CreatePaymentReq)},
-  { 16, -1, -1, sizeof(::CreatePaymentAck)},
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(::CreatePaymentReq)},
+  { 15, -1, sizeof(::CreatePaymentAck)},
 };
 
-static const ::_pb::Message* const file_default_instances[] = {
-  &::_CreatePaymentReq_default_instance_._instance,
-  &::_CreatePaymentAck_default_instance_._instance,
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_CreatePaymentReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_CreatePaymentAck_default_instance_),
 };
 
 const char descriptor_table_protodef_Msg_5fPayment_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -105,238 +97,208 @@ const char descriptor_table_protodef_Msg_5fPayment_2eproto[] PROTOBUF_SECTION_VA
   "ClientID\030\n \001(\005\"4\n\020CreatePaymentAck\022\017\n\007Re"
   "tCode\030\001 \001(\r\022\017\n\007OrderID\030\002 \001(\tb\006proto3"
   ;
-static ::_pbi::once_flag descriptor_table_Msg_5fPayment_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_Msg_5fPayment_2eproto = {
-    false, false, 276, descriptor_table_protodef_Msg_5fPayment_2eproto,
-    "Msg_Payment.proto",
-    &descriptor_table_Msg_5fPayment_2eproto_once, nullptr, 0, 2,
-    schemas, file_default_instances, TableStruct_Msg_5fPayment_2eproto::offsets,
-    file_level_metadata_Msg_5fPayment_2eproto, file_level_enum_descriptors_Msg_5fPayment_2eproto,
-    file_level_service_descriptors_Msg_5fPayment_2eproto,
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Msg_5fPayment_2eproto_deps[1] = {
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Msg_5fPayment_2eproto_getter() {
-  return &descriptor_table_Msg_5fPayment_2eproto;
-}
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Msg_5fPayment_2eproto_sccs[2] = {
+  &scc_info_CreatePaymentAck_Msg_5fPayment_2eproto.base,
+  &scc_info_CreatePaymentReq_Msg_5fPayment_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Msg_5fPayment_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Msg_5fPayment_2eproto = {
+  false, false, descriptor_table_protodef_Msg_5fPayment_2eproto, "Msg_Payment.proto", 276,
+  &descriptor_table_Msg_5fPayment_2eproto_once, descriptor_table_Msg_5fPayment_2eproto_sccs, descriptor_table_Msg_5fPayment_2eproto_deps, 2, 0,
+  schemas, file_default_instances, TableStruct_Msg_5fPayment_2eproto::offsets,
+  file_level_metadata_Msg_5fPayment_2eproto, 2, file_level_enum_descriptors_Msg_5fPayment_2eproto, file_level_service_descriptors_Msg_5fPayment_2eproto,
+};
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_Msg_5fPayment_2eproto(&descriptor_table_Msg_5fPayment_2eproto);
+static bool dynamic_init_dummy_Msg_5fPayment_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Msg_5fPayment_2eproto)), true);
 
 // ===================================================================
 
+void CreatePaymentReq::InitAsDefaultInstance() {
+}
 class CreatePaymentReq::_Internal {
  public:
 };
 
-CreatePaymentReq::CreatePaymentReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+CreatePaymentReq::CreatePaymentReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:CreatePaymentReq)
 }
 CreatePaymentReq::CreatePaymentReq(const CreatePaymentReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CreatePaymentReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.orderid_){}
-    , decltype(_impl_.platform_){}
-    , decltype(_impl_.channel_){}
-    , decltype(_impl_.roleid_){}
-    , decltype(_impl_.accountid_){}
-    , decltype(_impl_.serverid_){}
-    , decltype(_impl_.productid_){}
-    , decltype(_impl_.buyid_){}
-    , decltype(_impl_.proxyid_){}
-    , decltype(_impl_.clientid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.orderid_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.orderid_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  orderid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_orderid().empty()) {
-    _this->_impl_.orderid_.Set(from._internal_orderid(), 
-      _this->GetArenaForAllocation());
+    orderid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_orderid(),
+      GetArena());
   }
-  ::memcpy(&_impl_.platform_, &from._impl_.platform_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.clientid_) -
-    reinterpret_cast<char*>(&_impl_.platform_)) + sizeof(_impl_.clientid_));
+  ::memcpy(&platform_, &from.platform_,
+    static_cast<size_t>(reinterpret_cast<char*>(&clientid_) -
+    reinterpret_cast<char*>(&platform_)) + sizeof(clientid_));
   // @@protoc_insertion_point(copy_constructor:CreatePaymentReq)
 }
 
-inline void CreatePaymentReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.orderid_){}
-    , decltype(_impl_.platform_){0}
-    , decltype(_impl_.channel_){0}
-    , decltype(_impl_.roleid_){uint64_t{0u}}
-    , decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.serverid_){0}
-    , decltype(_impl_.productid_){0}
-    , decltype(_impl_.buyid_){0}
-    , decltype(_impl_.proxyid_){0}
-    , decltype(_impl_.clientid_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.orderid_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.orderid_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+void CreatePaymentReq::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreatePaymentReq_Msg_5fPayment_2eproto.base);
+  orderid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&platform_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&clientid_) -
+      reinterpret_cast<char*>(&platform_)) + sizeof(clientid_));
 }
 
 CreatePaymentReq::~CreatePaymentReq() {
   // @@protoc_insertion_point(destructor:CreatePaymentReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void CreatePaymentReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.orderid_.Destroy();
+void CreatePaymentReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  orderid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void CreatePaymentReq::ArenaDtor(void* object) {
+  CreatePaymentReq* _this = reinterpret_cast< CreatePaymentReq* >(object);
+  (void)_this;
+}
+void CreatePaymentReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void CreatePaymentReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const CreatePaymentReq& CreatePaymentReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreatePaymentReq_Msg_5fPayment_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void CreatePaymentReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:CreatePaymentReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.orderid_.ClearToEmpty();
-  ::memset(&_impl_.platform_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.clientid_) -
-      reinterpret_cast<char*>(&_impl_.platform_)) + sizeof(_impl_.clientid_));
+  orderid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&platform_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&clientid_) -
+      reinterpret_cast<char*>(&platform_)) + sizeof(clientid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CreatePaymentReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* CreatePaymentReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // string OrderID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_orderid();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "CreatePaymentReq.OrderID"));
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "CreatePaymentReq.OrderID"));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Platform = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.platform_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          platform_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Channel = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 RoleID = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 ServerID = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 AccountID = 6;
       case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 48)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 ProductID = 7;
       case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 56)) {
-          _impl_.productid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 56)) {
+          productid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 BuyID = 8;
       case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 64)) {
-          _impl_.buyid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
+          buyid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 ProxyID = 9;
       case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 72)) {
-          _impl_.proxyid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 72)) {
+          proxyid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 ClientID = 10;
       case 10:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 80)) {
-          _impl_.clientid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 80)) {
+          clientid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* CreatePaymentReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CreatePaymentReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:CreatePaymentReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string OrderID = 1;
-  if (!this->_internal_orderid().empty()) {
+  if (this->orderid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_orderid().data(), static_cast<int>(this->_internal_orderid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -346,61 +308,61 @@ uint8_t* CreatePaymentReq::_InternalSerialize(
   }
 
   // int32 Platform = 2;
-  if (this->_internal_platform() != 0) {
+  if (this->platform() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_platform(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_platform(), target);
   }
 
   // int32 Channel = 3;
-  if (this->_internal_channel() != 0) {
+  if (this->channel() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_channel(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_channel(), target);
   }
 
   // uint64 RoleID = 4;
-  if (this->_internal_roleid() != 0) {
+  if (this->roleid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(4, this->_internal_roleid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(4, this->_internal_roleid(), target);
   }
 
   // int32 ServerID = 5;
-  if (this->_internal_serverid() != 0) {
+  if (this->serverid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_serverid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_serverid(), target);
   }
 
   // uint64 AccountID = 6;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(6, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(6, this->_internal_accountid(), target);
   }
 
   // int32 ProductID = 7;
-  if (this->_internal_productid() != 0) {
+  if (this->productid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(7, this->_internal_productid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(7, this->_internal_productid(), target);
   }
 
   // int32 BuyID = 8;
-  if (this->_internal_buyid() != 0) {
+  if (this->buyid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(8, this->_internal_buyid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(8, this->_internal_buyid(), target);
   }
 
   // int32 ProxyID = 9;
-  if (this->_internal_proxyid() != 0) {
+  if (this->proxyid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(9, this->_internal_proxyid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(9, this->_internal_proxyid(), target);
   }
 
   // int32 ClientID = 10;
-  if (this->_internal_clientid() != 0) {
+  if (this->clientid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(10, this->_internal_clientid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(10, this->_internal_clientid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CreatePaymentReq)
@@ -411,111 +373,148 @@ size_t CreatePaymentReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CreatePaymentReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string OrderID = 1;
-  if (!this->_internal_orderid().empty()) {
+  if (this->orderid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_orderid());
   }
 
   // int32 Platform = 2;
-  if (this->_internal_platform() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_platform());
+  if (this->platform() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_platform());
   }
 
   // int32 Channel = 3;
-  if (this->_internal_channel() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_channel());
+  if (this->channel() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_channel());
   }
 
   // uint64 RoleID = 4;
-  if (this->_internal_roleid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_roleid());
+  if (this->roleid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_roleid());
   }
 
   // uint64 AccountID = 6;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // int32 ServerID = 5;
-  if (this->_internal_serverid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_serverid());
+  if (this->serverid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_serverid());
   }
 
   // int32 ProductID = 7;
-  if (this->_internal_productid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_productid());
+  if (this->productid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_productid());
   }
 
   // int32 BuyID = 8;
-  if (this->_internal_buyid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_buyid());
+  if (this->buyid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_buyid());
   }
 
   // int32 ProxyID = 9;
-  if (this->_internal_proxyid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_proxyid());
+  if (this->proxyid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_proxyid());
   }
 
   // int32 ClientID = 10;
-  if (this->_internal_clientid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_clientid());
+  if (this->clientid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_clientid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CreatePaymentReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CreatePaymentReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CreatePaymentReq::GetClassData() const { return &_class_data_; }
+void CreatePaymentReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:CreatePaymentReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CreatePaymentReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CreatePaymentReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CreatePaymentReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:CreatePaymentReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void CreatePaymentReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CreatePaymentReq*>(&to_msg);
-  auto& from = static_cast<const CreatePaymentReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CreatePaymentReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void CreatePaymentReq::MergeFrom(const CreatePaymentReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:CreatePaymentReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_orderid().empty()) {
-    _this->_internal_set_orderid(from._internal_orderid());
+  if (from.orderid().size() > 0) {
+    _internal_set_orderid(from._internal_orderid());
   }
-  if (from._internal_platform() != 0) {
-    _this->_internal_set_platform(from._internal_platform());
+  if (from.platform() != 0) {
+    _internal_set_platform(from._internal_platform());
   }
-  if (from._internal_channel() != 0) {
-    _this->_internal_set_channel(from._internal_channel());
+  if (from.channel() != 0) {
+    _internal_set_channel(from._internal_channel());
   }
-  if (from._internal_roleid() != 0) {
-    _this->_internal_set_roleid(from._internal_roleid());
+  if (from.roleid() != 0) {
+    _internal_set_roleid(from._internal_roleid());
   }
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_serverid() != 0) {
-    _this->_internal_set_serverid(from._internal_serverid());
+  if (from.serverid() != 0) {
+    _internal_set_serverid(from._internal_serverid());
   }
-  if (from._internal_productid() != 0) {
-    _this->_internal_set_productid(from._internal_productid());
+  if (from.productid() != 0) {
+    _internal_set_productid(from._internal_productid());
   }
-  if (from._internal_buyid() != 0) {
-    _this->_internal_set_buyid(from._internal_buyid());
+  if (from.buyid() != 0) {
+    _internal_set_buyid(from._internal_buyid());
   }
-  if (from._internal_proxyid() != 0) {
-    _this->_internal_set_proxyid(from._internal_proxyid());
+  if (from.proxyid() != 0) {
+    _internal_set_proxyid(from._internal_proxyid());
   }
-  if (from._internal_clientid() != 0) {
-    _this->_internal_set_clientid(from._internal_clientid());
+  if (from.clientid() != 0) {
+    _internal_set_clientid(from._internal_clientid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CreatePaymentReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:CreatePaymentReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void CreatePaymentReq::CopyFrom(const CreatePaymentReq& from) {
@@ -531,165 +530,150 @@ bool CreatePaymentReq::IsInitialized() const {
 
 void CreatePaymentReq::InternalSwap(CreatePaymentReq* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.orderid_, lhs_arena,
-      &other->_impl_.orderid_, rhs_arena
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  orderid_.Swap(&other->orderid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(CreatePaymentReq, _impl_.clientid_)
-      + sizeof(CreatePaymentReq::_impl_.clientid_)
-      - PROTOBUF_FIELD_OFFSET(CreatePaymentReq, _impl_.platform_)>(
-          reinterpret_cast<char*>(&_impl_.platform_),
-          reinterpret_cast<char*>(&other->_impl_.platform_));
+      PROTOBUF_FIELD_OFFSET(CreatePaymentReq, clientid_)
+      + sizeof(CreatePaymentReq::clientid_)
+      - PROTOBUF_FIELD_OFFSET(CreatePaymentReq, platform_)>(
+          reinterpret_cast<char*>(&platform_),
+          reinterpret_cast<char*>(&other->platform_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreatePaymentReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fPayment_2eproto_getter, &descriptor_table_Msg_5fPayment_2eproto_once,
-      file_level_metadata_Msg_5fPayment_2eproto[0]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void CreatePaymentAck::InitAsDefaultInstance() {
+}
 class CreatePaymentAck::_Internal {
  public:
 };
 
-CreatePaymentAck::CreatePaymentAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+CreatePaymentAck::CreatePaymentAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:CreatePaymentAck)
 }
 CreatePaymentAck::CreatePaymentAck(const CreatePaymentAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  CreatePaymentAck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.orderid_){}
-    , decltype(_impl_.retcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.orderid_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.orderid_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  orderid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_orderid().empty()) {
-    _this->_impl_.orderid_.Set(from._internal_orderid(), 
-      _this->GetArenaForAllocation());
+    orderid_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_orderid(),
+      GetArena());
   }
-  _this->_impl_.retcode_ = from._impl_.retcode_;
+  retcode_ = from.retcode_;
   // @@protoc_insertion_point(copy_constructor:CreatePaymentAck)
 }
 
-inline void CreatePaymentAck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.orderid_){}
-    , decltype(_impl_.retcode_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.orderid_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.orderid_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+void CreatePaymentAck::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreatePaymentAck_Msg_5fPayment_2eproto.base);
+  orderid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  retcode_ = 0u;
 }
 
 CreatePaymentAck::~CreatePaymentAck() {
   // @@protoc_insertion_point(destructor:CreatePaymentAck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void CreatePaymentAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.orderid_.Destroy();
+void CreatePaymentAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  orderid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void CreatePaymentAck::ArenaDtor(void* object) {
+  CreatePaymentAck* _this = reinterpret_cast< CreatePaymentAck* >(object);
+  (void)_this;
+}
+void CreatePaymentAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void CreatePaymentAck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const CreatePaymentAck& CreatePaymentAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreatePaymentAck_Msg_5fPayment_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void CreatePaymentAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:CreatePaymentAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.orderid_.ClearToEmpty();
-  _impl_.retcode_ = 0u;
+  orderid_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  retcode_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CreatePaymentAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* CreatePaymentAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // string OrderID = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_orderid();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "CreatePaymentAck.OrderID"));
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "CreatePaymentAck.OrderID"));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* CreatePaymentAck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CreatePaymentAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:CreatePaymentAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   // string OrderID = 2;
-  if (!this->_internal_orderid().empty()) {
+  if (this->orderid().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_orderid().data(), static_cast<int>(this->_internal_orderid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -699,7 +683,7 @@ uint8_t* CreatePaymentAck::_InternalSerialize(
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:CreatePaymentAck)
@@ -710,47 +694,68 @@ size_t CreatePaymentAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:CreatePaymentAck)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string OrderID = 2;
-  if (!this->_internal_orderid().empty()) {
+  if (this->orderid().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_orderid());
   }
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CreatePaymentAck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    CreatePaymentAck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CreatePaymentAck::GetClassData() const { return &_class_data_; }
+void CreatePaymentAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:CreatePaymentAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CreatePaymentAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CreatePaymentAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:CreatePaymentAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:CreatePaymentAck)
+    MergeFrom(*source);
+  }
+}
 
-
-void CreatePaymentAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<CreatePaymentAck*>(&to_msg);
-  auto& from = static_cast<const CreatePaymentAck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:CreatePaymentAck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void CreatePaymentAck::MergeFrom(const CreatePaymentAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:CreatePaymentAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_orderid().empty()) {
-    _this->_internal_set_orderid(from._internal_orderid());
+  if (from.orderid().size() > 0) {
+    _internal_set_orderid(from._internal_orderid());
   }
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void CreatePaymentAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:CreatePaymentAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void CreatePaymentAck::CopyFrom(const CreatePaymentAck& from) {
@@ -766,30 +771,22 @@ bool CreatePaymentAck::IsInitialized() const {
 
 void CreatePaymentAck::InternalSwap(CreatePaymentAck* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.orderid_, lhs_arena,
-      &other->_impl_.orderid_, rhs_arena
-  );
-  swap(_impl_.retcode_, other->_impl_.retcode_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  orderid_.Swap(&other->orderid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(retcode_, other->retcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CreatePaymentAck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fPayment_2eproto_getter, &descriptor_table_Msg_5fPayment_2eproto_once,
-      file_level_metadata_Msg_5fPayment_2eproto[1]);
+  return GetMetadataStatic();
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::CreatePaymentReq*
-Arena::CreateMaybeMessage< ::CreatePaymentReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::CreatePaymentReq* Arena::CreateMaybeMessage< ::CreatePaymentReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CreatePaymentReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::CreatePaymentAck*
-Arena::CreateMaybeMessage< ::CreatePaymentAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::CreatePaymentAck* Arena::CreateMaybeMessage< ::CreatePaymentAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::CreatePaymentAck >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

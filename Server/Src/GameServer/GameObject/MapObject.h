@@ -2,6 +2,8 @@
 #ifndef __MAP_OBJECT_H__
 #define __MAP_OBJECT_H__
 
+#include "CommonMath.h"
+
 class CGrid;
 class CScene;
 
@@ -56,6 +58,7 @@ public:
 	CScene*		m_pScene;
 
 public:
+    Vector3D    m_aPos;
 };
 
 // struct CObjectAi

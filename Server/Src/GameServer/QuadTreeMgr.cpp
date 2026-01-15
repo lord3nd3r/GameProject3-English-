@@ -103,7 +103,7 @@ BOOL QuadTreeNode::TrySplit()
         CMapObject* pTempObject = *itor;
         for (int i = 0; i < NODE_MAX_CHILD; i++)
         {
-            if (m_pChildNodes[i]->Contains(pTempObject->m_aPos))
+            if (m_pChildNodes[i]->Contains(Vector2D(pTempObject->m_aPos.m_x, pTempObject->m_aPos.m_z)))
             {
                 m_pChildNodes[i]->InsertObject(pTempObject);
                 break;
@@ -197,7 +197,7 @@ BOOL QuadTreeNode::InsertObject(CMapObject* pObject)
 
     for (int i = 0; i < NODE_MAX_CHILD; i++)
     {
-        if (m_pChildNodes[i]->Contains(pObject->m_aPos))
+        if (m_pChildNodes[i]->Contains(Vector2D(pObject->m_aPos.m_x, pObject->m_aPos.m_z)))
         {
             m_pChildNodes[i]->InsertObject(pObject);
 
@@ -229,7 +229,7 @@ BOOL QuadTreeNode::RemoveObject(CMapObject* pObject)
 
     for (int i = 0; i < NODE_MAX_CHILD; i++)
     {
-        if (m_pChildNodes[i]->Contains(pObject->m_aPos))
+        if (m_pChildNodes[i]->Contains(Vector2D(pObject->m_aPos.m_x, pObject->m_aPos.m_z)))
         {
             bSuccess = m_pChildNodes[i]->RemoveObject(pObject);
             break;
@@ -250,7 +250,7 @@ BOOL QuadTreeNode::SearchObject(Rect2D rcArea, std::list<CMapObject*>& objectLis
     {
         for (auto itor = m_objectList.begin(); itor != m_objectList.end(); ++itor)
         {
-            if (rcArea.Contains((*itor)->m_aPos))
+            if (rcArea.Contains(Vector2D((*itor)->m_aPos.m_x, (*itor)->m_aPos.m_z)))
             {
                 objectList.push_back(*itor);
             }

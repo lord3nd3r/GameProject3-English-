@@ -2,6 +2,10 @@
 #define __PLATFORM_H__
 
 #include <errno.h>
+#include <assert.h>
+#ifndef ASSERT
+#define ASSERT assert
+#endif
 
 #if defined(WIN32) || defined(WIN64)
 #define OS_PLATFORM_WINDOWS

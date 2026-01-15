@@ -1,20 +1,22 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(ProxyServer)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ../ServerEngine ../ServerEngine/DBInterface ../../Common/protobuf/src ../Message ../LogData ../ServerData ../PublicData ../WatcherClient)
+include_directories(../../Common/protobuf/src ./ ../ServerEngine ../ServerEngine/DBInterface  ../Message ../LogData ../ServerData ../PublicData ../WatcherClient)
 link_directories(../../Common/lib /usr/lib64/mysql)	
 
 
 #message
 set(PROTO Proto)
 FILE(GLOB PROTO "../Message/Msg_Copy.pb.cc" 
-                "../Message/Msg_Copy.pb.cc" 
+                "../Message/Msg_Copy.pb.h" 
                 "../Message/Msg_Base.pb.cc" 
                 "../Message/Msg_Base.pb.h"
                 "../Message/Msg_Game.pb.cc" 
                 "../Message/Msg_Game.pb.h"
+                "../Message/Msg_ID.pb.cc"
                 "../Message/Msg_ID.pb.h"
-                "../Message/Msg_ID.pb.h")
+                "../Message/Msg_LoginCltData.pb.cc"
+                "../Message/Msg_LoginCltData.pb.h")
 
 
 #header file code

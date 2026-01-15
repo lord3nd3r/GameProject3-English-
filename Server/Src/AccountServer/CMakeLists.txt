@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(AccountServer)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ../ServerEngine ../../Common/Lua ../ServerEngine/DBInterface ../ServerData ../../Common/Mysql ../../Common/protobuf/src ../Message ../LogData ../PublicData ../WatcherClient)
+include_directories(../../Common/protobuf/src ./ ../ServerEngine ../../Common/Lua ../ServerEngine/DBInterface ../ServerData ../../Common/Mysql  ../Message ../LogData ../PublicData ../WatcherClient)
 link_directories(../../Common/lib /usr/lib64/mysql) 
 
 

@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(ServerEngine)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ./DBInterface  ../../Common ../../Common/Mysql ../../Common/Lua ../../Common/protobuf/src ../PublicData)
+include_directories(../../Common/protobuf/src ./ ./DBInterface  ../../Common ../../Common/Mysql ../../Common/Lua  ../PublicData)
 link_directories(../../Common/lib /usr/lib64/mysql)
 
 #DB[TRANSLATED][TRANSLATED]

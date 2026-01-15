@@ -696,7 +696,7 @@ BOOL CommonFunc::IsAlreadyRun(std::string strSignName)
     INT32 fd;
     CHAR szbuf[32] = {0};
 
-    std::string strLockFile = "/var/run/" + strSignName + ".pid";
+    std::string strLockFile = "/tmp/" + strSignName + ".pid";
     fd = open(strLockFile.c_str(), O_RDWR | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH);
     if (fd < 0)
     {

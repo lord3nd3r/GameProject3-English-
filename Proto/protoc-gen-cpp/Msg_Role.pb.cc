@@ -14,298 +14,321 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_Msg_5fRole_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleItem_Msg_5fRole_2eproto;
+class RoleItemDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleItem> _instance;
+} _RoleItem_default_instance_;
+class RoleListReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleListReq> _instance;
+} _RoleListReq_default_instance_;
+class RoleListAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleListAck> _instance;
+} _RoleListAck_default_instance_;
+class RoleCreateReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleCreateReq> _instance;
+} _RoleCreateReq_default_instance_;
+class RoleCreateAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleCreateAck> _instance;
+} _RoleCreateAck_default_instance_;
+class RoleDeleteReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleDeleteReq> _instance;
+} _RoleDeleteReq_default_instance_;
+class RoleDeleteAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleDeleteAck> _instance;
+} _RoleDeleteAck_default_instance_;
+class RoleLoginReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleLoginReq> _instance;
+} _RoleLoginReq_default_instance_;
+class RoleLogoutReqDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleLogoutReq> _instance;
+} _RoleLogoutReq_default_instance_;
+class RoleLogoutAckDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleLogoutAck> _instance;
+} _RoleLogoutAck_default_instance_;
+class RoleOtherLoginNtyDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<RoleOtherLoginNty> _instance;
+} _RoleOtherLoginNty_default_instance_;
+static void InitDefaultsscc_info_RoleCreateAck_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-PROTOBUF_PRAGMA_INIT_SEG
+  {
+    void* ptr = &::_RoleCreateAck_default_instance_;
+    new (ptr) ::RoleCreateAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleCreateAck::InitAsDefaultInstance();
+}
 
-namespace _pb = ::PROTOBUF_NAMESPACE_ID;
-namespace _pbi = _pb::internal;
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleCreateAck_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleCreateAck_Msg_5fRole_2eproto}, {}};
 
-PROTOBUF_CONSTEXPR RoleItem::RoleItem(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.roleid_)*/uint64_t{0u}
-  , /*decltype(_impl_.carrer_)*/0
-  , /*decltype(_impl_.level_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleItemDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleItemDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleItemDefaultTypeInternal() {}
-  union {
-    RoleItem _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleItemDefaultTypeInternal _RoleItem_default_instance_;
-PROTOBUF_CONSTEXPR RoleListReq::RoleListReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.logincode_)*/0
-  , /*decltype(_impl_.serverid_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleListReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleListReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleListReqDefaultTypeInternal() {}
-  union {
-    RoleListReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleListReqDefaultTypeInternal _RoleListReq_default_instance_;
-PROTOBUF_CONSTEXPR RoleListAck::RoleListAck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.rolelist_)*/{}
-  , /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleListAckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleListAckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleListAckDefaultTypeInternal() {}
-  union {
-    RoleListAck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleListAckDefaultTypeInternal _RoleListAck_default_instance_;
-PROTOBUF_CONSTEXPR RoleCreateReq::RoleCreateReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.carrer_)*/0
-  , /*decltype(_impl_.channel_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleCreateReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleCreateReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleCreateReqDefaultTypeInternal() {}
-  union {
-    RoleCreateReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleCreateReqDefaultTypeInternal _RoleCreateReq_default_instance_;
-PROTOBUF_CONSTEXPR RoleCreateAck::RoleCreateAck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
-  , /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.roleid_)*/uint64_t{0u}
-  , /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_.carrer_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleCreateAckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleCreateAckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleCreateAckDefaultTypeInternal() {}
-  union {
-    RoleCreateAck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleCreateAckDefaultTypeInternal _RoleCreateAck_default_instance_;
-PROTOBUF_CONSTEXPR RoleDeleteReq::RoleDeleteReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.roleid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleDeleteReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleDeleteReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleDeleteReqDefaultTypeInternal() {}
-  union {
-    RoleDeleteReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleDeleteReqDefaultTypeInternal _RoleDeleteReq_default_instance_;
-PROTOBUF_CONSTEXPR RoleDeleteAck::RoleDeleteAck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleDeleteAckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleDeleteAckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleDeleteAckDefaultTypeInternal() {}
-  union {
-    RoleDeleteAck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleDeleteAckDefaultTypeInternal _RoleDeleteAck_default_instance_;
-PROTOBUF_CONSTEXPR RoleLoginReq::RoleLoginReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_.roleid_)*/uint64_t{0u}
-  , /*decltype(_impl_.langid_)*/0
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleLoginReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleLoginReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleLoginReqDefaultTypeInternal() {}
-  union {
-    RoleLoginReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleLoginReqDefaultTypeInternal _RoleLoginReq_default_instance_;
-PROTOBUF_CONSTEXPR RoleLogoutReq::RoleLogoutReq(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.accountid_)*/uint64_t{0u}
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleLogoutReqDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleLogoutReqDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleLogoutReqDefaultTypeInternal() {}
-  union {
-    RoleLogoutReq _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleLogoutReqDefaultTypeInternal _RoleLogoutReq_default_instance_;
-PROTOBUF_CONSTEXPR RoleLogoutAck::RoleLogoutAck(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleLogoutAckDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleLogoutAckDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleLogoutAckDefaultTypeInternal() {}
-  union {
-    RoleLogoutAck _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleLogoutAckDefaultTypeInternal _RoleLogoutAck_default_instance_;
-PROTOBUF_CONSTEXPR RoleOtherLoginNty::RoleOtherLoginNty(
-    ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.retcode_)*/0u
-  , /*decltype(_impl_._cached_size_)*/{}} {}
-struct RoleOtherLoginNtyDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR RoleOtherLoginNtyDefaultTypeInternal()
-      : _instance(::_pbi::ConstantInitialized{}) {}
-  ~RoleOtherLoginNtyDefaultTypeInternal() {}
-  union {
-    RoleOtherLoginNty _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 RoleOtherLoginNtyDefaultTypeInternal _RoleOtherLoginNty_default_instance_;
-static ::_pb::Metadata file_level_metadata_Msg_5fRole_2eproto[11];
-static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_Msg_5fRole_2eproto = nullptr;
-static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_Msg_5fRole_2eproto = nullptr;
+static void InitDefaultsscc_info_RoleCreateReq_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-const uint32_t TableStruct_Msg_5fRole_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  {
+    void* ptr = &::_RoleCreateReq_default_instance_;
+    new (ptr) ::RoleCreateReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleCreateReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleCreateReq_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleCreateReq_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleDeleteAck_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleDeleteAck_default_instance_;
+    new (ptr) ::RoleDeleteAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleDeleteAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleDeleteAck_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleDeleteAck_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleDeleteReq_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleDeleteReq_default_instance_;
+    new (ptr) ::RoleDeleteReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleDeleteReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleDeleteReq_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleDeleteReq_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleItem_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleItem_default_instance_;
+    new (ptr) ::RoleItem();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleItem::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleItem_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleItem_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleListAck_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleListAck_default_instance_;
+    new (ptr) ::RoleListAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleListAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RoleListAck_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_RoleListAck_Msg_5fRole_2eproto}, {
+      &scc_info_RoleItem_Msg_5fRole_2eproto.base,}};
+
+static void InitDefaultsscc_info_RoleListReq_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleListReq_default_instance_;
+    new (ptr) ::RoleListReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleListReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleListReq_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleListReq_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleLoginReq_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleLoginReq_default_instance_;
+    new (ptr) ::RoleLoginReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleLoginReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleLoginReq_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleLoginReq_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleLogoutAck_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleLogoutAck_default_instance_;
+    new (ptr) ::RoleLogoutAck();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleLogoutAck::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleLogoutAck_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleLogoutAck_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleLogoutReq_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleLogoutReq_default_instance_;
+    new (ptr) ::RoleLogoutReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleLogoutReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleLogoutReq_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleLogoutReq_Msg_5fRole_2eproto}, {}};
+
+static void InitDefaultsscc_info_RoleOtherLoginNty_Msg_5fRole_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::_RoleOtherLoginNty_default_instance_;
+    new (ptr) ::RoleOtherLoginNty();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::RoleOtherLoginNty::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RoleOtherLoginNty_Msg_5fRole_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RoleOtherLoginNty_Msg_5fRole_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Msg_5fRole_2eproto[11];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Msg_5fRole_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Msg_5fRole_2eproto = nullptr;
+
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Msg_5fRole_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleItem, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleItem, _impl_.roleid_),
-  PROTOBUF_FIELD_OFFSET(::RoleItem, _impl_.name_),
-  PROTOBUF_FIELD_OFFSET(::RoleItem, _impl_.carrer_),
-  PROTOBUF_FIELD_OFFSET(::RoleItem, _impl_.level_),
+  PROTOBUF_FIELD_OFFSET(::RoleItem, roleid_),
+  PROTOBUF_FIELD_OFFSET(::RoleItem, name_),
+  PROTOBUF_FIELD_OFFSET(::RoleItem, carrer_),
+  PROTOBUF_FIELD_OFFSET(::RoleItem, level_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleListReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleListReq, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleListReq, _impl_.logincode_),
-  PROTOBUF_FIELD_OFFSET(::RoleListReq, _impl_.serverid_),
+  PROTOBUF_FIELD_OFFSET(::RoleListReq, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleListReq, logincode_),
+  PROTOBUF_FIELD_OFFSET(::RoleListReq, serverid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleListAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleListAck, _impl_.retcode_),
-  PROTOBUF_FIELD_OFFSET(::RoleListAck, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleListAck, _impl_.rolelist_),
+  PROTOBUF_FIELD_OFFSET(::RoleListAck, retcode_),
+  PROTOBUF_FIELD_OFFSET(::RoleListAck, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleListAck, rolelist_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleCreateReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, _impl_.name_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, _impl_.carrer_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, _impl_.channel_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, name_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, carrer_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateReq, channel_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _impl_.retcode_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _impl_.roleid_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _impl_.name_),
-  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, _impl_.carrer_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, retcode_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, roleid_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, name_),
+  PROTOBUF_FIELD_OFFSET(::RoleCreateAck, carrer_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleDeleteReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleDeleteReq, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleDeleteReq, _impl_.roleid_),
+  PROTOBUF_FIELD_OFFSET(::RoleDeleteReq, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleDeleteReq, roleid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleDeleteAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleDeleteAck, _impl_.retcode_),
+  PROTOBUF_FIELD_OFFSET(::RoleDeleteAck, retcode_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleLoginReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, _impl_.accountid_),
-  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, _impl_.roleid_),
-  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, _impl_.langid_),
+  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, roleid_),
+  PROTOBUF_FIELD_OFFSET(::RoleLoginReq, langid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleLogoutReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleLogoutReq, _impl_.accountid_),
+  PROTOBUF_FIELD_OFFSET(::RoleLogoutReq, accountid_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleLogoutAck, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleLogoutAck, _impl_.retcode_),
+  PROTOBUF_FIELD_OFFSET(::RoleLogoutAck, retcode_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::RoleOtherLoginNty, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::RoleOtherLoginNty, _impl_.retcode_),
+  PROTOBUF_FIELD_OFFSET(::RoleOtherLoginNty, retcode_),
 };
-static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::RoleItem)},
-  { 10, -1, -1, sizeof(::RoleListReq)},
-  { 19, -1, -1, sizeof(::RoleListAck)},
-  { 28, -1, -1, sizeof(::RoleCreateReq)},
-  { 38, -1, -1, sizeof(::RoleCreateAck)},
-  { 49, -1, -1, sizeof(::RoleDeleteReq)},
-  { 57, -1, -1, sizeof(::RoleDeleteAck)},
-  { 64, -1, -1, sizeof(::RoleLoginReq)},
-  { 73, -1, -1, sizeof(::RoleLogoutReq)},
-  { 80, -1, -1, sizeof(::RoleLogoutAck)},
-  { 87, -1, -1, sizeof(::RoleOtherLoginNty)},
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(::RoleItem)},
+  { 9, -1, sizeof(::RoleListReq)},
+  { 17, -1, sizeof(::RoleListAck)},
+  { 25, -1, sizeof(::RoleCreateReq)},
+  { 34, -1, sizeof(::RoleCreateAck)},
+  { 44, -1, sizeof(::RoleDeleteReq)},
+  { 51, -1, sizeof(::RoleDeleteAck)},
+  { 57, -1, sizeof(::RoleLoginReq)},
+  { 65, -1, sizeof(::RoleLogoutReq)},
+  { 71, -1, sizeof(::RoleLogoutAck)},
+  { 77, -1, sizeof(::RoleOtherLoginNty)},
 };
 
-static const ::_pb::Message* const file_default_instances[] = {
-  &::_RoleItem_default_instance_._instance,
-  &::_RoleListReq_default_instance_._instance,
-  &::_RoleListAck_default_instance_._instance,
-  &::_RoleCreateReq_default_instance_._instance,
-  &::_RoleCreateAck_default_instance_._instance,
-  &::_RoleDeleteReq_default_instance_._instance,
-  &::_RoleDeleteAck_default_instance_._instance,
-  &::_RoleLoginReq_default_instance_._instance,
-  &::_RoleLogoutReq_default_instance_._instance,
-  &::_RoleLogoutAck_default_instance_._instance,
-  &::_RoleOtherLoginNty_default_instance_._instance,
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleItem_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleListReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleListAck_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleCreateReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleCreateAck_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleDeleteReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleDeleteAck_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleLoginReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleLogoutReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleLogoutAck_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::_RoleOtherLoginNty_default_instance_),
 };
 
 const char descriptor_table_protodef_Msg_5fRole_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -328,184 +351,181 @@ const char descriptor_table_protodef_Msg_5fRole_2eproto[] PROTOBUF_SECTION_VARIA
   "\001 \001(\r\"$\n\021RoleOtherLoginNty\022\017\n\007RetCode\030\001 "
   "\001(\rb\006proto3"
   ;
-static ::_pbi::once_flag descriptor_table_Msg_5fRole_2eproto_once;
-const ::_pbi::DescriptorTable descriptor_table_Msg_5fRole_2eproto = {
-    false, false, 691, descriptor_table_protodef_Msg_5fRole_2eproto,
-    "Msg_Role.proto",
-    &descriptor_table_Msg_5fRole_2eproto_once, nullptr, 0, 11,
-    schemas, file_default_instances, TableStruct_Msg_5fRole_2eproto::offsets,
-    file_level_metadata_Msg_5fRole_2eproto, file_level_enum_descriptors_Msg_5fRole_2eproto,
-    file_level_service_descriptors_Msg_5fRole_2eproto,
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Msg_5fRole_2eproto_deps[1] = {
 };
-PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_Msg_5fRole_2eproto_getter() {
-  return &descriptor_table_Msg_5fRole_2eproto;
-}
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Msg_5fRole_2eproto_sccs[11] = {
+  &scc_info_RoleCreateAck_Msg_5fRole_2eproto.base,
+  &scc_info_RoleCreateReq_Msg_5fRole_2eproto.base,
+  &scc_info_RoleDeleteAck_Msg_5fRole_2eproto.base,
+  &scc_info_RoleDeleteReq_Msg_5fRole_2eproto.base,
+  &scc_info_RoleItem_Msg_5fRole_2eproto.base,
+  &scc_info_RoleListAck_Msg_5fRole_2eproto.base,
+  &scc_info_RoleListReq_Msg_5fRole_2eproto.base,
+  &scc_info_RoleLoginReq_Msg_5fRole_2eproto.base,
+  &scc_info_RoleLogoutAck_Msg_5fRole_2eproto.base,
+  &scc_info_RoleLogoutReq_Msg_5fRole_2eproto.base,
+  &scc_info_RoleOtherLoginNty_Msg_5fRole_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Msg_5fRole_2eproto_once;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Msg_5fRole_2eproto = {
+  false, false, descriptor_table_protodef_Msg_5fRole_2eproto, "Msg_Role.proto", 691,
+  &descriptor_table_Msg_5fRole_2eproto_once, descriptor_table_Msg_5fRole_2eproto_sccs, descriptor_table_Msg_5fRole_2eproto_deps, 11, 0,
+  schemas, file_default_instances, TableStruct_Msg_5fRole_2eproto::offsets,
+  file_level_metadata_Msg_5fRole_2eproto, 11, file_level_enum_descriptors_Msg_5fRole_2eproto, file_level_service_descriptors_Msg_5fRole_2eproto,
+};
 
 // Force running AddDescriptors() at dynamic initialization time.
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_Msg_5fRole_2eproto(&descriptor_table_Msg_5fRole_2eproto);
+static bool dynamic_init_dummy_Msg_5fRole_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Msg_5fRole_2eproto)), true);
 
 // ===================================================================
 
+void RoleItem::InitAsDefaultInstance() {
+}
 class RoleItem::_Internal {
  public:
 };
 
-RoleItem::RoleItem(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleItem::RoleItem(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleItem)
 }
 RoleItem::RoleItem(const RoleItem& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleItem* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.roleid_){}
-    , decltype(_impl_.carrer_){}
-    , decltype(_impl_.level_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
-      _this->GetArenaForAllocation());
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  ::memcpy(&_impl_.roleid_, &from._impl_.roleid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.level_) -
-    reinterpret_cast<char*>(&_impl_.roleid_)) + sizeof(_impl_.level_));
+  ::memcpy(&roleid_, &from.roleid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&level_) -
+    reinterpret_cast<char*>(&roleid_)) + sizeof(level_));
   // @@protoc_insertion_point(copy_constructor:RoleItem)
 }
 
-inline void RoleItem::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.roleid_){uint64_t{0u}}
-    , decltype(_impl_.carrer_){0}
-    , decltype(_impl_.level_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+void RoleItem::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoleItem_Msg_5fRole_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&roleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&level_) -
+      reinterpret_cast<char*>(&roleid_)) + sizeof(level_));
 }
 
 RoleItem::~RoleItem() {
   // @@protoc_insertion_point(destructor:RoleItem)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleItem::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
+void RoleItem::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void RoleItem::ArenaDtor(void* object) {
+  RoleItem* _this = reinterpret_cast< RoleItem* >(object);
+  (void)_this;
+}
+void RoleItem::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleItem::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleItem& RoleItem::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleItem_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleItem::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleItem)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.name_.ClearToEmpty();
-  ::memset(&_impl_.roleid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.level_) -
-      reinterpret_cast<char*>(&_impl_.roleid_)) + sizeof(_impl_.level_));
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&roleid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&level_) -
+      reinterpret_cast<char*>(&roleid_)) + sizeof(level_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleItem::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleItem::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 RoleID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // string Name = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "RoleItem.Name"));
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "RoleItem.Name"));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Carrer = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Level = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.level_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          level_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleItem::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleItem::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleItem)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 RoleID = 1;
-  if (this->_internal_roleid() != 0) {
+  if (this->roleid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_roleid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_roleid(), target);
   }
 
   // string Name = 2;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -515,19 +535,19 @@ uint8_t* RoleItem::_InternalSerialize(
   }
 
   // int32 Carrer = 3;
-  if (this->_internal_carrer() != 0) {
+  if (this->carrer() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_carrer(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_carrer(), target);
   }
 
   // int32 Level = 4;
-  if (this->_internal_level() != 0) {
+  if (this->level() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_level(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_level(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleItem)
@@ -538,63 +558,88 @@ size_t RoleItem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleItem)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string Name = 2;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // uint64 RoleID = 1;
-  if (this->_internal_roleid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_roleid());
+  if (this->roleid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_roleid());
   }
 
   // int32 Carrer = 3;
-  if (this->_internal_carrer() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_carrer());
+  if (this->carrer() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_carrer());
   }
 
   // int32 Level = 4;
-  if (this->_internal_level() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_level());
+  if (this->level() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_level());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleItem::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleItem::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleItem::GetClassData() const { return &_class_data_; }
+void RoleItem::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleItem)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleItem* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleItem>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleItem)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleItem)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleItem::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleItem*>(&to_msg);
-  auto& from = static_cast<const RoleItem&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleItem)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleItem::MergeFrom(const RoleItem& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleItem)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_name().empty()) {
-    _this->_internal_set_name(from._internal_name());
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
   }
-  if (from._internal_roleid() != 0) {
-    _this->_internal_set_roleid(from._internal_roleid());
+  if (from.roleid() != 0) {
+    _internal_set_roleid(from._internal_roleid());
   }
-  if (from._internal_carrer() != 0) {
-    _this->_internal_set_carrer(from._internal_carrer());
+  if (from.carrer() != 0) {
+    _internal_set_carrer(from._internal_carrer());
   }
-  if (from._internal_level() != 0) {
-    _this->_internal_set_level(from._internal_level());
+  if (from.level() != 0) {
+    _internal_set_level(from._internal_level());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleItem::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleItem)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleItem::CopyFrom(const RoleItem& from) {
@@ -610,175 +655,164 @@ bool RoleItem::IsInitialized() const {
 
 void RoleItem::InternalSwap(RoleItem* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleItem, _impl_.level_)
-      + sizeof(RoleItem::_impl_.level_)
-      - PROTOBUF_FIELD_OFFSET(RoleItem, _impl_.roleid_)>(
-          reinterpret_cast<char*>(&_impl_.roleid_),
-          reinterpret_cast<char*>(&other->_impl_.roleid_));
+      PROTOBUF_FIELD_OFFSET(RoleItem, level_)
+      + sizeof(RoleItem::level_)
+      - PROTOBUF_FIELD_OFFSET(RoleItem, roleid_)>(
+          reinterpret_cast<char*>(&roleid_),
+          reinterpret_cast<char*>(&other->roleid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleItem::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[0]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleListReq::InitAsDefaultInstance() {
+}
 class RoleListReq::_Internal {
  public:
 };
 
-RoleListReq::RoleListReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleListReq::RoleListReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleListReq)
 }
 RoleListReq::RoleListReq(const RoleListReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleListReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){}
-    , decltype(_impl_.logincode_){}
-    , decltype(_impl_.serverid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.serverid_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.serverid_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&serverid_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(serverid_));
   // @@protoc_insertion_point(copy_constructor:RoleListReq)
 }
 
-inline void RoleListReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.logincode_){0}
-    , decltype(_impl_.serverid_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleListReq::SharedCtor() {
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&serverid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(serverid_));
 }
 
 RoleListReq::~RoleListReq() {
   // @@protoc_insertion_point(destructor:RoleListReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleListReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleListReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleListReq::ArenaDtor(void* object) {
+  RoleListReq* _this = reinterpret_cast< RoleListReq* >(object);
+  (void)_this;
+}
+void RoleListReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleListReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleListReq& RoleListReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleListReq_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleListReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleListReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.serverid_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.serverid_));
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&serverid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(serverid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleListReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleListReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 AccountID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 LoginCode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.logincode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          logincode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint32 ServerID = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          serverid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleListReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleListReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleListReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
   }
 
   // int32 LoginCode = 2;
-  if (this->_internal_logincode() != 0) {
+  if (this->logincode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_logincode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_logincode(), target);
   }
 
   // uint32 ServerID = 3;
-  if (this->_internal_serverid() != 0) {
+  if (this->serverid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(3, this->_internal_serverid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_serverid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleListReq)
@@ -789,53 +823,78 @@ size_t RoleListReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleListReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // int32 LoginCode = 2;
-  if (this->_internal_logincode() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_logincode());
+  if (this->logincode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_logincode());
   }
 
   // uint32 ServerID = 3;
-  if (this->_internal_serverid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_serverid());
+  if (this->serverid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_serverid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleListReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleListReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleListReq::GetClassData() const { return &_class_data_; }
+void RoleListReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleListReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleListReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleListReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleListReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleListReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleListReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleListReq*>(&to_msg);
-  auto& from = static_cast<const RoleListReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleListReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleListReq::MergeFrom(const RoleListReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleListReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_logincode() != 0) {
-    _this->_internal_set_logincode(from._internal_logincode());
+  if (from.logincode() != 0) {
+    _internal_set_logincode(from._internal_logincode());
   }
-  if (from._internal_serverid() != 0) {
-    _this->_internal_set_serverid(from._internal_serverid());
+  if (from.serverid() != 0) {
+    _internal_set_serverid(from._internal_serverid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleListReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleListReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleListReq::CopyFrom(const RoleListReq& from) {
@@ -851,117 +910,115 @@ bool RoleListReq::IsInitialized() const {
 
 void RoleListReq::InternalSwap(RoleListReq* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleListReq, _impl_.serverid_)
-      + sizeof(RoleListReq::_impl_.serverid_)
-      - PROTOBUF_FIELD_OFFSET(RoleListReq, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleListReq, serverid_)
+      + sizeof(RoleListReq::serverid_)
+      - PROTOBUF_FIELD_OFFSET(RoleListReq, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleListReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[1]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleListAck::InitAsDefaultInstance() {
+}
 class RoleListAck::_Internal {
  public:
 };
 
-RoleListAck::RoleListAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleListAck::RoleListAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  rolelist_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleListAck)
 }
 RoleListAck::RoleListAck(const RoleListAck& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleListAck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.rolelist_){from._impl_.rolelist_}
-    , decltype(_impl_.accountid_){}
-    , decltype(_impl_.retcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      rolelist_(from.rolelist_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.retcode_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.retcode_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&retcode_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(retcode_));
   // @@protoc_insertion_point(copy_constructor:RoleListAck)
 }
 
-inline void RoleListAck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.rolelist_){arena}
-    , decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.retcode_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleListAck::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoleListAck_Msg_5fRole_2eproto.base);
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&retcode_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(retcode_));
 }
 
 RoleListAck::~RoleListAck() {
   // @@protoc_insertion_point(destructor:RoleListAck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleListAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rolelist_.~RepeatedPtrField();
+void RoleListAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleListAck::ArenaDtor(void* object) {
+  RoleListAck* _this = reinterpret_cast< RoleListAck* >(object);
+  (void)_this;
+}
+void RoleListAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleListAck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleListAck& RoleListAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleListAck_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleListAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleListAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.rolelist_.Clear();
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.retcode_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.retcode_));
+  rolelist_.Clear();
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&retcode_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(retcode_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleListAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleListAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 AccountID = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // repeated .RoleItem RoleList = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -969,60 +1026,58 @@ const char* RoleListAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleListAck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleListAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleListAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   // uint64 AccountID = 2;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_accountid(), target);
   }
 
   // repeated .RoleItem RoleList = 3;
-  for (unsigned i = 0,
-      n = static_cast<unsigned>(this->_internal_rolelist_size()); i < n; i++) {
-    const auto& repfield = this->_internal_rolelist(i);
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_rolelist_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-        InternalWriteMessage(3, repfield, repfield.GetCachedSize(), target, stream);
+      InternalWriteMessage(3, this->_internal_rolelist(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleListAck)
@@ -1033,53 +1088,76 @@ size_t RoleListAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleListAck)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .RoleItem RoleList = 3;
   total_size += 1UL * this->_internal_rolelist_size();
-  for (const auto& msg : this->_impl_.rolelist_) {
+  for (const auto& msg : this->rolelist_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
   // uint64 AccountID = 2;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleListAck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleListAck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleListAck::GetClassData() const { return &_class_data_; }
+void RoleListAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleListAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleListAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleListAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleListAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleListAck)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleListAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleListAck*>(&to_msg);
-  auto& from = static_cast<const RoleListAck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleListAck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleListAck::MergeFrom(const RoleListAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleListAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_impl_.rolelist_.MergeFrom(from._impl_.rolelist_);
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  rolelist_.MergeFrom(from.rolelist_);
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleListAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleListAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleListAck::CopyFrom(const RoleListAck& from) {
@@ -1095,184 +1173,170 @@ bool RoleListAck::IsInitialized() const {
 
 void RoleListAck::InternalSwap(RoleListAck* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  _impl_.rolelist_.InternalSwap(&other->_impl_.rolelist_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  rolelist_.InternalSwap(&other->rolelist_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleListAck, _impl_.retcode_)
-      + sizeof(RoleListAck::_impl_.retcode_)
-      - PROTOBUF_FIELD_OFFSET(RoleListAck, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleListAck, retcode_)
+      + sizeof(RoleListAck::retcode_)
+      - PROTOBUF_FIELD_OFFSET(RoleListAck, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleListAck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[2]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleCreateReq::InitAsDefaultInstance() {
+}
 class RoleCreateReq::_Internal {
  public:
 };
 
-RoleCreateReq::RoleCreateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleCreateReq::RoleCreateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleCreateReq)
 }
 RoleCreateReq::RoleCreateReq(const RoleCreateReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleCreateReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.accountid_){}
-    , decltype(_impl_.carrer_){}
-    , decltype(_impl_.channel_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
-      _this->GetArenaForAllocation());
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.channel_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.channel_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&channel_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(channel_));
   // @@protoc_insertion_point(copy_constructor:RoleCreateReq)
 }
 
-inline void RoleCreateReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.carrer_){0}
-    , decltype(_impl_.channel_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+void RoleCreateReq::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoleCreateReq_Msg_5fRole_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&channel_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(channel_));
 }
 
 RoleCreateReq::~RoleCreateReq() {
   // @@protoc_insertion_point(destructor:RoleCreateReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleCreateReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
+void RoleCreateReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void RoleCreateReq::ArenaDtor(void* object) {
+  RoleCreateReq* _this = reinterpret_cast< RoleCreateReq* >(object);
+  (void)_this;
+}
+void RoleCreateReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleCreateReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleCreateReq& RoleCreateReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleCreateReq_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleCreateReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleCreateReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.name_.ClearToEmpty();
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.channel_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.channel_));
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&channel_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(channel_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleCreateReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleCreateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 AccountID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // string Name = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "RoleCreateReq.Name"));
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "RoleCreateReq.Name"));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Carrer = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Channel = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
-          _impl_.channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          channel_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleCreateReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleCreateReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleCreateReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
   }
 
   // string Name = 2;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1282,19 +1346,19 @@ uint8_t* RoleCreateReq::_InternalSerialize(
   }
 
   // int32 Carrer = 3;
-  if (this->_internal_carrer() != 0) {
+  if (this->carrer() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_carrer(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_carrer(), target);
   }
 
   // int32 Channel = 4;
-  if (this->_internal_channel() != 0) {
+  if (this->channel() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(4, this->_internal_channel(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_channel(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleCreateReq)
@@ -1305,63 +1369,88 @@ size_t RoleCreateReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleCreateReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string Name = 2;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // int32 Carrer = 3;
-  if (this->_internal_carrer() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_carrer());
+  if (this->carrer() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_carrer());
   }
 
   // int32 Channel = 4;
-  if (this->_internal_channel() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_channel());
+  if (this->channel() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_channel());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleCreateReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleCreateReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleCreateReq::GetClassData() const { return &_class_data_; }
+void RoleCreateReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleCreateReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleCreateReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleCreateReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleCreateReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleCreateReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleCreateReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleCreateReq*>(&to_msg);
-  auto& from = static_cast<const RoleCreateReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleCreateReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleCreateReq::MergeFrom(const RoleCreateReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleCreateReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_name().empty()) {
-    _this->_internal_set_name(from._internal_name());
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
   }
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_carrer() != 0) {
-    _this->_internal_set_carrer(from._internal_carrer());
+  if (from.carrer() != 0) {
+    _internal_set_carrer(from._internal_carrer());
   }
-  if (from._internal_channel() != 0) {
-    _this->_internal_set_channel(from._internal_channel());
+  if (from.channel() != 0) {
+    _internal_set_channel(from._internal_channel());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleCreateReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleCreateReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleCreateReq::CopyFrom(const RoleCreateReq& from) {
@@ -1377,211 +1466,189 @@ bool RoleCreateReq::IsInitialized() const {
 
 void RoleCreateReq::InternalSwap(RoleCreateReq* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleCreateReq, _impl_.channel_)
-      + sizeof(RoleCreateReq::_impl_.channel_)
-      - PROTOBUF_FIELD_OFFSET(RoleCreateReq, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleCreateReq, channel_)
+      + sizeof(RoleCreateReq::channel_)
+      - PROTOBUF_FIELD_OFFSET(RoleCreateReq, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleCreateReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[3]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleCreateAck::InitAsDefaultInstance() {
+}
 class RoleCreateAck::_Internal {
  public:
 };
 
-RoleCreateAck::RoleCreateAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleCreateAck::RoleCreateAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleCreateAck)
 }
 RoleCreateAck::RoleCreateAck(const RoleCreateAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleCreateAck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.accountid_){}
-    , decltype(_impl_.roleid_){}
-    , decltype(_impl_.retcode_){}
-    , decltype(_impl_.carrer_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    _this->_impl_.name_.Set(from._internal_name(), 
-      _this->GetArenaForAllocation());
+    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+      GetArena());
   }
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.carrer_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.carrer_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&carrer_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(carrer_));
   // @@protoc_insertion_point(copy_constructor:RoleCreateAck)
 }
 
-inline void RoleCreateAck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.name_){}
-    , decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.roleid_){uint64_t{0u}}
-    , decltype(_impl_.retcode_){0u}
-    , decltype(_impl_.carrer_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
-  _impl_.name_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-    _impl_.name_.Set("", GetArenaForAllocation());
-  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+void RoleCreateAck::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RoleCreateAck_Msg_5fRole_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&carrer_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(carrer_));
 }
 
 RoleCreateAck::~RoleCreateAck() {
   // @@protoc_insertion_point(destructor:RoleCreateAck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleCreateAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.name_.Destroy();
+void RoleCreateAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
+void RoleCreateAck::ArenaDtor(void* object) {
+  RoleCreateAck* _this = reinterpret_cast< RoleCreateAck* >(object);
+  (void)_this;
+}
+void RoleCreateAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleCreateAck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleCreateAck& RoleCreateAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleCreateAck_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleCreateAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleCreateAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.name_.ClearToEmpty();
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.carrer_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.carrer_));
+  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&carrer_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(carrer_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleCreateAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleCreateAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 AccountID = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 RoleID = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // string Name = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_name();
-          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "RoleCreateAck.Name"));
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "RoleCreateAck.Name"));
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 Carrer = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 40)) {
-          _impl_.carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          carrer_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleCreateAck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleCreateAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleCreateAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   // uint64 AccountID = 2;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_accountid(), target);
   }
 
   // uint64 RoleID = 3;
-  if (this->_internal_roleid() != 0) {
+  if (this->roleid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(3, this->_internal_roleid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->_internal_roleid(), target);
   }
 
   // string Name = 4;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1591,13 +1658,13 @@ uint8_t* RoleCreateAck::_InternalSerialize(
   }
 
   // int32 Carrer = 5;
-  if (this->_internal_carrer() != 0) {
+  if (this->carrer() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(5, this->_internal_carrer(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(5, this->_internal_carrer(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleCreateAck)
@@ -1608,71 +1675,98 @@ size_t RoleCreateAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleCreateAck)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string Name = 4;
-  if (!this->_internal_name().empty()) {
+  if (this->name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_name());
   }
 
   // uint64 AccountID = 2;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // uint64 RoleID = 3;
-  if (this->_internal_roleid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_roleid());
+  if (this->roleid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_roleid());
   }
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
   // int32 Carrer = 5;
-  if (this->_internal_carrer() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_carrer());
+  if (this->carrer() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_carrer());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleCreateAck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleCreateAck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleCreateAck::GetClassData() const { return &_class_data_; }
+void RoleCreateAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleCreateAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleCreateAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleCreateAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleCreateAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleCreateAck)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleCreateAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleCreateAck*>(&to_msg);
-  auto& from = static_cast<const RoleCreateAck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleCreateAck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleCreateAck::MergeFrom(const RoleCreateAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleCreateAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!from._internal_name().empty()) {
-    _this->_internal_set_name(from._internal_name());
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
   }
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_roleid() != 0) {
-    _this->_internal_set_roleid(from._internal_roleid());
+  if (from.roleid() != 0) {
+    _internal_set_roleid(from._internal_roleid());
   }
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  if (from._internal_carrer() != 0) {
-    _this->_internal_set_carrer(from._internal_carrer());
+  if (from.carrer() != 0) {
+    _internal_set_carrer(from._internal_carrer());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleCreateAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleCreateAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleCreateAck::CopyFrom(const RoleCreateAck& from) {
@@ -1688,159 +1782,151 @@ bool RoleCreateAck::IsInitialized() const {
 
 void RoleCreateAck::InternalSwap(RoleCreateAck* other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &_impl_.name_, lhs_arena,
-      &other->_impl_.name_, rhs_arena
-  );
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleCreateAck, _impl_.carrer_)
-      + sizeof(RoleCreateAck::_impl_.carrer_)
-      - PROTOBUF_FIELD_OFFSET(RoleCreateAck, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleCreateAck, carrer_)
+      + sizeof(RoleCreateAck::carrer_)
+      - PROTOBUF_FIELD_OFFSET(RoleCreateAck, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleCreateAck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[4]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleDeleteReq::InitAsDefaultInstance() {
+}
 class RoleDeleteReq::_Internal {
  public:
 };
 
-RoleDeleteReq::RoleDeleteReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleDeleteReq::RoleDeleteReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleDeleteReq)
 }
 RoleDeleteReq::RoleDeleteReq(const RoleDeleteReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleDeleteReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){}
-    , decltype(_impl_.roleid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.roleid_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.roleid_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&roleid_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(roleid_));
   // @@protoc_insertion_point(copy_constructor:RoleDeleteReq)
 }
 
-inline void RoleDeleteReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.roleid_){uint64_t{0u}}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleDeleteReq::SharedCtor() {
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&roleid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(roleid_));
 }
 
 RoleDeleteReq::~RoleDeleteReq() {
   // @@protoc_insertion_point(destructor:RoleDeleteReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleDeleteReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleDeleteReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleDeleteReq::ArenaDtor(void* object) {
+  RoleDeleteReq* _this = reinterpret_cast< RoleDeleteReq* >(object);
+  (void)_this;
+}
+void RoleDeleteReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleDeleteReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleDeleteReq& RoleDeleteReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleDeleteReq_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleDeleteReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleDeleteReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.roleid_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.roleid_));
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&roleid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(roleid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleDeleteReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleDeleteReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 AccountID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 RoleID = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleDeleteReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleDeleteReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleDeleteReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
   }
 
   // uint64 RoleID = 2;
-  if (this->_internal_roleid() != 0) {
+  if (this->roleid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_roleid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_roleid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleDeleteReq)
@@ -1851,45 +1937,68 @@ size_t RoleDeleteReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleDeleteReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // uint64 RoleID = 2;
-  if (this->_internal_roleid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_roleid());
+  if (this->roleid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_roleid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleDeleteReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleDeleteReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleDeleteReq::GetClassData() const { return &_class_data_; }
+void RoleDeleteReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleDeleteReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleDeleteReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleDeleteReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleDeleteReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleDeleteReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleDeleteReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleDeleteReq*>(&to_msg);
-  auto& from = static_cast<const RoleDeleteReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleDeleteReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleDeleteReq::MergeFrom(const RoleDeleteReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleDeleteReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_roleid() != 0) {
-    _this->_internal_set_roleid(from._internal_roleid());
+  if (from.roleid() != 0) {
+    _internal_set_roleid(from._internal_roleid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleDeleteReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleDeleteReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleDeleteReq::CopyFrom(const RoleDeleteReq& from) {
@@ -1905,133 +2014,131 @@ bool RoleDeleteReq::IsInitialized() const {
 
 void RoleDeleteReq::InternalSwap(RoleDeleteReq* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleDeleteReq, _impl_.roleid_)
-      + sizeof(RoleDeleteReq::_impl_.roleid_)
-      - PROTOBUF_FIELD_OFFSET(RoleDeleteReq, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleDeleteReq, roleid_)
+      + sizeof(RoleDeleteReq::roleid_)
+      - PROTOBUF_FIELD_OFFSET(RoleDeleteReq, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleDeleteReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[5]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleDeleteAck::InitAsDefaultInstance() {
+}
 class RoleDeleteAck::_Internal {
  public:
 };
 
-RoleDeleteAck::RoleDeleteAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleDeleteAck::RoleDeleteAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleDeleteAck)
 }
 RoleDeleteAck::RoleDeleteAck(const RoleDeleteAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleDeleteAck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.retcode_ = from._impl_.retcode_;
+  retcode_ = from.retcode_;
   // @@protoc_insertion_point(copy_constructor:RoleDeleteAck)
 }
 
-inline void RoleDeleteAck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleDeleteAck::SharedCtor() {
+  retcode_ = 0u;
 }
 
 RoleDeleteAck::~RoleDeleteAck() {
   // @@protoc_insertion_point(destructor:RoleDeleteAck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleDeleteAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleDeleteAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleDeleteAck::ArenaDtor(void* object) {
+  RoleDeleteAck* _this = reinterpret_cast< RoleDeleteAck* >(object);
+  (void)_this;
+}
+void RoleDeleteAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleDeleteAck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleDeleteAck& RoleDeleteAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleDeleteAck_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleDeleteAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleDeleteAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.retcode_ = 0u;
+  retcode_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleDeleteAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleDeleteAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleDeleteAck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleDeleteAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleDeleteAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleDeleteAck)
@@ -2042,37 +2149,58 @@ size_t RoleDeleteAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleDeleteAck)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleDeleteAck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleDeleteAck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleDeleteAck::GetClassData() const { return &_class_data_; }
+void RoleDeleteAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleDeleteAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleDeleteAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleDeleteAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleDeleteAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleDeleteAck)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleDeleteAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleDeleteAck*>(&to_msg);
-  auto& from = static_cast<const RoleDeleteAck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleDeleteAck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleDeleteAck::MergeFrom(const RoleDeleteAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleDeleteAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleDeleteAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleDeleteAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleDeleteAck::CopyFrom(const RoleDeleteAck& from) {
@@ -2088,164 +2216,158 @@ bool RoleDeleteAck::IsInitialized() const {
 
 void RoleDeleteAck::InternalSwap(RoleDeleteAck* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.retcode_, other->_impl_.retcode_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(retcode_, other->retcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleDeleteAck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[6]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleLoginReq::InitAsDefaultInstance() {
+}
 class RoleLoginReq::_Internal {
  public:
 };
 
-RoleLoginReq::RoleLoginReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleLoginReq::RoleLoginReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleLoginReq)
 }
 RoleLoginReq::RoleLoginReq(const RoleLoginReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleLoginReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){}
-    , decltype(_impl_.roleid_){}
-    , decltype(_impl_.langid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&_impl_.accountid_, &from._impl_.accountid_,
-    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.langid_) -
-    reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.langid_));
+  ::memcpy(&accountid_, &from.accountid_,
+    static_cast<size_t>(reinterpret_cast<char*>(&langid_) -
+    reinterpret_cast<char*>(&accountid_)) + sizeof(langid_));
   // @@protoc_insertion_point(copy_constructor:RoleLoginReq)
 }
 
-inline void RoleLoginReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){uint64_t{0u}}
-    , decltype(_impl_.roleid_){uint64_t{0u}}
-    , decltype(_impl_.langid_){0}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleLoginReq::SharedCtor() {
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&langid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(langid_));
 }
 
 RoleLoginReq::~RoleLoginReq() {
   // @@protoc_insertion_point(destructor:RoleLoginReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleLoginReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleLoginReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleLoginReq::ArenaDtor(void* object) {
+  RoleLoginReq* _this = reinterpret_cast< RoleLoginReq* >(object);
+  (void)_this;
+}
+void RoleLoginReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleLoginReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleLoginReq& RoleLoginReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleLoginReq_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleLoginReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleLoginReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&_impl_.accountid_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&_impl_.langid_) -
-      reinterpret_cast<char*>(&_impl_.accountid_)) + sizeof(_impl_.langid_));
+  ::memset(&accountid_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&langid_) -
+      reinterpret_cast<char*>(&accountid_)) + sizeof(langid_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleLoginReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleLoginReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 AccountID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // uint64 RoleID = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
-          _impl_.roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          roleid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
       // int32 LangID = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
-          _impl_.langid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          langid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleLoginReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleLoginReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleLoginReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
   }
 
   // uint64 RoleID = 2;
-  if (this->_internal_roleid() != 0) {
+  if (this->roleid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_roleid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_roleid(), target);
   }
 
   // int32 LangID = 3;
-  if (this->_internal_langid() != 0) {
+  if (this->langid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_langid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_langid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleLoginReq)
@@ -2256,53 +2378,78 @@ size_t RoleLoginReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleLoginReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
   // uint64 RoleID = 2;
-  if (this->_internal_roleid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_roleid());
+  if (this->roleid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_roleid());
   }
 
   // int32 LangID = 3;
-  if (this->_internal_langid() != 0) {
-    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_langid());
+  if (this->langid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_langid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleLoginReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleLoginReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleLoginReq::GetClassData() const { return &_class_data_; }
+void RoleLoginReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleLoginReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleLoginReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleLoginReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleLoginReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleLoginReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleLoginReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleLoginReq*>(&to_msg);
-  auto& from = static_cast<const RoleLoginReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleLoginReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleLoginReq::MergeFrom(const RoleLoginReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleLoginReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  if (from._internal_roleid() != 0) {
-    _this->_internal_set_roleid(from._internal_roleid());
+  if (from.roleid() != 0) {
+    _internal_set_roleid(from._internal_roleid());
   }
-  if (from._internal_langid() != 0) {
-    _this->_internal_set_langid(from._internal_langid());
+  if (from.langid() != 0) {
+    _internal_set_langid(from._internal_langid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleLoginReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleLoginReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleLoginReq::CopyFrom(const RoleLoginReq& from) {
@@ -2318,133 +2465,131 @@ bool RoleLoginReq::IsInitialized() const {
 
 void RoleLoginReq::InternalSwap(RoleLoginReq* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(RoleLoginReq, _impl_.langid_)
-      + sizeof(RoleLoginReq::_impl_.langid_)
-      - PROTOBUF_FIELD_OFFSET(RoleLoginReq, _impl_.accountid_)>(
-          reinterpret_cast<char*>(&_impl_.accountid_),
-          reinterpret_cast<char*>(&other->_impl_.accountid_));
+      PROTOBUF_FIELD_OFFSET(RoleLoginReq, langid_)
+      + sizeof(RoleLoginReq::langid_)
+      - PROTOBUF_FIELD_OFFSET(RoleLoginReq, accountid_)>(
+          reinterpret_cast<char*>(&accountid_),
+          reinterpret_cast<char*>(&other->accountid_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleLoginReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[7]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleLogoutReq::InitAsDefaultInstance() {
+}
 class RoleLogoutReq::_Internal {
  public:
 };
 
-RoleLogoutReq::RoleLogoutReq(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleLogoutReq::RoleLogoutReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleLogoutReq)
 }
 RoleLogoutReq::RoleLogoutReq(const RoleLogoutReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleLogoutReq* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.accountid_ = from._impl_.accountid_;
+  accountid_ = from.accountid_;
   // @@protoc_insertion_point(copy_constructor:RoleLogoutReq)
 }
 
-inline void RoleLogoutReq::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.accountid_){uint64_t{0u}}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleLogoutReq::SharedCtor() {
+  accountid_ = PROTOBUF_ULONGLONG(0);
 }
 
 RoleLogoutReq::~RoleLogoutReq() {
   // @@protoc_insertion_point(destructor:RoleLogoutReq)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleLogoutReq::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleLogoutReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleLogoutReq::ArenaDtor(void* object) {
+  RoleLogoutReq* _this = reinterpret_cast< RoleLogoutReq* >(object);
+  (void)_this;
+}
+void RoleLogoutReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleLogoutReq::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleLogoutReq& RoleLogoutReq::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleLogoutReq_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleLogoutReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleLogoutReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.accountid_ = uint64_t{0u};
+  accountid_ = PROTOBUF_ULONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleLogoutReq::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleLogoutReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint64 AccountID = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          accountid_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleLogoutReq::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleLogoutReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleLogoutReq)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
+  if (this->accountid() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(1, this->_internal_accountid(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleLogoutReq)
@@ -2455,37 +2600,58 @@ size_t RoleLogoutReq::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleLogoutReq)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint64 AccountID = 1;
-  if (this->_internal_accountid() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_accountid());
+  if (this->accountid() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_accountid());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleLogoutReq::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleLogoutReq::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleLogoutReq::GetClassData() const { return &_class_data_; }
+void RoleLogoutReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleLogoutReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleLogoutReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleLogoutReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleLogoutReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleLogoutReq)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleLogoutReq::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleLogoutReq*>(&to_msg);
-  auto& from = static_cast<const RoleLogoutReq&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleLogoutReq)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleLogoutReq::MergeFrom(const RoleLogoutReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleLogoutReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_accountid() != 0) {
-    _this->_internal_set_accountid(from._internal_accountid());
+  if (from.accountid() != 0) {
+    _internal_set_accountid(from._internal_accountid());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleLogoutReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleLogoutReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleLogoutReq::CopyFrom(const RoleLogoutReq& from) {
@@ -2501,128 +2667,126 @@ bool RoleLogoutReq::IsInitialized() const {
 
 void RoleLogoutReq::InternalSwap(RoleLogoutReq* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.accountid_, other->_impl_.accountid_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(accountid_, other->accountid_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleLogoutReq::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[8]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleLogoutAck::InitAsDefaultInstance() {
+}
 class RoleLogoutAck::_Internal {
  public:
 };
 
-RoleLogoutAck::RoleLogoutAck(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleLogoutAck::RoleLogoutAck(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleLogoutAck)
 }
 RoleLogoutAck::RoleLogoutAck(const RoleLogoutAck& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleLogoutAck* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.retcode_ = from._impl_.retcode_;
+  retcode_ = from.retcode_;
   // @@protoc_insertion_point(copy_constructor:RoleLogoutAck)
 }
 
-inline void RoleLogoutAck::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleLogoutAck::SharedCtor() {
+  retcode_ = 0u;
 }
 
 RoleLogoutAck::~RoleLogoutAck() {
   // @@protoc_insertion_point(destructor:RoleLogoutAck)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleLogoutAck::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleLogoutAck::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleLogoutAck::ArenaDtor(void* object) {
+  RoleLogoutAck* _this = reinterpret_cast< RoleLogoutAck* >(object);
+  (void)_this;
+}
+void RoleLogoutAck::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleLogoutAck::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleLogoutAck& RoleLogoutAck::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleLogoutAck_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleLogoutAck::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleLogoutAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.retcode_ = 0u;
+  retcode_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleLogoutAck::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleLogoutAck::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleLogoutAck::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleLogoutAck::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleLogoutAck)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleLogoutAck)
@@ -2633,37 +2797,58 @@ size_t RoleLogoutAck::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleLogoutAck)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleLogoutAck::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleLogoutAck::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleLogoutAck::GetClassData() const { return &_class_data_; }
+void RoleLogoutAck::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleLogoutAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleLogoutAck* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleLogoutAck>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleLogoutAck)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleLogoutAck)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleLogoutAck::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleLogoutAck*>(&to_msg);
-  auto& from = static_cast<const RoleLogoutAck&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleLogoutAck)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleLogoutAck::MergeFrom(const RoleLogoutAck& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleLogoutAck)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleLogoutAck::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleLogoutAck)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleLogoutAck::CopyFrom(const RoleLogoutAck& from) {
@@ -2679,128 +2864,126 @@ bool RoleLogoutAck::IsInitialized() const {
 
 void RoleLogoutAck::InternalSwap(RoleLogoutAck* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.retcode_, other->_impl_.retcode_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(retcode_, other->retcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleLogoutAck::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[9]);
+  return GetMetadataStatic();
 }
+
 
 // ===================================================================
 
+void RoleOtherLoginNty::InitAsDefaultInstance() {
+}
 class RoleOtherLoginNty::_Internal {
  public:
 };
 
-RoleOtherLoginNty::RoleOtherLoginNty(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
-  SharedCtor(arena, is_message_owned);
+RoleOtherLoginNty::RoleOtherLoginNty(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:RoleOtherLoginNty)
 }
 RoleOtherLoginNty::RoleOtherLoginNty(const RoleOtherLoginNty& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
-  RoleOtherLoginNty* const _this = this; (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){}
-    , /*decltype(_impl_._cached_size_)*/{}};
-
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  _this->_impl_.retcode_ = from._impl_.retcode_;
+  retcode_ = from.retcode_;
   // @@protoc_insertion_point(copy_constructor:RoleOtherLoginNty)
 }
 
-inline void RoleOtherLoginNty::SharedCtor(
-    ::_pb::Arena* arena, bool is_message_owned) {
-  (void)arena;
-  (void)is_message_owned;
-  new (&_impl_) Impl_{
-      decltype(_impl_.retcode_){0u}
-    , /*decltype(_impl_._cached_size_)*/{}
-  };
+void RoleOtherLoginNty::SharedCtor() {
+  retcode_ = 0u;
 }
 
 RoleOtherLoginNty::~RoleOtherLoginNty() {
   // @@protoc_insertion_point(destructor:RoleOtherLoginNty)
-  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
-  (void)arena;
-    return;
-  }
   SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-inline void RoleOtherLoginNty::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+void RoleOtherLoginNty::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
 }
 
+void RoleOtherLoginNty::ArenaDtor(void* object) {
+  RoleOtherLoginNty* _this = reinterpret_cast< RoleOtherLoginNty* >(object);
+  (void)_this;
+}
+void RoleOtherLoginNty::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
 void RoleOtherLoginNty::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _cached_size_.Set(size);
 }
+const RoleOtherLoginNty& RoleOtherLoginNty::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_RoleOtherLoginNty_Msg_5fRole_2eproto.base);
+  return *internal_default_instance();
+}
+
 
 void RoleOtherLoginNty::Clear() {
 // @@protoc_insertion_point(message_clear_start:RoleOtherLoginNty)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _impl_.retcode_ = 0u;
+  retcode_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* RoleOtherLoginNty::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
+const char* RoleOtherLoginNty::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    uint32_t tag;
-    ptr = ::_pbi::ReadTag(ptr, &tag);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // uint32 RetCode = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
-          _impl_.retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          retcode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else
-          goto handle_unusual;
+        } else goto handle_unusual;
         continue;
-      default:
-        goto handle_unusual;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
     }  // switch
-  handle_unusual:
-    if ((tag == 0) || ((tag & 7) == 4)) {
-      CHK_(ptr);
-      ctx->SetLastTag(tag);
-      goto message_done;
-    }
-    ptr = UnknownFieldParse(
-        tag,
-        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-        ptr, ctx);
-    CHK_(ptr != nullptr);
   }  // while
-message_done:
+success:
   return ptr;
 failure:
   ptr = nullptr;
-  goto message_done;
+  goto success;
 #undef CHK_
 }
 
-uint8_t* RoleOtherLoginNty::_InternalSerialize(
-    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+::PROTOBUF_NAMESPACE_ID::uint8* RoleOtherLoginNty::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:RoleOtherLoginNty)
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
+  if (this->retcode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::_pbi::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_retcode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:RoleOtherLoginNty)
@@ -2811,37 +2994,58 @@ size_t RoleOtherLoginNty::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:RoleOtherLoginNty)
   size_t total_size = 0;
 
-  uint32_t cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // uint32 RetCode = 1;
-  if (this->_internal_retcode() != 0) {
-    total_size += ::_pbi::WireFormatLite::UInt32SizePlusOne(this->_internal_retcode());
+  if (this->retcode() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_retcode());
   }
 
-  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
 }
 
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData RoleOtherLoginNty::_class_data_ = {
-    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
-    RoleOtherLoginNty::MergeImpl
-};
-const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*RoleOtherLoginNty::GetClassData() const { return &_class_data_; }
+void RoleOtherLoginNty::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:RoleOtherLoginNty)
+  GOOGLE_DCHECK_NE(&from, this);
+  const RoleOtherLoginNty* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<RoleOtherLoginNty>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:RoleOtherLoginNty)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:RoleOtherLoginNty)
+    MergeFrom(*source);
+  }
+}
 
-
-void RoleOtherLoginNty::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
-  auto* const _this = static_cast<RoleOtherLoginNty*>(&to_msg);
-  auto& from = static_cast<const RoleOtherLoginNty&>(from_msg);
-  // @@protoc_insertion_point(class_specific_merge_from_start:RoleOtherLoginNty)
-  GOOGLE_DCHECK_NE(&from, _this);
-  uint32_t cached_has_bits = 0;
+void RoleOtherLoginNty::MergeFrom(const RoleOtherLoginNty& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:RoleOtherLoginNty)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_retcode() != 0) {
-    _this->_internal_set_retcode(from._internal_retcode());
+  if (from.retcode() != 0) {
+    _internal_set_retcode(from._internal_retcode());
   }
-  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+}
+
+void RoleOtherLoginNty::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:RoleOtherLoginNty)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
 }
 
 void RoleOtherLoginNty::CopyFrom(const RoleOtherLoginNty& from) {
@@ -2857,60 +3061,48 @@ bool RoleOtherLoginNty::IsInitialized() const {
 
 void RoleOtherLoginNty::InternalSwap(RoleOtherLoginNty* other) {
   using std::swap;
-  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_impl_.retcode_, other->_impl_.retcode_);
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(retcode_, other->retcode_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata RoleOtherLoginNty::GetMetadata() const {
-  return ::_pbi::AssignDescriptors(
-      &descriptor_table_Msg_5fRole_2eproto_getter, &descriptor_table_Msg_5fRole_2eproto_once,
-      file_level_metadata_Msg_5fRole_2eproto[10]);
+  return GetMetadataStatic();
 }
+
 
 // @@protoc_insertion_point(namespace_scope)
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::RoleItem*
-Arena::CreateMaybeMessage< ::RoleItem >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleItem* Arena::CreateMaybeMessage< ::RoleItem >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleItem >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleListReq*
-Arena::CreateMaybeMessage< ::RoleListReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleListReq* Arena::CreateMaybeMessage< ::RoleListReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleListReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleListAck*
-Arena::CreateMaybeMessage< ::RoleListAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleListAck* Arena::CreateMaybeMessage< ::RoleListAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleListAck >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleCreateReq*
-Arena::CreateMaybeMessage< ::RoleCreateReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleCreateReq* Arena::CreateMaybeMessage< ::RoleCreateReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleCreateReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleCreateAck*
-Arena::CreateMaybeMessage< ::RoleCreateAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleCreateAck* Arena::CreateMaybeMessage< ::RoleCreateAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleCreateAck >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleDeleteReq*
-Arena::CreateMaybeMessage< ::RoleDeleteReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleDeleteReq* Arena::CreateMaybeMessage< ::RoleDeleteReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleDeleteReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleDeleteAck*
-Arena::CreateMaybeMessage< ::RoleDeleteAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleDeleteAck* Arena::CreateMaybeMessage< ::RoleDeleteAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleDeleteAck >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleLoginReq*
-Arena::CreateMaybeMessage< ::RoleLoginReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleLoginReq* Arena::CreateMaybeMessage< ::RoleLoginReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleLoginReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleLogoutReq*
-Arena::CreateMaybeMessage< ::RoleLogoutReq >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleLogoutReq* Arena::CreateMaybeMessage< ::RoleLogoutReq >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleLogoutReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleLogoutAck*
-Arena::CreateMaybeMessage< ::RoleLogoutAck >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleLogoutAck* Arena::CreateMaybeMessage< ::RoleLogoutAck >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleLogoutAck >(arena);
 }
-template<> PROTOBUF_NOINLINE ::RoleOtherLoginNty*
-Arena::CreateMaybeMessage< ::RoleOtherLoginNty >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::RoleOtherLoginNty* Arena::CreateMaybeMessage< ::RoleOtherLoginNty >(Arena* arena) {
   return Arena::CreateMessageInternal< ::RoleOtherLoginNty >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

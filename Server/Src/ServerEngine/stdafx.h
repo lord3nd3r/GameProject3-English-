@@ -12,6 +12,9 @@
 #include <list>
 #include <algorithm>
 #include <assert.h>
+#ifndef ASSERT
+#define ASSERT assert
+#endif
 #include <set>
 #include <deque>
 #include <mutex>

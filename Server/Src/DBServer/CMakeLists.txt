@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(DBServer)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ../ServerEngine ../ServerEngine/DBInterface ../ServerData ../../Common/Mysql ../../Common/protobuf/src ../Message ../PublicData ../WatcherClient)
+include_directories(../../Common/protobuf/src ./ ../ServerEngine ../ServerEngine/DBInterface ../ServerData ../../Common/Mysql  ../Message ../PublicData ../WatcherClient)
 link_directories(../../Common/lib /usr/lib64/mysql)
 
 

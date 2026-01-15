@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
 project(LoginServer)
 SET(PROJECT_ROOT_PATH ".")
-include_directories(./ ../ServerEngine  ../ServerEngine/DBInterface ../PublicData ../StaticData ../../Common/Sqlite ../ServerData ../../Common/Mysql ../../Common/protobuf/src ../Message ../LogData ../ServerData ../WatcherClient)
+include_directories(../../Common/protobuf/src ./ ../ServerEngine  ../ServerEngine/DBInterface ../PublicData ../StaticData ../../Common/Sqlite ../ServerData ../../Common/Mysql  ../Message ../LogData ../ServerData ../WatcherClient)
 link_directories(../../Common/lib /usr/lib64/mysql)	
 
 
