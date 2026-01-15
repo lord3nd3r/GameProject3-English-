@@ -1,4 +1,4 @@
-﻿#ifndef __GLOBAL_DATA_MGR_H__
+#ifndef __GLOBAL_DATA_MGR_H__
 #define __GLOBAL_DATA_MGR_H__
 #include "DBInterface/CppMysql.h"
 

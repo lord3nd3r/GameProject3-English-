@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___AVLTree.h */
-﻿#ifndef __AVL_TREE_H__
+#ifndef __AVL_TREE_H__
 #define __AVL_TREE_H__
 #include <vector>
 

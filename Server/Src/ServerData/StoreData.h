@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___StoreData.h */
-﻿#ifndef __STORE_DATA_OBJECT_H__
+#ifndef __STORE_DATA_OBJECT_H__
 #define __STORE_DATA_OBJECT_H__
 
 #include "DBInterface/DBInterface.h"

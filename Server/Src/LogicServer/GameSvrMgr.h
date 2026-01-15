@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GameSvrMgr.h */
-﻿#ifndef __GAME_SVR_MGR__
+#ifndef __GAME_SVR_MGR__
 #define __GAME_SVR_MGR__
 
 #include "../Message/Msg_Copy.pb.h"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___CounterModule.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "DataPool.h"
 #include "GlobalDataMgr.h"
 #include "CounterID.h"

@@ -1,4 +1,4 @@
-﻿#ifndef __TEAM_COPY_MGR__
+#ifndef __TEAM_COPY_MGR__
 #define __TEAM_COPY_MGR__
 
 #include "../Message/Msg_Copy.pb.h"

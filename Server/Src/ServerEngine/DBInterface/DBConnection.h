@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___DBConnection.h */
-﻿#ifndef _SQL_CONN_H_
+#ifndef _SQL_CONN_H_
 #define _SQL_CONN_H_
 
 #include <mysql.h>

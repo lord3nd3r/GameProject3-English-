@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LoginClientMgr.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "LoginClientMgr.h"
 #include "../Message/Msg_ID.pb.h"
 

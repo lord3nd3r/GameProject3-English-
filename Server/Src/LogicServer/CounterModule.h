@@ -1,4 +1,4 @@
-﻿#ifndef __COUNTER_MODULE_H__
+#ifndef __COUNTER_MODULE_H__
 #define __COUNTER_MODULE_H__
 #include "ModuleBase.h"
 #include "CounterData.h"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___PartnerData.h */
-﻿#ifndef __PARTNER_DATA_OBJECT_H__
+#ifndef __PARTNER_DATA_OBJECT_H__
 #define __PARTNER_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 struct PartnerDataObject : public ShareObject

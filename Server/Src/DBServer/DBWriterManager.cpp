@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBWriterManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "DBWriterManager.h"
 
 CDBWriterManager::CDBWriterManager()

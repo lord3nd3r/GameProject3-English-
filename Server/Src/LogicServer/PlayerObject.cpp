@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PlayerObject.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "PlayerObject.h"
 #include "PacketHeader.h"
 #include "PlayerManager.h"

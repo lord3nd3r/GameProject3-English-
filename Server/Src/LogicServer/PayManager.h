@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PayManager.h */
-﻿#ifndef __PAY_MANAGER_H__
+#ifndef __PAY_MANAGER_H__
 #define __PAY_MANAGER_H__
 
 #include "HttpParameter.h"

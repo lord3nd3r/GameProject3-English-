@@ -7,11 +7,11 @@ MY_INCLUDE=-I$(PWD) \
 		-I../ServerData \
 		-I../StaticData \
 		-I../WatcherClient \
-		-I../../Common \
-		-I../../Common/Mysql \
-		-I../../Common/Sqlite  \
-		-I../../Common/Lua	\
-		-I../../Common/toluapp
+		-I../../Common -I../../Common/protobuf/src \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Mysql \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Sqlite  \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Lua	\
+		-I../../Common -I../../Common/protobuf/src -I../../Common/toluapp
 		
 CC_LIB=-L/usr/lib \
 	-L/lib \

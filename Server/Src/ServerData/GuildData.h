@@ -1,4 +1,4 @@
-﻿#ifndef __GUILD_DATA_OBJECT_H__
+#ifndef __GUILD_DATA_OBJECT_H__
 #define __GUILD_DATA_OBJECT_H__
 
 #include "DBInterface/DBInterface.h"

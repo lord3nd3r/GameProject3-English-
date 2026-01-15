@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PetModule.h */
-﻿#ifndef __PET_MODULE_H__
+#ifndef __PET_MODULE_H__
 #define __PET_MODULE_H__
 #include "ModuleBase.h"
 #include "PetData.h"

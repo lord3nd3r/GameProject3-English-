@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___ServerDefine.h */
-﻿#ifndef __SERVER_DEFINE_H__
+#ifndef __SERVER_DEFINE_H__
 #define __SERVER_DEFINE_H__
 
 //[TRANSLATED][TRANSLATED]count

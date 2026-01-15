@@ -1,4 +1,4 @@
-﻿#ifndef __COPY_DATA_OBJECT_H__
+#ifndef __COPY_DATA_OBJECT_H__
 #define __COPY_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 struct CopyDataObject : public ShareObject

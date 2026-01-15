@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DataBuffer.h */
-﻿#ifndef _DATA_BUFFER_H_
+#ifndef _DATA_BUFFER_H_
 #define _DATA_BUFFER_H_
 #include "IBufferHandler.h"
 

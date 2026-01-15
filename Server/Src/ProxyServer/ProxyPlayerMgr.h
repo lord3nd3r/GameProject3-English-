@@ -1,4 +1,4 @@
-﻿#ifndef __PROXY_PLAYER_MGR_H__
+#ifndef __PROXY_PLAYER_MGR_H__
 #define __PROXY_PLAYER_MGR_H__
 #include "AVLTree.h"
 

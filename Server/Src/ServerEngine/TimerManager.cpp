@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___TimerManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "TimerManager.h"
 
 

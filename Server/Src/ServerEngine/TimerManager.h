@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___TimerManager.h */
-﻿#ifndef _TIMER_MANAGER__
+#ifndef _TIMER_MANAGER__
 #define _TIMER_MANAGER__
 #include "CommonTime.h"
 class CTimerSlotBase

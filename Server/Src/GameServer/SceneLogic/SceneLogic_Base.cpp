@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_Base.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "CommonMath.h"
 #include "SceneLogic_Base.h"
 #include "../Scene.h"

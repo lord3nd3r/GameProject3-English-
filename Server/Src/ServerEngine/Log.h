@@ -1,4 +1,4 @@
-﻿#ifndef _GLOBAL_LOG_H_
+#ifndef _GLOBAL_LOG_H_
 #define _GLOBAL_LOG_H_
 
 enum LogLevel

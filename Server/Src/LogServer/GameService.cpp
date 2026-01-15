@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogServer___GameService.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "GameService.h"
 #include "../Message/Msg_Game.pb.h"
 #include "../Message/Msg_RetCode.pb.h"

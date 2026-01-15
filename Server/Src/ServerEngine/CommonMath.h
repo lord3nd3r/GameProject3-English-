@@ -1,6 +1,7 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonMath.h */
-﻿#ifndef __X_MATH_H_
+#ifndef __X_MATH_H_
 #define __X_MATH_H_
+#include <cmath>
 
 #define PI          3.1415926f
 #define TWO_PI      6.2831852f

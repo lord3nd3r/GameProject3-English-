@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BuffObject.h */
-﻿#ifndef __BUFF_OBJECT_H__
+#ifndef __BUFF_OBJECT_H__
 #define __BUFF_OBJECT_H__
 
 class CSceneObject;

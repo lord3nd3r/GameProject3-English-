@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___MemObjectPool.h */
-﻿#ifndef __OBJECT_POOL_H__
+#ifndef __OBJECT_POOL_H__
 #define __OBJECT_POOL_H__
 
 template<typename T>

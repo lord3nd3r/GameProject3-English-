@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___StaticData___StaticData.h */
-﻿#ifndef __TYPE_DATA_PARSER_H__
+#ifndef __TYPE_DATA_PARSER_H__
 #define __TYPE_DATA_PARSER_H__
 #include "CppSQLite3.h"
 #include "StaticStruct.h"

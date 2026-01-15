@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBMsgHandler.h */
-﻿#ifndef _DB_MSG_HANDLER_H_
+#ifndef _DB_MSG_HANDLER_H_
 #define _DB_MSG_HANDLER_H_
 #include "DBManager.h"
 #include "LockFreeQueue.h"

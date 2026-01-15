@@ -1,4 +1,4 @@
-﻿#ifndef __CONFIG_DEFINE_H__
+#ifndef __CONFIG_DEFINE_H__
 #define __CONFIG_DEFINE_H__
 
 enum ETaskEvent

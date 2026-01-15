@@ -1,4 +1,4 @@
-﻿#ifndef __BAG_MODULE_H__
+#ifndef __BAG_MODULE_H__
 #define __BAG_MODULE_H__
 
 #include "ModuleBase.h"

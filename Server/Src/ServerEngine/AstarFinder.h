@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___AstarFinder.h */
-﻿#ifndef __ASTAR_FINDER_H__
+#ifndef __ASTAR_FINDER_H__
 #define __ASTAR_FINDER_H__
 
 #define TILESIZE 1			// change this also to reflect tile size. 64x64.

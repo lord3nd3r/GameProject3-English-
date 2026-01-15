@@ -1,4 +1,4 @@
-﻿#ifndef __DATA_MODULE_POOL_H__
+#ifndef __DATA_MODULE_POOL_H__
 #define __DATA_MODULE_POOL_H__
 
 

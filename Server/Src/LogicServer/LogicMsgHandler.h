@@ -1,4 +1,4 @@
-﻿#ifndef _LOGIC_MSG_HANDLER_H_
+#ifndef _LOGIC_MSG_HANDLER_H_
 #define _LOGIC_MSG_HANDLER_H_
 
 #include "GameSvrMgr.h"

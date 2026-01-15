@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_City.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "SceneLogic_City.h"
 #include "../GameObject/SceneObject.h"
 #include "../Scene.h"

@@ -4,7 +4,7 @@ CC_INCLUDE=-I/usr/include
 MY_INCLUDE=-I$(PWD) \
 		-I../ServerEngine \
 		-I../PublicData \
-		-I../../Common 
+		-I../../Common -I../../Common/protobuf/src 
 					 
 CC_LIB=-L/usr/lib \
 	-L/lib \

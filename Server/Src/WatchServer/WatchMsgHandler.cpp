@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___WatchServer___WatchMsgHandler.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 
 #include "WatchMsgHandler.h"
 #include "GameService.h"

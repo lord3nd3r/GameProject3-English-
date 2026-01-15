@@ -1,4 +1,4 @@
-﻿#ifndef __PLATFORM_H__
+#ifndef __PLATFORM_H__
 #define __PLATFORM_H__
 
 #include <errno.h>

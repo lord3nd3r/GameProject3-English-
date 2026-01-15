@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___WinCondition.h */
-﻿#ifndef __BATTLE_RESULT_H__
+#ifndef __BATTLE_RESULT_H__
 #define __BATTLE_RESULT_H__
 #include "../../ServerData/ServerStruct.h"
 #include "CommonMath.h"

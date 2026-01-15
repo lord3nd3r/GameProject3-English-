@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___RoleModule.h */
-﻿#ifndef __ROLE_MODULE_H__
+#ifndef __ROLE_MODULE_H__
 #define __ROLE_MODULE_H__
 #include "ModuleBase.h"
 

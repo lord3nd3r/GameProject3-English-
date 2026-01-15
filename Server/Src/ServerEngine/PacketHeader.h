@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___PacketHeader.h */
-﻿#ifndef __PACKET__HEADER_H__
+#ifndef __PACKET__HEADER_H__
 #define __PACKET__HEADER_H__
 
 #pragma  pack(push)

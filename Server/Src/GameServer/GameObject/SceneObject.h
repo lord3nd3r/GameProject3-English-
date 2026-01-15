@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___SceneObject.h */
-﻿#ifndef _SCENE_OBJECT_H_
+#ifndef _SCENE_OBJECT_H_
 #define _SCENE_OBJECT_H_
 #include "../Message/Msg_Move.pb.h"
 #include "../Message/Msg_Game.pb.h"

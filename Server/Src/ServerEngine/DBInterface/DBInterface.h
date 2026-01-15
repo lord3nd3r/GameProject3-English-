@@ -1,4 +1,4 @@
-﻿#ifndef __DB_INTERFACE_H__
+#ifndef __DB_INTERFACE_H__
 #define __DB_INTERFACE_H__
 
 class CDBStoredProcedure;

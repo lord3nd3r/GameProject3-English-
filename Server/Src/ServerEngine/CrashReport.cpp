@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CrashReport.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 
 #ifdef WIN32
 #pragma warning(disable: 4996)

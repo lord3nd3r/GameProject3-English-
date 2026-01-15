@@ -1,4 +1,4 @@
-﻿#ifndef _CENTER_MSG_HANDLER_H_
+#ifndef _CENTER_MSG_HANDLER_H_
 #define _CENTER_MSG_HANDLER_H_
 
 class CCenterMsgHandler

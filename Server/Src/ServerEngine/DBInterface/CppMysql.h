@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___CppMysql.h */
-﻿#ifndef __MYSQL_HELPER_H__
+#ifndef __MYSQL_HELPER_H__
 #define __MYSQL_HELPER_H__
 
 #include "mysql.h"

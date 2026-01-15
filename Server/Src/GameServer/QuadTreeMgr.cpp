@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___QuadTreeMgr.cpp */
-﻿/****************************************************
+/****************************************************
 [TRANSLATED][TRANSLATED]：QuadTreeManager.cpp
 [TRANSLATED][TRANSLATED]：ylmbtm@163.com
 [TRANSLATED][TRANSLATED]：2025/03/27 11:19:18

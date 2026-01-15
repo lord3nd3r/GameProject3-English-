@@ -1,4 +1,4 @@
-﻿#ifndef __TASK_MODULE_H__
+#ifndef __TASK_MODULE_H__
 #define __TASK_MODULE_H__
 #include "ModuleBase.h"
 #include "../ServerData/TaskData.h"

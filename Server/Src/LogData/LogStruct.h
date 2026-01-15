@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogData___LogStruct.h */
-﻿#ifndef __LOG_STRUCT_H__
+#ifndef __LOG_STRUCT_H__
 #define __LOG_STRUCT_H__
 
 

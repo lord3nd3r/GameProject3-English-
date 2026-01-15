@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LoginClientMgr.h */
-﻿#ifndef __LOGIN_CLIENT_MGR_H__
+#ifndef __LOGIN_CLIENT_MGR_H__
 #define __LOGIN_CLIENT_MGR_H__
 #include "AVLTree.h"
 

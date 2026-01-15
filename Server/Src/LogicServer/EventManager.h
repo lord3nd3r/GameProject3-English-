@@ -1,4 +1,4 @@
-﻿#ifndef __EVENT_MANAGER_H__
+#ifndef __EVENT_MANAGER_H__
 #define __EVENT_MANAGER_H__
 
 #include "MsgHandlerManager.h"

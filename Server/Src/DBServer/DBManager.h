@@ -1,4 +1,4 @@
-﻿#ifndef __DB_PROC_MANAGER__
+#ifndef __DB_PROC_MANAGER__
 #define __DB_PROC_MANAGER__
 #include "../Message/Msg_LoginDBData.pb.h"
 #include "../Message/Msg_Game.pb.h"

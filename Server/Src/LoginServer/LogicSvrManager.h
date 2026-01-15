@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LogicSvrManager.h */
-﻿#ifndef _LOGIC_SEVER_MANAGERH_
+#ifndef _LOGIC_SEVER_MANAGERH_
 #define _LOGIC_SEVER_MANAGERH_
 #include "DBInterface/CppMysql.h"
 #include "LockFreeQueue.h"

@@ -1,4 +1,4 @@
-﻿#ifndef __MAIL_MODULE_H__
+#ifndef __MAIL_MODULE_H__
 #define __MAIL_MODULE_H__
 #include "ModuleBase.h"
 #include "MailData.h"

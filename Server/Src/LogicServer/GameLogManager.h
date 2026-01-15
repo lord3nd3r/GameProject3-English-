@@ -1,4 +1,4 @@
-﻿#ifndef __GAME_LOG_MANAGER_H__
+#ifndef __GAME_LOG_MANAGER_H__
 #define __GAME_LOG_MANAGER_H__
 
 #include "../Message/Msg_ID.pb.h"

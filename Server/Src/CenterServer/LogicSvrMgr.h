@@ -1,4 +1,4 @@
-﻿#ifndef _LOGIC_SEVER_MANAGERH_CENTER_
+#ifndef _LOGIC_SEVER_MANAGERH_CENTER_
 #define _LOGIC_SEVER_MANAGERH_CENTER_
 
 struct LogicServerNode

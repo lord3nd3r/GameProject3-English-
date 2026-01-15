@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "CommonTime.h"
 
 INT64 g_TimeAdd = 0;
@@ -280,8 +280,10 @@ INT32 CommonFunc::DiffDays(UINT64 uTimeSrc, UINT64 uTimeDest)
         std::swap(uTimeSrc, uTimeDest);
     }
 
-    tm tm1 = *localtime(&(time_t)uTimeSrc);
-    tm tm2 = *localtime(&(time_t)uTimeDest);
+    time_t tSrc = (time_t)uTimeSrc;
+    tm tm1 = *localtime(&tSrc);
+    time_t tDest = (time_t)uTimeDest;
+    tm tm2 = *localtime(&tDest);
 
     uTimeSrc = tm1.tm_isdst > 0 ? uTimeSrc = uTimeSrc - 3600 : uTimeSrc;
     uTimeDest = tm2.tm_isdst > 0 ? uTimeDest = uTimeDest + 3600 : uTimeDest;

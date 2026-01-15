@@ -1,4 +1,4 @@
-﻿#ifndef __GROUP_MAIL_MANAGER_H__
+#ifndef __GROUP_MAIL_MANAGER_H__
 #define __GROUP_MAIL_MANAGER_H__
 #include "MailData.h"
 #include "DBInterface/CppMysql.h"

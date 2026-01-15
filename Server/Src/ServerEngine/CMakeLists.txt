@@ -1,4 +1,4 @@
-/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CMakeLists.txt */
+# NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CMakeLists.txt
 cmake_minimum_required(VERSION 2.8.9)
 project(ServerEngine)
 SET(PROJECT_ROOT_PATH ".")

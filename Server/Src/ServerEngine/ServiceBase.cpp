@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___ServiceBase.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "SpinLock.h"
 #include "ServiceBase.h"
 #include "NetManager.h"

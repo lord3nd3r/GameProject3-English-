@@ -1,4 +1,4 @@
-﻿#ifndef __WEB_COMMAND_MGR_H__
+#ifndef __WEB_COMMAND_MGR_H__
 #define __WEB_COMMAND_MGR_H__
 
 #include "WebActionDef.h"

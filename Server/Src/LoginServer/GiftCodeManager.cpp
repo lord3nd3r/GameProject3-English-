@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___GiftCodeManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "GiftCodeManager.h"
 #include "../Message/Msg_RetCode.pb.h"
 #include "../Message/Msg_ID.pb.h"

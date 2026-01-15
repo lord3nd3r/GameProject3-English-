@@ -1,4 +1,4 @@
-﻿#ifndef _SCENELOGIC_BASE_H_
+#ifndef _SCENELOGIC_BASE_H_
 #define _SCENELOGIC_BASE_H_
 
 #include "RapidXml.h"

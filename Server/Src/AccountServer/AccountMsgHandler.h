@@ -1,4 +1,4 @@
-﻿#ifndef _ACCOUNT_MSG_HANDLER_H_
+#ifndef _ACCOUNT_MSG_HANDLER_H_
 #define _ACCOUNT_MSG_HANDLER_H_
 
 #include "AccountManager.h"

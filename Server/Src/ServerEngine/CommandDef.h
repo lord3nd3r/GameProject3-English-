@@ -1,4 +1,4 @@
-﻿#ifndef __MSG_DEFINE_H__
+#ifndef __MSG_DEFINE_H__
 #define __MSG_DEFINE_H__
 
 #define BEGIN_PROCESS_MESSAGE(ClassName) \

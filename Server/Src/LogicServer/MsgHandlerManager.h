@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___MsgHandlerManager.h */
-﻿#ifndef _MSG_HANDLER_MANAGER_H__
+#ifndef _MSG_HANDLER_MANAGER_H__
 #define _MSG_HANDLER_MANAGER_H__
 
 class CHandlerBase

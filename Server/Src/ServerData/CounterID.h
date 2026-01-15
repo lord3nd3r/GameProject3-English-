@@ -1,4 +1,4 @@
-﻿#ifndef __SERVER_COUNTER_ID_H__
+#ifndef __SERVER_COUNTER_ID_H__
 #define __SERVER_COUNTER_ID_H__
 
 

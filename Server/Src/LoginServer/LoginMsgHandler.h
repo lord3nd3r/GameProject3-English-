@@ -1,4 +1,4 @@
-﻿#ifndef _LOGIN_MSG_HANDLER_H_
+#ifndef _LOGIN_MSG_HANDLER_H_
 #define _LOGIN_MSG_HANDLER_H_
 
 #include "LogicSvrManager.h"

@@ -1,8 +1,8 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SharedMemory.cpp */
-﻿+﻿/****************************************************
-+[TRANSLATED][TRANSLATED]：SharedMemory.cpp
-+[TRANSLATED][TRANSLATED]：ylmbtm@163.com
-+[TRANSLATED][TRANSLATED]：2025/03/27 11:19:18
+/****************************************************
+[TRANSLATED] SharedMemory.cpp
+[TRANSLATED] ylmbtm@163.com
+[TRANSLATED] 2025/03/27 11:19:18
 +[TRANSLATED][TRANSLATED]：[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 +*****************************************************/
 #include "stdafx.h"

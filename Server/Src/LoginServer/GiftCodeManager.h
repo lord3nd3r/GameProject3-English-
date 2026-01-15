@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___GiftCodeManager.h */
-﻿#ifndef _GIFT_CODE_MANAGER_H_
+#ifndef _GIFT_CODE_MANAGER_H_
 #define _GIFT_CODE_MANAGER_H_
 
 #include "DBInterface/CppMysql.h"

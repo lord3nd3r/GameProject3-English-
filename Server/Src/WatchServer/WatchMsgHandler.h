@@ -1,4 +1,4 @@
-﻿#ifndef _WATCH_MSG_HANDLER_H_
+#ifndef _WATCH_MSG_HANDLER_H_
 #define _WATCH_MSG_HANDLER_H_
 
 #include "RapidXml.h"

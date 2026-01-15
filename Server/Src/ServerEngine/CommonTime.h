@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonTime.h */
-﻿#ifndef __COMMON_TIME__
+#ifndef __COMMON_TIME__
 #define __COMMON_TIME__
 
 namespace CommonFunc

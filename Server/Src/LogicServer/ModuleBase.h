@@ -1,4 +1,4 @@
-﻿#ifndef __CMODULE_BASE_H__
+#ifndef __CMODULE_BASE_H__
 #define __CMODULE_BASE_H__
 #include "AVLTree.h"
 #include "Position.h"

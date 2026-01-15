@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SharedMemory.h */
-﻿#ifndef __SHARE_MEMORY_H__
+#ifndef __SHARE_MEMORY_H__
 #define __SHARE_MEMORY_H__
 #include "DBInterface/DBInterface.h"
 

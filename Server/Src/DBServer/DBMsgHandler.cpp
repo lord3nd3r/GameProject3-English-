@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBMsgHandler.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "DBMsgHandler.h"
 #include "PacketHeader.h"
 #include "GameService.h"

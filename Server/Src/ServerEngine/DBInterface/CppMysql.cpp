@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___CppMysql.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "CppMysql.h"
 #include <stdlib.h>
 #include <errmsg.h>

@@ -1,4 +1,4 @@
-﻿#ifndef _SCENE_XML_MANAGER_H_
+#ifndef _SCENE_XML_MANAGER_H_
 #define _SCENE_XML_MANAGER_H_
 
 #include "RapidXml.h"

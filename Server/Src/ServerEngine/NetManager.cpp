@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___NetManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "NetManager.h"
 #include "Connection.h"
 #include "CommonSocket.h"
@@ -476,7 +476,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                     CConnection* pConnection = AssociateCompletePort(hClientSocket, FALSE);
                     if (pConnection != NULL)
                     {
-                        pConnection->m_dwIpAddr = client_addr.sin_addr.s_addr;
+                        pConnection->m_nIpAddr = client_addr.sin_addr.s_addr;
 
                         pConnection->SetConnectStatus(ENS_CONNECTED);
 

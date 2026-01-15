@@ -1,4 +1,4 @@
-﻿// stdafx.cpp : Source file that includes just the standard includes
+// stdafx.cpp : Source file that includes just the standard includes
 // TestServer.pch will be used as the precompiled header
 // stdafx.obj will contain the precompiled type information
 

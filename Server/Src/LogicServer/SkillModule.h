@@ -1,4 +1,4 @@
-﻿#ifndef __SKILL_MODULE_H__
+#ifndef __SKILL_MODULE_H__
 #define __SKILL_MODULE_H__
 #include "ModuleBase.h"
 #include "../ServerData/SkillData.h"

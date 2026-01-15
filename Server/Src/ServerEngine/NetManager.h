@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___NetManager.h */
-﻿#ifndef _NET_MANAGER_H_
+#ifndef _NET_MANAGER_H_
 #define _NET_MANAGER_H_
 #include "IBufferHandler.h"
 #include "Connection.h"

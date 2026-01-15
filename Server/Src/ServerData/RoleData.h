@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___RoleData.h */
-﻿#ifndef __ROLE_DATA_OBJECT_H__
+#ifndef __ROLE_DATA_OBJECT_H__
 #define __ROLE_DATA_OBJECT_H__
 #include "DBInterface/DBStoredProc.h"
 #include "DBInterface/DBInterface.h"

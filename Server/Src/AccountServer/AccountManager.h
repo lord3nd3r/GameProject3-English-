@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___AccountServer___AccountManager.h */
-﻿#ifndef __DB_ACCOUNT_OBJECT_H__
+#ifndef __DB_ACCOUNT_OBJECT_H__
 #define __DB_ACCOUNT_OBJECT_H__
 #include "AVLTree.h"
 #include "DBInterface/CppMysql.h"

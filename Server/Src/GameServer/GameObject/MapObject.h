@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___MapObject.h */
-﻿#ifndef __MAP_OBJECT_H__
+#ifndef __MAP_OBJECT_H__
 #define __MAP_OBJECT_H__
 
 class CGrid;

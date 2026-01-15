@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___SealData.h */
-﻿#ifndef __SEAL_DATA_OBJECT_H__
+#ifndef __SEAL_DATA_OBJECT_H__
 #define __SEAL_DATA_OBJECT_H__
 
 #include "DBInterface/DBInterface.h"

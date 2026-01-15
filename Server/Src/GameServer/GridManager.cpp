@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GridManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "GridManager.h"
 
 CGridManager::CGridManager(void)

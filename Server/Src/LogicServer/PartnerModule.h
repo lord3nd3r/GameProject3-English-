@@ -1,4 +1,4 @@
-﻿#ifndef __PARTNER_MODULE_H__
+#ifndef __PARTNER_MODULE_H__
 #define __PARTNER_MODULE_H__
 #include "ModuleBase.h"
 #include "DBInterface/DBStoredProc.h"

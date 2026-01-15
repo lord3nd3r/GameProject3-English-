@@ -1,4 +1,4 @@
-﻿#ifndef _SCENELOGIC_TEAM_H_
+#ifndef _SCENELOGIC_TEAM_H_
 #define _SCENELOGIC_TEAM_H_
 #include "SceneLogic_Base.h"
 

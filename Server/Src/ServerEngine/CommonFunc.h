@@ -1,4 +1,4 @@
-﻿#ifndef __COMMON_FUNCTION__
+#ifndef __COMMON_FUNCTION__
 #define __COMMON_FUNCTION__
 
 #define GET_BIT(X,Y) (((X) >> (Y-1)) & 1)

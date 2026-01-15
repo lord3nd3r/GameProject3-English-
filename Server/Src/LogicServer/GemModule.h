@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GemModule.h */
-﻿#ifndef __GEM_MODULE_H__
+#ifndef __GEM_MODULE_H__
 #define __GEM_MODULE_H__
 #include "ModuleBase.h"
 #include "../ServerData/ServerDefine.h"

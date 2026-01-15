@@ -1,8 +1,9 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___AsyncMysql.h */
-﻿#ifndef __MYSQL_ASYNC_QUERY_H__
+#ifndef __MYSQL_ASYNC_QUERY_H__
 #define __MYSQL_ASYNC_QUERY_H__
 
 #include "CppMysql.h"
+#include <functional>
 #include "../LockFreeQueue.h"
 
 class AsyncQueryParam;

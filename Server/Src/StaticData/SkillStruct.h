@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___StaticData___SkillStruct.h */
-﻿#ifndef __SKILL_STRUCT_H__
+#ifndef __SKILL_STRUCT_H__
 #define __SKILL_STRUCT_H__
 
 #include "../Message/Game_Define.pb.h"

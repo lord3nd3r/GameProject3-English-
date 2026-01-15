@@ -1,4 +1,4 @@
-﻿#ifndef __FRIEND_MODULE_H__
+#ifndef __FRIEND_MODULE_H__
 #define __FRIEND_MODULE_H__
 #include "ModuleBase.h"
 #include "FriendData.h"

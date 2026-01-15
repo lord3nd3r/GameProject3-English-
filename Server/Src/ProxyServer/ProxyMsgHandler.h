@@ -1,4 +1,4 @@
-﻿#ifndef _PROXY_SERVER_MSG_HANDLER_H_
+#ifndef _PROXY_SERVER_MSG_HANDLER_H_
 #define _PROXY_SERVER_MSG_HANDLER_H_
 
 class  CProxyPlayer;

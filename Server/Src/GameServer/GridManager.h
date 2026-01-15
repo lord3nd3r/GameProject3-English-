@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GridManager.h */
-﻿#ifndef __GRID_MANAGER_H__
+#ifndef __GRID_MANAGER_H__
 #define __GRID_MANAGER_H__
 #include "Grid.h"
 

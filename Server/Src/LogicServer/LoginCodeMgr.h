@@ -1,4 +1,4 @@
-﻿#ifndef __LOGIN_CODE_MANAGER_H__
+#ifndef __LOGIN_CODE_MANAGER_H__
 #define __LOGIN_CODE_MANAGER_H__
 #include "AVLTree.h"
 

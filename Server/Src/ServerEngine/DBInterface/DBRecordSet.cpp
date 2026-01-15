@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "DBRecordSet.h"
 
 CDBRecordSet::CDBRecordSet( void )

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_libuv___NetManager.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "NetManager.h"
 #include "Connection.h"
 #include "../ServerEngine/CommonConvert.h"

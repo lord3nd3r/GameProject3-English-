@@ -1,4 +1,4 @@
-﻿#ifndef __COPY_MODULE_H__
+#ifndef __COPY_MODULE_H__
 #define __COPY_MODULE_H__
 #include "ModuleBase.h"
 

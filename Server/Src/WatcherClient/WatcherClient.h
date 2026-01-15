@@ -1,4 +1,4 @@
-﻿#ifndef _WATCHER_CLIENT_H_
+#ifndef _WATCHER_CLIENT_H_
 #define _WATCHER_CLIENT_H_
 
 class CWatcherClient

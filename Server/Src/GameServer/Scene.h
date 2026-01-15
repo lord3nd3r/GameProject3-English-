@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___Scene.h */
-﻿#ifndef _SCENE_H_
+#ifndef _SCENE_H_
 #define _SCENE_H_
 #include "GameObject/SceneObject.h"
 #include "SceneLogic/SceneLogic_Base.h"

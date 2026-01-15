@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___EquipData.h */
-﻿#ifndef __EQUIP_DATA_OBJECT_H__
+#ifndef __EQUIP_DATA_OBJECT_H__
 #define __EQUIP_DATA_OBJECT_H__
 
 #include "DBInterface/DBStoredProc.h"

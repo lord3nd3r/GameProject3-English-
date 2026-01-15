@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___SkillData.h */
-﻿#ifndef __SKILL_DATA_OBJECT_H__
+#ifndef __SKILL_DATA_OBJECT_H__
 #define __SKILL_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 #include "DBInterface/DBStoredProc.h"

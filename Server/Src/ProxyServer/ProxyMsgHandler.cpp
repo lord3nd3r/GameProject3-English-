@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ProxyServer___ProxyMsgHandler.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "ProxyMsgHandler.h"
 #include "PacketHeader.h"
 #include "GameService.h"

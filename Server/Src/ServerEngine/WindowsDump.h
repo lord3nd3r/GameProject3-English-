@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___WindowsDump.h */
-﻿#ifndef __WINDOWS_DUMP_H__
+#ifndef __WINDOWS_DUMP_H__
 #define __WINDOWS_DUMP_H__
 
 #ifdef WIN32

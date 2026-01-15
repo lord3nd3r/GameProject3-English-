@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___GlobalData.h */
-﻿#ifndef __GLOBAL_DATA_OBJECT_H__
+#ifndef __GLOBAL_DATA_OBJECT_H__
 #define __GLOBAL_DATA_OBJECT_H__
 #include "DBInterface/DBStoredProc.h"
 #include "DBInterface/DBInterface.h"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___StoreModule.h */
-﻿#ifndef __STORE_MODULE_H__
+#ifndef __STORE_MODULE_H__
 #define __STORE_MODULE_H__
 #include "ModuleBase.h"
 struct StoreDataObject;

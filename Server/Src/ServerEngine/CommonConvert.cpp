@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonConvert.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "CommonConvert.h"
 
 INT32 CommonConvert::StringToInt(const char* pStr)

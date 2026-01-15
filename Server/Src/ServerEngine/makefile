@@ -6,9 +6,9 @@ CC_INCLUDE=-I/usr/include \
 DEFS = -DSERVER_ENGINE
 	 
 MY_INCLUDE=-I$(PWD) \
-		-I../../Common \
-		-I../../Common/Mysql \
-		-I../../Common/Lua 
+		-I../../Common -I../../Common/protobuf/src \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Mysql \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Lua 
 					 
 CC_LIB=-L/usr/lib \
 	-L/lib \

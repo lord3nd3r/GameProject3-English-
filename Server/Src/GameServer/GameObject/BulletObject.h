@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BulletObject.h */
-﻿#ifndef __BULLET_OBJECT_H__
+#ifndef __BULLET_OBJECT_H__
 #define __BULLET_OBJECT_H__
 #include "../Message/Msg_Move.pb.h"
 #include "SkillStruct.h"

@@ -5,8 +5,8 @@ MY_INCLUDE=-I$(PWD) \
 		-I../ServerEngine \
 		-I../ServerData \
 		-I../WatcherClient \
-		-I../../Common \
-		-I../../Common/Mysql 
+		-I../../Common -I../../Common/protobuf/src \
+		-I../../Common -I../../Common/protobuf/src -I../../Common/Mysql 
 					 
 CC_LIB=-L/usr/lib \
 		-L/lib \

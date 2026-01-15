@@ -1,7 +1,9 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SpinLock.h */
-﻿#ifndef __SPIN_LOCK_h__
+#ifndef __SPIN_LOCK_h__
 #define __SPIN_LOCK_h__
 #include <atomic>
+#include <immintrin.h>
+#include <thread>
 
 class CSpinLock
 {

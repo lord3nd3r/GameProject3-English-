@@ -1,4 +1,4 @@
-﻿#ifndef __WEB_ACTION_DEFINE_H__
+#ifndef __WEB_ACTION_DEFINE_H__
 #define __WEB_ACTION_DEFINE_H__
 
 enum EWebAction

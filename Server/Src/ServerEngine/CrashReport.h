@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CrashReport.h */
-﻿#ifndef _CRASH_REPORT_H_
+#ifndef _CRASH_REPORT_H_
 #define _CRASH_REPORT_H_
 
 void NewInvalidParamHandler(const wchar_t* expression,

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___QuadTreeMgr.h */
-﻿#ifndef __QUAD_TREE_MANAGER_H__
+#ifndef __QUAD_TREE_MANAGER_H__
 #define __QUAD_TREE_MANAGER_H__
 
 #include "CommonMath.h"

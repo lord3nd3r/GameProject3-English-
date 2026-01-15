@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___BagData.h */
-﻿#ifndef __BAG_DATA_OBJECT_H__
+#ifndef __BAG_DATA_OBJECT_H__
 #define __BAG_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 struct BagDataObject : public ShareObject

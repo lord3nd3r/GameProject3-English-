@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonSocket.h */
-﻿#ifndef __COMMON_SOCKET__
+#ifndef __COMMON_SOCKET__
 #define __COMMON_SOCKET__
 
 #define SOCKET_ERROR        (-1)

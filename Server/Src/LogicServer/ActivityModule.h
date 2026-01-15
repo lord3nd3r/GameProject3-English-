@@ -1,4 +1,4 @@
-﻿#ifndef __ACTIVITY_MODULE_H__
+#ifndef __ACTIVITY_MODULE_H__
 #define __ACTIVITY_MODULE_H__
 #include "ModuleBase.h"
 struct ActivityDataObject;

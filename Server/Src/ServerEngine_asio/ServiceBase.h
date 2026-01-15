@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_asio___ServiceBase.h */
-﻿#ifndef __SERVICE_BASE_H__
+#ifndef __SERVICE_BASE_H__
 #define __SERVICE_BASE_H__
 
 #include "IBufferHandler.h"

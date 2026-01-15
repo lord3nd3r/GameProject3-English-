@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BulletObject.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "CommonMath.h"
 #include "BulletObject.h"
 #include "SceneObject.h"

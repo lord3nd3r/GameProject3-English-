@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___Connection.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "Connection.h"
 #include "DataBuffer.h"
 #include "CommonSocket.h"

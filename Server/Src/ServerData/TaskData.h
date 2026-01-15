@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___TaskData.h */
-﻿#ifndef __TASK_DATA_OBJECT_H__
+#ifndef __TASK_DATA_OBJECT_H__
 #define __TASK_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 #include "DBInterface/DBStoredProc.h"

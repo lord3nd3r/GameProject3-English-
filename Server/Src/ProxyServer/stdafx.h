@@ -1,4 +1,4 @@
-﻿// stdafx.h : Include file for standard system include files,
+// stdafx.h : Include file for standard system include files,
 // or frequently used but infrequently changed
 // Project specific include files
 //

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___TeamCopyMgr.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "TeamCopyMgr.h"
 #include "GameService.h"
 #include "PacketHeader.h"

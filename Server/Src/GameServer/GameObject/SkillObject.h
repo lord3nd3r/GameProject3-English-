@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___SkillObject.h */
-﻿#ifndef __SKILL_OBJECT_H__
+#ifndef __SKILL_OBJECT_H__
 #define __SKILL_OBJECT_H__
 
 #include "SkillStruct.h"

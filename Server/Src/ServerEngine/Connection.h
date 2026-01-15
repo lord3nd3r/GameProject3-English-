@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___Connection.h */
-﻿#ifndef _CONNECTION_H_
+#ifndef _CONNECTION_H_
 #define _CONNECTION_H_
 
 #include "IBufferHandler.h"

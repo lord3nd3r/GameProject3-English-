@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___GemData.h */
-﻿#ifndef __GEM_DATA_OBJECT_H__
+#ifndef __GEM_DATA_OBJECT_H__
 #define __GEM_DATA_OBJECT_H__
 
 #include "DBInterface/DBStoredProc.h"

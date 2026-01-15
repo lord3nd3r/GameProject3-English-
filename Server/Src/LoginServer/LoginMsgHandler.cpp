@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LoginMsgHandler.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "LoginMsgHandler.h"
 #include "GameService.h"
 #include "PacketHeader.h"

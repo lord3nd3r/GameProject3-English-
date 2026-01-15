@@ -1,4 +1,4 @@
-﻿#ifndef __SEAL_MANAGER_H__
+#ifndef __SEAL_MANAGER_H__
 #define __SEAL_MANAGER_H__
 
 #include "HttpParameter.h"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___PetData.h */
-﻿#ifndef __PET_DATA_OBJECT_H__
+#ifndef __PET_DATA_OBJECT_H__
 #define __PET_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 #include "DBInterface/DBStoredProc.h"

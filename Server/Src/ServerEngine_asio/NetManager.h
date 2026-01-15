@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_asio___NetManager.h */
-﻿#ifndef _NET_MANAGER_H_
+#ifndef _NET_MANAGER_H_
 #define _NET_MANAGER_H_
 #include "IBufferHandler.h"
 #include "boost/system/error_code.hpp"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___MonsterCreator.h */
-﻿#ifndef _GAME_MONSTER_CREATOR_H_
+#ifndef _GAME_MONSTER_CREATOR_H_
 #define _GAME_MONSTER_CREATOR_H_
 
 class CScene;

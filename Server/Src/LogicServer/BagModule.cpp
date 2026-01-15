@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___BagModule.cpp */
-﻿#include "stdafx.h"
+#include "stdafx.h"
 #include "BagModule.h"
 #include "DataPool.h"
 #include "StaticStruct.h"

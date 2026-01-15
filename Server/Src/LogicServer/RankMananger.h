@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___RankMananger.h */
-﻿#ifndef __RANK_MANAGER_H__
+#ifndef __RANK_MANAGER_H__
 #define __RANK_MANAGER_H__
 
 #include "DBInterface/CppMysql.h"

@@ -1,5 +1,5 @@
 /* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PlayerObject.h */
-﻿#ifndef __WS_PLAYER_OBJECT_H__
+#ifndef __WS_PLAYER_OBJECT_H__
 #define __WS_PLAYER_OBJECT_H__
 #include "AVLTree.h"
 #include "Position.h"

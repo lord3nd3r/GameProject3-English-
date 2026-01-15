@@ -1,4 +1,4 @@
-﻿#ifndef __ACTIVITY_MANAGER_H__
+#ifndef __ACTIVITY_MANAGER_H__
 #define __ACTIVITY_MANAGER_H__
 
 #include "DBInterface/CppMysql.h"

@@ -1,4 +1,4 @@
-﻿#ifndef _DB_WRITER_MANAGER_H_
+#ifndef _DB_WRITER_MANAGER_H_
 #define _DB_WRITER_MANAGER_H_
 
 #include "DBInterface/DBConnection.h"
