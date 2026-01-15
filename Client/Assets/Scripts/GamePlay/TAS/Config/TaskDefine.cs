@@ -68,7 +68,7 @@ namespace CFG
         TYPE_CAN_ACCEPT           = 4,	// 可以接受的任务(绿色叹号)
         TYPE_CAN_ACCEPT_REPEAT    = 5,	// 可以接受的重复任务(蓝色叹号)
         TYPE_NOT_ACCEPT           = 6,	// 没有达到接受条件的任务(红色叹号)
-        TYPE_LOW_LEVEL            = 7,	// 未做过的低等级任务
+        TYPE_LOW_LEVEL            = 7,	// 未做过的低Level任务
         TYPE_INTERACTIVE          = 8,	// 多环节交互
     }
 

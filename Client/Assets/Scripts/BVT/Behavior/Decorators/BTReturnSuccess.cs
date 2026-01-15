@@ -4,8 +4,8 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "成功节点")]
-    [NodeDesc("无论子节点返回成功或失败，均返回成功")]
+    [NodeAttribute(Type = "装饰节点", Label = "Success节点")]
+    [NodeDesc("无论子节点返回Success或Failure，均返回Success")]
     [NodeName("05CBF2", "ReturnFailure")]
     public class BTReturnSuccess : BTDecorator
     {

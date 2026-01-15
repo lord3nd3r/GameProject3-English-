@@ -35,7 +35,7 @@ typedef struct St_ChangeStatus
             UINT32  bActor  : 1;    // 角色
             UINT32  bAction : 1;    // 行动状态
             UINT32  bBuff   : 1;    // BUFF
-            UINT32  bLevel  : 1;    // 等级
+            UINT32  bLevel  : 1;    // Level
             UINT32  bControl: 1;    // 控制权
             UINT32  bCamp   : 1;    // 阵营
             UINT32  bMount  : 1;    // 坐骑

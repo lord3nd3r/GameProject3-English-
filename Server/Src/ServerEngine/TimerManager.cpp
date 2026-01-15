@@ -83,7 +83,7 @@ VOID TimerManager::UpdateTimer()
         BOOL bRet = TRUE;
         if(m_uCurTime >= pCurEvent->m_uFireTime)
         {
-            //避免每次启动服务器，之前的定时器都执行一遍
+            //避免每次Start server，之前的定时器都执行一遍
             if(m_uInitTime <= pCurEvent->m_uFireTime)
             {
                 bRet = OnTimerEvent(pCurEvent);

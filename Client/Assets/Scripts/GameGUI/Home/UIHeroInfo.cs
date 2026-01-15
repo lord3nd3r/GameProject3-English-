@@ -112,7 +112,7 @@ public class UIHeroInfo : GTWindow
         XCharacter role = GTGlobal.Main;
         DRoleLevel heroLevelDB = ReadCfgRoleLevel.GetDataById(role.Level);
         heroName.text = role.Name;
-        heroLevel.text = GTTools.Format("等级 {0}", role.Level);
+        heroLevel.text = GTTools.Format("Level {0}", role.Level);
         heroVIP.text = GTTools.Format("VIP {0}", role.VipLevel);
         heroExpNum.text = GTTools.Format("{0}/{1}", role.CurExp, heroLevelDB.RequireExp);
         heroExpBar.value = role.CurExp / (heroLevelDB.RequireExp * 1f);

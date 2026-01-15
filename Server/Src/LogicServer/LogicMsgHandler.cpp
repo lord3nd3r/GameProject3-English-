@@ -176,7 +176,7 @@ BOOL CLogicMsgHandler::OnMsgRoleCreateReq(NetPacket* pNetPacket)
     Req.ParsePartialFromArray(pNetPacket->m_pDataBuffer->GetData(), pNetPacket->m_pDataBuffer->GetBodyLenth());
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
     ERROR_RETURN_TRUE(pHeader->dwUserData != 0);
-    //检验名字是否可用
+    //检验Name是否可用
     ERROR_RETURN_TRUE(Req.accountid() != 0);
     ERROR_RETURN_TRUE(Req.carrer() != 0);
 

@@ -115,21 +115,21 @@ struct StBuffInfo
 
 struct StBulletInfo
 {
-    UINT32      BulletID    = 0;                //子弹ID
-    EBulletType BulletType  = EBT_FIXDIRECTION; //子弹类型
-    FLOAT       InitSpeed   = 0;                //初始速度
-    FLOAT       AccSpeed    = 0;                //加速度
-    ERangeType  RangeType   = ERT_CIRCLE;       //范围类型
-    FLOAT       RangeParams[5] = { 0 };         //范围参数
-    UINT32      LifeTime    = 0;                //生命期
-    UINT32      HitActionID = 0;                 //受击动作, 击退，击飞， 击倒
-    UINT32      HitEffect = 0;                   //受击特效
-    FLOAT       HitDistance = 0;                 //受击移动移动距离
+    UINT32      BulletID    = 0;                //Bullet ID
+    EBulletType BulletType  = EBT_FIXDIRECTION; //Bullet Type
+    FLOAT       InitSpeed   = 0;                //Initial Speed
+    FLOAT       AccSpeed    = 0;                //Acceleration
+    ERangeType  RangeType   = ERT_CIRCLE;       //Range Type
+    FLOAT       RangeParams[5] = { 0 };         //Range Parameters
+    UINT32      LifeTime    = 0;                //Life Time
+    UINT32      HitActionID = 0;                 //Hit Action, 击退，击飞， 击倒
+    UINT32      HitEffect = 0;                   //Hit Effect
+    FLOAT       HitDistance = 0;                 //Hit Move Distance
 };
 
 struct StBulletObject
 {
-    UINT32 BulletID;    //子弹ID
+    UINT32 BulletID;    //Bullet ID
     FLOAT  fAngle;       //角度
 };
 
@@ -142,45 +142,45 @@ struct StGoblinInfo
 
 struct StSkillEvent
 {
-    UINT64 TrigerTime = 0;                  //触发时间
-    UINT32 SelfBuffID = 0;                  //自己的BuffID
-    UINT32 TargetBuffID = 0;                //目标的BuffID
-    FLOAT  RangeParams[5] = {0};            //范围参数
-    ERangeType RangeType = ERT_OBJECTS;     //范围类型
+    UINT64 TrigerTime = 0;                  //Trigger Time
+    UINT32 SelfBuffID = 0;                  //Self Buff ID
+    UINT32 TargetBuffID = 0;                //Target Buff ID
+    FLOAT  RangeParams[5] = {0};            //Range Parameters
+    ERangeType RangeType = ERT_OBJECTS;     //Range Type
     UINT32 CenterType = 0;                  //中心点类型
-    std::vector<StBulletObject> vtBullets;  //子弹列表
-    std::vector<StGoblinInfo> vtGoblins;    //召唤的妖精列表
-    UINT32 HitActionID = 0;                 //受击动作, 击退，击飞， 击倒
-    UINT32 HitEffect = 0;                   //受击特效
-    FLOAT  HitDistance = 0;                 //受击移动移动距离
+    std::vector<StBulletObject> vtBullets;  //Bullet List
+    std::vector<StGoblinInfo> vtGoblins;    //Summoned goblins list
+    UINT32 HitActionID = 0;                 //Hit Action, 击退，击飞， 击倒
+    UINT32 HitEffect = 0;                   //Hit Effect
+    FLOAT  HitDistance = 0;                 //Hit Move Distance
 };
 
 struct StSkillInfo
 {
-    UINT32        SkillID;        //技能ID
-    UINT32        Level;          //技能等级
-    UINT32        SkillType;      //技能类型,1:物理伤害,2:法术伤害
-    EHitShipType  HitShipType;    //作用目标关系,
-    BOOL          HitMyself;      //目标是否包含自己
-    UINT32        CD;               //技能CD
-    UINT64        uDuration;      //技能持续总时间
-    INT32         HurtFix;        //固定伤害
-    INT32         HurtMuti;       //加成伤害
+    UINT32        SkillID;        //Skill ID
+    UINT32        Level;          //技能Level
+    UINT32        SkillType;      //Skill Type,1:物理伤害,2:法术伤害
+    EHitShipType  HitShipType;    //Target relation,
+    BOOL          HitMyself;      //HitMyself
+    UINT32        CD;               //Skill CD
+    UINT64        uDuration;      //Skill total duration
+    INT32         HurtFix;        //Fixed damage
+    INT32         HurtMuti;       //Bonus damage
 };
 
 
 struct StSkillEventInfo
 {
-    UINT32      nSkillID;                       //技能ID
-    UINT64      uDuration;                      //技能持续总时间
-    UINT32      dwCastType;                     //目标选择方式
-    std::vector<StSkillEvent> vtEvents;         //技能事件列表
+    UINT32      nSkillID;                       //Skill ID
+    UINT64      uDuration;                      //Skill total duration
+    UINT32      dwCastType;                     //Target selection policy
+    std::vector<StSkillEvent> vtEvents;         //Skill event list
 };
 
 struct StComboSkillInfo
 {
-    UINT32 SkillID;                     //主技能ID
-    std::vector<UINT32> vtComboSkill;   //连击技能
+    UINT32 SkillID;                     //主Skill ID
+    std::vector<UINT32> vtComboSkill;   //Combo skills
 };
 
 

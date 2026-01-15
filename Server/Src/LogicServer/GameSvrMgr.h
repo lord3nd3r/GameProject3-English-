@@ -114,13 +114,13 @@ public:
 public:
     BOOL    OnCloseConnect(INT32 nConnID);
     BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //响应副本服务器注册
-    BOOL    OnMsgCreateSceneAck(NetPacket* pNetPacket);  //响应创建副本成功
-    BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//响应角色数据传输成功
+    BOOL    OnMsgCreateSceneAck(NetPacket* pNetPacket);  //响应创建副本Success
+    BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//响应角色数据传输Success
     BOOL    OnMsgCopyReportReq(NetPacket* pNetPacket);
     BOOL    OnMsgBattleResultNty(NetPacket* pNetPacket);
     //*********************消息处理定义结束******************************
 public:
-    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //服务器ID-->副本服务器信息
+    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //服务器ID-->副本Server information
 
     std::map<UINT32, CityInfo>      m_mapCity;
 

@@ -111,7 +111,7 @@ public:
 public:
 	//对象的基本信息
 	//////////////////////////////////////////////////////////
-	std::string     m_strName;						//对象的名字
+	std::string     m_strName;						//对象的Name
 	UINT64          m_uGuid;						//实例ID, 对玩家是角色ID
 	UINT32          m_dwActorID;					//对象ID
 	UINT32          m_dwObjType;					//对象类型 玩家，宠物， NPC之类的
@@ -120,7 +120,7 @@ public:
 	Vector3D        m_Pos;							//位置
 	FLOAT           m_ft;							//对象坐标, 朝向
 	UINT32          m_dwStatus;				        //对象当前的状态
-	INT32           m_dwLevel;						//等级
+	INT32           m_dwLevel;						//Level
 	INT32           m_Propertys[PROPERTY_NUM];		//15个属性的数值
 	UINT32          m_Equips[EQUIP_MAX_NUM];		//角色装备
 	UINT32          m_dwMountID;                    //坐骑ID

@@ -119,7 +119,7 @@ public:
     /* 主要功能:得到主机信息 */
     const char* getHostInfo();
 
-    /* 主要功能:得到服务器信息 */
+    /* 主要功能:得到Server information */
     const char* GetServerInfo();
 
     const char* GetErrorMsg();
@@ -129,7 +129,7 @@ public:
     /*主要功能:得到服务器版本信息*/
     const unsigned long  GetDBVersion();
 
-    /*主要功能:得到 当前连接的默认字符集*/
+    /*主要功能:得到 当前连接的Default字符集*/
     const char*   getCharacterSetName();
 
     /* 建立新数据库 */

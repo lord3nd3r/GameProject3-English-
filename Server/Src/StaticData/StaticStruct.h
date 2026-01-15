@@ -56,7 +56,7 @@ struct StActorInfo
 	FLOAT   fRadius;
 	FLOAT	fDefSpeed;
 	INT32   dwType;
-	INT32   InitLevel; //初始等级
+	INT32   InitLevel; //初始Level
 	INT32   AiID;
 	INT32   Propertys[PROPERTY_NUM];
 
@@ -174,9 +174,9 @@ struct StItemInfo
 struct StFuncInfo
 {
 	UINT32 dwFuncID;	//! 功能ID
-	INT32 OpenLevel;	//! 开放等级
-	INT32 VipLevel;		//! VIP提前开放等级
-	INT32 Logic;		//! 逻辑关系 1:两者取其一; 2:两者都必须; 3: 满足VIP条件; 4:满足等级条件
+	INT32 OpenLevel;	//! 开放Level
+	INT32 VipLevel;		//! VIP提前开放Level
+	INT32 Logic;		//! 逻辑关系 1:两者取其一; 2:两者都必须; 3: 满足VIP条件; 4:满足Level条件
 };
 
 
@@ -226,7 +226,7 @@ struct StTaskInfo
 	UINT32 TaskType;	//! 任务类型(日常， 主线， 分支，公会)
 	UINT32 NeedCount;	//! 需要达成的条件数
 	UINT32 TaskEvent;	//! 任务事件
-	INT32  NeedLevel;	//! 开放等级
+	INT32  NeedLevel;	//! 开放Level
 	UINT32 AwardID;		//! 任务奖励ID
 };
 

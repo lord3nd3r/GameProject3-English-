@@ -8,11 +8,11 @@ struct RoleDataObject : public ShareObject
 	{
 		m_uRoleID		= 0;            //角色ID
 		m_uAccountID	= 0;            //账号ID
-		m_Level			= 0;            //等级
+		m_Level			= 0;            //Level
 		m_Exp			= 0;            //经验
 		m_nLangID		= 0;            //语言ID
 		m_u64Fight		= 0;            //战力
-		m_nVipLvl		= 0;            //VIP等级
+		m_nVipLvl		= 0;            //VIPLevel
 		m_nVipExp		= 0;            //VIP经验
 		m_CityCopyID	= 0;            //主城副本类型
 		m_bDelete       = FALSE;        //是否删除
@@ -28,13 +28,13 @@ struct RoleDataObject : public ShareObject
 	UINT64		m_uAccountID;           //账号ID
 	CHAR		m_szName[ROLE_NAME_LEN];//角色名
 	INT32		m_CarrerID;             //职业ID
-	INT32		m_Level;                //等级
+	INT32		m_Level;                //Level
 	INT64		m_Action[ACTION_NUM];   //所有的体力
 	INT64		m_Actime[ACTION_NUM];   //体力恢复时间
 	INT64		m_Exp;                  //经验
 	INT32		m_nLangID;              //语言ID
 	INT64		m_u64Fight;             //战力
-	INT32		m_nVipLvl;               //VIP等级
+	INT32		m_nVipLvl;               //VIPLevel
 	INT32		m_nVipExp;               //VIP经验
 	INT32		m_CityCopyID;           //主城副本类型
 	INT32		m_nChannel;             //角色渠道

@@ -102,7 +102,7 @@ BOOL CTeamCopyMgr::OnMsgCreateRoom(NetPacket* pNetPacket)
     //清理其它房间内的玩家
     //创建新的房间  6
     //返回房间的id给客户端
-    //返回成功的消息
+    //返回Success的消息
     return TRUE;
 }
 
@@ -141,7 +141,7 @@ BOOL CTeamCopyMgr::OnMsgLeaveRoom(NetPacket* pNetPacket)
     //如果房间只有一个人，退出，房间销毁
     //如果房间内还有其它的人，转移房主的权力
     //房间状态通知其它的玩家
-    //返回成功
+    //返回Success
     return TRUE;
 }
 

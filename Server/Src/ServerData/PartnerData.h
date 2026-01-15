@@ -8,8 +8,8 @@ struct PartnerDataObject : public ShareObject
 		m_uRoleID = 0;			//角色ID
 		m_uGuid = 0;			//guid
 		m_PartnerID = 0;		//伙伴ID
-		m_StrengthLvl = 0;		//强化等级
-		m_RefineLevel = 0;		//精炼等级
+		m_StrengthLvl = 0;		//强化Level
+		m_RefineLevel = 0;		//精炼Level
 		m_StarLevel = 0;		//星级
 		m_RefineExp = 0;		//精验的经验
 		m_StarExp = 0;			//星级经验
@@ -19,8 +19,8 @@ struct PartnerDataObject : public ShareObject
 	UINT64 m_uRoleID;			//角色ID
 	UINT64 m_uGuid;			//guid
 	UINT32 m_PartnerID;		//伙伴ID
-	INT32  m_StrengthLvl;   //强化等级
-	INT32  m_RefineLevel;   //精炼等级
+	INT32  m_StrengthLvl;   //强化Level
+	INT32  m_RefineLevel;   //精炼Level
 	INT32  m_StarLevel;		//星级
 	INT32  m_RefineExp;		//精验的经验
 	INT32  m_StarExp;		//星级经验

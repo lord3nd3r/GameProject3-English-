@@ -41,12 +41,12 @@ void On_WriteData(uv_write_t* req, int status)
 
     if (status == 0)
     {
-        //成功
+        //Success
         pConnection->DoSend();
     }
     else
     {
-        //失败
+        //Failure
     }
 
     return;
@@ -60,11 +60,11 @@ void On_Shutdown(uv_shutdown_t* req, int status)
 
     if (status == 0)
     {
-        //成功
+        //Success
     }
     else
     {
-        //失败
+        //Failure
     }
 
     return;
@@ -383,19 +383,19 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket;
     if (pHeader->CheckCode != CODE_VALUE)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 pHeader->CheckCode error");
+        CLog::GetInstancePtr()->LogInfo("验证-Failure pHeader->CheckCode error");
         return FALSE;
     }
 
     if ((pHeader->nSize > 1024 * 1024) || (pHeader->nSize <= 0))
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("验证-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
         return FALSE;
     }
 
     if (pHeader->nMsgID > 399999 || pHeader->nMsgID <= 0)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 Invalid MessageID roleid:%lld", pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("验证-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
         return FALSE;
     }
 
@@ -422,7 +422,7 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
         return TRUE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("验证-失败 m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
+    CLog::GetInstancePtr()->LogInfo("验证-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
 
     return FALSE;
 }

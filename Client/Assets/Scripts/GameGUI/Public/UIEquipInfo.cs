@@ -207,8 +207,8 @@ public class UIEquipInfo : GTWindow
         equipAdvanceLevel.text = MLEquip.Instance.GetEquipAdvanceNameByLevel(equip.AdvanceLevel);
         Dictionary<EAttr, int> propertys = GTAttrHelper.GetPropertys(equip);
         title3.text = GTTools.Format("装备星级 {0}", equip.StarLevel);
-        title2.text = GTTools.Format("进阶等级 {0}", equip.AdvanceLevel);
-        title1.text = GTTools.Format("强化等级 {0}", equip.StrengthenLevel);
+        title2.text = GTTools.Format("进阶Level {0}", equip.AdvanceLevel);
+        title1.text = GTTools.Format("强化Level {0}", equip.StrengthenLevel);
         GTItemHelper.ShowPropertyText(this.equipPropertys, propertys, true);
         GTItemHelper.ShowEquipStrengthText(text1, itemID, equip.StrengthenLevel);
         GTItemHelper.ShowEquipAdvanceText(text2, itemID, equip.AdvanceLevel);

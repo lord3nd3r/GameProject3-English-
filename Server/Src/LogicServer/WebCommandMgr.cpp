@@ -105,17 +105,17 @@ BOOL CWebCommandMgr::OnMsgGmCommandReq(NetPacket* pNetPacket)
 			OnGmSealRole(Params, pNetPacket->m_nConnID);
 		}
 		break;
-		case EWA_SINGLE_MAIL:           //单发邮件
+		case EWA_SINGLE_MAIL:           //Send single mail
 		{
 			OnGmSingleMail(Params, pNetPacket->m_nConnID);
 		}
 		break;
-		case EWA_GROUP_MAIL:           //群发邮件
+		case EWA_GROUP_MAIL:           //Send group mail
 		{
 			OnGmGroupMail(Params, pNetPacket->m_nConnID);
 		}
 		break;
-		case EWA_DELTE_MAIL:           //删除邮件
+		case EWA_DELTE_MAIL:           //Delete mail
 		{
 			OnGmDeleteMail(Params, pNetPacket->m_nConnID);
 		}
@@ -296,7 +296,7 @@ void CWebCommandMgr::OnGmDeleteMail(HttpParameter& hParams, INT32 nConnID)
 	INT32 nMailType = hParams.GetIntValue("mailtype");
 	UINT64 uMailGuid = hParams.GetLongValue("mailguid");
 
-	if (nMailType == 1) //群发邮件
+	if (nMailType == 1) //Send group mail
 	{
 		//先删除群邮件表里的
 		CMailManager::GetInstancePtr()->DeleteGroupMail(uMailGuid);

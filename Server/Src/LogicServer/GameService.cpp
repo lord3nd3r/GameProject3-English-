@@ -87,7 +87,7 @@ BOOL CGameService::Init()
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("加载 servercfg.ini文件失败!");
+        CLog::GetInstancePtr()->LogError("加载 servercfg.ini文件Failure!");
         return FALSE;
     }
 
@@ -111,13 +111,13 @@ BOOL CGameService::Init()
     INT32  nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("logic_svr_max_con");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("启动服务失败!");
+        CLog::GetInstancePtr()->LogError("启动服务Failure!");
         return FALSE;
     }
 
     if (!CDataPool::GetInstancePtr()->InitDataPool())
     {
-        CLog::GetInstancePtr()->LogError("初始化共享内存池失败!");
+        CLog::GetInstancePtr()->LogError("初始化共享内存池Failure!");
         return FALSE;
     }
 
@@ -125,25 +125,25 @@ BOOL CGameService::Init()
     //服务器启动之前需要加载的数据
     if (!CStaticData::GetInstancePtr()->LoadConfigData("Config.db"))
     {
-        CLog::GetInstancePtr()->LogError("加载静态配制数据失败!");
+        CLog::GetInstancePtr()->LogError("加载静态配制数据Failure!");
         return FALSE;
     }
 
     //if (!CLuaManager::GetInstancePtr()->Init())
     //{
-    //  CLog::GetInstancePtr()->LogError("初始化Lua环境失败!");
+    //  CLog::GetInstancePtr()->LogError("初始化Lua环境Failure!");
     //  return FALSE;
     //}
 
     //if (!luaopen_LuaScript(CLuaManager::GetInstancePtr()->GetLuaState()))
     //{
-    //  CLog::GetInstancePtr()->LogError("导出Lua接口失败!");
+    //  CLog::GetInstancePtr()->LogError("导出Lua接口Failure!");
     //  return FALSE;
     //}
 
     //if (!CLuaManager::GetInstancePtr()->LoadAllLua(".\\Lua"))
     //{
-    //  CLog::GetInstancePtr()->LogError("加载lua代码失败!");
+    //  CLog::GetInstancePtr()->LogError("加载lua代码Failure!");
     //  return FALSE;
     //}
 
@@ -202,7 +202,7 @@ BOOL CGameService::Init()
 
     RegisterMessageHanler();
 
-    CLog::GetInstancePtr()->LogError("---------服务器启动成功!--------");
+    CLog::GetInstancePtr()->LogError("---------服务器启动Success!--------");
 
     return TRUE;
 }
@@ -519,7 +519,7 @@ BOOL CGameService::ReportServerStatus()
     Req.set_totalnum(CSimpleManager::GetInstancePtr()->GetTotalCount());     //总注册人数
     Req.set_cachenum(CPlayerManager::GetInstancePtr()->GetCount());          //当前缓存人数
     Req.set_serverid(CConfigFile::GetInstancePtr()->GetIntValue("areaid"));  //区服ID
-    Req.set_servername(CConfigFile::GetInstancePtr()->GetStringValue("areaname")); //区服名字
+    Req.set_servername(CConfigFile::GetInstancePtr()->GetStringValue("areaname")); //区服Name
     Req.set_dberrcnt(m_dwDbErrorCount);                                      //db写错误数
 
     return ServiceBase::GetInstancePtr()->SendMsgProtoBuf(m_dwLoginConnID, MSG_LOGIC_UPDATE_REQ, 0, 0, Req);
@@ -532,7 +532,7 @@ BOOL CGameService::OnMsgRegToLoginAck(NetPacket* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
 
     ERROR_RETURN_TRUE(Ack.retcode() == MRC_SUCCESSED);
-    //表示注册成功
+    //表示注册Success
     m_bRegSuccessed = TRUE;
 
     m_uSvrOpenTime = Ack.svropentime();

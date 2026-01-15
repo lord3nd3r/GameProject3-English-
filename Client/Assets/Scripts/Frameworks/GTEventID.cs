@@ -4,8 +4,8 @@ using System.Collections;
 public enum GTEventID : ushort
 {
     TYPE_NETWORK_CONNECT             = 1000,   //准备连接
-    TYPE_NETWORK_CONNECT_FAIL        = 1001,   //连接失败  
-    TYPE_NETWORK_CONNECT_SUCCESS     = 1002,   //连接成功
+    TYPE_NETWORK_CONNECT_FAIL        = 1001,   //连接Failure  
+    TYPE_NETWORK_CONNECT_SUCCESS     = 1002,   //连接Success
 
     TYPE_LOGIN_ACCOUNT_REGISTER      = 1051,   //注册回调            
     TYPE_LOGIN_ACCOUNT_LOGIN         = 1052,   //登陆回调 

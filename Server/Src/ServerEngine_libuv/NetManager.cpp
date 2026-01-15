@@ -32,12 +32,12 @@ void On_Connection(uv_connect_t* req, int status)
     CConnection* pConnection = (CConnection*)req->data;
     if (status == 0)
     {
-        //成功
+        //Success
         CNetManager::GetInstancePtr()->HandleConnect(pConnection, status);
     }
     else
     {
-        //失败
+        //Failure
         pConnection->Close();
     }
 
@@ -218,13 +218,13 @@ BOOL    CNetManager::SendMessageBuff(INT32 nConnID, IDataBuffer* pBuffer)
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示连接己经失败断开了，这个连接ID不可用了。
+        //表示连接己经Failure断开了，这个连接ID不可用了。
         return FALSE;
     }
 
     if(pConn->GetConnectStatus() != ENS_CONNECTED)
     {
-        CLog::GetInstancePtr()->LogError("CNetManager::SendMessageBuff FAILED, 连接己断开, ConnID:%d", nConnID);
+        CLog::GetInstancePtr()->LogError("CNetManager::SendMessageBuff FAILED, connection already disconnected, ConnID:%d", nConnID);
         return FALSE;
     }
 
@@ -249,13 +249,13 @@ BOOL CNetManager::SendMessageData(INT32 nConnID, INT32 nMsgID, UINT64 u64TargetI
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示连接己经失败断开了，这个连接ID不可用了。
+        //表示连接己经Failure断开了，这个连接ID不可用了。
         return FALSE;
     }
 
     if(pConn->GetConnectStatus() != ENS_CONNECTED)
     {
-        CLog::GetInstancePtr()->LogError("CNetManager::SendMessageData FAILED, 连接己断开, MsgID:%d, nConnID:%d", nMsgID, nConnID);
+        CLog::GetInstancePtr()->LogError("CNetManager::SendMessageData FAILED, connection already disconnected, MsgID:%d, nConnID:%d", nMsgID, nConnID);
         return FALSE;
     }
 

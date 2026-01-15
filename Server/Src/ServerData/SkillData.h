@@ -7,14 +7,14 @@ struct SkillDataObject : public ShareObject
 	SkillDataObject()
 	{
 		m_uRoleID = 0;	//角色ID
-		m_dwSkillID = 0;	//技能ID
+		m_dwSkillID = 0;	//Skill ID
 		m_nLevel = 0;
 		m_nKeyPos = 0; //
 	}
 
 	UINT64 m_uRoleID;		//角色ID
-	UINT32 m_dwSkillID;		//技能ID
-	UINT32 m_nLevel;		//技能等级
+	UINT32 m_dwSkillID;		//Skill ID
+	UINT32 m_nLevel;		//技能Level
 	UINT32 m_nKeyPos;		//按键位置
 
 	BOOL Create(IDBInterface* pDB)

@@ -229,13 +229,13 @@ public enum ETaskState
     QUEST_NONE,           //无类型
     QUEST_DOING,          //正在进行任务
     QUEST_CANSUBMIT,      //可提交
-    QUEST_FAILED,         //任务失败
+    QUEST_FAILED,         //任务Failure
     QUEST_HASSUBMIT,      //已经提交
 }
 
 public enum Resp : byte
 {
-    TYPE_YES                  = 0,  //成功
+    TYPE_YES                  = 0,  //Success
     TYPE_NO                   = 1,  //不做
     TYPE_CANNOT_CONTROLSELF   = 2,  //角色被控制，无法操控
 

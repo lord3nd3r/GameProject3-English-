@@ -41,7 +41,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("配制文件加载失败!");
+        CLog::GetInstancePtr()->LogError("配制文件加载Failure!");
         return FALSE;
     }
 
@@ -59,7 +59,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
     INT32  nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("game_svr_max_con");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this))
     {
-        CLog::GetInstancePtr()->LogError("启动服务失败!");
+        CLog::GetInstancePtr()->LogError("启动服务Failure!");
         return FALSE;
     }
 
@@ -67,11 +67,11 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
 
     if(!m_SceneManager.Init(TRUE))
     {
-        CLog::GetInstancePtr()->LogError("启动场景管理器失败!");
+        CLog::GetInstancePtr()->LogError("启动场景管理器Failure!");
         return FALSE;
     }
 
-    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动成功!--------");
+    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动Success!--------");
     return TRUE;
 }
 

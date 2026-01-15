@@ -84,7 +84,7 @@ public:
         }
     }
 
-    UINT64 m_uFireTime;  //触发时间
+    UINT64 m_uFireTime;  //Trigger Time
     INT32  m_nSec;
     INT32  m_nData;
     TimeEvent* m_pPrev; //前一节点

@@ -30,7 +30,7 @@ BOOL CGameService::Init()
     CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
     if(!CConfigFile::GetInstancePtr()->Load("watchcfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("配制文件加载失败!");
+        CLog::GetInstancePtr()->LogError("配制文件加载Failure!");
         return FALSE;
     }
 
@@ -47,13 +47,13 @@ BOOL CGameService::Init()
     std::string strListenIp = CConfigFile::GetInstancePtr()->GetStringValue("watch_svr_ip");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("启动服务失败!");
+        CLog::GetInstancePtr()->LogError("启动服务Failure!");
         return FALSE;
     }
 
     m_WatchMsgHandler.Init(0);
 
-    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动成功!--------");
+    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动Success!--------");
 
     return TRUE;
 }

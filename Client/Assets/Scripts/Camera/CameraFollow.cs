@@ -5,7 +5,7 @@ using DG.Tweening;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
-    private float           m_DefaultDistance = 12;                 // 默认视距
+    private float           m_DefaultDistance = 12;                 // Default视距
     [SerializeField]
     private float           m_MinDistance     = 8;
     [SerializeField]

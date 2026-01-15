@@ -91,8 +91,8 @@ BOOL CGameSvrMgr::CreateScene(UINT32 dwCopyID, UINT64 uCreateParam, UINT32 dwPla
     //向副本服务器发送创建副本的消息
     if(!SendCreateSceneCmd(dwServerID, dwCopyID, dwCopyType, uCreateParam, dwPlayerNum))
     {
-        //发送创建副本的消息失败
-        CLog::GetInstancePtr()->LogError("发送创建副本的消息失败");
+        //发送创建副本的消息Failure
+        CLog::GetInstancePtr()->LogError("发送创建副本的消息Failure");
         return FALSE;
     }
 

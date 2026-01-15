@@ -7,7 +7,7 @@
 enum ESealReason
 {
     ESR_GM_OPER    = 1,  //通过GM后台封禁
-    ESR_CHANGE_MSG = 2,  //协议MD5验证失败
+    ESR_CHANGE_MSG = 2,  //协议MD5验证Failure
 };
 
 enum ESealAction

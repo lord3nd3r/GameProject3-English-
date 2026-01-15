@@ -21,8 +21,8 @@ struct GemDataObject : public ShareObject
 	UINT64 m_uRoleID;		//角色ID
 	UINT64 m_uGuid;			//guid
 	UINT32 m_GemID;			//宝石ID
-	INT32  m_StrengthLvl;   //强化等级
-	INT32  m_RefineLevel;   //精炼等级
+	INT32  m_StrengthLvl;   //强化Level
+	INT32  m_RefineLevel;   //精炼Level
 	INT32  m_StarLevel;		//星级
 	INT32  m_RefineExp;		//精验的经验
 	INT32  m_StarExp;		//星级经验

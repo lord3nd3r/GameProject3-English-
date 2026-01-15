@@ -262,7 +262,7 @@ BOOL CClientObject::OnMsgAccountLoginAck(UINT32 dwMsgID, CHAR* PacketBuf, INT32 
 
 	if(Ack.retcode() == MRC_UNKNOW_ERROR)
 	{
-		MessageBox(NULL, "登录失败! 密码或账号不对!!", "提示", MB_OK);
+		MessageBox(NULL, "登录Failure! 密码或账号不对!!", "提示", MB_OK);
 		m_dwHostState = ST_Overed;
 		return TRUE;
 	}

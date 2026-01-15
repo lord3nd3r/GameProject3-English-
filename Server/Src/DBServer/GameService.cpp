@@ -36,7 +36,7 @@ BOOL CGameService::Init()
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("配制文件加载失败!");
+        CLog::GetInstancePtr()->LogError("配制文件加载Failure!");
         return FALSE;
     }
 
@@ -58,7 +58,7 @@ BOOL CGameService::Init()
     INT32 nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("db_svr_max_con");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this, "127.0.0.1"))
     {
-        CLog::GetInstancePtr()->LogError("启动服务失败!");
+        CLog::GetInstancePtr()->LogError("启动服务Failure!");
         return FALSE;
     }
 
@@ -66,7 +66,7 @@ BOOL CGameService::Init()
 
     ERROR_RETURN_FALSE(m_DBWriterManger.Init());
 
-    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动成功!--------");
+    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动Success!--------");
 
     return TRUE;
 }

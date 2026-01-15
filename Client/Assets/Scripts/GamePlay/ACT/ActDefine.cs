@@ -98,9 +98,9 @@ public enum EActType
     TYPE_TIMESCALE        = 88, //时间控制
     TYPE_HIDEWEAPON       = 89, //隐藏武器
 
-    TYPE_RESETSKILLCD     = 91, //重置技能CD
-    TYPE_SHORTENSKILLCD   = 92, //减少技能CD
-    TYPE_EXTENDSKILLID    = 93, //延长技能CD
+    TYPE_RESETSKILLCD     = 91, //重置Skill CD
+    TYPE_SHORTENSKILLCD   = 92, //减少Skill CD
+    TYPE_EXTENDSKILLID    = 93, //延长Skill CD
     TYPE_BREAKSKILL       = 94, //打断技能
     TYPE_UPSKILLRESULT    = 95, //提高技能效果
     TYPE_CHANGESKILL      = 96, //使当前技能升级为新的技能
@@ -169,7 +169,7 @@ public enum EActStatus
     TRIGGER,//触发
     RUNNING,//运行
     SELFEND,//本体运行结束
-    SUCCESS,//成功
+    SUCCESS,//Success
 }
 
 

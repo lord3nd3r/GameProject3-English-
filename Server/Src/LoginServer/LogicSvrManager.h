@@ -76,7 +76,7 @@ struct LogicServerNode
     INT32       m_nMinVersion; //最小可见版本
     INT32       m_nMaxVersion; //最大可见版本
     UINT64      m_uSvrOpenTime; //开服时间
-    std::string m_strSvrName;   //服务器名字
+    std::string m_strSvrName;   //服务器Name
     std::string m_strOuterAddr; //服务器的外网地址
     std::string m_strInnerAddr; //服务器的内网地址
     UINT64      m_uLastUpdate;  //服务器最后更新时间
@@ -89,7 +89,7 @@ struct LogicServerNode
     INT32       m_nCurOnline;   //当前最大人数
     INT32       m_nTotalNum;    //总注册人数
     INT32       m_nCacheNum;    //当前缓存人数
-    INT32       m_nErrorCnt;    //数据库写失败次数
+    INT32       m_nErrorCnt;    //数据库写Failure次数
     INT32       m_nFileVer;     //服务器文件版本
 
     EUpdateStatus       m_eChangeStatus;

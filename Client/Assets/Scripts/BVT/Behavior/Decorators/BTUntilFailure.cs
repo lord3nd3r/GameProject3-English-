@@ -5,7 +5,7 @@ using BVT;
 namespace BVT
 {
     [NodeAttribute(Type = "装饰节点", Label = "BTUntilFailure")]
-    [NodeDesc("直到子节点返回失败，才返回失败")]
+    [NodeDesc("直到子节点返回Failure，才返回Failure")]
     [NodeName("05CBF2", "UntilFailure")]
     public class BTUntilFailure : BTDecorator
     {

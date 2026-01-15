@@ -80,7 +80,7 @@ BOOL CConnection::DoReceive()
     if(nRet != 0)
     {
         //对于WSARecv来说， 只要返回0,就表示没有错误发生。
-        //当返回为ERROR_IO_PENDING时，表示提交读数据请求成功， 其它的返回值都是错误。
+        //当返回为ERROR_IO_PENDING时，表示提交读数据请求Success， 其它的返回值都是错误。
         int nError = CommonSocket::GetSocketLastError();
         if(nError != ERROR_IO_PENDING )
         {
@@ -110,7 +110,7 @@ BOOL CConnection::DoReceive()
                 return TRUE;
             }
 
-            CLog::GetInstancePtr()->LogWarn("读失败， 可能连接己断开 原因:%s!!", CommonFunc::GetLastErrorStr(nErr).c_str());
+            CLog::GetInstancePtr()->LogWarn("读Failure， 可能connection already disconnected 原因:%s!!", CommonFunc::GetLastErrorStr(nErr).c_str());
             return FALSE;
         }
 
@@ -415,19 +415,19 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket;
     if (pHeader->CheckCode != CODE_VALUE)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 pHeader->CheckCode error");
+        CLog::GetInstancePtr()->LogInfo("验证-Failure pHeader->CheckCode error");
         return FALSE;
     }
 
     if ((pHeader->nSize > 1024 * 1024) || (pHeader->nSize <= 0))
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("验证-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
         return FALSE;
     }
 
     if (pHeader->nMsgID > 399999 || pHeader->nMsgID <= 0)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-失败 Invalid MessageID roleid:%lld", pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("验证-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
         return FALSE;
     }
 
@@ -454,7 +454,7 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
         return TRUE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("验证-失败 m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
+    CLog::GetInstancePtr()->LogInfo("验证-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
 
     return FALSE;
 }
@@ -565,11 +565,11 @@ BOOL CConnection::DoSend()
 
     DWORD nSendBytes = 0;
     int nRet = WSASend(m_hSocket, &DataBuf, 1, &nSendBytes, 0, (LPOVERLAPPED)&m_IoOverlapSend, NULL);
-    if(nRet == 0) //发送成功
+    if(nRet == 0) //发送Success
     {
         //if(nSendBytes < DataBuf.len)
         //{
-        //  CLog::GetInstancePtr()->LogError("发送线程:直接发送数据成功send:%d--Len:%d!", nSendBytes, DataBuf.len);
+        //  CLog::GetInstancePtr()->LogError("发送线程:直接发送数据Successsend:%d--Len:%d!", nSendBytes, DataBuf.len);
         //}
     }
     else if( nRet == -1 ) //发送出错
@@ -580,7 +580,7 @@ BOOL CConnection::DoSend()
             pSendingBuffer->Release();
             pSendingBuffer = NULL;
             Close();
-            CLog::GetInstancePtr()->LogError("发送线程:发送失败, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
+            CLog::GetInstancePtr()->LogError("发送线程:发送Failure, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
         }
     }
 
@@ -616,7 +616,7 @@ BOOL CConnection::DoSend()
                 m_pSendingBuffer->Release();
                 m_pSendingBuffer = NULL;
                 m_nSendingPos = 0;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送失败, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 
@@ -650,7 +650,7 @@ BOOL CConnection::DoSend()
             {
                 pBuffer->Release();
                 pBuffer = NULL;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送失败, 连接关闭原因2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, 连接关闭原因2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 

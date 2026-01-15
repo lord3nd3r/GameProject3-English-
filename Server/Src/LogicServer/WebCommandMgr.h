@@ -28,9 +28,9 @@ public:
 	//*********************WebAction处理定义开始******************************
 	void OnGmReloadTable(HttpParameter& hParams, INT32 nConnID);
 	void OnGmSealRole(HttpParameter& hParams, INT32 nConnID);
-	void OnGmSingleMail(HttpParameter& hParams, INT32 nConnID); //单发邮件
-	void OnGmGroupMail(HttpParameter& hParams, INT32 nConnID);  //群发邮件
-	void OnGmDeleteMail(HttpParameter& hParams, INT32 nConnID); //删除邮件
+	void OnGmSingleMail(HttpParameter& hParams, INT32 nConnID); //Send single mail
+	void OnGmGroupMail(HttpParameter& hParams, INT32 nConnID);  //Send group mail
+	void OnGmDeleteMail(HttpParameter& hParams, INT32 nConnID); //Delete mail
 	void OnGmCommand(HttpParameter& hParams, INT32 nConnID);
 	//*********************WebAction处理定义开始******************************
 

@@ -170,7 +170,7 @@ public class UIGem : GTWindow
         int addExpNum = MLGem.Instance.GetExpByStrengthMatList(mStrengthenMats);
         GTItemHelper.ShowItemTexture(costMoneyTexture, levelDB.CostMoneyId);
         costMoneyNum.text = addExpNum.ToString();
-        gemLevel.text = GTTools.Format("强化等级 {0}", gem.StrengthenLevel);
+        gemLevel.text = GTTools.Format("强化Level {0}", gem.StrengthenLevel);
         GTItemHelper.ShowProgressText(gemExpNum, gem.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowProgressSlider(gemExpBar, gem.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowGemPropertyText(gemProperty, itemID, gem.StrengthenLevel, true);

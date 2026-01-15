@@ -47,7 +47,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (string.IsNullOrEmpty(name))
         {
-            GTItemHelper.ShowTip("名字不能为空");
+            GTItemHelper.ShowTip("Name不能为空");
             return;
         }
         RoleCreateReq req = new RoleCreateReq();
@@ -175,7 +175,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
 
             if (data.Level >= count)
             {
-                GTItemHelper.ShowTip("宠物等级已满");
+                GTItemHelper.ShowTip("宠物Level已满");
                 return;
             }
         }
@@ -346,7 +346,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (MLEquip.Instance.IsFullAdvanceLevel(equip))
         {
-            GTItemHelper.ShowTip("进阶等级已满");
+            GTItemHelper.ShowTip("进阶Level已满");
             return;
         }
         DEquip cfg = ReadCfgEquip.GetDataById(equip.Id);
@@ -412,7 +412,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (MLGem.Instance.IsFullStrengthenLevel(gem))
         {
-            GTItemHelper.ShowTip("宝石强化等级已满");
+            GTItemHelper.ShowTip("宝石强化Level已满");
             return;
         }
         if (list.Count == 0)
@@ -481,7 +481,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         }
         if (relics.Level == db.LevelExp.Length)
         {
-            GTItemHelper.ShowTip("已升到最大等级，无法继续升级");
+            GTItemHelper.ShowTip("已升到最大Level，无法继续升级");
             return;
         }
         for (int i = 0; i < 3; i++)

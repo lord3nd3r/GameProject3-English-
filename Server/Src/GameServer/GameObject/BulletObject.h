@@ -56,7 +56,7 @@ public:
 	Vector3D        m_TargetPos;        //目标位置
 
 	FLOAT           m_vx, m_vz;         //当前速度向量
-	FLOAT           m_accx, m_accz;     //当前加速度向量
+	FLOAT           m_accx, m_accz;     //当前Acceleration向量
 
 	std::vector<CSceneObject*> m_vtTargets;
 };

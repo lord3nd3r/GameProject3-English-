@@ -9,8 +9,8 @@ struct PetDataObject : public ShareObject
 		m_uRoleID = 0;			//角色ID
 		m_uGuid = 0;			//guid
 		m_PetID = 0;			//宠物ID
-		m_StrengthLvl = 0;		//强化等级
-		m_RefineLevel = 0;		//精炼等级
+		m_StrengthLvl = 0;		//强化Level
+		m_RefineLevel = 0;		//精炼Level
 		m_StarLevel = 0;		//星级
 		m_RefineExp = 0;		//精验的经验
 		m_StarExp = 0;			//星级经验
@@ -20,8 +20,8 @@ struct PetDataObject : public ShareObject
 	UINT64 m_uRoleID;			//角色ID
 	UINT64 m_uGuid;			//guid
 	UINT32 m_PetID;			//宠物ID
-	INT32  m_StrengthLvl;   //强化等级
-	INT32  m_RefineLevel;   //精炼等级
+	INT32  m_StrengthLvl;   //强化Level
+	INT32  m_RefineLevel;   //精炼Level
 	INT32  m_StarLevel;		//星级
 	INT32  m_RefineExp;		//精验的经验
 	INT32  m_StarExp;		//星级经验

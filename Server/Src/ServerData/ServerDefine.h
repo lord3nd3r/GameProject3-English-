@@ -10,7 +10,7 @@
 //角色属性个数
 #define PROPERTY_NUM		21
 
-//角色的最大等级
+//角色的最大Level
 #define MAX_ROLE_LEVEL		150
 
 //服务器帧率

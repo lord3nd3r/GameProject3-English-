@@ -86,7 +86,7 @@ public abstract class GTWindow
         GameObject prefab = GTResourceManager.Instance.Load<GameObject>(path);
         if (prefab == null)
         {
-            Debug.LogError(string.Format("加载Window资源失败:{0}", Path));
+            Debug.LogError(string.Format("加载Window资源Failure:{0}", Path));
             return false;
         }
         GameObject go = GameObject.Instantiate(prefab);

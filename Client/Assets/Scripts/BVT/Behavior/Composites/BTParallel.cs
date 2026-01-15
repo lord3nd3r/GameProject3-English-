@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace BVT
 {
     [NodeAttribute(Type = "组合节点", Label = "并行节点")]
-    [NodeDesc("并行节点会依次执行所有的子节点，无论子节点返回“成功”或“失败”都会继续运行后续节点")]
+    [NodeDesc("并行节点会依次执行所有的子节点，无论子节点返回“Success”或“Failure”都会继续运行后续节点")]
     [NodeName("ff64cb", "Parallel")]
     public class BTParallel : BTComposite
     {

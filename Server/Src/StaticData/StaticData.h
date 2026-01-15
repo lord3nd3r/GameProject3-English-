@@ -51,7 +51,7 @@ public:
 	StCarrerInfo* GetCarrerInfo(UINT32 dwCarrerID);
 
 
-	//职业等级信息
+	//职业Level信息
 	///////////////////////////////////////////////
 	StLevelInfo m_CarrerLevel[4][MAX_ROLE_LEVEL];
 	BOOL ReadCarrerLevel(CppSQLite3Query& QueryData);
@@ -164,7 +164,7 @@ public:
 	BOOL ReadSkillEvent();
 	StSkillEventInfo* GetSkillEventInfo(UINT32 dwSkillID);
 
-	//连击技能
+	//Combo skills
 	std::map<UINT32, StComboSkillInfo> m_mapComboSkill;
 	BOOL ReadComboSkillInfo(CppSQLite3Query& QueryData);
 	StComboSkillInfo* GetComboSkillInfo(UINT32 dwSkillID);

@@ -211,7 +211,7 @@ public class UIGemInfo : GTWindow
         XGem gem = GTDataManager.Instance.GetGemDataByPos(posType, pos);
         int itemID = gem.Id;
         DGem gemDB = ReadCfgGem.GetDataById(itemID);
-        gemLevel.text = GTTools.Format("等级 {0}", gem.StrengthenLevel);
+        gemLevel.text = GTTools.Format("Level {0}", gem.StrengthenLevel);
         gemFightValue.text = GTTools.Format("战斗力 {0}", GTAttrHelper.GetFightValue(gem));
         ShowBaseView(itemID);
         GTItemHelper.ShowGemPropertyText(gemPropertys, itemID, gem.StrengthenLevel);

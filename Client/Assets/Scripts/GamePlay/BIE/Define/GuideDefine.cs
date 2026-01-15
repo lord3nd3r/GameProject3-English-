@@ -64,7 +64,7 @@ namespace BIE
     public enum EGuideCondition
     {
         CheckItemAmount                =  1,   //检查物品数量
-        CheckPlayerLevel               =  2,   //检查玩家等级
+        CheckPlayerLevel               =  2,   //检查玩家Level
         CheckPlayerVip                 =  3,   //检查玩家Vip
         CheckOpenUI                    =  4,   //检查打开UI
         CheckHideUI                    =  5,   //检查关闭UI

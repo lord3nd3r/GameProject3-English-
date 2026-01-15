@@ -294,7 +294,7 @@ public class UIEquip : GTWindow
         int addExpNum = MLEquip.Instance.GetStrengthenExpByMatList(curStrengthenCostItems);
         GTItemHelper.ShowItemTexture(equipStrengthen.costMoneyTexture, DEquip.EQUIP_STRENGTHEN_MONEY_ID_1);
         equipStrengthen.costMoneyNum.text = addExpNum.ToString();
-        equipStrengthen.equipStrengthLevel.text = GTTools.Format("强化等级 {0}", equip.StrengthenLevel);
+        equipStrengthen.equipStrengthLevel.text = GTTools.Format("强化Level {0}", equip.StrengthenLevel);
         GTItemHelper.ShowProgressText(equipStrengthen.equipStrengthExp, equip.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowProgressSlider(equipStrengthen.equipStrengthExpBar, equip.StrengthenExp, levelDB.RequireExp);
         Dictionary<EAttr, int> propertys = GTAttrHelper.GetPropertys(equip);

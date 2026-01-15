@@ -370,7 +370,7 @@ public:
 
             if (pdata->IsRelease())
             {
-                ///释放的时候执行一次保存...如果上次没有保存成功或者，释放前修改了就再保存一次
+                ///释放的时候执行一次保存...如果上次没有保存Success或者，释放前修改了就再保存一次
                 if ((lastMotifyTime > 0) && (afterTime < beforeTime || lastMotifyTime > beforeTime))
                 {
                     pBlock->m_beforeTime = time(0);

@@ -29,8 +29,8 @@ struct Log_BaseData
     CHAR        m_szIdfa[64] = { 0 };  //客户端idfa
     CHAR        m_szRoleName[64] = { 0 };
     //以下两条仅角色日志有效
-    INT32       m_nLevel     = 0;//角色等级
-    INT32       m_nVipLevel  = 0;//角色VIP等级
+    INT32       m_nLevel     = 0;//角色Level
+    INT32       m_nVipLevel  = 0;//角色VIPLevel
     INT32       m_nAddWay    = 0;//
 };
 
@@ -200,7 +200,7 @@ struct Log_RoleChat : public Log_BaseData
     }
 };
 
-//等级变化日志
+//Level变化日志
 struct Log_RoleLevel : public Log_BaseData
 {
     UINT32 m_uPreValue = 0;

@@ -202,7 +202,7 @@ void SharedMemoryBase::ImportOtherPage()
     }
 }
 
-/**@param name 共享内存名字，可以通过名字找回,暂时如果有只打开内存中已经有的。
+/**@param name 共享内存Name，可以通过Name找回,暂时如果有只打开内存中已经有的。
 *@param count  T的个数
 *@param noCreate 不允许创建
 */

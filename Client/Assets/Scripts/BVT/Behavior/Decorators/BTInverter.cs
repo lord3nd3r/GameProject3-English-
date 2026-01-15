@@ -7,7 +7,7 @@ using BVT;
 namespace BVT
 {
     [NodeAttribute(Type = "装饰节点", Label = "逆转节点")]
-    [NodeDesc("子节点返回成功，则返回失败；子节点返回失败，则返回成功")]
+    [NodeDesc("子节点返回Success，则返回Failure；子节点返回Failure，则返回Success")]
     [NodeName("05CBF2", "Inverter")]
     public class BTInverter : BTDecorator
     {

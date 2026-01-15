@@ -32,7 +32,7 @@ struct GroupMailDataObject : public ShareObject
     UINT64 m_uGuid;                         //邮件ID
     CHAR   m_szTitle[MAIL_TITLE_LEN];       //邮件标题
     CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
-    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者名字
+    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
     UINT64 m_uTime;                         //邮件时间
     INT32  m_nMailType;                    //邮件类型
     INT32  m_nChannel;                     //目标渠道
@@ -109,7 +109,7 @@ struct MailDataObject : public ShareObject
     UINT64 m_uSenderID;                     //发送者ID
     INT32  m_nMailType;                    //邮件类型
     INT32  m_nStatus;                      //邮件状态
-    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者名字
+    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
     CHAR   m_szTitle[MAIL_TITLE_LEN];       //邮件标题
     CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
     StMailItem m_Items[MAIL_ITEM_COUNT];    //道具列表

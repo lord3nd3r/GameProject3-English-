@@ -841,7 +841,7 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 {
 	ERROR_RETURN_VALUE(m_pScene != NULL, MRC_UNKNOW_ERROR);
 
-	//取技能等级
+	//取技能Level
 	INT32 nLevel = GetSkillLevel(Req.skillid());
 	ERROR_RETURN_VALUE(nLevel > 0, MRC_INVALID_SKILL_ID);
 
@@ -854,10 +854,10 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 	//	return MRC_SKILL_CD_ERROR;
 	//}
 
-	//是否是普通的连击技能
+	//是否是普通的Combo skills
 	if (m_vtNormals.size() > 0 && Req.skillid() == m_vtNormals[0].dwSkillID)
 	{
-		//如果是普通的连击技能
+		//如果是普通的Combo skills
 		if(m_SkillObject.GetSkillStatus() == ESS_RUNNING)
 		{
 			m_SkillObject.SetComboSkill(TRUE);
@@ -867,7 +867,7 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 
 	m_SkillObject.SetComboSkill(FALSE);
 
-	//技能CD是否可以施放。
+	//Skill CD是否可以施放。
 	if (!CheckSkillCD(Req.skillid(), pSkillInfo->CD))
 	{
 		return MRC_SKILL_CD_ERROR;
