@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Raid___UIMainResult.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -138,7 +139,7 @@ public class UIMainResult : GTWindow
     private void OnRecoverClick(GameObject go)
     {
         GTAudioManager.Instance.PlayEffectAudio(GTAudioKey.SOUND_UI_CLICK);
-        GTItemHelper.ShowTip("功能未开放");
+        GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
     }
 
     private void OnQuitClick(GameObject go)
@@ -299,7 +300,7 @@ public class UIMainResult : GTWindow
     private void PlayWinContinueTween()
     {
         mContinue.SetActive(true);
-        mContinue.GetComponent<UILabel>().text = "点击屏幕继续";
+        mContinue.GetComponent<UILabel>().text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
         mCanClickMask = true;
     }
 
@@ -340,13 +341,13 @@ public class UIMainResult : GTWindow
             switch (type)
             {
                 case EStarCondition.TYPE_MAIN_HEALTH:
-                    tab.text.text = GTTools.Format("主角血量大于{0}%", v);
+                    tab.text.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]{0}%", v);
                     break;
                 case EStarCondition.TYPE_PASSCOPY:
-                    tab.text.text = "通关副本";
+                    tab.text.text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
                     break;
                 case EStarCondition.TYPE_TIME_LIMIT:
-                    tab.text.text = GTTools.Format("{0}秒通关副本", v);
+                    tab.text.text = GTTools.Format("{0}[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", v);
                     break;
             }
             tab.trans.gameObject.SetActive(true);

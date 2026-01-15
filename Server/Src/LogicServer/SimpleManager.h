@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___SimpleManager.h */
 ﻿#ifndef __SIMPLE_MANAGER_H__
 #define __SIMPLE_MANAGER_H__
 
@@ -30,8 +31,8 @@ struct CSimpleInfo
 	UINT64	m_uLogonTime;
 	UINT64	m_uCreateTime;
 	std::string m_strName;
-	BOOL    m_IsDelete; //whether被删除
-	UINT32  m_nLogonStatus;  //0:表示正常，1:表示正在db服取数据
+	BOOL    m_IsDelete; //whether[TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32  m_nLogonStatus;  //0:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，1:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]db[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 class CSimpleManager

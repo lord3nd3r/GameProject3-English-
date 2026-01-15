@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameLogic___MLGem.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -46,17 +47,17 @@ public class MLGem : GTSingleton<MLGem>
         switch (db.Pos)
         {
             case 1:
-                return "金";
+                return "[TRANSLATED]";
             case 2:
-                return "木";
+                return "[TRANSLATED]";
             case 3:
-                return "水";
+                return "[TRANSLATED]";
             case 4:
-                return "火";
+                return "[TRANSLATED]";
             case 5:
-                return "土";
+                return "[TRANSLATED]";
             default:
-                return "空";
+                return "[TRANSLATED]";
         }
     }
 

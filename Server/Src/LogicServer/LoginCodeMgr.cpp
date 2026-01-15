@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___LoginCodeMgr.cpp */
 ﻿#include "stdafx.h"
 #include "LoginCodeMgr.h"
 #include "RoleModule.h"
@@ -38,7 +39,7 @@ INT32 CLoginCodeManager::CreateLoginCode(UINT64 uAccountID)
 
 BOOL CLoginCodeManager::CheckLoginCode(UINT64 uAccountID, INT32 nCode)
 {
-    //任何key 只能用来比较一次就删除
+    //[TRANSLATED][TRANSLATED]key [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     CLoginCodeItem* pLoginCode = GetByKey(uAccountID);
     if (pLoginCode == NULL)
     {

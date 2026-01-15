@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___MonsterCreator.h */
 ﻿#ifndef _GAME_MONSTER_CREATOR_H_
 #define _GAME_MONSTER_CREATOR_H_
 
@@ -36,8 +37,8 @@ public:
 	BOOL   m_bCheckDie;         //Whether affects monster spawning
 	FLOAT  m_x, m_y, m_z, m_ft; //Monster spawn position
 
-	UINT64 m_uObjectGuid;       //刷出怪的实例ID
-	BOOL   m_bDead;             //刷出怪whether死亡
+	UINT64 m_uObjectGuid;       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	BOOL   m_bDead;             //[TRANSLATED][TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED]
 
 };
 

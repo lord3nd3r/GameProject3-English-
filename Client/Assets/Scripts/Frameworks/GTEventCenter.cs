@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Frameworks___GTEventCenter.cs */
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ public class GTEventCenter
         Delegate ed = mEvents[e];
         if (ed != null && d.GetType() != ed.GetType())
         {
-            string error = string.Format("添加eventlistenerror，EventID:{0}，添加的event{1},已存在的event{2}", e.ToString(), d.GetType().Name, ed.GetType().Name);
+            string error = string.Format("[TRANSLATED][TRANSLATED]eventlistenerror，EventID:{0}，[TRANSLATED][TRANSLATED][TRANSLATED]event{1},[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]event{2}", e.ToString(), d.GetType().Name, ed.GetType().Name);
             Debug.LogError(error);
         }
     }

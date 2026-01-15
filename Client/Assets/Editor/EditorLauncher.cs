@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Editor___EditorLauncher.cs */
 ﻿using UnityEngine;
 using UnityEditor;
 
@@ -16,16 +17,16 @@ namespace EDT
             EditorGUILayout.LabelField("Next game status", manager.NextSceneType.ToString());
 
             manager.UseGuide     = EditorGUILayout.Toggle("Use novice guide", manager.UseGuide);
-            bool musicActive  = EditorGUILayout.Toggle("shutdown音乐", manager.MusicDisable);
+            bool musicActive  = EditorGUILayout.Toggle("shutdown[TRANSLATED][TRANSLATED]", manager.MusicDisable);
             if(manager.MusicDisable != musicActive)
             {
                 manager.MusicDisable = musicActive;
                 PlayerPrefs.SetInt(GTAudioManager.MUSIC_ACTIVE_KEY, manager.MusicDisable ? 1 : 0);
             }
-            manager.TestScene    = EditorGUILayout.Toggle("测试", manager.TestScene);
+            manager.TestScene    = EditorGUILayout.Toggle("[TRANSLATED][TRANSLATED]", manager.TestScene);
             if(manager.TestScene)
             {
-                manager.TestActorID = EditorGUILayout.IntField("测试角色ID", manager.TestActorID);
+                manager.TestActorID = EditorGUILayout.IntField("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID", manager.TestActorID);
             }
         }
     }

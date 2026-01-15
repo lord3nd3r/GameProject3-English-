@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___DBConnection.h */
 ﻿#ifndef _SQL_CONN_H_
 #define _SQL_CONN_H_
 
@@ -10,7 +11,7 @@
 #pragma comment(lib, "libmysql.lib")
 #endif
 
-#define ERROR_SLEEP_TIME 3000 // 执行SQL语句时出错，再次尝试执行interval时间（毫秒）
+#define ERROR_SLEEP_TIME 3000 // [TRANSLATED][TRANSLATED]SQL[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]interval[TRANSLATED][TRANSLATED]（[TRANSLATED][TRANSLATED]）
 
 class CDBConnection  : public IDBInterface
 {

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Network___Core___NetworkManager.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -244,7 +245,7 @@ public class NetworkManager : GTSingleton<NetworkManager>
         UInt32 CheckCode = 0x88;
         UInt32 dwMsgID = (UInt32)messageID;
         UInt32 dwSize = 3;
-        UInt32 dwPacketNo = 0;	//生成序号 = wCommandID^dwSize+index(每个包自动增长索引); 还原序号 = pHeader->dwPacketNo - pHeader->wCommandID^pHeader->dwSize;
+        UInt32 dwPacketNo = 0;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] = wCommandID^dwSize+index([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]); [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] = pHeader->dwPacketNo - pHeader->wCommandID^pHeader->dwSize;
         WriteUInt32(CheckCode);
         WriteUInt32(dwMsgID);
         WriteUInt32(dwSize);

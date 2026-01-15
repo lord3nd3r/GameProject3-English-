@@ -1,10 +1,11 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Tasks___BTWaitFrames.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "action节点", Label = "BTWaitFrames")]
+    [NodeAttribute(Type = "action[TRANSLATED][TRANSLATED]", Label = "BTWaitFrames")]
     public class BTWaitFrames : BTTask
     {
         [NodeVariable]
@@ -45,18 +46,18 @@ namespace BVT
             if (Running)
             {
                 int lastFrames = Time.frameCount - mStFrames;
-                GUILayout.Label(string.Format("<color=#ffffff>等待帧数：{0}</color>", mDrFrames));
-                GUILayout.Label(string.Format("<color=#ff64cb>running帧数：{0}</color>", lastFrames > this.mDrFrames ? this.mDrFrames : lastFrames));
+                GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}</color>", mDrFrames));
+                GUILayout.Label(string.Format("<color=#ff64cb>running[TRANSLATED][TRANSLATED]：{0}</color>", lastFrames > this.mDrFrames ? this.mDrFrames : lastFrames));
             }
             else
             {
                 if (RandomWait)
                 {
-                    GUILayout.Label(string.Format("<color=#ffffff>等待帧数：{0}s~{1}</color>", this.RandomWaitMin, this.RandomWaitMax));
+                    GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}s~{1}</color>", this.RandomWaitMin, this.RandomWaitMax));
                 }
                 else
                 {
-                    GUILayout.Label(string.Format("<color=#ffffff>等待帧数：{0}</color>", this.WaitFrames));
+                    GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}</color>", this.WaitFrames));
                 }
             }
         }

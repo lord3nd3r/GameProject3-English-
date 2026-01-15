@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Third___NcEffect___NcCurveAnimation.cs */
 // ----------------------------------------------------------------------------------
 //
 // FXMaker
@@ -709,7 +710,7 @@ public class NcCurveAnimation : NcEffectAniBehaviour
 		if (srcCurveInfo.m_ApplyType != NcInfoCurve.APPLY_TYPE.COLOR && srcCurveInfo.m_ApplyType != NcInfoCurve.APPLY_TYPE.SCALE && srcCurveInfo.m_ApplyType != NcInfoCurve.APPLY_TYPE.TEXTUREUV)
 			return false;
 
-		// 可记 吝汗八荤
+		// [TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		bool	bDup = false;
 // 		int		nChkCount = srcCurveInfo.GetValueCount();
 // 

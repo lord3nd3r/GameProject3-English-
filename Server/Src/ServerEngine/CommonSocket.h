@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonSocket.h */
 ﻿#ifndef __COMMON_SOCKET__
 #define __COMMON_SOCKET__
 
@@ -5,10 +6,10 @@
 
 namespace CommonSocket
 {
-//设置套接字is可重用状态
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL        SetSocketReuseable(SOCKET hSocket);
 
-//设置套接字is非阻塞状态
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL        SetSocketBlock(SOCKET hSocket, BOOL bBlock);
 
 BOOL        SetSocketNoDelay(SOCKET hSocket);

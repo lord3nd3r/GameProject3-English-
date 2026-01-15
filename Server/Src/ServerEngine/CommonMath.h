@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonMath.h */
 ﻿#ifndef __X_MATH_H_
 #define __X_MATH_H_
 
@@ -51,16 +52,16 @@ public:
 
     FLOAT Normalized();
 
-    //求到线段的距离
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     FLOAT DistanceToSegment(Vector2D pt1, Vector2D pt2);
 
-    //求弧度range: 0-π
+    //[TRANSLATED][TRANSLATED][TRANSLATED]range: 0-π
     FLOAT AngleBetween(const Vector2D dest);
 
-    //向量转弧度range: 0-2π
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]range: 0-2π
     FLOAT ToRadiansAngle();
 
-    //向量转角度range: 0-360
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]range: 0-360
     FLOAT ToDegreesAngle();
 
     Vector2D Rotate(Vector2D A, FLOAT radianAngle);
@@ -162,7 +163,7 @@ public:
 
     bool operator != (const Vector3D& rkVector) const;
 
-    //点集
+    //[TRANSLATED][TRANSLATED]
     FLOAT DotProduct(const Vector3D& v);
 
     FLOAT Length();
@@ -179,21 +180,21 @@ public:
 
     FLOAT Distance2D(Vector3D pos);
 
-    //求弧度range: 0-π
+    //[TRANSLATED][TRANSLATED][TRANSLATED]range: 0-π
     FLOAT AngleBetween2D(Vector3D& dest);
 
     Vector2D Rotate(Vector2D A, FLOAT radianAngle);
 
-    //求向量在对应向量的平行分量
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     Vector3D ParallelComponent(Vector3D& unitBasis);
 
-    //求向量在对应向量的垂直分量
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     Vector3D PerpendicularComponent(Vector3D& unitBasis);
 
-    //求弧度range: 0-2π
+    //[TRANSLATED][TRANSLATED][TRANSLATED]range: 0-2π
     FLOAT ToRadiansAngle();
 
-    //求角度range: 0-360
+    //[TRANSLATED][TRANSLATED][TRANSLATED]range: 0-360
     FLOAT ToDegreesAngle();
 
     BOOL FromString(const char* pStr);
@@ -206,13 +207,13 @@ typedef Vector3D CPoint3D;
 namespace CommonMath
 {
 
-//角度转弧度
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 FLOAT DegreesToRadians(FLOAT fDegrees);
 
-//弧度转角度
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 FLOAT RadiansToDegrees(FLOAT fRadians);
 
-//限制取值
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 FLOAT Clamp(const FLOAT fValue, const FLOAT fMin, const FLOAT fMax);
 
 BOOL  IsInCircle(Vector3D tTarPos, FLOAT fTarRadius, Vector3D tCirclePos, FLOAT fCircleRadius);

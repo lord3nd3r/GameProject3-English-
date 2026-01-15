@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___MapObject.h */
 ﻿#ifndef __MAP_OBJECT_H__
 #define __MAP_OBJECT_H__
 
@@ -63,7 +64,7 @@ public:
 // 	virtual UINT64          GetTargetID() = 0;
 // 	virtual CSceneObject*   GetTargetObject() = 0;
 // 	virtual FLOAT           GetTargetDistance() = 0;
-// 	//whether有target
+// 	//whether[TRANSLATED]target
 // };
 
 #endif //__MAP_OBJECT_H__

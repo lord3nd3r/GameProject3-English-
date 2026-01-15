@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ProxyServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "Position.h"
@@ -43,7 +44,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("ProxyServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("ProxyServeralready在running!");
+        CLog::GetInstancePtr()->LogError("ProxyServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -52,7 +53,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("proxy_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件proxy_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]proxy_svr_portconfigerror!");
         return FALSE;
     }
 
@@ -63,7 +64,7 @@ BOOL CGameService::Init()
         return FALSE;
     }
 
-    //开启包序号检查
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     ServiceBase::GetInstancePtr()->EnableCheck(FALSE);
 
     INT32  nIntervalTime = CConfigFile::GetInstancePtr()->GetIntValue("heart_interval_time");

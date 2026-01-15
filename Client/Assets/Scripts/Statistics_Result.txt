@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Statistics_Result.txt */
             File: BTFlipSelector.cs
             Lines: 53
             Characters:874
@@ -2662,6 +2663,6 @@
         Lines: 6
         Characters:102
 
-文件总数: 666
-全部行数: 43395
-全部字符数:944694
+[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]: 666
+[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]: 43395
+[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:944694

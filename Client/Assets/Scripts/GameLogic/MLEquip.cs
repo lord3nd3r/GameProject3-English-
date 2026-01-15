@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameLogic___MLEquip.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,15 +15,15 @@ public class MLEquip : GTSingleton<MLEquip>
         switch (equipDB.Quality)
         {
             case 1:
-                return "普通";
+                return "[TRANSLATED][TRANSLATED]";
             case 2:
-                return "优良";
+                return "[TRANSLATED][TRANSLATED]";
             case 3:
-                return "精良";
+                return "[TRANSLATED][TRANSLATED]";
             case 4:
-                return "史诗";
+                return "[TRANSLATED][TRANSLATED]";
             default:
-                return "传说";
+                return "[TRANSLATED][TRANSLATED]";
         }
     }
 
@@ -31,21 +32,21 @@ public class MLEquip : GTSingleton<MLEquip>
         switch (advanceLevel)
         {
             case 1:
-                return "[00ff00]初心[-]";
+                return "[00ff00][TRANSLATED][TRANSLATED][-]";
             case 2:
-                return "[97FFFF]元婴[-]";
+                return "[97FFFF][TRANSLATED][TRANSLATED][-]";
             case 3:
-                return "[ADFF2F]离骚[-]";
+                return "[ADFF2F][TRANSLATED][TRANSLATED][-]";
             case 4:
-                return "[EEEE00]空明[-]";
+                return "[EEEE00][TRANSLATED][TRANSLATED][-]";
             case 5:
-                return "[EE9A00]蛮荒[-]";
+                return "[EE9A00][TRANSLATED][TRANSLATED][-]";
             case 6:
-                return "[EE4000]无极[-]";
+                return "[EE4000][TRANSLATED][TRANSLATED][-]";
             case 7:
-                return "[EE0000]湮灭[-]";
+                return "[EE0000][TRANSLATED][TRANSLATED][-]";
             case 8:
-                return "[FFD700]化神[-]";
+                return "[FFD700][TRANSLATED][TRANSLATED][-]";
             default:
                 return string.Empty;
 
@@ -58,23 +59,23 @@ public class MLEquip : GTSingleton<MLEquip>
         switch (equipDB.Pos)
         {
             case 1:
-                return "头部";
+                return "[TRANSLATED][TRANSLATED]";
             case 2:
-                return "项链";
+                return "[TRANSLATED][TRANSLATED]";
             case 3:
-                return "衣服";
+                return "[TRANSLATED][TRANSLATED]";
             case 4:
-                return "鞋子";
+                return "[TRANSLATED][TRANSLATED]";
             case 5:
-                return "手套";
+                return "[TRANSLATED][TRANSLATED]";
             case 6:
-                return "戒指";
+                return "[TRANSLATED][TRANSLATED]";
             case 7:
-                return "法宝";
+                return "[TRANSLATED][TRANSLATED]";
             case 8:
-                return "武器";
+                return "[TRANSLATED][TRANSLATED]";
             default:
-                return "未知";
+                return "[TRANSLATED][TRANSLATED]";
         }
     }
 

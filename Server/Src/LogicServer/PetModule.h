@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PetModule.h */
 ﻿#ifndef __PET_MODULE_H__
 #define __PET_MODULE_H__
 #include "ModuleBase.h"
@@ -35,8 +36,8 @@ public:
 	PetDataObject* GetCurrentPetData();
 
 	//********************* Message handlers begin ******************************
-	BOOL OnMsgSetupPetReq(NetPacket* pNetPacket);  //出战宠物
-	BOOL OnMsgUnsetPetReq(NetPacket* pNetPacket);  //收回宠物
+	BOOL OnMsgSetupPetReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL OnMsgUnsetPetReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	//********************* Message handlers end ******************************
 
 public:

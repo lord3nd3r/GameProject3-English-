@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___CounterModule.cpp */
 ﻿#include "stdafx.h"
 #include "DataPool.h"
 #include "GlobalDataMgr.h"
@@ -151,7 +152,7 @@ BOOL CCounterModule::AddCounterValue(UINT32 uID, INT64 uValue, UINT32 dwIndex /*
 
 BOOL CCounterModule::GetCounterBitValue(UINT32 uID)
 {
-	ERROR_RETURN_FALSE(uID > 0); // uID必须大于0
+	ERROR_RETURN_FALSE(uID > 0); // uID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]0
 
 	CounterDataObject* pCounterObject = GetCounterData(uID / 64 + 1, 0);
 	if (pCounterObject == NULL)
@@ -164,7 +165,7 @@ BOOL CCounterModule::GetCounterBitValue(UINT32 uID)
 
 BOOL CCounterModule::SetCounterBitValue(UINT32 uID, BOOL bValue)
 {
-	ERROR_RETURN_FALSE(uID > 0); // uID必须大于0
+	ERROR_RETURN_FALSE(uID > 0); // uID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]0
 
 	CounterDataObject* pCounterObject = GetCounterData(uID / 64 + 1, 0, TRUE);
 	ERROR_RETURN_FALSE(pCounterObject != NULL);

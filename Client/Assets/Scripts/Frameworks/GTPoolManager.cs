@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Frameworks___GTPoolManager.cs */
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class GTPoolManager : GTMonoSingleton<GTPoolManager>
     }
 
     private Dictionary<string, CPoolInfo> mPoolDict = new Dictionary<string, CPoolInfo>();
-    private List<GameObject>              mDestroyPoolGameObjects = new List<GameObject>();//删除队列
+    private List<GameObject>              mDestroyPoolGameObjects = new List<GameObject>();//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     public GameObject GetObject(string path)
     {

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___SkillData.h */
 ﻿#ifndef __SKILL_DATA_OBJECT_H__
 #define __SKILL_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
@@ -6,16 +7,16 @@ struct SkillDataObject : public ShareObject
 {
 	SkillDataObject()
 	{
-		m_uRoleID = 0;	//角色ID
+		m_uRoleID = 0;	//[TRANSLATED][TRANSLATED]ID
 		m_dwSkillID = 0;	//Skill ID
 		m_nLevel = 0;
 		m_nKeyPos = 0; //
 	}
 
-	UINT64 m_uRoleID;		//角色ID
+	UINT64 m_uRoleID;		//[TRANSLATED][TRANSLATED]ID
 	UINT32 m_dwSkillID;		//Skill ID
 	UINT32 m_nLevel;		//skillLevel
-	UINT32 m_nKeyPos;		//按键position
+	UINT32 m_nKeyPos;		//[TRANSLATED][TRANSLATED]position
 
 	BOOL Create(IDBInterface* pDB)
 	{

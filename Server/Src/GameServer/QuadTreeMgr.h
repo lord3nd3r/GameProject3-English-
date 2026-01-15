@@ -1,13 +1,14 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___QuadTreeMgr.h */
 ﻿#ifndef __QUAD_TREE_MANAGER_H__
 #define __QUAD_TREE_MANAGER_H__
 
 #include "CommonMath.h"
 #include "GameObject/MapObject.h"
 
-#define NODE_SPLIT_NUM 8   //格子对象数达到就begin分割
-#define NODE_MERGE_NUM 4   //格子对象数小于就begin合并
-#define NODE_MAX_CHILD 4   //最大分割子格子数
-#define NODE_MAX_DEPTH 5   //最大分割层数
+#define NODE_SPLIT_NUM 8   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin[TRANSLATED][TRANSLATED]
+#define NODE_MERGE_NUM 4   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin[TRANSLATED][TRANSLATED]
+#define NODE_MAX_CHILD 4   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+#define NODE_MAX_DEPTH 5   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 struct QuadTreeNode
 {
@@ -50,7 +51,7 @@ public:
     CQuadTreeManager(void);
     ~CQuadTreeManager(void);
 
-    //初始化网格数据
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL        Init(FLOAT fLeft, FLOAT fTop, FLOAT fRight, FLOAT fBottom);
 
     BOOL        AddMapObject(CMapObject* pMapObject);

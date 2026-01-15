@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Editor___ResourceAtlasCreate.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -61,7 +62,7 @@ public class ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 创建临时预设
+    /// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     /// </summary>
     public static Object CreatePrefab(GameObject go, string name, string path)
     {
@@ -73,7 +74,7 @@ public class ResourceAtlasCreate
 
 
     /// <summary>
-    /// whether有alpha通道
+    /// whether[TRANSLATED]alpha[TRANSLATED][TRANSLATED]
     /// </summary>
     /// <param name="_tex"></param>
     /// <returns></returns>
@@ -105,7 +106,7 @@ public class ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 判断whether是图片格式
+    /// [TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     /// </summary>
     /// <param name="_path"></param>
     /// <returns></returns>
@@ -116,13 +117,13 @@ public class ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 显示进度条
+    /// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     /// </summary>
     /// <param name="path"></param>
     /// <param name="val"></param>
     public static void ShowProgress(string path, float val)
     {
-        EditorUtility.DisplayProgressBar("图集handle中...", string.Format("Please wait...  Path:{0}", path), val);
+        EditorUtility.DisplayProgressBar("[TRANSLATED][TRANSLATED]handle[TRANSLATED]...", string.Format("Please wait...  Path:{0}", path), val);
     }
 
     public virtual void CreateUIAtlasPrefab(UnityEngine.Object obj)

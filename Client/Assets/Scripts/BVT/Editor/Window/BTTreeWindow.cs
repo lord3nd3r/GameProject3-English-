@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Editor___Window___BTTreeWindow.cs */
 ﻿using BVT;
 using System;
 using UnityEditor;
@@ -330,9 +331,9 @@ namespace BVT
             }
 
             GUI.backgroundColor = Color.green;
-            BTSettings.ShowNodeComment  = GUILayout.Toggle(showNodeDesc,     showNodeDesc ?      "隐藏备注":"显示备注", ToolbarButtonStyle, GUILayout.Width(120));
-            BTSettings.ShowNodeIcon     = GUILayout.Toggle(showNodeIcon,     showNodeIcon ?      "文字模式":"图片模式", ToolbarButtonStyle, GUILayout.Width(120));
-            BTSettings.ShowBlackboard   = GUILayout.Toggle(showBlackboard,   showBlackboard ?    "隐藏黑板":"显示黑板", ToolbarButtonStyle, GUILayout.Width(120));
+            BTSettings.ShowNodeComment  = GUILayout.Toggle(showNodeDesc,     showNodeDesc ?      "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]":"[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", ToolbarButtonStyle, GUILayout.Width(120));
+            BTSettings.ShowNodeIcon     = GUILayout.Toggle(showNodeIcon,     showNodeIcon ?      "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]":"[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", ToolbarButtonStyle, GUILayout.Width(120));
+            BTSettings.ShowBlackboard   = GUILayout.Toggle(showBlackboard,   showBlackboard ?    "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]":"[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", ToolbarButtonStyle, GUILayout.Width(120));
             BTSettings.NodeConnMode     = (ENodeConnMode)EditorGUILayout.EnumPopup(BTSettings.NodeConnMode, ToolbarButtonStyle, GUILayout.Width(120));
 
             GUILayout.FlexibleSpace();
@@ -342,14 +343,14 @@ namespace BVT
 
             }
             GUI.backgroundColor = Color.yellow;
-            if (GUILayout.Button("保存Tree", ToolbarButtonStyle, GUILayout.Width(120)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED]Tree", ToolbarButtonStyle, GUILayout.Width(120)))
             {
 
             }
 
             GUILayout.Space(100);
             GUI.backgroundColor = Color.red;
-            if (GUILayout.Button("清除所有节点", ToolbarButtonStyle, GUILayout.Width(200)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", ToolbarButtonStyle, GUILayout.Width(200)))
             {
 
             }

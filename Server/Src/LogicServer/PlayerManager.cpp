@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PlayerManager.cpp */
 ﻿#include "stdafx.h"
 #include "PlayerManager.h"
 #include "RoleModule.h"
@@ -116,7 +117,7 @@ BOOL CPlayerManager::BroadMessageToAll(INT32 nMsgID, const google::protobuf::Mes
         }
     }
 
-    //因is所有player是一个ProxyID
+    //[TRANSLATED]is[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED]ProxyID
     ServiceBase::GetInstancePtr()->SendMsgProtoBuf(dwProxyID, MSG_BROAD_MESSAGE_NOTIFY, 0, 0, Nty);
 
     return TRUE;
@@ -125,7 +126,7 @@ BOOL CPlayerManager::BroadMessageToAll(INT32 nMsgID, const google::protobuf::Mes
 BOOL CPlayerManager::ZeroTimer(INT32 nParam)
 {
     TNodeTypePtr pNode = MoveFirst();
-    if (pNode == NULL) //一个人也没有
+    if (pNode == NULL) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     {
         return TRUE;
     }
@@ -185,7 +186,7 @@ BOOL CPlayerManager::OnUpdate(UINT64 uTick)
 
     if (uReleaseRoleID != 0 && GetCount() > m_nMaxCacheNum)
     {
-        //当内存中的人数超过人，就清理一个离线时间最长的player
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player
         ReleasePlayer(uReleaseRoleID);
     }
 

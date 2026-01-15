@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Cmd___CommandUseSkill.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// 使用skill
+/// [TRANSLATED][TRANSLATED]skill
 /// </summary>
 public class CommandUseSkill : CommandAct
 {

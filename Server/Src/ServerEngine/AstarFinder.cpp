@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___AstarFinder.cpp */
 ﻿#include "stdafx.h"
 #include "AstarFinder.h"
 
@@ -35,9 +36,9 @@ AstarFinder::~AstarFinder()
 
 BOOL AstarFinder::InitAstarMap(BYTE* pMap, INT32 w, INT32 h)
 {
-	m_nColCnt = w;	// 障碍图的宽度
-	m_nRowCnt = h;	// 障碍图的高度
-	m_nTotalTiles = m_nRowCnt * m_nColCnt; // 障碍图的尺寸
+	m_nColCnt = w;	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	m_nRowCnt = h;	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	m_nTotalTiles = m_nRowCnt * m_nColCnt; // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 #ifdef MAPDATANOCOPY
 	m_pTileMap = pMap;
 #else
@@ -57,7 +58,7 @@ BOOL AstarFinder::InitAstarMap(BYTE* pMap, INT32 w, INT32 h)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-BOOL AstarFinder::NewPath(int sx, int sy, int dx, int dy) //(dx,dy)目的节点，(sx,sy)源节点，入口函数
+BOOL AstarFinder::NewPath(int sx, int sy, int dx, int dy) //(dx,dy)[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，(sx,sy)[TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 {
 	if ( IsTileAviable(dx, dy) && IsTileAviable(sx, sy) && (GetTileNum(sx, sy) != GetTileNum(dx, dy)) )
 	{
@@ -201,7 +202,7 @@ void AstarFinder::FindPath(int sx, int sy, int dx, int dy)
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::GetBestNode(void) //返回开list中的f最小的节点，并将此节点插入shutdownlist
+* AstarFinder::GetBestNode(void) //[TRANSLATED][TRANSLATED][TRANSLATED]list[TRANSLATED][TRANSLATED]f[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]shutdownlist
 {
 	NODE* tmp;
 	if ( m_pOpenList->NextNode == NULL )
@@ -315,7 +316,7 @@ void AstarFinder::GenerateSucc(NODE* BestNode, int x, int y, int dx, int dy)
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::CheckOPEN(int tilenum) //遍历找完开list，看tilenumwhether在其中
+* AstarFinder::CheckOPEN(int tilenum) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]list，[TRANSLATED]tilenumwhether[TRANSLATED][TRANSLATED][TRANSLATED]
 {
 	NODE* tmp;
 
@@ -333,7 +334,7 @@ AstarFinder::NODE
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::CheckCLOSED(int tilenum) //遍历找完闭list，看tilenumwhether在其中
+* AstarFinder::CheckCLOSED(int tilenum) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]list，[TRANSLATED]tilenumwhether[TRANSLATED][TRANSLATED][TRANSLATED]
 {
 	NODE* tmp;
 
@@ -351,7 +352,7 @@ AstarFinder::NODE
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void AstarFinder::Insert(NODE* Successor)//在开list中从小到大排序
+void AstarFinder::Insert(NODE* Successor)//[TRANSLATED][TRANSLATED]list[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 {
 	NODE* tmp1, *tmp2;
 	int f;
@@ -431,7 +432,7 @@ void AstarFinder::Push(NODE* Node)
 
 ////////////////////////////////////////////////////////////////////////////////
 AstarFinder::NODE
-* AstarFinder::Pop(void) //返回节点指针
+* AstarFinder::Pop(void) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 {
 	NODE* tmp;
 	STACK* tmpSTK;

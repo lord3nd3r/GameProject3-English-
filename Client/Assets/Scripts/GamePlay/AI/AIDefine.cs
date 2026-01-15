@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___AIDefine.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -11,17 +12,17 @@ namespace BVT.AI
 
     public enum EAIState
     {
-        BORN,  //出生
-        IDLE,  //闲逛
-        FIGHT, //战斗
-        FOLLOW,//跟随
-        PATROL,//巡逻
-        DEAD,  //死亡
-        BACK,  //回家
-        CHASE, //追击
-        FLEE,  //避开
-        ESCAPE,//逃跑
-        PLOT,  //剧情
+        BORN,  //[TRANSLATED][TRANSLATED]
+        IDLE,  //[TRANSLATED][TRANSLATED]
+        FIGHT, //[TRANSLATED][TRANSLATED]
+        FOLLOW,//[TRANSLATED][TRANSLATED]
+        PATROL,//[TRANSLATED][TRANSLATED]
+        DEAD,  //[TRANSLATED][TRANSLATED]
+        BACK,  //[TRANSLATED][TRANSLATED]
+        CHASE, //[TRANSLATED][TRANSLATED]
+        FLEE,  //[TRANSLATED][TRANSLATED]
+        ESCAPE,//[TRANSLATED][TRANSLATED]
+        PLOT,  //[TRANSLATED][TRANSLATED]
     }
 
     public enum EAITarget

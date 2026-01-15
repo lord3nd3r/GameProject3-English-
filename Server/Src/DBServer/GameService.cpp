@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "../Message/Msg_Game.pb.h"
@@ -42,7 +43,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("DBServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("DBServeralready在running!");
+        CLog::GetInstancePtr()->LogError("DBServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -51,7 +52,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("db_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件db_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]db_svr_portconfigerror!");
         return FALSE;
     }
 

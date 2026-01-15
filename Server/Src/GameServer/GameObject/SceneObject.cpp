@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___SceneObject.cpp */
 ﻿#include "stdafx.h"
 #include "SceneObject.h"
 #include "../GameService.h"
@@ -455,7 +456,7 @@ BOOL CSceneObject::IsInCircle(Vector3D hitPoint, float radius, float height)
 
 BOOL CSceneObject::IsInSquare(Vector3D hitPoint, FLOAT hitDegree, float length, float width)
 {
-	float radius = 1.0f; //player自身的半径
+	float radius = 1.0f; //player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	CPoint2D A(-width / 2, -length / 2), B(-width / 2, length / 2), C(width / 2, length / 2), D(width / 2, -length / 2);
 
@@ -726,7 +727,7 @@ BOOL CSceneObject::InitSkills(const google::protobuf::RepeatedPtrField< ::SkillI
 	StComboSkillInfo* pComboInfo = CStaticData::GetInstancePtr()->GetComboSkillInfo(m_vtNormals[0].dwSkillID);
 	if (pComboInfo == NULL)
 	{
-		//表示没有连招
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		return TRUE;
 	}
 
@@ -787,7 +788,7 @@ BOOL CSceneObject::InitSkills()
 	StComboSkillInfo* pComboInfo = CStaticData::GetInstancePtr()->GetComboSkillInfo(m_vtNormals[0].dwSkillID);
 	if (pComboInfo == NULL)
 	{
-		//表示没有连招
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		return TRUE;
 	}
 
@@ -841,23 +842,23 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 {
 	ERROR_RETURN_VALUE(m_pScene != NULL, MRC_UNKNOW_ERROR);
 
-	//取skillLevel
+	//[TRANSLATED]skillLevel
 	INT32 nLevel = GetSkillLevel(Req.skillid());
 	ERROR_RETURN_VALUE(nLevel > 0, MRC_INVALID_SKILL_ID);
 
 	StSkillInfo* pSkillInfo = CStaticData::GetInstancePtr()->GetSkillInfo(Req.skillid(), nLevel);
 	ERROR_RETURN_VALUE(pSkillInfo != NULL, MRC_INVALID_SKILL_ID);
 
-	//3. 扣除放skill需要的东西
+	//3. [TRANSLATED][TRANSLATED][TRANSLATED]skill[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	//if (GetMp() < pSkillInfo->CostMp)
 	//{
 	//	return MRC_SKILL_CD_ERROR;
 	//}
 
-	//whether是普通的Combo skills
+	//whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Combo skills
 	if (m_vtNormals.size() > 0 && Req.skillid() == m_vtNormals[0].dwSkillID)
 	{
-		//如果是普通的Combo skills
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Combo skills
 		if(m_SkillObject.GetSkillStatus() == ESS_RUNNING)
 		{
 			m_SkillObject.SetComboSkill(TRUE);
@@ -867,15 +868,15 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 
 	m_SkillObject.SetComboSkill(FALSE);
 
-	//Skill CDwhethercan施放。
+	//Skill CDwhethercan[TRANSLATED][TRANSLATED]。
 	if (!CheckSkillCD(Req.skillid(), pSkillInfo->CD))
 	{
 		return MRC_SKILL_CD_ERROR;
 	}
 
-	m_SkillObject.StopSkill(); //stop当前的skill
+	m_SkillObject.StopSkill(); //stop[TRANSLATED][TRANSLATED][TRANSLATED]skill
 
-	//skillwhethercan打中指定的target.(带有target的skill要检查targetwhether合法)
+	//skillwhethercan[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]target.([TRANSLATED][TRANSLATED]target[TRANSLATED]skill[TRANSLATED][TRANSLATED][TRANSLATED]targetwhether[TRANSLATED][TRANSLATED])
 	if (Req.targetobjects_size() > 0)
 	{
 		for (int i = 0; i < Req.targetobjects_size(); i++)

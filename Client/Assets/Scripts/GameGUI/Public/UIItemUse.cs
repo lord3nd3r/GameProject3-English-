@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Public___UIItemUse.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -146,6 +147,6 @@ public class UIItemUse : GTWindow
         GTItemHelper.ShowItemTexture(itemTexture, item.Id);
         GTItemHelper.ShowItemQuality(itemQuality, item.Id);
         SetCurrCount(1);
-        itemNum.text = GTTools.Format("拥有count：{0}", item.Num);
+        itemNum.text = GTTools.Format("[TRANSLATED][TRANSLATED]count：{0}", item.Num);
     }
 }

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___BagData.h */
 ﻿#ifndef __BAG_DATA_OBJECT_H__
 #define __BAG_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
@@ -14,13 +15,13 @@ struct BagDataObject : public ShareObject
 		m_nStatus = 0;
 	}
 
-	UINT64	m_uGuid;		//格子的guid
-	UINT64	m_uRoleID;		//角色ID
-	UINT64	m_ItemGuid;		//物品guid
-	UINT32	m_ItemID;		//道具ID
-	INT64	m_nCount;		//个数
-	BOOL	m_bBind;		//whether是邦定
-	UINT32	m_nStatus;		//whether删除
+	UINT64	m_uGuid;		//[TRANSLATED][TRANSLATED][TRANSLATED]guid
+	UINT64	m_uRoleID;		//[TRANSLATED][TRANSLATED]ID
+	UINT64	m_ItemGuid;		//[TRANSLATED][TRANSLATED]guid
+	UINT32	m_ItemID;		//[TRANSLATED][TRANSLATED]ID
+	INT64	m_nCount;		//[TRANSLATED][TRANSLATED]
+	BOOL	m_bBind;		//whether[TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32	m_nStatus;		//whether[TRANSLATED][TRANSLATED]
 
 	BOOL Create(IDBInterface* pDB)
 	{

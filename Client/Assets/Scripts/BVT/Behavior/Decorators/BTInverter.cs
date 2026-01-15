@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Decorators___BTInverter.cs */
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +7,8 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "逆转节点")]
-    [NodeDesc("子节点返回Success，则返回Failure；子节点返回Failure，则返回Success")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success，[TRANSLATED][TRANSLATED][TRANSLATED]Failure；[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure，[TRANSLATED][TRANSLATED][TRANSLATED]Success")]
     [NodeName("05CBF2", "Inverter")]
     public class BTInverter : BTDecorator
     {

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GemModule.h */
 ﻿#ifndef __GEM_MODULE_H__
 #define __GEM_MODULE_H__
 #include "ModuleBase.h"
@@ -42,8 +43,8 @@ public:
 
 public:
 	//********************* Message handlers begin ******************************
-	BOOL OnMsgSetupGemReq(NetPacket* pNetPacket);  //穿装备请求
-	BOOL OnMsgUnsetGemReq(NetPacket* pNetPacket);  //穿装备请求
+	BOOL OnMsgSetupGemReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL OnMsgUnsetGemReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	//********************* Message handlers end ******************************
 
 public:

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Core___GTResourceManager.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,9 +7,9 @@ using System.IO;
 
 public class GTResourceManager : GTSingleton<GTResourceManager>
 {
-    public Dictionary<string, GTResourceUnit>    Units          = new Dictionary<string, GTResourceUnit>();   //以AssetNameisKey，保存Asset
-    public Dictionary<string, GTResourceBundle>  Bundles        = new Dictionary<string, GTResourceBundle>(); //保存所有的AssetBundle
-    public ResourceType                          Type           = ResourceType.TYPE_BUNDLE;                 //资源load方式
+    public Dictionary<string, GTResourceUnit>    Units          = new Dictionary<string, GTResourceUnit>();   //[TRANSLATED]AssetNameisKey，[TRANSLATED][TRANSLATED]Asset
+    public Dictionary<string, GTResourceBundle>  Bundles        = new Dictionary<string, GTResourceBundle>(); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]AssetBundle
+    public ResourceType                          Type           = ResourceType.TYPE_BUNDLE;                 //[TRANSLATED][TRANSLATED]load[TRANSLATED][TRANSLATED]
     
     private bool                                 IsRead
     {
@@ -200,14 +201,14 @@ public class GTResourceManager : GTSingleton<GTResourceManager>
         Units.TryGetValue(assetName, out unit);
         if (unit == null)
         {
-            Debug.LogError("config表中不存在：" + assetName);
+            Debug.LogError("config[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：" + assetName);
             return;
         }
         GTResourceBundle bundle = null;
         Bundles.TryGetValue(unit.AssetBundleName, out bundle);
         if (bundle == null)
         {
-            Debug.LogError("不存在这个Bundle：" + unit.AssetBundleName);
+            Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Bundle：" + unit.AssetBundleName);
             return;
         }
         AddLoadBundleTask(unit.AssetName, bundle, null, callback);
@@ -224,13 +225,13 @@ public class GTResourceManager : GTSingleton<GTResourceManager>
         Units.TryGetValue(assetName, out unit);
         if (unit == null)
         {
-            Debug.LogError("config表中不存在：" + assetName);
+            Debug.LogError("config[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：" + assetName);
             return;
         }
         Object asset = UnityEditor.AssetDatabase.LoadAssetAtPath<Object>(unit.Path);
         if (asset == null)
         {
-            Debug.LogError("不存在这个资源：" + assetName);
+            Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：" + assetName);
             return;
         }
         if (callback != null)

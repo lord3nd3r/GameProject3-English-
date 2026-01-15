@@ -1,9 +1,10 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___ConditionComposites___CheckHostAIState.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/条件组合节点", Label = "CheckHostAIState")]
+    [NodeAttribute(Type = "AI/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "CheckHostAIState")]
     public class CheckHostAIState : AICondition
     {
         [SerializeField]
@@ -11,7 +12,7 @@ namespace BVT.AI
 
         public override string Name
         {
-            get { return !Invert ? "主人AI Is " + ApplyAIState.ToString() : string.Format("主人AI Not {0}", ApplyAIState); }
+            get { return !Invert ? "[TRANSLATED][TRANSLATED]AI Is " + ApplyAIState.ToString() : string.Format("[TRANSLATED][TRANSLATED]AI Not {0}", ApplyAIState); }
         }
 
         public override bool Check()

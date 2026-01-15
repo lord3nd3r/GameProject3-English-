@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LogicSvrManager.h */
 ﻿#ifndef _LOGIC_SEVER_MANAGERH_
 #define _LOGIC_SEVER_MANAGERH_
 #include "DBInterface/CppMysql.h"
@@ -5,36 +6,36 @@
 
 enum EStatusFlag
 {
-    ESF_NONE        = 0,//未知
-    ESF_GOOD        = 1,//流畅
-    ESF_BUSY        = 2,//拥挤
-    ESF_FULL        = 3,//爆满
-    ESF_MAINTAIN    = 4,//维护
+    ESF_NONE        = 0,//[TRANSLATED][TRANSLATED]
+    ESF_GOOD        = 1,//[TRANSLATED][TRANSLATED]
+    ESF_BUSY        = 2,//[TRANSLATED][TRANSLATED]
+    ESF_FULL        = 3,//[TRANSLATED][TRANSLATED]
+    ESF_MAINTAIN    = 4,//[TRANSLATED][TRANSLATED]
     ESF_SHUTDOWN    = 5,//shutdown
-    ESF_REVIEW      = 6,//评审
+    ESF_REVIEW      = 6,//[TRANSLATED][TRANSLATED]
 };
 
 enum ECornerMark
 {
-    ECM_NONE = 0,//无
-    ECM_NEW = 1, //新服
-    ECM_SURGEST = 2,//推荐
+    ECM_NONE = 0,//[TRANSLATED]
+    ECM_NEW = 1, //[TRANSLATED][TRANSLATED]
+    ECM_SURGEST = 2,//[TRANSLATED][TRANSLATED]
 };
 
 enum EUpdateStatus
 {
-    EUS_NONE = 0,   //无变化
-    EUS_UPDATE = 1, //数据变化
-    EUS_RE_REG = 2, //重启注册
-    EUS_NEW_REG = 3 //新服注册
+    EUS_NONE = 0,   //[TRANSLATED][TRANSLATED][TRANSLATED]
+    EUS_UPDATE = 1, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    EUS_RE_REG = 2, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    EUS_NEW_REG = 3 //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 enum EServerStatus
 {
-    ESS_SVR_OFFLINE     = 0, //掉线
-    ESS_SVR_ONLINE      = 1, //在线
-    ESS_SVR_STARTING    = 2, //start中
-    ESS_SVR_UPDATING    = 3, //更新中
+    ESS_SVR_OFFLINE     = 0, //[TRANSLATED][TRANSLATED]
+    ESS_SVR_ONLINE      = 1, //[TRANSLATED][TRANSLATED]
+    ESS_SVR_STARTING    = 2, //start[TRANSLATED]
+    ESS_SVR_UPDATING    = 3, //[TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 struct LogicServerNode
@@ -50,10 +51,10 @@ struct LogicServerNode
         m_uLastUpdate   = 0;
         m_nMinVersion  = 0;
         m_nMaxVersion  = 0;
-        m_nMaxOnline   = 0;    //最大在线人数
-        m_nCurOnline   = 0;    //当前最大人数
-        m_nTotalNum    = 0;    //总注册人数
-        m_nCacheNum    = 0;    //当前缓存人数
+        m_nMaxOnline   = 0;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        m_nCurOnline   = 0;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        m_nTotalNum    = 0;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        m_nCacheNum    = 0;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         m_uSvrOpenTime  = 0;
         m_nErrorCnt    = 0;
         m_nFileVer     = 0;
@@ -69,28 +70,28 @@ struct LogicServerNode
 
     INT32       m_nConnID;     //connectionID
     INT32       m_nServerID;   //serverID
-    INT32       m_nPort;       //游戏端口号
-    INT32       m_nHttpPort;   //http端口
-    INT32       m_ServerFlag;   //server标记
-    INT32       m_CornerMark;   //server角标
-    INT32       m_nMinVersion; //最小可见版本
-    INT32       m_nMaxVersion; //最大可见版本
-    UINT64      m_uSvrOpenTime; //开服时间
+    INT32       m_nPort;       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nHttpPort;   //http[TRANSLATED][TRANSLATED]
+    INT32       m_ServerFlag;   //server[TRANSLATED][TRANSLATED]
+    INT32       m_CornerMark;   //server[TRANSLATED][TRANSLATED]
+    INT32       m_nMinVersion; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nMaxVersion; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    UINT64      m_uSvrOpenTime; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     std::string m_strSvrName;   //serverName
-    std::string m_strOuterAddr; //server的外网地址
-    std::string m_strInnerAddr; //server的内网地址
-    UINT64      m_uLastUpdate;  //server最后更新时间
-    std::set<INT32> m_CheckIpList;   //IP白名单
-    std::set<INT32>  m_CheckChannelList; //渠道白名单
-    std::set<UINT64>  m_CheckAccountList; //账号白名单
-    EServerStatus    m_ServerStatus;   //server状态
+    std::string m_strOuterAddr; //server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    std::string m_strInnerAddr; //server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    UINT64      m_uLastUpdate;  //server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    std::set<INT32> m_CheckIpList;   //IP[TRANSLATED][TRANSLATED][TRANSLATED]
+    std::set<INT32>  m_CheckChannelList; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    std::set<UINT64>  m_CheckAccountList; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    EServerStatus    m_ServerStatus;   //server[TRANSLATED][TRANSLATED]
 
-    INT32       m_nMaxOnline;   //最大在线人数
-    INT32       m_nCurOnline;   //当前最大人数
-    INT32       m_nTotalNum;    //总注册人数
-    INT32       m_nCacheNum;    //当前缓存人数
-    INT32       m_nErrorCnt;    //数据库写Failure次数
-    INT32       m_nFileVer;     //server文件版本
+    INT32       m_nMaxOnline;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nCurOnline;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nTotalNum;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nCacheNum;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nErrorCnt;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure[TRANSLATED][TRANSLATED]
+    INT32       m_nFileVer;     //server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     EUpdateStatus       m_eChangeStatus;
 
@@ -98,9 +99,9 @@ struct LogicServerNode
 
 struct GameParamNode
 {
-    INT32 m_nChannel;  //渠道
+    INT32 m_nChannel;  //[TRANSLATED][TRANSLATED]
     std::string m_strParamKey;//
-    std::string m_strParamValue; //实际serverID
+    std::string m_strParamValue; //[TRANSLATED][TRANSLATED]serverID
 };
 
 class LogicSvrManager : public std::map<INT32, LogicServerNode*>

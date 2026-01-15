@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___LuaManager.cpp */
 #include "stdafx.h"
 #include "LuaManager.h"
 
@@ -8,8 +9,8 @@ CLuaHelper::CLuaHelper()
 
 CLuaHelper::~CLuaHelper()
 {
-	//因isCLuaHelper是帮助类，所以这个指针必须在对象析构前要调用Deattch,
-	//而且m_pLuaState赋值也只能是通过Attach来做;
+	//[TRANSLATED]isCLuaHelper[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Deattch,
+	//[TRANSLATED][TRANSLATED]m_pLuaState[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Attach[TRANSLATED][TRANSLATED];
 
 	m_pLuaState = NULL;
 }

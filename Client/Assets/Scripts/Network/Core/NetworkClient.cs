@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Network___Core___NetworkClient.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Net.Sockets;
@@ -121,7 +122,7 @@ public class NetworkClient
         int nPacketSize = BitConverter.ToUInt16(m_DataBuffer, 8);
         if (nPacketSize > m_DataLen)
         {
-            //暂时这样handle
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]handle
             return false;
         }
         byte[] realPacket = new byte[nPacketSize];

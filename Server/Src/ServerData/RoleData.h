@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___RoleData.h */
 ﻿#ifndef __ROLE_DATA_OBJECT_H__
 #define __ROLE_DATA_OBJECT_H__
 #include "DBInterface/DBStoredProc.h"
@@ -6,50 +7,50 @@ struct RoleDataObject : public ShareObject
 {
 	RoleDataObject()
 	{
-		m_uRoleID		= 0;            //角色ID
-		m_uAccountID	= 0;            //账号ID
+		m_uRoleID		= 0;            //[TRANSLATED][TRANSLATED]ID
+		m_uAccountID	= 0;            //[TRANSLATED][TRANSLATED]ID
 		m_Level			= 0;            //Level
-		m_Exp			= 0;            //经验
-		m_nLangID		= 0;            //语言ID
-		m_u64Fight		= 0;            //战力
+		m_Exp			= 0;            //[TRANSLATED][TRANSLATED]
+		m_nLangID		= 0;            //[TRANSLATED][TRANSLATED]ID
+		m_u64Fight		= 0;            //[TRANSLATED][TRANSLATED]
 		m_nVipLvl		= 0;            //VIPLevel
-		m_nVipExp		= 0;            //VIP经验
-		m_CityCopyID	= 0;            //主城副本type
-		m_bDelete       = FALSE;        //whether删除
-		m_CarrerID      = 0;            //职业
-		m_uCreateTime	= 0;            //角色create time
-		m_uLogonTime	= 0;            //最近一次登录时间
-		m_uLogoffTime	= 0;            //最近一次离线时间
-		m_nChannel      = 0;            //角色渠道
+		m_nVipExp		= 0;            //VIP[TRANSLATED][TRANSLATED]
+		m_CityCopyID	= 0;            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+		m_bDelete       = FALSE;        //whether[TRANSLATED][TRANSLATED]
+		m_CarrerID      = 0;            //[TRANSLATED][TRANSLATED]
+		m_uCreateTime	= 0;            //[TRANSLATED][TRANSLATED]create time
+		m_uLogonTime	= 0;            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+		m_uLogoffTime	= 0;            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+		m_nChannel      = 0;            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		memset(m_szName, 0, ROLE_NAME_LEN);
 	}
 
-	UINT64		m_uRoleID;              //角色ID
-	UINT64		m_uAccountID;           //账号ID
-	CHAR		m_szName[ROLE_NAME_LEN];//角色名
-	INT32		m_CarrerID;             //职业ID
+	UINT64		m_uRoleID;              //[TRANSLATED][TRANSLATED]ID
+	UINT64		m_uAccountID;           //[TRANSLATED][TRANSLATED]ID
+	CHAR		m_szName[ROLE_NAME_LEN];//[TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32		m_CarrerID;             //[TRANSLATED][TRANSLATED]ID
 	INT32		m_Level;                //Level
-	INT64		m_Action[ACTION_NUM];   //所有的体力
-	INT64		m_Actime[ACTION_NUM];   //体力恢复时间
-	INT64		m_Exp;                  //经验
-	INT32		m_nLangID;              //语言ID
-	INT64		m_u64Fight;             //战力
+	INT64		m_Action[ACTION_NUM];   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT64		m_Actime[ACTION_NUM];   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT64		m_Exp;                  //[TRANSLATED][TRANSLATED]
+	INT32		m_nLangID;              //[TRANSLATED][TRANSLATED]ID
+	INT64		m_u64Fight;             //[TRANSLATED][TRANSLATED]
 	INT32		m_nVipLvl;               //VIPLevel
-	INT32		m_nVipExp;               //VIP经验
-	INT32		m_CityCopyID;           //主城副本type
-	INT32		m_nChannel;             //角色渠道
-	BOOL		m_bDelete;              //whether删除
-	INT64       m_uQQ;                  //QQ号
-	UINT64      m_uCreateTime;          //角色create time
-	UINT64      m_uLogonTime;           //本次登录时间
-	UINT64      m_uLogoffTime;          //离线时间
-	UINT64      m_uGroupMailTime;       //群邮件接收时间
+	INT32		m_nVipExp;               //VIP[TRANSLATED][TRANSLATED]
+	INT32		m_CityCopyID;           //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+	INT32		m_nChannel;             //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL		m_bDelete;              //whether[TRANSLATED][TRANSLATED]
+	INT64       m_uQQ;                  //QQ[TRANSLATED]
+	UINT64      m_uCreateTime;          //[TRANSLATED][TRANSLATED]create time
+	UINT64      m_uLogonTime;           //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT64      m_uLogoffTime;          //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT64      m_uGroupMailTime;       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	UINT64      m_uGuildID;             //guildID
-	UINT32      m_nOnlineTime;          //在线时长
-	//签到数据
-	INT32		m_nSignNum;             //签到天数
-	UINT32		m_nSignDay;             //最新的签到时间
-	UINT32		m_RecvAction;           //领取体力标记
+	UINT32      m_nOnlineTime;          //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32		m_nSignNum;             //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32		m_nSignDay;             //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32		m_RecvAction;           //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 
 	BOOL Create(IDBInterface* pDB)

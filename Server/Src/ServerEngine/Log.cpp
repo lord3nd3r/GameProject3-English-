@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___Log.cpp */
 ﻿#include "stdafx.h"
 #include "Log.h"
 CLog::CLog(void)
@@ -230,7 +231,7 @@ void CLog::SetTitle(char* lpszFormat, ...)
 
 void CLog::CheckAndCreate()
 {
-    //超过10M就新建一个文件
+    //[TRANSLATED][TRANSLATED]10M[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (ftell(m_pLogFile) < 1024 * 1024 * 10)
     {
         return;

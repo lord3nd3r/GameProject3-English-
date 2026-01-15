@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBMsgHandler.cpp */
 ﻿#include "stdafx.h"
 #include "DBMsgHandler.h"
 #include "PacketHeader.h"
@@ -114,7 +115,7 @@ BOOL CDBMsgHandler::OnMsgRoleLoginReq(NetPacket* pPacket)
 	Ack.set_retcode(MRC_SUCCESSED);
 	Ack.set_roleid(Req.roleid());
 
-	//一个角色其它的数据可能都没有，但角色基本信息必须有
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	if (!m_DBManager.GetRoleData(Req.roleid(), Ack))
 	{
 		Ack.set_retcode(MRC_INVALID_ROLEID);

@@ -1,10 +1,11 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Tasks___BTLog.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "action节点", Label = "BTLog")]
+    [NodeAttribute(Type = "action[TRANSLATED][TRANSLATED]", Label = "BTLog")]
     public class BTLog : BTTask
     {
         public enum ELogLevel

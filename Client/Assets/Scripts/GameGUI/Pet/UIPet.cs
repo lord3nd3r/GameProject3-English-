@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Pet___UIPet.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -176,7 +177,7 @@ public class UIPet : GTWindow
         MLPet.Instance.GetItemListToOneKeyUpgrade(ref mItems);
         if (mItems.Count == 0)
         {
-            GTItemHelper.ShowTip("缺少食物");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         ShowView();
@@ -187,7 +188,7 @@ public class UIPet : GTWindow
         GTAudioManager.Instance.PlayEffectAudio(GTAudioKey.SOUND_UI_CLICK);
         if (mItems.Count == 0)
         {
-            GTItemHelper.ShowTip("请添加食物");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         GTNetworkSend.Instance.TryUpgradePet(mCurPetID, mItems);

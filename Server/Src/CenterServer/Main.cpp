@@ -1,4 +1,5 @@
-﻿// CenterServer.cpp : definition控制台应用程序的入口点。
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___CenterServer___Main.cpp */
+﻿// CenterServer.cpp : definition[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 //
 
 #include "stdafx.h"

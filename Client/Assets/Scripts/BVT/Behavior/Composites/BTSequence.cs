@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTSequence.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
@@ -5,8 +6,8 @@ using System.Collections.Generic;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "串行节点")]
-    [NodeDesc("串行节点，顺序执行子节点，只要碰到一个子节点返回FALSE，则返回FALSE；否则返回TRUE")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE，[TRANSLATED][TRANSLATED][TRANSLATED]FALSE；[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]TRUE")]
     [NodeName("bf7fff", " Sequence")]
     public class BTSequence : BTComposite
     {

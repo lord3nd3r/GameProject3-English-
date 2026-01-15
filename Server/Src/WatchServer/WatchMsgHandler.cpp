@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___WatchServer___WatchMsgHandler.cpp */
 ﻿#include "stdafx.h"
 
 #include "WatchMsgHandler.h"
@@ -353,7 +354,7 @@ BOOL CWatchMsgHandler::CheckServerStatus(BOOL bFrist)
                     continue;
                 }
 
-                //表示进程already挂了
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED]
 
                 //
 

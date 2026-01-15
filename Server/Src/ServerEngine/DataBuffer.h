@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DataBuffer.h */
 ﻿#ifndef _DATA_BUFFER_H_
 #define _DATA_BUFFER_H_
 #include "IBufferHandler.h"
@@ -196,10 +197,10 @@ public:
         if (pBuff->m_nRefCount <= 0)
         {
             pBuff->m_nDataLen = 0;
-            //首先从己用中删除
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             if (m_pUsedList == pBuff)
             {
-                //自己是首结点
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 m_pUsedList = pBuff->m_pNext;
                 if (m_pUsedList != NULL)
                 {
@@ -218,7 +219,7 @@ public:
 
             if (m_EnablePool)
             {
-                //再把自己加到己用中
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 pBuff->m_pNext = m_pFreeList;
                 pBuff->m_pPrev = NULL;
                 m_pFreeList = pBuff;
@@ -320,19 +321,19 @@ public:
 public:
     IDataBuffer* AllocDataBuff(int nSize);
 
-    CBufferManager<64>     m_BufferManager64B;      //管理<=64B的内存池，
-    CBufferManager<128>    m_BufferManager128B;     //管理<=128B的内存池，
-    CBufferManager<256>    m_BufferManager256B;     //管理<=256B的内存池，
-    CBufferManager<512>    m_BufferManager512B;     //管理<=512B的内存池，
-    CBufferManager<1024>   m_BufferManager1K;       //管理<=1k的内存池，
-    CBufferManager<2048>   m_BufferManager2K;       //管理<=2k的内存池，
-    CBufferManager<4096>   m_BufferManager4K;       //管理<=4k的内存池，
-    CBufferManager<8192>   m_BufferManager8K;       //管理<=8k的内存池，
-    CBufferManager<16384>  m_BufferManager16K;      //管理<=16k的内存池，
-    CBufferManager<32768>  m_BufferManager32K;      //管理<=32k的内存池，
-    CBufferManager<65536>  m_BufferManager64K;      //管理<=64k的内存池，
+    CBufferManager<64>     m_BufferManager64B;      //[TRANSLATED][TRANSLATED]<=64B[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<128>    m_BufferManager128B;     //[TRANSLATED][TRANSLATED]<=128B[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<256>    m_BufferManager256B;     //[TRANSLATED][TRANSLATED]<=256B[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<512>    m_BufferManager512B;     //[TRANSLATED][TRANSLATED]<=512B[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<1024>   m_BufferManager1K;       //[TRANSLATED][TRANSLATED]<=1k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<2048>   m_BufferManager2K;       //[TRANSLATED][TRANSLATED]<=2k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<4096>   m_BufferManager4K;       //[TRANSLATED][TRANSLATED]<=4k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<8192>   m_BufferManager8K;       //[TRANSLATED][TRANSLATED]<=8k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<16384>  m_BufferManager16K;      //[TRANSLATED][TRANSLATED]<=16k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<32768>  m_BufferManager32K;      //[TRANSLATED][TRANSLATED]<=32k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    CBufferManager<65536>  m_BufferManager64K;      //[TRANSLATED][TRANSLATED]<=64k[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
 
-    CBufferManager<10 * 1024 * 1014> m_BufferManagerAny;        //管理<=10M的内存, 并不用池管理, 直接apply, 直接释放.
+    CBufferManager<10 * 1024 * 1014> m_BufferManagerAny;        //[TRANSLATED][TRANSLATED]<=10M[TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED]apply, [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].
 };
 
 #endif

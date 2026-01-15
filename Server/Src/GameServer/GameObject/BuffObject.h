@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BuffObject.h */
 ﻿#ifndef __BUFF_OBJECT_H__
 #define __BUFF_OBJECT_H__
 
@@ -21,8 +22,8 @@ public:
 
 public:
 	UINT32  m_dwBuffID;    //buffID
-	UINT32  m_dwStartTime; //begin时间
-	UINT32  m_dwLastTime;  //上次作用时间
+	UINT32  m_dwStartTime; //begin[TRANSLATED][TRANSLATED]
+	UINT32  m_dwLastTime;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	BOOL	m_bOver;
 	INT32   m_PtyChange[PROPERTY_NUM];
 	CSceneObject* m_pSceneObject;

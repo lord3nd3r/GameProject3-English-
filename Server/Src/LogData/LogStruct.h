@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogData___LogStruct.h */
 ﻿#ifndef __LOG_STRUCT_H__
 #define __LOG_STRUCT_H__
 
@@ -9,39 +10,39 @@ enum ELogType
     ELT_ACCOUNT_LOGIN,
     ELT_ROLE_CREATE,
     ELT_ROLE_LOGIN,
-    ELT_ROLE_LOGOUT, //离线
+    ELT_ROLE_LOGOUT, //[TRANSLATED][TRANSLATED]
     ELT_ROLE_EXP,
     ELT_ROLE_DIAMOND,
     ELT_ROLE_GOLD,
     ELT_ROLE_LEVEL,
-    ELT_ROLE_CHAT, //聊天
+    ELT_ROLE_CHAT, //[TRANSLATED][TRANSLATED]
 };
 
-//角色log
+//[TRANSLATED][TRANSLATED]log
 struct Log_BaseData
 {
     ELogType    m_LogType   = ELT_LOG_TYPE_NONE; //logtype
-    UINT64      m_uAccountID = 0; //账号ID
-    UINT64      m_uRoleID    = 0; //角色ID
-    UINT64      m_uOpTime    = 0; //log发生时间
-    INT32       m_nChannel   = 0; //渠道
-    INT32       m_nAreaID    = 0; //区服ID
+    UINT64      m_uAccountID = 0; //[TRANSLATED][TRANSLATED]ID
+    UINT64      m_uRoleID    = 0; //[TRANSLATED][TRANSLATED]ID
+    UINT64      m_uOpTime    = 0; //log[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_nChannel   = 0; //[TRANSLATED][TRANSLATED]
+    INT32       m_nAreaID    = 0; //[TRANSLATED][TRANSLATED]ID
     CHAR        m_szIdfa[64] = { 0 };  //clientidfa
     CHAR        m_szRoleName[64] = { 0 };
-    //以下两条仅角色log有效
-    INT32       m_nLevel     = 0;//角色Level
-    INT32       m_nVipLevel  = 0;//角色VIPLevel
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]log[TRANSLATED][TRANSLATED]
+    INT32       m_nLevel     = 0;//[TRANSLATED][TRANSLATED]Level
+    INT32       m_nVipLevel  = 0;//[TRANSLATED][TRANSLATED]VIPLevel
     INT32       m_nAddWay    = 0;//
 };
 
 struct Log_AccountCreate : public Log_BaseData
 {
-    INT32       m_dwVersion      = 0;   //client版本号
-    INT32       m_dwIpAddr       = 0;    //登录IP
-    CHAR        m_szImei[64]    = { 0 };  //手机的MEI
-    CHAR        m_szModel[64]   = { 0 }; //手机的机型
-    CHAR        m_szUuid[64]    = { 0 };  //手机的uuid;
-    CHAR        m_szOpenID[64]  = { 0 };//第三方平台ID
+    INT32       m_dwVersion      = 0;   //client[TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_dwIpAddr       = 0;    //[TRANSLATED][TRANSLATED]IP
+    CHAR        m_szImei[64]    = { 0 };  //[TRANSLATED][TRANSLATED][TRANSLATED]MEI
+    CHAR        m_szModel[64]   = { 0 }; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR        m_szUuid[64]    = { 0 };  //[TRANSLATED][TRANSLATED][TRANSLATED]uuid;
+    CHAR        m_szOpenID[64]  = { 0 };//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
 
     Log_AccountCreate()
     {
@@ -58,12 +59,12 @@ struct Log_AccountCreate : public Log_BaseData
 
 struct Log_AccountLogin : public Log_BaseData
 {
-    INT32       m_dwVersion = 0;  //client版本号
-    INT32       m_dwIpAddr = 0;   //登录IP
-    CHAR        m_szImei[64] = { 0 }; //手机的MEI
-    CHAR        m_szModel[64] = { 0 };//手机的机型
-    CHAR        m_szUuid[64] = { 0 }; //手机的uuid;
-    CHAR        m_szOpenID[64] = { 0 };//第三方平台ID
+    INT32       m_dwVersion = 0;  //client[TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32       m_dwIpAddr = 0;   //[TRANSLATED][TRANSLATED]IP
+    CHAR        m_szImei[64] = { 0 }; //[TRANSLATED][TRANSLATED][TRANSLATED]MEI
+    CHAR        m_szModel[64] = { 0 };//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR        m_szUuid[64] = { 0 }; //[TRANSLATED][TRANSLATED][TRANSLATED]uuid;
+    CHAR        m_szOpenID[64] = { 0 };//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
     Log_AccountLogin()
     {
         m_LogType = ELT_ACCOUNT_LOGIN;
@@ -95,7 +96,7 @@ struct Log_RoleCreate : public Log_BaseData
 
 struct Log_RoleLogin : public Log_BaseData
 {
-    INT32  m_nIpAddr = 0;   //登录IP
+    INT32  m_nIpAddr = 0;   //[TRANSLATED][TRANSLATED]IP
     Log_RoleLogin()
     {
         m_LogType = ELT_ROLE_LOGIN;
@@ -125,7 +126,7 @@ struct Log_RoleLogout : public Log_BaseData
     }
 };
 
-//经验获取
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 struct Log_RoleExp : public Log_BaseData
 {
     UINT64 m_uPreValue;
@@ -142,7 +143,7 @@ struct Log_RoleExp : public Log_BaseData
     }
 };
 
-//钻石获取(充值币)
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED])
 struct Log_RoleDiamond : public Log_BaseData
 {
     UINT64 m_uPreValue;
@@ -159,7 +160,7 @@ struct Log_RoleDiamond : public Log_BaseData
     }
 };
 
-//金币获取(游戏币)
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED])
 struct Log_RoleGold : public Log_BaseData
 {
     UINT64 m_uPreValue;
@@ -176,7 +177,7 @@ struct Log_RoleGold : public Log_BaseData
     }
 };
 
-//聊天log
+//[TRANSLATED][TRANSLATED]log
 struct Log_RoleChat : public Log_BaseData
 {
     CHAR   m_szText[256] = { 0 };
@@ -200,7 +201,7 @@ struct Log_RoleChat : public Log_BaseData
     }
 };
 
-//Level变化log
+//Level[TRANSLATED][TRANSLATED]log
 struct Log_RoleLevel : public Log_BaseData
 {
     UINT32 m_uPreValue = 0;

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Editor___EditorTools.cs */
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
@@ -10,7 +11,7 @@ using BVT;
 
 public class EditorTools : Editor
 {
-    [MenuItem("工具/添加Colldier")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED]Colldier")]
     static void AttachCollider()
     {
         GameObject[] gameObjects = Selection.gameObjects;
@@ -27,7 +28,7 @@ public class EditorTools : Editor
         }
     }
 
-    [MenuItem("工具/添加CharacterController")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED]CharacterController")]
     static void AttachCharacterController()
     {
         GameObject go = Selection.activeGameObject;
@@ -42,7 +43,7 @@ public class EditorTools : Editor
         }
     }
 
-    [MenuItem("工具/获取网格数据")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void GetMeshData()
     {
         if (Selection.activeObject == null)
@@ -72,7 +73,7 @@ public class EditorTools : Editor
         Debug.Log("vertices:" + m);
     }
 
-    [MenuItem("工具/替换黑乎乎的Shader")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Shader")]
     static void ReplaceDiffuse()
     {
         Shader newShader = Shader.Find("MyMobile/Diffuse");
@@ -98,13 +99,13 @@ public class EditorTools : Editor
         }
     }
 
-    [MenuItem("工具/MyMobile Diffuse 换 MyMobile VertexLit Diffuse")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/MyMobile Diffuse [TRANSLATED] MyMobile VertexLit Diffuse")]
     static void ReplaceDiffuse1()
     {
         ReplaceShader("MyMobile/VertexLit/Diffuse", "MyMobile/Diffuse");
     }
 
-    [MenuItem("工具/MyMobile Diffuse_old 换 MyMobile VertexLit Diffuse")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/MyMobile Diffuse_old [TRANSLATED] MyMobile VertexLit Diffuse")]
     static void ReplaceDiffuse2()
     {
         ReplaceShader("MyMobile/VertexLit/Diffuse", "MyMobile/Diffuse_old");
@@ -135,7 +136,7 @@ public class EditorTools : Editor
         }
     }
 
-    [MenuItem("工具/一键替换字体")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void ReplaceFont()
     {
         List<string> files = new List<string>();
@@ -180,7 +181,7 @@ public class EditorTools : Editor
 
     }
 
-    [MenuItem("工具/自动更改ShaderError")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ShaderError")]
     static void AutoChangeShaderError()
     {
         Shader newShader = Shader.Find("Mobile/Diffuse");
@@ -197,19 +198,19 @@ public class EditorTools : Editor
         AssetDatabase.Refresh();
     }
 
-    [MenuItem("编辑器/NLE")]
+    [MenuItem("[TRANSLATED][TRANSLATED][TRANSLATED]/NLE")]
     static void OpenNLEWindow()
     {
         EditorWindow.GetWindow<NLE.EDT.NSequencerWindow>().Show();
     }
 
-    [MenuItem("编辑器/打包")]
+    [MenuItem("[TRANSLATED][TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED]")]
     static void Build()
     {
         EditorResourceBuild.Build();
     }
 
-    [MenuItem("编辑器/建立行is树")]
+    [MenuItem("[TRANSLATED][TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED]")]
     static void BuildBTTree()
     {
         NodeTree tree = BTHelper.CreatePrefab<NodeTree>(true);

@@ -1,11 +1,12 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___AstarFinder.h */
 ﻿#ifndef __ASTAR_FINDER_H__
 #define __ASTAR_FINDER_H__
 
 #define TILESIZE 1			// change this also to reflect tile size. 64x64.
 #define MAPDATANOCOPY		//use the pointer for mapdata
 
-//说明
-/* 对TileMap来说， 每一位表示一块方各，当位is1表示不可通行， 0:表示can通行*/
+//[TRANSLATED][TRANSLATED]
+/* [TRANSLATED]TileMap[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]is1[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， 0:[TRANSLATED][TRANSLATED]can[TRANSLATED][TRANSLATED]*/
 
 
 
@@ -38,7 +39,7 @@ public:
 	INT32	NodeGetX();
 	INT32	NodeGetY();
 	INT32	GetTileNum(int x, int y);
-	INT32	IsTileAviable(int x, int y); ////is真表示不能通过
+	INT32	IsTileAviable(int x, int y); ////is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 private:
 	void	FreeNodes(void);

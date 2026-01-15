@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Dialog___UIAwardBox.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -120,15 +121,15 @@ public class UIAwardBox : GTWindow
         {
             case ERewardState.NOT_RECEIVE:
                 btnReceive.GetComponent<UISprite>().spriteName = "67";
-                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "领取";
+                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "[TRANSLATED][TRANSLATED]";
                 break;
             case ERewardState.CAN_RECEIVE:
                 btnReceive.GetComponent<UISprite>().spriteName = "8";
-                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "领取";
+                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "[TRANSLATED][TRANSLATED]";
                 break;
             case ERewardState.HAS_RECEIVE:
                 btnReceive.GetComponent<UISprite>().spriteName = "9";
-                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "已领取";
+                btnReceive.transform.Find("Label").GetComponent<UILabel>().text = "[TRANSLATED][TRANSLATED][TRANSLATED]";
                 break;
         }
         title.text = db.Name;

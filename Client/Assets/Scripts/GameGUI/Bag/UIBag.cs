@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Bag___UIBag.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -192,11 +193,11 @@ public class UIBag : GTWindow
     {
         if (mRemainTimer > 0)
         {
-            labArrange.text = GTTools.Format("整理({0})", mRemainTimer);
+            labArrange.text = GTTools.Format("[TRANSLATED][TRANSLATED]({0})", mRemainTimer);
         }
         else
         {
-            labArrange.text = "整理";
+            labArrange.text = "[TRANSLATED][TRANSLATED]";
         }
     }
 

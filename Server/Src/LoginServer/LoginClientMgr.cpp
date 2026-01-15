@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LoginClientMgr.cpp */
 ﻿#include "stdafx.h"
 #include "LoginClientMgr.h"
 #include "../Message/Msg_ID.pb.h"
@@ -79,7 +80,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return TRUE;
     }
 
-    //如果是Initial state，则只能接收MSG_CHECK_VERSION_REQ版本验证message，否则非法
+    //[TRANSLATED][TRANSLATED][TRANSLATED]Initial state，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]MSG_CHECK_VERSION_REQ[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (pLoginClient->m_ClientStatue == ECS_NONE)
     {
         if (nMsgID == MSG_CHECK_VERSION_REQ)
@@ -91,7 +92,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return FALSE;
     }
 
-    //如果版本己验证，则下一个message必须是账号注册或登录，否则非法
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if(pLoginClient->m_ClientStatue == ECS_VER_CHECKED)
     {
         if (nMsgID == MSG_ACCOUNT_LOGIN_REQ || nMsgID == MSG_ACCOUNT_REG_REQ)
@@ -103,7 +104,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return FALSE;
     }
 
-    //如果账号密码己验证，则下一个message必须是选服message，否则非法
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (pLoginClient->m_ClientStatue == ECS_PSD_CHECKED)
     {
         if (nMsgID == MSG_SERVER_LIST_REQ)

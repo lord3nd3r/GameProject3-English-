@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ProxyServer___GameService.h */
 ﻿#ifndef _GAME_SERVICE_H_
 #define _GAME_SERVICE_H_
 #include "ProxyMsgHandler.h"
@@ -31,7 +32,7 @@ public:
     BOOL        ConnectToLogicSvr();
 
 public:
-    //handle普通的网络connection
+    //handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection
     CProxyMsgHandler    m_ProxyMsgHandler;
 
     INT32               m_nLogicConnID;

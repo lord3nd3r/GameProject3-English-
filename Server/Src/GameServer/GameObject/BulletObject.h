@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BulletObject.h */
 ﻿#ifndef __BULLET_OBJECT_H__
 #define __BULLET_OBJECT_H__
 #include "../Message/Msg_Move.pb.h"
@@ -42,21 +43,21 @@ public:
 
 public:
 	UINT64          m_uGuid;            //bulletGUID
-	UINT64          m_uStartTick;       //begin时间
-	UINT64          m_uLastTick;        //上次更新时间
-	Vector3D        m_Pos;              //当前position
-	Vector3D        m_InitPos;          //初始position
-	BOOL            m_bFinished;        //whether完成
-	StBulletInfo*   m_pBulletInfo;      //bullet信息
-	CSkillObject*   m_pSkillObject;     //skill对象
-	CSceneObject*   m_pCastObject;      //源对象
+	UINT64          m_uStartTick;       //begin[TRANSLATED][TRANSLATED]
+	UINT64          m_uLastTick;        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	Vector3D        m_Pos;              //[TRANSLATED][TRANSLATED]position
+	Vector3D        m_InitPos;          //[TRANSLATED][TRANSLATED]position
+	BOOL            m_bFinished;        //whether[TRANSLATED][TRANSLATED]
+	StBulletInfo*   m_pBulletInfo;      //bullet[TRANSLATED][TRANSLATED]
+	CSkillObject*   m_pSkillObject;     //skill[TRANSLATED][TRANSLATED]
+	CSceneObject*   m_pCastObject;      //[TRANSLATED][TRANSLATED][TRANSLATED]
 
-	CSceneObject*   m_pTargetObject;    //target对象
-	FLOAT           m_fAngle;           //bullet方向
+	CSceneObject*   m_pTargetObject;    //target[TRANSLATED][TRANSLATED]
+	FLOAT           m_fAngle;           //bullet[TRANSLATED][TRANSLATED]
 	Vector3D        m_TargetPos;        //targetposition
 
-	FLOAT           m_vx, m_vz;         //当前速度向量
-	FLOAT           m_accx, m_accz;     //当前Acceleration向量
+	FLOAT           m_vx, m_vz;         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	FLOAT           m_accx, m_accz;     //[TRANSLATED][TRANSLATED]Acceleration[TRANSLATED][TRANSLATED]
 
 	std::vector<CSceneObject*> m_vtTargets;
 };

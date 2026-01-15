@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___LogicMsgHandler.cpp */
 ﻿#include "stdafx.h"
 #include "LogicMsgHandler.h"
 #include "GameService.h"
@@ -108,7 +109,7 @@ BOOL CLogicMsgHandler::OnMsgRoleListReq(NetPacket* pNetPacket)
 //      Ack.set_retcode(MRC_ILLEGAL_LOGIN_REQ);
 //      return ServiceBase::GetInstancePtr()->SendMsgProtoBuf(pNetPacket->m_nConnID, MSG_ROLE_LIST_ACK, 0, pHeader->dwUserData, Ack);
 
-        //还需要通知网关disconnected这个连结
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]disconnected[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     }
 
     ServiceBase::GetInstancePtr()->SendMsgProtoBuf(CGameService::GetInstancePtr()->GetDBConnID(),  MSG_ROLE_LIST_REQ, pNetPacket->m_nConnID, pHeader->dwUserData, Req);
@@ -131,8 +132,8 @@ BOOL CLogicMsgHandler::OnMsgRoleListAck(NetPacket* pNetPacket)
         return ServiceBase::GetInstancePtr()->SendMsgProtoBuf((UINT32)pHeader->u64TargetID, MSG_ROLE_LIST_ACK, 0, pHeader->dwUserData, Ack);
     }
 
-    //否则说明有player的数据还没有写到数据库中
-    //这个时候就说明这个player的数据需要从内存中取
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     for (INT32 i = 0; i < vtRoleIDs.size(); i++)
     {
@@ -149,7 +150,7 @@ BOOL CLogicMsgHandler::OnMsgRoleListAck(NetPacket* pNetPacket)
             }
         }
 
-        //表示没有找到,这时候,就只能从内存中来取了
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if (!bFind)
         {
             CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(uRoleID);
@@ -176,7 +177,7 @@ BOOL CLogicMsgHandler::OnMsgRoleCreateReq(NetPacket* pNetPacket)
     Req.ParsePartialFromArray(pNetPacket->m_pDataBuffer->GetData(), pNetPacket->m_pDataBuffer->GetBodyLenth());
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
     ERROR_RETURN_TRUE(pHeader->dwUserData != 0);
-    //检验Namewhether可用
+    //[TRANSLATED][TRANSLATED]Namewhether[TRANSLATED][TRANSLATED]
     ERROR_RETURN_TRUE(Req.accountid() != 0);
     ERROR_RETURN_TRUE(Req.carrer() != 0);
 
@@ -239,7 +240,7 @@ BOOL CLogicMsgHandler::OnMsgRoleDeleteReq(NetPacket* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
     ERROR_RETURN_TRUE(pHeader->u64TargetID != 0);
 
-    //如果player在内存中，就在内存中删除，然后释放掉，如果player不在内存中，就向数据库发message删除
+    //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message[TRANSLATED][TRANSLATED]
     CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(Req.roleid());
     if(pPlayer != NULL)
     {
@@ -288,16 +289,16 @@ BOOL CLogicMsgHandler::OnMsgRoleLoginReq(NetPacket* pNetPacket)
 
     if((pPlayer->m_nProxyConnID != 0) || (pPlayer->m_nClientConnID != 0))
     {
-        //表示player还没有退出，这个时候就是相当于挤的人情况发生了
-        //如果在副本中，通知副本里人物离开
-        //如果在场景中，通知场景中人物离开
-        //清理副本状态
-        //还需要通知player被人挤走了
+        //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
         pPlayer->SendMsgRawData(MSG_ROLE_OTHER_LOGIN_NTY, NULL, 0);
         if(pPlayer->m_bMainCity)
         {
-            //表示明确己登录到其它的副本
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             pPlayer->SendLeaveScene(pPlayer->m_dwCopyGuid, pPlayer->m_dwCopySvrID);
         }
 
@@ -467,8 +468,8 @@ BOOL CLogicMsgHandler::OnMsgChatMessageReq(NetPacket* pNetPacket)
     CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(pHeader->u64TargetID);
     ERROR_RETURN_TRUE(pPlayer != NULL);
 
-    //以下是走聊天逻辑
-    //如果条件不够返回error码
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error[TRANSLATED]
     //ChatMessageAck Ack;
     //Ack.set_retcode(xxx);
     //pPlayer->SendMsgProtoBuf(MSG_CHAT_MESSAGE_ACK, Ack);
@@ -522,11 +523,11 @@ BOOL CLogicMsgHandler::OnMsgReconnectReq( NetPacket* pNetPacket )
 
     if((pPlayer->m_nProxyConnID != 0) || (pPlayer->m_nClientConnID != 0))
     {
-        //当重连发生的时候，理论上这个connectionalreadydisconnected了。这两个值应该is空了，
-        //如果此时这两个值is空，那么，还会有其它的情况发生。
-        //此时应该直接选设置这两个值
-        //由于副本already被退出， 所以此时应该将player放到主城
-        CLog::GetInstancePtr()->LogError("OnMsgReconnectReq disconnected消都还没有收到， 重连的message就到了");
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionalreadydisconnected[TRANSLATED]。[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED]，
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED]，[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        CLog::GetInstancePtr()->LogError("OnMsgReconnectReq disconnected[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED]message[TRANSLATED][TRANSLATED][TRANSLATED]");
     }
 
     pPlayer->SetOnline(TRUE);

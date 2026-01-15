@@ -1,47 +1,48 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___ServerStruct.h */
 ﻿#ifndef __SERVER_STRUCT_H__
 #define __SERVER_STRUCT_H__
 
 struct BattleRecord
 {
-	UINT32			m_dwResult;		//0:未结算，1:胜利，2: Failure 3: 平局
-	UINT32			m_dwKill;		//击杀数
-	UINT32          m_dwDeath;		//被杀次数
-	UINT32			m_dwHeal;		//治疗值
-	UINT32          m_dwDamage;		//总伤害值
+	UINT32			m_dwResult;		//0:[TRANSLATED][TRANSLATED][TRANSLATED]，1:[TRANSLATED][TRANSLATED]，2: Failure 3: [TRANSLATED][TRANSLATED]
+	UINT32			m_dwKill;		//[TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32          m_dwDeath;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32			m_dwHeal;		//[TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32          m_dwDamage;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 enum EChangeType
 {
-	ECT_EQUIP = 1,//装备改变
-	ECT_MOUNT = 2,//坐骑改变
+	ECT_EQUIP = 1,//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	ECT_MOUNT = 2,//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	ECT_LEVEL = 3,//Level
-	ECT_PARTNER = 4,//伙伴
-	ECT_PET = 5,//宠物
+	ECT_PARTNER = 4,//[TRANSLATED][TRANSLATED]
+	ECT_PET = 5,//[TRANSLATED][TRANSLATED]
 };
 
 enum EWinCondition
 {
 	EWC_NONE,
-	EWC_KILL_ALL,       //击杀全部怪物
-	EWC_KILL_NUM,       //击杀指定count怪物
-	EWC_DESTINATION,    //达到目的地
-	EWC_PLAYER_ALIVE,   //存活下来
-	EWC_NPC_ALIVE,      //护送npc
+	EWC_KILL_ALL,       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	EWC_KILL_NUM,       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]count[TRANSLATED][TRANSLATED]
+	EWC_DESTINATION,    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	EWC_PLAYER_ALIVE,   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	EWC_NPC_ALIVE,      //[TRANSLATED][TRANSLATED]npc
 	EWC_END
 };
 
 enum EBattleCamp
 {
-	EBC_NONE,     //中立阵营
-	EBC_PLAYER,   //player阵营
-	EBC_MONSTER,  //怪物阵营
+	EBC_NONE,     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	EBC_PLAYER,   //player[TRANSLATED][TRANSLATED]
+	EBC_MONSTER,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 enum ETriggerType
 {
-	ETT_NORMAL,     //直接trigger
-	ETT_TRIBOX,     //trigger盒trigger
-	ETT_TIME,       //时间trigger
+	ETT_NORMAL,     //[TRANSLATED][TRANSLATED]trigger
+	ETT_TRIBOX,     //trigger[TRANSLATED]trigger
+	ETT_TIME,       //[TRANSLATED][TRANSLATED]trigger
 };
 
 

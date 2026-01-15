@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___EquipModule.h */
 ﻿#ifndef __EQUIPMENT_MODULE_H__
 #define __EQUIPMENT_MODULE_H__
 #include "ModuleBase.h"
@@ -38,15 +39,15 @@ public:
 
 	EquipDataObject* GetEquipByGuid(UINT64 uGuid);
 
-	//uguid：装备guid, ubagguid， 装备在背包中的格子guid
+	//uguid：[TRANSLATED][TRANSLATED]guid, ubagguid， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]guid
 	UINT32 DressEquip(UINT64 uGuid, UINT64 uBagGuid);
 
 	UINT32 UnDressEquip(UINT64 uGuid);
 
 public:
 	//********************* Message handlers begin ******************************
-	BOOL OnMsgSetupEquipReq(NetPacket* pNetPacket);  //穿装备请求
-	BOOL OnMsgUnsetEquipReq(NetPacket* pNetPacket);  //穿装备请求
+	BOOL OnMsgSetupEquipReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL OnMsgUnsetEquipReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	//********************* Message handlers end ******************************
 
 public:

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Home___UIHeroInfo.cs */
 ﻿using Protocol;
 using System;
 using System.Collections.Generic;
@@ -117,7 +118,7 @@ public class UIHeroInfo : GTWindow
         heroExpNum.text = GTTools.Format("{0}/{1}", role.CurExp, heroLevelDB.RequireExp);
         heroExpBar.value = role.CurExp / (heroLevelDB.RequireExp * 1f);
         int fightValue = GTAttrHelper.GetFightValue(role);
-        heroFightValue.text = GTTools.Format("战斗力 {0}", fightValue);
+        heroFightValue.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED] {0}", fightValue);
     }
 
     private void ShowActionView()
@@ -134,10 +135,10 @@ public class UIHeroInfo : GTWindow
         string allTimer1 = GTDataTimer.Instance.GetAllSecondTimer(EAction.Manual);
         string allTimer2 = GTDataTimer.Instance.GetAllSecondTimer(EAction.Energy);
 
-        labOneTimer1.text = GTTools.Format("{0}恢复一点：{1}", db1.Name, oneTimer1);
-        labOneTimer2.text = GTTools.Format("{0}恢复一点：{1}", db2.Name, oneTimer2);
-        labAllTimer1.text = GTTools.Format("{0}完全恢复：{1}", db1.Name, allTimer1);
-        labAllTimer2.text = GTTools.Format("{0}完全恢复：{1}", db2.Name, allTimer2);
+        labOneTimer1.text = GTTools.Format("{0}[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{1}", db1.Name, oneTimer1);
+        labOneTimer2.text = GTTools.Format("{0}[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{1}", db2.Name, oneTimer2);
+        labAllTimer1.text = GTTools.Format("{0}[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{1}", db1.Name, allTimer1);
+        labAllTimer2.text = GTTools.Format("{0}[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{1}", db2.Name, allTimer2);
     }
 
     private void OnChangeNameClick(GameObject go)

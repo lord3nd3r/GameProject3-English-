@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___AccountServer___AccountManager.h */
 ﻿#ifndef __DB_ACCOUNT_OBJECT_H__
 #define __DB_ACCOUNT_OBJECT_H__
 #include "AVLTree.h"
@@ -10,8 +11,8 @@ struct CAccountObject
     std::string m_strName;
     std::string m_strPassword;
     INT32       m_nLastSvrID[2] = {0};
-    INT32       m_nChannel = 0;    //渠道ID
-    UINT64      m_uSealTime = 0;    //封禁end时间
+    INT32       m_nChannel = 0;    //[TRANSLATED][TRANSLATED]ID
+    UINT64      m_uSealTime = 0;    //[TRANSLATED][TRANSLATED]end[TRANSLATED][TRANSLATED]
     UINT64      m_uCreateTime = 0;  //create time
     INT32       m_nLoginCount = 0;
 };
@@ -62,7 +63,7 @@ public:
 
     UINT64              m_u64MaxID;
 
-    BOOL                m_bCrossChannel;   //whether区分渠道
+    BOOL                m_bCrossChannel;   //whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 #endif //__DB_ACCOUNT_OBJECT_H__

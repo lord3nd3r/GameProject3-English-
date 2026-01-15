@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___AsyncMysql.h */
 ﻿#ifndef __MYSQL_ASYNC_QUERY_H__
 #define __MYSQL_ASYNC_QUERY_H__
 
@@ -127,7 +128,7 @@ public:
     std::string  m_strUser;
     std::string  m_strPwd;
     std::string  m_strDB;
-    std::string  m_strCharSet; //字符集
+    std::string  m_strCharSet; //[TRANSLATED][TRANSLATED][TRANSLATED]
     int          m_nPort;
 
 };

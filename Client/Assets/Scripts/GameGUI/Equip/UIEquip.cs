@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Equip___UIEquip.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -195,7 +196,7 @@ public class UIEquip : GTWindow
         List<XItem> list = MLEquip.Instance.GetItemListToOneKeyStrengthen(equip);
         if (list.Count == 0)
         {
-            GTItemHelper.ShowTip("没有蓝绿装，且没有水晶");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         curStrengthenCostItems = list;
@@ -294,7 +295,7 @@ public class UIEquip : GTWindow
         int addExpNum = MLEquip.Instance.GetStrengthenExpByMatList(curStrengthenCostItems);
         GTItemHelper.ShowItemTexture(equipStrengthen.costMoneyTexture, DEquip.EQUIP_STRENGTHEN_MONEY_ID_1);
         equipStrengthen.costMoneyNum.text = addExpNum.ToString();
-        equipStrengthen.equipStrengthLevel.text = GTTools.Format("强化Level {0}", equip.StrengthenLevel);
+        equipStrengthen.equipStrengthLevel.text = GTTools.Format("[TRANSLATED][TRANSLATED]Level {0}", equip.StrengthenLevel);
         GTItemHelper.ShowProgressText(equipStrengthen.equipStrengthExp, equip.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowProgressSlider(equipStrengthen.equipStrengthExpBar, equip.StrengthenExp, levelDB.RequireExp);
         Dictionary<EAttr, int> propertys = GTAttrHelper.GetPropertys(equip);
@@ -394,15 +395,15 @@ public class UIEquip : GTWindow
         switch (curEquipFunc)
         {
             case EquipFunc.STRENGTHEN:
-                currFuncName.text = "装备强化";
+                currFuncName.text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
                 ShowStrengthenView();
                 break;
             case EquipFunc.ADVANCE:
-                currFuncName.text = "装备进阶";
+                currFuncName.text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
                 ShowAdvanceView();
                 break;
             case EquipFunc.EQUIPSTAR:
-                currFuncName.text = "装备升星";
+                currFuncName.text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
                 ShowEquipStarView();
                 break;
         }

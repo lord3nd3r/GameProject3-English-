@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTRandomSequence.cs */
 ﻿using BVT;
 using System;
 using System.Collections.Generic;
@@ -7,8 +8,8 @@ using UnityEngine;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "随机-队列节点")]
-    [NodeDesc("提供每次不同的迭代顺序")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED]-[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     [NodeName("b3ff7f", "RandomSequence")]
     public class BTRandomSequence : BTComposite
     {

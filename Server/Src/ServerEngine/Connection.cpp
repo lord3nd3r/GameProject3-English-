@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___Connection.cpp */
 ﻿#include "stdafx.h"
 #include "Connection.h"
 #include "DataBuffer.h"
@@ -79,18 +80,18 @@ BOOL CConnection::DoReceive()
     int nRet = WSARecv(m_hSocket, &DataBuf, 1, &nRecvBytes, &nFlags, (LPOVERLAPPED)&m_IoOverlapRecv, NULL);
     if(nRet != 0)
     {
-        //对于WSARecv来说， 只要返回0,就表示没有error发生。
-        //当返回isERROR_IO_PENDING时，表示提交读数据请求Success， 其它的返回值都是error。
+        //[TRANSLATED][TRANSLATED]WSARecv[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]0,[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error[TRANSLATED][TRANSLATED]。
+        //[TRANSLATED][TRANSLATED][TRANSLATED]isERROR_IO_PENDING[TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error。
         int nError = CommonSocket::GetSocketLastError();
         if(nError != ERROR_IO_PENDING )
         {
-            CLog::GetInstancePtr()->LogWarn("shutdownconnection，因is接收数据发生error:%s!", CommonFunc::GetLastErrorStr(nError).c_str());
+            CLog::GetInstancePtr()->LogWarn("shutdownconnection，[TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error:%s!", CommonFunc::GetLastErrorStr(nError).c_str());
 
             return FALSE;
         }
     }
 
-    //对于WSARecv来说， 只要返回0,就表示没有error发生。
+    //[TRANSLATED][TRANSLATED]WSARecv[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]0,[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error[TRANSLATED][TRANSLATED]。
 
     return TRUE;
 }
@@ -110,7 +111,7 @@ BOOL CConnection::DoReceive()
                 return TRUE;
             }
 
-            CLog::GetInstancePtr()->LogWarn("读Failure， 可能connection already disconnected 原因:%s!!", CommonFunc::GetLastErrorStr(nErr).c_str());
+            CLog::GetInstancePtr()->LogWarn("[TRANSLATED]Failure， [TRANSLATED][TRANSLATED]connection already disconnected [TRANSLATED][TRANSLATED]:%s!!", CommonFunc::GetLastErrorStr(nErr).c_str());
             return FALSE;
         }
 
@@ -175,8 +176,8 @@ BOOL CConnection::Shutdown()
 
 BOOL CConnection::ExtractBuffer()
 {
-    //在这方法里返回FALSE。
-    //会在外面导致这个connection被shutdown。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED]shutdown。
     if (m_nDataLen == 0)
     {
         return TRUE;
@@ -211,7 +212,7 @@ BOOL CConnection::ExtractBuffer()
         {
             if (m_nDataLen >= 1 && *(BYTE*)m_pBufPos != 0x88)
             {
-                CLog::GetInstancePtr()->LogInfo("验证首字节失改!, m_nDataLen:%d--ConnID:%d", m_nDataLen, m_nConnID);
+                CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!, m_nDataLen:%d--ConnID:%d", m_nDataLen, m_nConnID);
                 return FALSE;
             }
 
@@ -220,7 +221,7 @@ BOOL CConnection::ExtractBuffer()
 
         PacketHeader* pHeader = (PacketHeader*)m_pBufPos;
         //////////////////////////////////////////////////////////////////////////
-        //在这里对包头进行检查, 如果不合法就要返回FALSE;
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE;
         if (!CheckHeader(m_pBufPos))
         {
             //return FALSE;
@@ -415,19 +416,19 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket;
     if (pHeader->CheckCode != CODE_VALUE)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure pHeader->CheckCode error");
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure pHeader->CheckCode error");
         return FALSE;
     }
 
     if ((pHeader->nSize > 1024 * 1024) || (pHeader->nSize <= 0))
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
         return FALSE;
     }
 
     if (pHeader->nMsgID > 399999 || pHeader->nMsgID <= 0)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
         return FALSE;
     }
 
@@ -454,7 +455,7 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
         return TRUE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("验证-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
+    CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
 
     return FALSE;
 }
@@ -565,14 +566,14 @@ BOOL CConnection::DoSend()
 
     DWORD nSendBytes = 0;
     int nRet = WSASend(m_hSocket, &DataBuf, 1, &nSendBytes, 0, (LPOVERLAPPED)&m_IoOverlapSend, NULL);
-    if(nRet == 0) //发送Success
+    if(nRet == 0) //[TRANSLATED][TRANSLATED]Success
     {
         //if(nSendBytes < DataBuf.len)
         //{
-        //  CLog::GetInstancePtr()->LogError("发送线程:直接发送数据Successsend:%d--Len:%d!", nSendBytes, DataBuf.len);
+        //  CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Successsend:%d--Len:%d!", nSendBytes, DataBuf.len);
         //}
     }
-    else if( nRet == -1 ) //发送出错
+    else if( nRet == -1 ) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     {
         INT32 errCode = CommonSocket::GetSocketLastError();
         if(errCode != ERROR_IO_PENDING)
@@ -580,7 +581,7 @@ BOOL CConnection::DoSend()
             pSendingBuffer->Release();
             pSendingBuffer = NULL;
             Close();
-            CLog::GetInstancePtr()->LogError("发送线程:发送Failure, connectionshutdown原因:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
+            CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]Failure, connectionshutdown[TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
         }
     }
 
@@ -590,15 +591,15 @@ BOOL CConnection::DoSend()
 #else
 BOOL CConnection::DoSend()
 {
-    //返回值is正数， 分is完全发送，和部分发送，部分发送，用另一个缓冲区装着继续发送
-    //返回值is负数   error码：
+    //[TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED]， [TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED]   error[TRANSLATED]：
     //
     //if (errno != EAGAIN)
     //{
     //  //ERROR("TcpConnection sendInLoop");
     //  if (errno == EPIPE || errno == ECONNRESET)
     //  {
-    //      faultError = true;//这就是真实的error了
+    //      faultError = true;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error[TRANSLATED]
     //  }
     //}
     // #define E_SEND_SUCCESS               1
@@ -616,7 +617,7 @@ BOOL CConnection::DoSend()
                 m_pSendingBuffer->Release();
                 m_pSendingBuffer = NULL;
                 m_nSendingPos = 0;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, connectionshutdown原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]Failure, connectionshutdown[TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 
@@ -625,7 +626,7 @@ BOOL CConnection::DoSend()
 
         if (nRet < nDataLen)
         {
-            //这就表示发送了一半的数据
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             m_nSendingPos += nRet;
             return E_SEND_UNDONE;
         }
@@ -650,7 +651,7 @@ BOOL CConnection::DoSend()
             {
                 pBuffer->Release();
                 pBuffer = NULL;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, connectionshutdown原因2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]Failure, connectionshutdown[TRANSLATED][TRANSLATED]2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 
@@ -662,7 +663,7 @@ BOOL CConnection::DoSend()
 
         if (nRet < pBuffer->GetTotalLenth())
         {
-            //这就表示发送了一半的数据
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             m_pSendingBuffer = pBuffer;
             m_nSendingPos = nRet;
             return E_SEND_UNDONE;
@@ -695,7 +696,7 @@ CConnection* CConnectionMgr::CreateConnection()
     m_ConnListMutex.lock();
     if (m_pFreeConnRoot == NULL)
     {
-        //表示己到达connection的上限，不能再创建新的connection了
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED]
         m_ConnListMutex.unlock();
         return NULL;
     }
@@ -855,12 +856,12 @@ BOOL CConnectionMgr::CheckConntionAvalible(INT32 nInterval)
             continue;
         }
 
-        //如果当前是等待shutdown的状态
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]shutdown[TRANSLATED][TRANSLATED][TRANSLATED]
         if (pConnection->GetConnectStatus() == ENS_CLOSEING)
         {
             if (uCurTick > (pConnection->m_uLastRecvTick + 10 * 1000))
             {
-                CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible WAIT超时主动disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
+                CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible WAIT[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
                 pConnection->Close();
             }
 

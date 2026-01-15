@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___NetManager.cpp */
 ﻿#include "stdafx.h"
 #include "NetManager.h"
 #include "Connection.h"
@@ -32,7 +33,7 @@ BOOL CNetManager::CreateEventThread(INT32 nNum )
 
     m_bCloseEvent = FALSE;
 
-    //目前linux使用单线程
+    //[TRANSLATED][TRANSLATED]linux[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 #ifndef WIN32
     nNum = 1;
 #endif
@@ -56,7 +57,7 @@ BOOL CNetManager::WorkThread_Listen()
         SOCKET hClientSocket = accept(m_hListenSocket, (sockaddr*)&Con_Addr, &nLen);
         if(hClientSocket == INVALID_SOCKET)
         {
-            CLog::GetInstancePtr()->LogError("accept error 原因:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+            CLog::GetInstancePtr()->LogError("accept error [TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
             return FALSE;
         }
         CommonSocket::SetSocketBlock(hClientSocket, FALSE);
@@ -70,7 +71,7 @@ BOOL CNetManager::WorkThread_Listen()
 
             m_pBufferHandler->OnNewConnect(pConnection->GetConnectionID());
 
-            //在Windows的IOCP模式，一个新的connection必须首先调一次接收， 而EPOLL模型下，只要关注了读event就can等event到了之后发读的操作。
+            //[TRANSLATED]Windows[TRANSLATED]IOCP[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED]EPOLL[TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]event[TRANSLATED]can[TRANSLATED]event[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 #ifdef WIN32
             if(!pConnection->DoReceive())
             {
@@ -80,7 +81,7 @@ BOOL CNetManager::WorkThread_Listen()
         }
         else
         {
-            CLog::GetInstancePtr()->LogError("接受新connectionFailure 原因:己达到最大connection数或者绑定Failure!");
+            CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure [TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
         }
     }
 
@@ -95,7 +96,7 @@ BOOL CNetManager::StartNetListen(UINT16 nPortNum, std::string strIpAddr)
 
     if (strIpAddr.size() <= 1)
     {
-        SvrAddr.sin_addr.s_addr = htonl(INADDR_ANY);        //支持多IP地址listen
+        SvrAddr.sin_addr.s_addr = htonl(INADDR_ANY);        //[TRANSLATED][TRANSLATED][TRANSLATED]IP[TRANSLATED][TRANSLATED]listen
     }
     else
     {
@@ -105,7 +106,7 @@ BOOL CNetManager::StartNetListen(UINT16 nPortNum, std::string strIpAddr)
     m_hListenSocket = CommonSocket::CreateSocket(AF_INET, SOCK_STREAM, 0);
     if(m_hListenSocket == INVALID_SOCKET)
     {
-        CLog::GetInstancePtr()->LogError("创建listen套接字Failure原因:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]listen[TRANSLATED][TRANSLATED][TRANSLATED]Failure[TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
         return FALSE;
     }
 
@@ -115,19 +116,19 @@ BOOL CNetManager::StartNetListen(UINT16 nPortNum, std::string strIpAddr)
 
     if(!CommonSocket::BindSocket(m_hListenSocket, (sockaddr*)&SvrAddr, sizeof(SvrAddr)))
     {
-        CLog::GetInstancePtr()->LogError("邦定套接字Failure原因:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure[TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
         return FALSE;
     }
 
     if(!CommonSocket::ListenSocket(m_hListenSocket, 20))
     {
-        CLog::GetInstancePtr()->LogError("listen线程套接字Failure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+        CLog::GetInstancePtr()->LogError("listen[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
         return FALSE;
     }
 
     if (!WaitForConnect())
     {
-        CLog::GetInstancePtr()->LogError("等待接受connectionFailure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
         return FALSE;
     }
 
@@ -180,7 +181,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
             {
                 if (ERROR_ABANDONED_WAIT_0 == CommonSocket::GetSocketLastError())
                 {
-                    CLog::GetInstancePtr()->LogError("完成端口被外部shutdown!");
+                    CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]shutdown!");
                     return FALSE;
                 }
 
@@ -196,7 +197,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
 
                 //if (CommonSocket::GetSocketLastError() == ERROR_NETNAME_DELETED)
                 //{
-                //  //clientshutdown的一种情况
+                //  //clientshutdown[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 //}
             }
             //else
@@ -214,16 +215,16 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 CConnection* pConnection = (CConnection*)CompleteKey;
                 if(pConnection == NULL)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_RECV1, pConnection == NULL");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_RECV1, pConnection == NULL");
                     break;
                 }
 
                 if(nNumOfByte == 0)
                 {
-                    //说明对方alreadyshutdown
+                    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]alreadyshutdown
                     if(pConnection->GetConnectionID() != pIoPeratorData->nConnID)
                     {
-                        CLog::GetInstancePtr()->LogError("trigger了NET_MSG_RECV2, 对方alreadyshutdownconnection，但可能我们这边更快, connectionalready被重用了。NewID:%d, OrgID:%d", pConnection->GetConnectionID(), pIoPeratorData->nConnID);
+                        CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_RECV2, [TRANSLATED][TRANSLATED]alreadyshutdownconnection，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], connectionalready[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。NewID:%d, OrgID:%d", pConnection->GetConnectionID(), pIoPeratorData->nConnID);
                         break;
                     }
                     pConnection->Close();
@@ -232,7 +233,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 {
                     if(pConnection->GetConnectionID() != pIoPeratorData->nConnID)
                     {
-                        CLog::GetInstancePtr()->LogError("trigger了NET_MSG_RECV3，确实有数据, 但connectionalready被重用了。NewID:%d, OrgID:%d", pConnection->GetConnectionID(), pIoPeratorData->nConnID);
+                        CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_RECV3，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED]connectionalready[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。NewID:%d, OrgID:%d", pConnection->GetConnectionID(), pIoPeratorData->nConnID);
                         break;
                     }
 
@@ -245,7 +246,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                     }
                     else
                     {
-                        CLog::GetInstancePtr()->LogError("严重error, 没有connection上，却收到的数据! ConnID:%d, ConnectStatus:%d", pConnection->GetConnectionID(), pConnection->GetConnectStatus());
+                        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]error, [TRANSLATED][TRANSLATED]connection[TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]! ConnID:%d, ConnectStatus:%d", pConnection->GetConnectionID(), pConnection->GetConnectStatus());
                     }
                 }
             }
@@ -256,13 +257,13 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 CConnection* pConnection = (CConnection*)CompleteKey;
                 if (pConnection == NULL)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_SEND, pConnection == NULL。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_SEND, pConnection == NULL。");
                     break;
                 }
 
                 if(pConnection->GetConnectionID() != pIoPeratorData->nConnID)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_SEND, 但connectionalready被shutdown重用了。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_SEND, [TRANSLATED]connectionalready[TRANSLATED]shutdown[TRANSLATED][TRANSLATED][TRANSLATED]。");
                     break;
                 }
 
@@ -274,13 +275,13 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 CConnection* pConnection = (CConnection*)CompleteKey;
                 if (pConnection == NULL)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_POST1, pConnection == NULL。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_POST1, pConnection == NULL。");
                     break;
                 }
 
                 if (pConnection->GetConnectionID() != pIoPeratorData->nConnID)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_POST2, 但connectionalready被shutdown重用了。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_POST2, [TRANSLATED]connectionalready[TRANSLATED]shutdown[TRANSLATED][TRANSLATED][TRANSLATED]。");
                     break;
                 }
 
@@ -292,13 +293,13 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 CConnection* pConnection = (CConnection*)CompleteKey;
                 if (pConnection == NULL)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_CONNECT, pConnection == NULL。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_CONNECT, pConnection == NULL。");
                     break;
                 }
 
                 if (pConnection->GetConnectionID() != pIoPeratorData->nConnID)
                 {
-                    CLog::GetInstancePtr()->LogError("trigger了NET_MSG_CONNECT, eventID和connectionID不一致。");
+                    CLog::GetInstancePtr()->LogError("trigger[TRANSLATED]NET_MSG_CONNECT, eventID[TRANSLATED]connectionID[TRANSLATED][TRANSLATED][TRANSLATED]。");
                     break;
                 }
 
@@ -335,7 +336,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 sockaddr_in* addrClient = NULL, *addrLocal = NULL;
                 if (!CommonSocket::GetSocketAddress(m_hListenSocket, m_AddressBuf, addrClient, addrLocal))
                 {
-                    CLog::GetInstancePtr()->LogError("接受新connectionFailure 原因:GetSocketAddress FALSE Reason:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+                    CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure [TRANSLATED][TRANSLATED]:GetSocketAddress FALSE Reason:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
                     break;
                 }
 
@@ -356,7 +357,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 }
                 else
                 {
-                    CLog::GetInstancePtr()->LogError("接受新connectionFailure 原因:AssociateCompletePort己达到最大connection数或者绑定Failure!");
+                    CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure [TRANSLATED][TRANSLATED]:AssociateCompletePort[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
                 }
 
                 m_IoOverlapAccept.Reset();
@@ -444,7 +445,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
         {
             if (errno != EINTR)
             {
-                CLog::GetInstancePtr()->LogError("epoll_waitFailure 原因:%s", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogError("epoll_waitFailure [TRANSLATED][TRANSLATED]:%s", CommonFunc::GetLastErrorStr(errno).c_str());
                 return FALSE;
             }
 
@@ -465,7 +466,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                     {
                         if (errno != EAGAIN && errno != EINTR )
                         {
-                            CLog::GetInstancePtr()->LogError("接受新connectionFailure 原因:%s", CommonFunc::GetLastErrorStr(errno).c_str());
+                            CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure [TRANSLATED][TRANSLATED]:%s", CommonFunc::GetLastErrorStr(errno).c_str());
                         }
 
                         break;
@@ -483,7 +484,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                     }
                     else
                     {
-                        CLog::GetInstancePtr()->LogError("接受新connectionFailure 原因:己达到最大connection数或者绑定Failure!");
+                        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]connectionFailure [TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
                         break;
                     }
                 }
@@ -508,7 +509,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
 
                 if (!pConnection->HandleRecvEvent(0))
                 {
-                    //基本表明connection already disconnected，canshutdownconnection了。
+                    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection already disconnected，canshutdownconnection[TRANSLATED]。
                     EventDelete(pConnection);
                     pConnection->Close();
                     continue;
@@ -546,7 +547,7 @@ BOOL CNetManager::WorkThread_ProcessEvent(INT32 nParam)
                 EpollEvent.events = nNeedEvent;
                 if(0 != epoll_ctl(m_hCompletePort, EPOLL_CTL_MOD, pConnection->GetSocket(), &EpollEvent))
                 {
-                    CLog::GetInstancePtr()->LogError("socket 设置eventFailure 原因:%s", CommonFunc::GetLastErrorStr(errno).c_str());
+                    CLog::GetInstancePtr()->LogError("socket [TRANSLATED][TRANSLATED]eventFailure [TRANSLATED][TRANSLATED]:%s", CommonFunc::GetLastErrorStr(errno).c_str());
                 }
             }
         }
@@ -562,7 +563,7 @@ BOOL CNetManager::EventDelete(CConnection* pConnection)
     delEpv.data.ptr = pConnection;
     if (-1 == epoll_ctl(m_hCompletePort, EPOLL_CTL_DEL, pConnection->GetSocket(), &delEpv))
     {
-        CLog::GetInstancePtr()->LogError("---EventDelete::epoll_ctl Failure 原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+        CLog::GetInstancePtr()->LogError("---EventDelete::epoll_ctl Failure [TRANSLATED][TRANSLATED]:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
         return FALSE;
     }
 
@@ -582,25 +583,25 @@ BOOL CNetManager::Start(UINT16 nPortNum, INT32 nMaxConn, IDataHandler* pBufferHa
 
     if(!InitNetwork())
     {
-        CLog::GetInstancePtr()->LogError("初始化网络Failure！！");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure！！");
         return FALSE;
     }
 
     if(!CreateCompletePort())
     {
-        CLog::GetInstancePtr()->LogError("创建完成端口或EpollFailure！！");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]EpollFailure！！");
         return FALSE;
     }
 
     if(!CreateEventThread(0))
     {
-        CLog::GetInstancePtr()->LogError("创建网络eventhandle线程Failure！！");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]eventhandle[TRANSLATED][TRANSLATED]Failure！！");
         return FALSE;
     }
 
     if(!StartNetListen(nPortNum, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("开启listenFailure！！");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]listenFailure！！");
         return FALSE;
     }
 
@@ -657,7 +658,7 @@ CConnection* CNetManager::ConnectTo_Sync( std::string strIpAddr, UINT16 sPort )
     if(hSocket == INVALID_SOCKET)
     {
         CommonSocket::CloseSocket(hSocket);
-        CLog::GetInstancePtr()->LogError("创建套接字Failure!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!!");
         return NULL;
     }
 
@@ -674,7 +675,7 @@ CConnection* CNetManager::ConnectTo_Sync( std::string strIpAddr, UINT16 sPort )
     CConnection* pConnection = AssociateCompletePort(hSocket, TRUE);
     if(pConnection == NULL)
     {
-        CLog::GetInstancePtr()->LogError("邦定套接字到完成端口Failure!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!!");
         return NULL;
     }
 
@@ -698,7 +699,7 @@ CConnection* CNetManager::ConnectTo_Async( std::string strIpAddr, UINT16 sPort )
     if(hSocket == INVALID_SOCKET || hSocket == 0)
     {
         CommonSocket::CloseSocket(hSocket);
-        CLog::GetInstancePtr()->LogError("创建套接字Failure!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!!");
         return NULL;
     }
 
@@ -710,7 +711,7 @@ CConnection* CNetManager::ConnectTo_Async( std::string strIpAddr, UINT16 sPort )
     CConnection* pConnection = AssociateCompletePort(hSocket, TRUE);
     if (pConnection == NULL)
     {
-        CLog::GetInstancePtr()->LogError("邦定套接字到完成端口Failure!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!!");
 
         return NULL;
     }
@@ -744,7 +745,7 @@ CConnection* CNetManager::ConnectTo_Async( std::string strIpAddr, UINT16 sPort )
     CConnection* pConnection = AssociateCompletePort(hSocket, TRUE);
     if (pConnection == NULL)
     {
-        CLog::GetInstancePtr()->LogError("邦定套接字到完成端口Failure!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!!");
 
         return NULL;
     }
@@ -759,7 +760,7 @@ BOOL CNetManager::WaitForConnect()
 #ifdef WIN32
     if (NULL == CreateIoCompletionPort((HANDLE)m_hListenSocket, m_hCompletePort, (ULONG_PTR)NULL, 0))
     {
-        CLog::GetInstancePtr()->LogError("WaitConnect邦定Listen套接字Failure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
+        CLog::GetInstancePtr()->LogError("WaitConnect[TRANSLATED][TRANSLATED]Listen[TRANSLATED][TRANSLATED][TRANSLATED]Failure:%s!", CommonFunc::GetLastErrorStr(CommonSocket::GetSocketLastError()).c_str());
         return FALSE;
     }
     m_IoOverlapAccept.Reset();
@@ -784,7 +785,7 @@ BOOL CNetManager::SendMessageData(INT32 nConnID,  INT32 nMsgID, UINT64 u64Target
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
+        //[TRANSLATED][TRANSLATED]connectionalreadyFailuredisconnected[TRANSLATED]，[TRANSLATED][TRANSLATED]connectionID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
         return FALSE;
     }
 
@@ -825,7 +826,7 @@ BOOL CNetManager::SendMessageBuff(INT32 nConnID, IDataBuffer* pBuffer)
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
+        //[TRANSLATED][TRANSLATED]connectionalreadyFailuredisconnected[TRANSLATED]，[TRANSLATED][TRANSLATED]connectionID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
         return FALSE;
     }
 

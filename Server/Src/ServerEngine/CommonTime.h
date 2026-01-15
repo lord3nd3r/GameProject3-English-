@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonTime.h */
 ﻿#ifndef __COMMON_TIME__
 #define __COMMON_TIME__
 
@@ -13,23 +14,23 @@ INT32           DiffWeeks(UINT64 uTimeSrc, UINT64 uTimeDest);
 
 INT32           DiffDays(UINT64 uTimeSrc, UINT64 uTimeDest);
 
-UINT64          GetCurrTime(); //获取当前的秒数
+UINT64          GetCurrTime(); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 BOOL            SetCurrTimeAdd(INT64 nTimeAdd);
 
-UINT64          GetCurMsTime(); //获取当前的毫秒数
+UINT64          GetCurMsTime(); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 tm              GetCurrTmTime(UINT64 uTime = 0);
 
-UINT64          GetDayBeginTime(UINT64 uTime = 0); //获取当天起点的秒数
+UINT64          GetDayBeginTime(UINT64 uTime = 0); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-UINT64          GetWeekBeginTime(UINT64 uTime = 0); //获取当周起点的秒数
+UINT64          GetWeekBeginTime(UINT64 uTime = 0); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-UINT64          GetMonthBeginTime(UINT64 uTime = 0);//获取当月起点的秒数
+UINT64          GetMonthBeginTime(UINT64 uTime = 0);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-UINT64          GetMonthRemainTime(UINT64 uTime = 0);   //获取当月剩余的秒数
+UINT64          GetMonthRemainTime(UINT64 uTime = 0);   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-INT32           GetWeekDay();       //获得周几
+INT32           GetWeekDay();       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 INT32           GetMonthDay();
 

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTRandomSelector.cs */
 ﻿using BVT;
 using System;
 using System.Collections.Generic;
@@ -6,8 +7,8 @@ using System.Text;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "随机-选择节点")]
-    [NodeDesc("提供每次执行不同的First True Child Node的可能")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED]-[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]First True Child Node[TRANSLATED][TRANSLATED][TRANSLATED]")]
     [NodeName("b3ff7f", "RandomSelector")]
     public class BTRandomSelector : BTSelector
     {

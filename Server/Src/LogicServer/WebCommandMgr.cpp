@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___WebCommandMgr.cpp */
 ﻿#include "stdafx.h"
 #include "WebCommandMgr.h"
 #include "GameService.h"
@@ -120,7 +121,7 @@ BOOL CWebCommandMgr::OnMsgGmCommandReq(NetPacket* pNetPacket)
 			OnGmDeleteMail(Params, pNetPacket->m_nConnID);
 		}
 		break;
-		case EWA_GM_COMMAND:           //后台发的GM指令
+		case EWA_GM_COMMAND:           //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]GM[TRANSLATED][TRANSLATED]
 		{
 			OnGmCommand(Params, pNetPacket->m_nConnID);
 		}
@@ -251,7 +252,7 @@ void CWebCommandMgr::OnGmGroupMail(HttpParameter& hParams, INT32 nConnID)
 	std::string strTitle = hParams.GetStrValue("mail_title");
 	std::string strContent = hParams.GetStrValue("mail_content");
 	INT32 nLanguage = hParams.GetIntValue("language");
-	INT32 nRecvGroup = hParams.GetIntValue("reciver_group"); //1:全部player; 2:在线player
+	INT32 nRecvGroup = hParams.GetIntValue("reciver_group"); //1:[TRANSLATED][TRANSLATED]player; 2:[TRANSLATED][TRANSLATED]player
 
 
 	std::vector<StMailItem> vtItems;
@@ -298,10 +299,10 @@ void CWebCommandMgr::OnGmDeleteMail(HttpParameter& hParams, INT32 nConnID)
 
 	if (nMailType == 1) //Send group mail
 	{
-		//先删除群邮件表里的
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		CMailManager::GetInstancePtr()->DeleteGroupMail(uMailGuid);
 	}
-	else  if (nMailType == 2) //单人邮件
+	else  if (nMailType == 2) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	{
 		CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(uRoleID);
 		ERROR_RETURN_NONE(pPlayer != NULL);

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___AIHelper.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -50,25 +51,25 @@ namespace BVT.AI
             switch (aiState)
             {
                 case EAIState.IDLE:
-                    return "闲置";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.BORN:
-                    return "出生";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.PATROL:
-                    return "巡逻";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.FOLLOW:
-                    return "跟随";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.ESCAPE:
-                    return "逃跑";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.CHASE:
-                    return "追击";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.BACK:
-                    return "回家";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.FIGHT:
-                    return "攻击";
+                    return "[TRANSLATED][TRANSLATED]";
                 case EAIState.DEAD:
-                    return "死亡";
+                    return "[TRANSLATED][TRANSLATED]";
                 default:
-                    return "未知";
+                    return "[TRANSLATED][TRANSLATED]";
             }
         }
     }

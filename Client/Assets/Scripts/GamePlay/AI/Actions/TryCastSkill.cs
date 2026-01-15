@@ -1,10 +1,11 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___Actions___TryCastSkill.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using ACT;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/action节点", Label = "TryCastSkill")]
+    [NodeAttribute(Type = "AI/action[TRANSLATED][TRANSLATED]", Label = "TryCastSkill")]
     public class TryCastSkill : AITask
     {
         public override ENST OnExecute()

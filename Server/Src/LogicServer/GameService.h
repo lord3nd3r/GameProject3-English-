@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GameService.h */
 ﻿#ifndef _GAME_SERVICE_H_
 #define _GAME_SERVICE_H_
 #include "LogicMsgHandler.h"
@@ -62,7 +63,7 @@ public:
 	UINT32			m_dwLogConnID;
 	UINT32			m_dwLoginConnID;
 	UINT32			m_dwDBConnID;
-	UINT32          m_dwCenterConnID;   //中心服的connectionID
+	UINT32          m_dwCenterConnID;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionID
 	UINT64          m_uSvrOpenTime;
 	UINT32          m_dwDbErrorCount;
 	BOOL            m_bRegSuccessed;

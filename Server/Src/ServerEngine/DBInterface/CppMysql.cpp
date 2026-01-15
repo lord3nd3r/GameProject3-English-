@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___CppMysql.cpp */
 ﻿#include "stdafx.h"
 #include "CppMysql.h"
 #include <stdlib.h>
@@ -31,11 +32,11 @@ CppMySQLQuery& CppMySQLQuery::operator=(CppMySQLQuery& rQuery)
     _field = NULL;
     if ( m_MysqlRes != NULL )
     {
-        //定位游标position到第一个position
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
         mysql_data_seek(m_MysqlRes, 0);
         _row =  mysql_fetch_row( m_MysqlRes );
         _row_count = (int)mysql_num_rows( m_MysqlRes );
-        //得到字段count
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]count
         _field_count = mysql_num_fields( m_MysqlRes );
     }
     rQuery.m_MysqlRes = NULL;
@@ -101,7 +102,7 @@ int CppMySQLQuery::fieldIndex(const char* szField)
         return -1;
     }
 
-    mysql_field_seek(m_MysqlRes, 0);//定位到第0列
+    mysql_field_seek(m_MysqlRes, 0);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]0[TRANSLATED]
     int i = 0;
     while ( i < _field_count )
     {
@@ -111,9 +112,9 @@ int CppMySQLQuery::fieldIndex(const char* szField)
             return -1;
         }
 #ifdef WIN32
-        if (_stricmp(_field->name, szField) == 0 )//找到
+        if (_stricmp(_field->name, szField) == 0 )//[TRANSLATED][TRANSLATED]
 #else
-        if (strcasecmp(_field->name, szField) == 0)//找到
+        if (strcasecmp(_field->name, szField) == 0)//[TRANSLATED][TRANSLATED]
 #endif
         {
             return i;
@@ -429,7 +430,7 @@ bool CppMySQL3DB::open(const char* host, const char* user, const char* passwd, c
     //  goto EXT;
     //}
 
-    //如果connectionFailure，返回NULL。对于Success的connection，返回值与第1个params的值相同。
+    //[TRANSLATED][TRANSLATED]connectionFailure，[TRANSLATED][TRANSLATED]NULL。[TRANSLATED][TRANSLATED]Success[TRANSLATED]connection，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]1[TRANSLATED]params[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
     if ( NULL == mysql_real_connect( m_pMySqlDB, host, user, passwd, db, port, NULL, 0) )
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -455,8 +456,8 @@ bool CppMySQL3DB::open(const char* host, const char* user, const char* passwd, c
     m_nPort         = port;
     m_strCharSet    = charSetName;
 
-    //选择制定的数据库Failure
-    //0表示Success，非0值表示出现error。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure
+    //0[TRANSLATED][TRANSLATED]Success，[TRANSLATED]0[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error。
     if ( mysql_select_db( m_pMySqlDB, db ) != 0 )
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -494,7 +495,7 @@ MYSQL* CppMySQL3DB::getMysql()
     return m_pMySqlDB;
 }
 
-/* handle返回多行的查询，返回影响的行数 */
+/* handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 CppMySQLQuery& CppMySQL3DB::querySQL(const char* sql, bool recon)
 {
     m_nErrNo = 0;
@@ -535,21 +536,21 @@ CppMySQLQuery& CppMySQL3DB::querySQL(const char* sql, bool recon)
     return m_dbQuery;
 }
 
-/* 执行非返回结果查询 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 int CppMySQL3DB::execSQL(const char* sql, bool recon)
 {
     m_nErrNo = 0;
     int nRet = mysql_real_query(m_pMySqlDB, sql, (unsigned long)strlen(sql));
     if (nRet == 0)
     {
-        //得到受影响的行数
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         return (int)mysql_affected_rows(m_pMySqlDB) ;
     }
 
     m_nErrNo = mysql_errno(m_pMySqlDB);
     m_strError = mysql_error(m_pMySqlDB);
 
-    //不需要重连
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (!recon)
     {
         return -1;
@@ -573,11 +574,11 @@ int CppMySQL3DB::execSQL(const char* sql, bool recon)
         return -1;
     }
 
-    //得到受影响的行数
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     return (int)mysql_affected_rows(m_pMySqlDB);
 }
 
-/* 测试mysqlserverwhether存活 */
+/* [TRANSLATED][TRANSLATED]mysqlserverwhether[TRANSLATED][TRANSLATED] */
 bool CppMySQL3DB::ping()
 {
     if( mysql_ping(m_pMySqlDB) == 0 )
@@ -599,7 +600,7 @@ bool CppMySQL3DB::shutDown()
     return false;
 }
 
-/* 主要功能:重新startmysql server */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]startmysql server */
 bool CppMySQL3DB::reboot()
 {
     if(!mysql_reload(m_pMySqlDB))
@@ -625,7 +626,7 @@ bool CppMySQL3DB::reconnect()
         return false;
     }
 
-    //如果connectionFailure，返回NULL。对于Success的connection，返回值与第1个params的值相同。
+    //[TRANSLATED][TRANSLATED]connectionFailure，[TRANSLATED][TRANSLATED]NULL。[TRANSLATED][TRANSLATED]Success[TRANSLATED]connection，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]1[TRANSLATED]params[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
     if (NULL == mysql_real_connect(m_pMySqlDB, m_strHost.c_str(), m_strUser.c_str(), m_strPwd.c_str(), m_strDB.c_str(), m_nPort, NULL, 0))
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -642,8 +643,8 @@ bool CppMySQL3DB::reconnect()
         return false;
     }
 
-    //选择制定的数据库Failure
-    //0表示Success，非0值表示出现error。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure
+    //0[TRANSLATED][TRANSLATED]Success，[TRANSLATED]0[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]error。
     if (mysql_select_db(m_pMySqlDB, m_strDB.c_str()) != 0)
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -656,9 +657,9 @@ bool CppMySQL3DB::reconnect()
 }
 
 /*
-* 说明:事务支持InnoDB or BDB表type
+* [TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]InnoDB or BDB[TRANSLATED]type
 */
-/* 主要功能:begin事务 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:begin[TRANSLATED][TRANSLATED] */
 bool CppMySQL3DB::startTransaction()
 {
     m_nErrNo = 0;
@@ -673,7 +674,7 @@ bool CppMySQL3DB::startTransaction()
     return false;
 }
 
-/* 主要功能:提交事务 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 bool CppMySQL3DB::commit()
 {
     m_nErrNo = 0;
@@ -688,7 +689,7 @@ bool CppMySQL3DB::commit()
     return false;
 }
 
-/* 主要功能:回滚事务 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 bool CppMySQL3DB::rollback()
 {
     m_nErrNo = 0;
@@ -703,25 +704,25 @@ bool CppMySQL3DB::rollback()
     return false;
 }
 
-/* 得到客户信息 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 const char* CppMySQL3DB::getClientInfo()
 {
     return mysql_get_client_info();
 }
 
-/* 主要功能:得到客户版本信息 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 const unsigned long  CppMySQL3DB::getClientVersion()
 {
     return mysql_get_client_version();
 }
 
-/* 主要功能:得到主机信息 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 const char* CppMySQL3DB::getHostInfo()
 {
     return mysql_get_host_info(m_pMySqlDB);
 }
 
-/* 主要功能:得到Server information */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]Server information */
 const char* CppMySQL3DB::GetServerInfo()
 {
     return mysql_get_server_info( m_pMySqlDB );
@@ -737,19 +738,19 @@ int CppMySQL3DB::GetErrorNo()
     return m_nErrNo;
 }
 
-/*主要功能:得到server版本信息*/
+/*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
 const unsigned long  CppMySQL3DB::GetDBVersion()
 {
     return mysql_get_server_version(m_pMySqlDB);
 }
 
-/*主要功能:得到 当前connection的Default字符集*/
+/*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED]connection[TRANSLATED]Default[TRANSLATED][TRANSLATED][TRANSLATED]*/
 const char*   CppMySQL3DB::getCharacterSetName()
 {
     return mysql_character_set_name(m_pMySqlDB);
 }
 
-/* 建立新数据库 */
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
 int CppMySQL3DB::createDB(const char* name)
 {
     m_nErrNo = 0;
@@ -766,7 +767,7 @@ int CppMySQL3DB::createDB(const char* name)
     return -1;
 }
 
-/* 删除制定的数据库*/
+/* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
 int CppMySQL3DB::dropDB(const char*  name)
 {
     m_nErrNo = 0;

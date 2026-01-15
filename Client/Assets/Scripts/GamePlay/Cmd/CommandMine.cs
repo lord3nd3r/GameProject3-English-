@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Cmd___CommandMine.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// 采集
+/// [TRANSLATED][TRANSLATED]
 /// </summary>
 public class CommandMine : ICommand
 {

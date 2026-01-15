@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Cmd___CommandMove.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 /// <summary>
-/// 移动命令
+/// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 /// </summary>
 public class CommandMove : ICommand
 {

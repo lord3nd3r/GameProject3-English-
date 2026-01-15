@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___SkillObject.h */
 ﻿#ifndef __SKILL_OBJECT_H__
 #define __SKILL_OBJECT_H__
 
@@ -49,13 +50,13 @@ public:
 	CBulletObject* CreateBullet(StBulletObject& stBullet);
 
 public:
-	UINT64              m_dwStartTick; //begin时间
+	UINT64              m_dwStartTick; //begin[TRANSLATED][TRANSLATED]
 	UINT32              m_dwSkillID;   //Skill ID
 	UINT32              m_dwEventIndex;
 	StSkillInfo*        m_pSkillInfo;
 	StSkillEventInfo*   m_pSkillEventInfo;
 	CSceneObject*       m_pCastObject;
-	BOOL                m_bComboSkill;  //连击开启
+	BOOL                m_bComboSkill;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	ESkillStatus        m_SkillStatus;
 	BOOL                m_bCalcTargets;
 	std::vector<CSceneObject*> m_vtTargets;

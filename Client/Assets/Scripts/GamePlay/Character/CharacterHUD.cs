@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Character___CharacterHUD.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -32,7 +33,7 @@ public class CharacterHUD : ICharacterComponent
                 {
                     mBoard.SetVisable(true);
                     string text1 = GTTools.Format("<#00F4FF>Lv.{0} {1}</color>", mOwner.Level, mOwner.Name);
-                    string text2 = GTTools.Format("<#00F4FF><{0}></color>", "单身狗");
+                    string text2 = GTTools.Format("<#00F4FF><{0}></color>", "[TRANSLATED][TRANSLATED][TRANSLATED]");
                     mBoard.Show(text1, text2, 1);
                 }
                 break;
@@ -40,7 +41,7 @@ public class CharacterHUD : ICharacterComponent
                 {
                     mBoard.SetVisable(true);
                     string text1 = GTTools.Format("<#00FF17>{0}</color>",   mOwner.Name);
-                    string text2 = GTTools.Format("<#00FF17><{0}></color>", "魔教");
+                    string text2 = GTTools.Format("<#00FF17><{0}></color>", "[TRANSLATED][TRANSLATED]");
                     mBoard.Show(text1, text2);
                 }
                 break;

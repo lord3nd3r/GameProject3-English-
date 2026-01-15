@@ -1,11 +1,12 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTSelector.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "选择节点")]
-    [NodeDesc("选择节点，顺序执行子节点，只要碰到一个子节点返回TRUE，则返回TRUE；否则返回FALSE")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]TRUE，[TRANSLATED][TRANSLATED][TRANSLATED]TRUE；[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE")]
     [NodeName("b3ff7f", "Selector")]
     public class BTSelector : BTComposite
     {

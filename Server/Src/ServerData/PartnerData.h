@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___PartnerData.h */
 ﻿#ifndef __PARTNER_DATA_OBJECT_H__
 #define __PARTNER_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
@@ -5,26 +6,26 @@ struct PartnerDataObject : public ShareObject
 {
 	PartnerDataObject ()
 	{
-		m_uRoleID = 0;			//角色ID
+		m_uRoleID = 0;			//[TRANSLATED][TRANSLATED]ID
 		m_uGuid = 0;			//guid
-		m_PartnerID = 0;		//伙伴ID
-		m_StrengthLvl = 0;		//强化Level
-		m_RefineLevel = 0;		//精炼Level
-		m_StarLevel = 0;		//星级
-		m_RefineExp = 0;		//精验的经验
-		m_StarExp = 0;			//星级经验
-		m_SetPos = 0;			//当前上阵position
+		m_PartnerID = 0;		//[TRANSLATED][TRANSLATED]ID
+		m_StrengthLvl = 0;		//[TRANSLATED][TRANSLATED]Level
+		m_RefineLevel = 0;		//[TRANSLATED][TRANSLATED]Level
+		m_StarLevel = 0;		//[TRANSLATED][TRANSLATED]
+		m_RefineExp = 0;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+		m_StarExp = 0;			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+		m_SetPos = 0;			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
 	}
 
-	UINT64 m_uRoleID;			//角色ID
+	UINT64 m_uRoleID;			//[TRANSLATED][TRANSLATED]ID
 	UINT64 m_uGuid;			//guid
-	UINT32 m_PartnerID;		//伙伴ID
-	INT32  m_StrengthLvl;   //强化Level
-	INT32  m_RefineLevel;   //精炼Level
-	INT32  m_StarLevel;		//星级
-	INT32  m_RefineExp;		//精验的经验
-	INT32  m_StarExp;		//星级经验
-	BOOL   m_SetPos;       //当前使用中
+	UINT32 m_PartnerID;		//[TRANSLATED][TRANSLATED]ID
+	INT32  m_StrengthLvl;   //[TRANSLATED][TRANSLATED]Level
+	INT32  m_RefineLevel;   //[TRANSLATED][TRANSLATED]Level
+	INT32  m_StarLevel;		//[TRANSLATED][TRANSLATED]
+	INT32  m_RefineExp;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32  m_StarExp;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL   m_SetPos;       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	BOOL Create(IDBInterface* pDB)
 	{

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Editor___ResourceAtlasCreate_ETC1_Alpha.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -10,7 +11,7 @@ public class ResourceAtlasCreate_ETC1_Alpha : ResourceAtlasCreate
         string path = AssetDatabase.GetAssetPath(obj);
         if (string.IsNullOrEmpty(path) || !IsTextureFile(path))
         {
-            Debug.LogError("未选中对象或者选择的对象不是图片");
+            Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         if (Path.GetExtension(path) == ".png" && !path.Contains("_Alpha") && !path.Contains("_RGB"))
@@ -47,7 +48,7 @@ public class ResourceAtlasCreate_ETC1_Alpha : ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 分离RGB和ALPHA
+    /// [TRANSLATED][TRANSLATED]RGB[TRANSLATED]ALPHA
     /// </summary>
     /// <param name="texturePath"></param>
     public void SeperateRGBandAlphaChannel(string texturePath)
@@ -85,7 +86,7 @@ public class ResourceAtlasCreate_ETC1_Alpha : ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 写入图片
+    /// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     /// </summary>
     /// <param name="path"></param>
     /// <param name="bytes"></param>

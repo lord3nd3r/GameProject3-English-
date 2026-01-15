@@ -1,11 +1,12 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Decorators___BTUntilFailure.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "BTUntilFailure")]
-    [NodeDesc("直到子节点返回Failure，才返回Failure")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "BTUntilFailure")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure，[TRANSLATED][TRANSLATED][TRANSLATED]Failure")]
     [NodeName("05CBF2", "UntilFailure")]
     public class BTUntilFailure : BTDecorator
     {

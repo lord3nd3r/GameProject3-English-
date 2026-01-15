@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___MAP___Draw___FTGUILayout.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace MAP
 #if UNITY_EDITOR
             GUILayout.Space(10);
             GUI.color = Color.green;
-            if (GUILayout.Button("添加event", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED]event", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 FTEditorHelper.ShowMenu(typeof(FTEvent), (obj) =>
                 {

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBMsgHandler.h */
 ﻿#ifndef _DB_MSG_HANDLER_H_
 #define _DB_MSG_HANDLER_H_
 #include "DBManager.h"
@@ -31,7 +32,7 @@ public:
 	//********************* Message handlers end ******************************
 
 public:
-	//数据库definition
+	//[TRANSLATED][TRANSLATED][TRANSLATED]definition
 	CDBManager							m_DBManager;
 
 	ArrayLockFreeQueue<NetPacket*>		m_PacketQueue;

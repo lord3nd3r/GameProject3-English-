@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Main___GTNetworkRecv.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using Protocol;
@@ -206,7 +207,7 @@ public class GTNetworkRecv : GTSingleton<GTNetworkRecv>
         XCharacter data = DataDBSCharacter.GetDataById(GTGlobal.CurPlayerCarrerID);
         if (data == null)
         {
-            GTItemHelper.ShowTip("职业error");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED]error");
             return;
         }
         else

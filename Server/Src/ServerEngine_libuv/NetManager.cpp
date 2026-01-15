@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_libuv___NetManager.cpp */
 ﻿#include "stdafx.h"
 #include "NetManager.h"
 #include "Connection.h"
@@ -218,7 +219,7 @@ BOOL    CNetManager::SendMessageBuff(INT32 nConnID, IDataBuffer* pBuffer)
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
+        //[TRANSLATED][TRANSLATED]connectionalreadyFailuredisconnected[TRANSLATED]，[TRANSLATED][TRANSLATED]connectionID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
         return FALSE;
     }
 
@@ -249,7 +250,7 @@ BOOL CNetManager::SendMessageData(INT32 nConnID, INT32 nMsgID, UINT64 u64TargetI
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
+        //[TRANSLATED][TRANSLATED]connectionalreadyFailuredisconnected[TRANSLATED]，[TRANSLATED][TRANSLATED]connectionID[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
         return FALSE;
     }
 

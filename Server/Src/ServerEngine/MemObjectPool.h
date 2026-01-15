@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___MemObjectPool.h */
 ﻿#ifndef __OBJECT_POOL_H__
 #define __OBJECT_POOL_H__
 
@@ -150,7 +151,7 @@ private:
 private:
 	MemObjectNode<T>* m_pFreeHead;
 	std::vector<MemObjectNode<T>*> m_NodeBuff;
-	boost::mutex       m_pool_mutex; //池锁
+	boost::mutex       m_pool_mutex; //[TRANSLATED][TRANSLATED]
 	int				   m_nUsedCount;
 };
 

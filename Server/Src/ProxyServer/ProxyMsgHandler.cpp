@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ProxyServer___ProxyMsgHandler.cpp */
 ﻿#include "stdafx.h"
 #include "ProxyMsgHandler.h"
 #include "PacketHeader.h"
@@ -58,7 +59,7 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                 {
                     RelayToConnect(pPacketHeader->dwUserData, pNetPacket->m_pDataBuffer);
                 }
-                else //这是client发过来的message
+                else //[TRANSLATED][TRANSLATED]client[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message
                 {
                     CConnection* pConnection = ServiceBase::GetInstancePtr()->GetConnectionByID(pNetPacket->m_nConnID);
                     ERROR_RETURN_TRUE(pConnection !=  NULL);
@@ -77,7 +78,7 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                 {
                     RelayToConnect(pPacketHeader->dwUserData, pNetPacket->m_pDataBuffer);
                 }
-                else //这是client发过来的message
+                else //[TRANSLATED][TRANSLATED]client[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message
                 {
                     CProxyPlayer* pPlayer = CProxyPlayerMgr::GetInstancePtr()->GetByRoleID(pPacketHeader->u64TargetID);
                     ERROR_RETURN_TRUE(pPlayer != NULL);
@@ -86,8 +87,8 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                     ERROR_RETURN_TRUE(nConnID != 0);
 
                     //pPacketHeader->dwUserData = pPlayer->GetCopyGuid();
-                    //疑问, pPakcetHeader->dwUserData字段需不需要由client来填，现在proxyserver也can获取到.
-                    //这个可能会加快向游戏服的转发速度
+                    //[TRANSLATED][TRANSLATED], pPakcetHeader->dwUserData[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]client[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]proxyserver[TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED].
+                    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
                     RelayToConnect(nConnID, pNetPacket->m_pDataBuffer);
                 }
@@ -364,7 +365,7 @@ BOOL CProxyMsgHandler::OnMsgReconnectReq(NetPacket* pPacket)
     if (!CGameService::GetInstancePtr()->m_bLogicConnect)
     {
         RoleReconnectAck Ack;
-        Ack.set_retcode(MRC_CANNOT_RECONNECT); //内存already没有player必须要重登
+        Ack.set_retcode(MRC_CANNOT_RECONNECT); //[TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         ServiceBase::GetInstancePtr()->SendMsgProtoBuf(pPacket->m_nConnID, MSG_ROLE_RECONNECT_ACK, 0, 0, Ack);
         return TRUE;
     }

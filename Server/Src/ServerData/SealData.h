@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___SealData.h */
 ﻿#ifndef __SEAL_DATA_OBJECT_H__
 #define __SEAL_DATA_OBJECT_H__
 
@@ -6,14 +7,14 @@
 
 enum ESealReason
 {
-    ESR_GM_OPER    = 1,  //通过GM后台封禁
-    ESR_CHANGE_MSG = 2,  //协议MD5验证Failure
+    ESR_GM_OPER    = 1,  //[TRANSLATED][TRANSLATED]GM[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    ESR_CHANGE_MSG = 2,  //[TRANSLATED][TRANSLATED]MD5[TRANSLATED][TRANSLATED]Failure
 };
 
 enum ESealAction
 {
-    ESA_SEAL_LOGIN = 1,  //封禁登录
-    ESA_SEAL_CHAT  = 2,  //封禁聊天
+    ESA_SEAL_LOGIN = 1,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    ESA_SEAL_CHAT  = 2,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 struct SealDataObject : public ShareObject

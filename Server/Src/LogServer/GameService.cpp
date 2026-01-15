@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "../Message/Msg_Game.pb.h"
@@ -39,7 +40,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("LogServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("LogServeralready在running!");
+        CLog::GetInstancePtr()->LogError("LogServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -48,7 +49,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("log_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件log_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]log_svr_portconfigerror!");
         return FALSE;
     }
 

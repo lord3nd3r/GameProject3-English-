@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___MAP___Common___FTGroup.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -87,13 +88,13 @@ namespace MAP
 
             GUILayout.BeginHorizontal();
             GUI.color = Color.green;
-            if (GUILayout.Button("添加元素", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 this.AddElement();
             }
             GUILayout.Space(10);
             GUI.color = Color.green;
-            if (GUILayout.Button("快捷编辑", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 UnityEditor.EditorWindow.GetWindow<FTComponentWindow>().SetGroup(this);
                 UnityEditor.EditorWindow.GetWindow<FTComponentWindow>().Show();
@@ -103,7 +104,7 @@ namespace MAP
 
             GUI.color = Color.red;
             GUILayout.Space(10);
-            if (GUILayout.Button("所有target贴近地面", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED]target[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 List<T> list = GetElements();
                 for (int i = 0; i < list.Count; i++)

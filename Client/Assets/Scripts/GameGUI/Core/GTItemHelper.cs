@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Core___GTItemHelper.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -169,7 +170,7 @@ public class GTItemHelper
                 case EAttr.MP:
                     if (showAll)
                     {
-                        string str = GTTools.Format("[00ff00]装备：{0}[-]", s);
+                        string str = GTTools.Format("[00ff00][TRANSLATED][TRANSLATED]：{0}[-]", s);
                         label.Append(str);
                     }
                     break;
@@ -198,7 +199,7 @@ public class GTItemHelper
             }
             else
             {
-                v = GTTools.Format("[777777]{0} (强化至{1}级生效)[-]", desc, data.UnlockLevel);
+                v = GTTools.Format("[777777]{0} ([TRANSLATED][TRANSLATED][TRANSLATED]{1}[TRANSLATED][TRANSLATED][TRANSLATED])[-]", desc, data.UnlockLevel);
 
             }
             label.Append(v);
@@ -227,7 +228,7 @@ public class GTItemHelper
             }
             else
             {
-                v = GTTools.Format("[777777]{0} (进阶至{1}级生效)[-]", desc, i + 1);
+                v = GTTools.Format("[777777]{0} ([TRANSLATED][TRANSLATED][TRANSLATED]{1}[TRANSLATED][TRANSLATED][TRANSLATED])[-]", desc, i + 1);
             }
             label.Append(v);
         }
@@ -246,7 +247,7 @@ public class GTItemHelper
                 int lv = i + 1;
                 DEquipStar starDB = ReadCfgEquipStar.GetDataById(equipDB.Quality * 1000 + lv);
                 float percent = starDB == null ? 0 : starDB.Percent;
-                string desc = GTTools.Format("life、攻击和防御+{0}%", percent);
+                string desc = GTTools.Format("life、[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]+{0}%", percent);
                 string v = string.Empty;
                 if (starLevel >= lv)
                 {
@@ -254,7 +255,7 @@ public class GTItemHelper
                 }
                 else
                 {
-                    v = GTTools.Format("[777777]{0} (升星至{1}级生效)[-]", desc, lv);
+                    v = GTTools.Format("[777777]{0} ([TRANSLATED][TRANSLATED][TRANSLATED]{1}[TRANSLATED][TRANSLATED][TRANSLATED])[-]", desc, lv);
                 }
                 label.Append(v);
             }
@@ -262,11 +263,11 @@ public class GTItemHelper
         else
         {
             DEquipStar starDB = ReadCfgEquipStar.GetDataById(equipDB.Quality * 1000 + starLevel);
-            string format = "{0}提高 [00ff00]{1}[-] %";
+            string format = "{0}[TRANSLATED][TRANSLATED] [00ff00]{1}[-] %";
             float percent = starDB == null ? 0 : starDB.Percent;
             label.Append(GTTools.Format(format, "life", percent));
-            label.Append(GTTools.Format(format, "攻击", percent));
-            label.Append(GTTools.Format(format, "防御", percent));
+            label.Append(GTTools.Format(format, "[TRANSLATED][TRANSLATED]", percent));
+            label.Append(GTTools.Format(format, "[TRANSLATED][TRANSLATED]", percent));
         }
     }
 
@@ -302,7 +303,7 @@ public class GTItemHelper
             }
             else
             {
-                str = GTTools.Format("[777777]{0} (宝石强化至{1}级生效)[-]", s, gp.UnlockLevel);
+                str = GTTools.Format("[777777]{0} ([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]{1}[TRANSLATED][TRANSLATED][TRANSLATED])[-]", s, gp.UnlockLevel);
             }
             label.Append(str);
         }
@@ -316,7 +317,7 @@ public class GTItemHelper
         {
             if (showTip)
             {
-                GTItemHelper.ShowTip("背包空间不足");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             }
             return true;
         }
@@ -346,7 +347,7 @@ public class GTItemHelper
         if (GTDataManager.Instance.GetItemCountById(itemID) < costNum)
         {
             DItem itemDB = ReadCfgItem.GetDataById(itemID);
-            GTItemHelper.ShowTip("物品不足：" + itemDB.Name);
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：" + itemDB.Name);
             return false;
         }
         return true;
@@ -507,7 +508,7 @@ public class GTItemHelper
     {
         GTWindowManager.Instance.OpenWindow(EWindowID.UIMessageTip);
         UIMessageTip dialog = (UIMessageTip)GTWindowManager.Instance.GetWindow(EWindowID.UIMessageTip);
-        string format = GetText("经验+{0}");
+        string format = GetText("[TRANSLATED][TRANSLATED]+{0}");
         dialog.ShowExp(GTTools.Format(format, exp));
     }
 
@@ -536,7 +537,7 @@ public class GTItemHelper
     {
         if (errorCode != 0)
         {
-            GTItemHelper.ShowTip(string.Format("网络error：{0}", errorCode));
+            GTItemHelper.ShowTip(string.Format("[TRANSLATED][TRANSLATED]error：{0}", errorCode));
             return false;
         }
         else

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___StaticData___SkillStruct.h */
 ﻿#ifndef __SKILL_STRUCT_H__
 #define __SKILL_STRUCT_H__
 
@@ -80,18 +81,18 @@ enum ESkillType
 
 // enum EObjectStatus
 // {
-//  EOS_NONE = 0;//无
-//  EOS_DEAD = 1;//死亡
-//  EOS_IDLE = 2;//静止
-//  EOS_WALK = 3;//走
-//  EOS_RUN = 4;//跑
-//  EOS_FLY = 5;//飞
-//  EOS_NOT_MOVE = 6;//不能移动
-//  EOS_NOT_CAST = 7;//不能放skill
-//  EOS_NOT_BEHURT = 8;//不能被攻击
-//  EOS_NOT_BECONTROL = 9;//无法被控制
-//  EOS_STEALTH = 10;//隐身
-//  EOS_BLIND = 11;//瞎的
+//  EOS_NONE = 0;//[TRANSLATED]
+//  EOS_DEAD = 1;//[TRANSLATED][TRANSLATED]
+//  EOS_IDLE = 2;//[TRANSLATED][TRANSLATED]
+//  EOS_WALK = 3;//[TRANSLATED]
+//  EOS_RUN = 4;//[TRANSLATED]
+//  EOS_FLY = 5;//[TRANSLATED]
+//  EOS_NOT_MOVE = 6;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+//  EOS_NOT_CAST = 7;//[TRANSLATED][TRANSLATED][TRANSLATED]skill
+//  EOS_NOT_BEHURT = 8;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+//  EOS_NOT_BECONTROL = 9;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+//  EOS_STEALTH = 10;//[TRANSLATED][TRANSLATED]
+//  EOS_BLIND = 11;//[TRANSLATED][TRANSLATED]
 // };
 
 
@@ -101,16 +102,16 @@ enum ESkillType
 struct StBuffInfo
 {
     UINT32 BuffID;                      //BuffID
-    UINT32 EffectID;                  //Bufftarget需要加的effect
-    INT32  PtyValue[PROPERTY_NUM];      //加属性值
-    INT32  PtyPercent[PROPERTY_NUM];    //加属性百分比
+    UINT32 EffectID;                  //Bufftarget[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]effect
+    INT32  PtyValue[PROPERTY_NUM];      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32  PtyPercent[PROPERTY_NUM];    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32  TotalTime;                   //total duration(ms)
-    INT32  Interval;                    //interval时长
-    UINT32 ChangeStatus;                //修改player的状态
+    INT32  Interval;                    //interval[TRANSLATED][TRANSLATED]
+    UINT32 ChangeStatus;                //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL   OverLay;                     //whethercanstack
-    std::string   LuaAdd;               //whether有luaevent
-    std::string   LuaTick;              //whether有luaevent
-    std::string   LuaRemove;            //whether有luaevent
+    std::string   LuaAdd;               //whether[TRANSLATED]luaevent
+    std::string   LuaTick;              //whether[TRANSLATED]luaevent
+    std::string   LuaRemove;            //whether[TRANSLATED]luaevent
 };
 
 struct StBulletInfo
@@ -122,7 +123,7 @@ struct StBulletInfo
     ERangeType  RangeType   = ERT_CIRCLE;       //Range Type
     FLOAT       RangeParams[5] = { 0 };         //Range Parameters
     UINT32      LifeTime    = 0;                //Life Time
-    UINT32      HitActionID = 0;                 //Hit Action, 击退，击飞， 击倒
+    UINT32      HitActionID = 0;                 //Hit Action, [TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED]
     UINT32      HitEffect = 0;                   //Hit Effect
     FLOAT       HitDistance = 0;                 //Hit Move Distance
 };
@@ -130,13 +131,13 @@ struct StBulletInfo
 struct StBulletObject
 {
     UINT32 BulletID;    //Bullet ID
-    FLOAT  fAngle;       //角度
+    FLOAT  fAngle;       //[TRANSLATED][TRANSLATED]
 };
 
 
 struct StGoblinInfo
 {
-    UINT32 ActorID;     //角色ID
+    UINT32 ActorID;     //[TRANSLATED][TRANSLATED]ID
 };
 
 
@@ -147,10 +148,10 @@ struct StSkillEvent
     UINT32 TargetBuffID = 0;                //Target Buff ID
     FLOAT  RangeParams[5] = {0};            //Range Parameters
     ERangeType RangeType = ERT_OBJECTS;     //Range Type
-    UINT32 CenterType = 0;                  //中心点type
+    UINT32 CenterType = 0;                  //[TRANSLATED][TRANSLATED][TRANSLATED]type
     std::vector<StBulletObject> vtBullets;  //Bullet List
     std::vector<StGoblinInfo> vtGoblins;    //Summoned goblins list
-    UINT32 HitActionID = 0;                 //Hit Action, 击退，击飞， 击倒
+    UINT32 HitActionID = 0;                 //Hit Action, [TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED]
     UINT32 HitEffect = 0;                   //Hit Effect
     FLOAT  HitDistance = 0;                 //Hit Move Distance
 };
@@ -159,7 +160,7 @@ struct StSkillInfo
 {
     UINT32        SkillID;        //Skill ID
     UINT32        Level;          //skillLevel
-    UINT32        SkillType;      //Skill Type,1:物理伤害,2:法术伤害
+    UINT32        SkillType;      //Skill Type,1:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],2:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     EHitShipType  HitShipType;    //Target relation,
     BOOL          HitMyself;      //HitMyself
     UINT32        CD;               //Skill CD
@@ -179,7 +180,7 @@ struct StSkillEventInfo
 
 struct StComboSkillInfo
 {
-    UINT32 SkillID;                     //主Skill ID
+    UINT32 SkillID;                     //[TRANSLATED]Skill ID
     std::vector<UINT32> vtComboSkill;   //Combo skills
 };
 

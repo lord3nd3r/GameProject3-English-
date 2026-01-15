@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_libuv___Connection.cpp */
 ﻿#include "stdafx.h"
 #include "Connection.h"
 #include "DataBuffer.h"
@@ -160,8 +161,8 @@ VOID CConnection::SetConnectionData( UINT64 uData )
 
 BOOL CConnection::ExtractBuffer()
 {
-    //在这方法里返回FALSE。
-    //会在外面导致这个connection被shutdown。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE。
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED]shutdown。
     if (m_nDataLen == 0)
     {
         return TRUE;
@@ -196,7 +197,7 @@ BOOL CConnection::ExtractBuffer()
         {
             if (m_nDataLen >= 1 && *(BYTE*)m_pBufPos != 0x88)
             {
-                //CLog::GetInstancePtr()->LogWarn("验证首字节失改!, m_nDataLen:%d--ConnID:%d", m_nDataLen, m_nConnID);
+                //CLog::GetInstancePtr()->LogWarn("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!, m_nDataLen:%d--ConnID:%d", m_nDataLen, m_nConnID);
                 //return FALSE;
             }
 
@@ -205,7 +206,7 @@ BOOL CConnection::ExtractBuffer()
 
         PacketHeader* pHeader = (PacketHeader*)m_pBufPos;
         //////////////////////////////////////////////////////////////////////////
-        //在这里对包头进行检查, 如果不合法就要返回FALSE;
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE;
         if (!CheckHeader(m_pBufPos))
         {
             //return FALSE;
@@ -383,19 +384,19 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket;
     if (pHeader->CheckCode != CODE_VALUE)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure pHeader->CheckCode error");
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure pHeader->CheckCode error");
         return FALSE;
     }
 
     if ((pHeader->nSize > 1024 * 1024) || (pHeader->nSize <= 0))
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure packetsize < 0, pHeader->nMsgID:%d, roleid:%lld", pHeader->nMsgID, pHeader->u64TargetID);
         return FALSE;
     }
 
     if (pHeader->nMsgID > 399999 || pHeader->nMsgID <= 0)
     {
-        CLog::GetInstancePtr()->LogInfo("验证-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
+        CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure Invalid MessageID roleid:%lld", pHeader->u64TargetID);
         return FALSE;
     }
 
@@ -422,7 +423,7 @@ BOOL CConnection::CheckHeader(CHAR* pNetPacket)
         return TRUE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("验证-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
+    CLog::GetInstancePtr()->LogInfo("[TRANSLATED][TRANSLATED]-Failure m_nCheckNo:%d, nPktChkNo:%ld", m_nCheckNo, nPktChkNo);
 
     return FALSE;
 }
@@ -569,7 +570,7 @@ CConnection* CConnectionMgr::CreateConnection()
     m_ConnListMutex.lock();
     if (m_pFreeConnRoot == NULL)
     {
-        //表示己到达connection的上限，不能再创建新的connection了
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED]
         m_ConnListMutex.unlock();
         return NULL;
     }
@@ -725,7 +726,7 @@ BOOL CConnectionMgr::CheckConntionAvalible(INT32 nInterval)
 
         if(uCurTick > (pConnection->m_uLastRecvTick + nInterval * 1000))
         {
-            CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible 超时主动disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
+            CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
             pConnection->Close();
         }
     }

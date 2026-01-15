@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Common___protobuf___src___google___protobuf___util___internal___protostream_objectwriter_test.cc */
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
 // https://developers.google.com/protocol-buffers/
@@ -2550,7 +2551,7 @@ TEST_P(ProtoStreamObjectWriterFieldMaskTest, MapKeyMustBeEscapedCorrectly) {
 TEST_P(ProtoStreamObjectWriterFieldMaskTest, MapKeyCanContainAnyChars) {
   FieldMaskTest expected;
   expected.mutable_single_mask()->add_paths(
-      // \xE5\xAD\x99 is the UTF-8 byte sequence for chinese character 孙.
+      // \xE5\xAD\x99 is the UTF-8 byte sequence for chinese character [TRANSLATED].
       // We cannot embed non-ASCII characters in the code directly because
       // some windows compilers will try to interpret them using the system's
       // current encoding and end up with invalid UTF-8 byte sequence.

@@ -1,9 +1,10 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___Actions___TryChangeAIState.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/action节点", Label = "TryChangeAIState")]
+    [NodeAttribute(Type = "AI/action[TRANSLATED][TRANSLATED]", Label = "TryChangeAIState")]
     [NodeName("ff64cb", "<size=12>TryChangeAIState</size>")]
     public class TryChangeAIState : AITask
     {
@@ -38,7 +39,7 @@ namespace BVT.AI
         public override void DrawNodeWindowContents()
         {
             base.DrawNodeWindowContents();
-            GUILayout.Label(string.Format("切换至：<color=#ff0000>{0}</color>", AIHelper.GetAIStateName(ApplyAIState)));   
+            GUILayout.Label(string.Format("[TRANSLATED][TRANSLATED][TRANSLATED]：<color=#ff0000>{0}</color>", AIHelper.GetAIStateName(ApplyAIState)));   
         }
 #endif
     }

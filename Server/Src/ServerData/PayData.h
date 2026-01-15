@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___PayData.h */
 ﻿#ifndef __PAY_DATA_OBJECT_H__
 #define __PAY_DATA_OBJECT_H__
 
@@ -6,8 +7,8 @@
 
 enum EOrderStatus
 {
-    EOS_WAIT = 1,  //等待发货
-    EOS_DONE = 2   //完成
+    EOS_WAIT = 1,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    EOS_DONE = 2   //[TRANSLATED][TRANSLATED]
 };
 
 struct PayDataObject : public ShareObject
@@ -29,11 +30,11 @@ struct PayDataObject : public ShareObject
     CHAR    m_szOrderID[PAY_ORDERID_LEN];
     CHAR    m_szThirdID[PAY_ORDERID_LEN];
     INT32   m_nChannel = 0;
-    INT32   m_nStatus;  //1：表示未发货, 2:表示己发货
+    INT32   m_nStatus;  //1：[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], 2:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     UINT64  m_uFinishTime;
     UINT64  m_uSendTime;
-    INT32   m_nProductID; //产品ID
-    INT32   m_nBuyID;   //游戏内真实的商品ID
+    INT32   m_nProductID; //[TRANSLATED][TRANSLATED]ID
+    INT32   m_nBuyID;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
     FLOAT   m_fMoney;
 
     BOOL Create(IDBInterface* pDB)

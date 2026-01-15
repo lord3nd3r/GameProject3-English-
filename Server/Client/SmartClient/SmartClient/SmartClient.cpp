@@ -1,4 +1,5 @@
-﻿// PressureTest.cpp : definition控制台应用程序的入口点。
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Client___SmartClient___SmartClient___SmartClient.cpp */
+﻿// PressureTest.cpp : definition[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 //
 
 #include "stdafx.h"
@@ -10,7 +11,7 @@
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int nRobotNum = 0;
-	printf("请输入需要start的机器人数目: ");
+	printf("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]start[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]: ");
 	scanf_s("%d", &nRobotNum);
 
 	if(nRobotNum <= 0)
@@ -30,12 +31,12 @@ int _tmain(int argc, _TCHAR* argv[])
 #endif
 
 	/***********************************
-	以下三句代码是is了实现连调功能，连调功能是在游戏running的时候，
-	编辑器can连上游戏，实时的查看树的running情况、变量的当前值并can设置断点等
+	[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]running[TRANSLATED][TRANSLATED][TRANSLATED]，
+	[TRANSLATED][TRANSLATED][TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]running[TRANSLATED][TRANSLATED]、[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	************************************/
-	//behaviac::Config::SetSocketBlocking(true);//等待编辑器connection上才往后继续执行
-	//behaviac::Config::SetSocketPort(60636);如果需要修改端口号，需要添加此代码
-	//behaviac::Config::SetLogging(true);//is了在程序start时，等待编辑器connection上才往后继续执行
+	//behaviac::Config::SetSocketBlocking(true);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	//behaviac::Config::SetSocketPort(60636);[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	//behaviac::Config::SetLogging(true);//is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]start[TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	behaviac::Workspace::GetInstance()->SetFilePath("../SmartClient/exported");
 	behaviac::Workspace::GetInstance()->SetFileFormat(behaviac::Workspace::EFF_xml);

@@ -1,5 +1,6 @@
-﻿// stdafx.cpp : 只包括标准包含文件的源文件
-// CenterServer.pch 将作is预编译头
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___CenterServer___stdafx.cpp */
+﻿// stdafx.cpp : [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+// CenterServer.pch [TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 // stdafx.obj will contain precompiled type information
 
 #include "stdafx.h"

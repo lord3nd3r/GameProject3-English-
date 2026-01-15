@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonSocket.cpp */
 ﻿#include "stdafx.h"
 #include "CommonSocket.h"
 
@@ -14,7 +15,7 @@ BOOL  CommonSocket::SetSocketReuseable(SOCKET hSocket)
 }
 
 
-//设置套接字阻塞状态
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL    CommonSocket::SetSocketBlock(SOCKET hSocket, BOOL bBlock)
 {
 #ifdef WIN32
@@ -158,7 +159,7 @@ std::string CommonSocket::HttpGet(std::string strHost, INT32 nPort, std::string 
 
     CHAR szRecvBuff[10240] = { 0 };
 
-    //循环接收
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32 nDataLen = 0;
     INT32 nBytes;
     while (nBytes = recv(hSocket, szRecvBuff + nDataLen, 10240 - nDataLen, 0))
@@ -520,8 +521,8 @@ BOOL CommonSocket::SetSocketKeepAlive( SOCKET hSocket, int nKeepInterval, int nK
 {
 #ifdef WIN32
     tcp_keepalive  alive_in = { 0 }, alive_out = { 0 };
-    alive_in.keepalivetime = nKeepIdle;                // begin首次KeepAlive探测前的TCP空闭时间
-    alive_in.keepaliveinterval = nKeepInterval;            // 两次KeepAlive探测间的时间interval
+    alive_in.keepalivetime = nKeepIdle;                // begin[TRANSLATED][TRANSLATED]KeepAlive[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]TCP[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    alive_in.keepaliveinterval = nKeepInterval;            // [TRANSLATED][TRANSLATED]KeepAlive[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]interval
     alive_in.onoff = TRUE;
     unsigned long ulBytesReturn = 0;
     int nRet = WSAIoctl(hSocket, SIO_KEEPALIVE_VALS, &alive_in, sizeof(alive_in),

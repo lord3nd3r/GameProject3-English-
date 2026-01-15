@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___CppMysql.h */
 ﻿#ifndef __MYSQL_HELPER_H__
 #define __MYSQL_HELPER_H__
 
@@ -11,10 +12,10 @@ class CppMySQLQuery
 public:
     CppMySQLQuery();
 
-    //当执行拷贝构造函数后，括号里的类已经无效，不能再使用
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     CppMySQLQuery(CppMySQLQuery& rQuery);
 
-    // 当执行赋值构造函数后， = 右边的类已经无效，不能再使用
+    // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， = [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     CppMySQLQuery& operator=(CppMySQLQuery& rQuery);
 
     virtual ~CppMySQLQuery();
@@ -25,7 +26,7 @@ public:
 
     int fieldIndex(const char* szField);
 
-    //0...n-1列
+    //0...n-1[TRANSLATED]
     const char* fieldName(int nCol);
     int fieldType(int nCol);
 
@@ -39,7 +40,7 @@ public:
     double getFloatField(int nField, double fNullValue = 0.0);
     double getFloatField(const char* szField, double fNullValue = 0.0);
 
-    //0...n-1列
+    //0...n-1[TRANSLATED]
     const char* getStringField(int nField, const char* szNullValue = "");
     const char* getStringField(const char* szField, const char* szNullValue = "");
 
@@ -78,67 +79,67 @@ public:
 
     void close();
 
-    /* 返回句柄 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     MYSQL* getMysql();
 
-    /* handle返回多行的查询，返回影响的行数 */
-    //返回引用是因is在CppMySQLQuery的赋值构造函数中要把成员变量_mysql_res置is空
+    /* handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED]CppMySQLQuery[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]_mysql_res[TRANSLATED]is[TRANSLATED]
     CppMySQLQuery& querySQL(const char* sql, bool recon = true);
 
-    /* 执行非返回结果查询 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     int execSQL(const char* sql, bool recon = true);
 
-    /* 测试mysqlserverwhether存活 */
+    /* [TRANSLATED][TRANSLATED]mysqlserverwhether[TRANSLATED][TRANSLATED] */
     bool ping();
 
     /* shutdownmysql server */
     bool shutDown();
 
-    /* 主要功能:重新startmysql server */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]startmysql server */
     bool reboot();
 
-    /* 主要功能:重新connectionmysql server */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]connectionmysql server */
     bool reconnect();
 
-    /*说明:事务支持InnoDB or BDB表type*/
-    /* 主要功能:begin事务 */
+    /*[TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]InnoDB or BDB[TRANSLATED]type*/
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:begin[TRANSLATED][TRANSLATED] */
     bool startTransaction();
 
-    /* 主要功能:提交事务 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     bool commit();
 
-    /* 主要功能:回滚事务 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     bool rollback();
 
-    /* 得到客户信息 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     const char* getClientInfo();
 
-    /* 主要功能:得到客户版本信息 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     const unsigned long  getClientVersion();
 
-    /* 主要功能:得到主机信息 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     const char* getHostInfo();
 
-    /* 主要功能:得到Server information */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]Server information */
     const char* GetServerInfo();
 
     const char* GetErrorMsg();
 
     int         GetErrorNo();
 
-    /*主要功能:得到server版本信息*/
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     const unsigned long  GetDBVersion();
 
-    /*主要功能:得到 当前connection的Default字符集*/
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:[TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED]connection[TRANSLATED]Default[TRANSLATED][TRANSLATED][TRANSLATED]*/
     const char*   getCharacterSetName();
 
-    /* 建立新数据库 */
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] */
     int createDB(const char* name);
 
-    /* 删除制定的数据库*/
+    /* [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     int dropDB(const char* name);
 
-    /*修改当前的数据库*/
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     bool changeCurDB(const char* name);
 
     INT64 GetAutoIncrementID(const char* szTableName, const char* szDBName);
@@ -150,7 +151,7 @@ private:
     CppMySQL3DB& operator=(const CppMySQL3DB& db);
 
 private:
-    /* msyql connection句柄 */
+    /* msyql connection[TRANSLATED][TRANSLATED] */
     MYSQL* m_pMySqlDB;
     CppMySQLQuery m_dbQuery;
 
@@ -162,7 +163,7 @@ private:
     std::string  m_strUser;
     std::string  m_strPwd;
     std::string  m_strDB;
-    std::string  m_strCharSet; //字符集
+    std::string  m_strCharSet; //[TRANSLATED][TRANSLATED][TRANSLATED]
     int          m_nPort;
 };
 

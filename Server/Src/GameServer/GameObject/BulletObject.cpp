@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___BulletObject.cpp */
 ﻿#include "stdafx.h"
 #include "CommonMath.h"
 #include "BulletObject.h"
@@ -151,7 +152,7 @@ BOOL CBulletObject::CheckTargetObjects()
 
 BOOL CBulletObject::CheckLifeOver(UINT64 uTick)
 {
-	//检查whether该消失了
+	//[TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	if ((uTick - m_uStartTick) > m_pBulletInfo->LifeTime)
 	{
 		m_bFinished = TRUE;
@@ -205,7 +206,7 @@ BOOL CBulletObject::UpdateBulletPos(UINT64 uTick)
 
 	switch (m_pBulletInfo->BulletType)
 	{
-		case EBT_CHASE:         //追踪型飞弹:
+		case EBT_CHASE:         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:
 		{
 			m_fAngle = 0.0;
 
@@ -217,8 +218,8 @@ BOOL CBulletObject::UpdateBulletPos(UINT64 uTick)
 		}
 		break;
 
-		case EBT_FIXTARGETPOS:  //固定target点飞弹
-		case EBT_FIXDIRECTION:  //固定方向型飞弹:
+		case EBT_FIXTARGETPOS:  //[TRANSLATED][TRANSLATED]target[TRANSLATED][TRANSLATED][TRANSLATED]
+		case EBT_FIXDIRECTION:  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:
 		{
 			if (m_fAngle < 0)
 			{
@@ -232,31 +233,31 @@ BOOL CBulletObject::UpdateBulletPos(UINT64 uTick)
 			m_Pos.m_z = m_InitPos.m_z + m_vz * (uTick - m_uStartTick) / 1000 + fAccZ;
 		}
 		break;
-		case EBT_POINT:         //固定点飞弹
+		case EBT_POINT:         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_LINK:          //connection飞弹
+		case EBT_LINK:          //connection[TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_ANNULAR:       //环形飞弹
+		case EBT_ANNULAR:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_BACK:          //回旋飞弹
+		case EBT_BACK:          //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_EXTRACT:       //抽取飞弹
+		case EBT_EXTRACT:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_BOUNDCE:       //弹跳飞弹
+		case EBT_BOUNDCE:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;
-		case EBT_WAVE:          //冲击波
+		case EBT_WAVE:          //[TRANSLATED][TRANSLATED][TRANSLATED]
 		{
 		}
 		break;

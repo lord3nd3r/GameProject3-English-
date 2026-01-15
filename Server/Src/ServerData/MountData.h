@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___MountData.h */
 ﻿#ifndef __MOUNT_DATA_OBJECT_H__
 #define __MOUNT_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
@@ -10,15 +11,15 @@ struct MountDataObject : public ShareObject
 
 	}
 
-	UINT64 m_uRoleID;			//角色ID
+	UINT64 m_uRoleID;			//[TRANSLATED][TRANSLATED]ID
 	UINT64 m_uGuid;			//guid
-	UINT32 m_MountID;			//坐骑ID
-	INT32  m_StrengthLvl;   //强化Level
-	INT32  m_RefineLevel;   //精炼Level
-	INT32  m_StarLevel;		//星级
-	INT32  m_RefineExp;		//精验的经验
-	INT32  m_StarExp;		//星级经验
-	BOOL   m_IsUsing;       //当前使用中
+	UINT32 m_MountID;			//[TRANSLATED][TRANSLATED]ID
+	INT32  m_StrengthLvl;   //[TRANSLATED][TRANSLATED]Level
+	INT32  m_RefineLevel;   //[TRANSLATED][TRANSLATED]Level
+	INT32  m_StarLevel;		//[TRANSLATED][TRANSLATED]
+	INT32  m_RefineExp;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32  m_StarExp;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL   m_IsUsing;       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	BOOL Create(IDBInterface* pDB)
 	{

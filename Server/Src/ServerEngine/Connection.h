@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___Connection.h */
 ﻿#ifndef _CONNECTION_H_
 #define _CONNECTION_H_
 
@@ -129,7 +130,7 @@ public:
 
     sockaddr                    m_UdpAddr;
 
-    //LINUX下专用， 用于发了一半的包
+    //LINUX[TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     IDataBuffer*                m_pSendingBuffer;
     INT32                       m_nSendingPos;
 };

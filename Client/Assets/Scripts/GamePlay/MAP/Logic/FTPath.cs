@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___MAP___Logic___FTPath.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -96,7 +97,7 @@ namespace MAP
             this.Type         = (EPathNodeType)UnityEditor.EditorGUILayout.EnumPopup("Type", this.Type);
             this.PositionVary = UnityEditor.EditorGUILayout.Toggle("PositionVary", this.PositionVary);
             this.RotationVary = UnityEditor.EditorGUILayout.Toggle("RotationVary", this.RotationVary);
-            if (GUILayout.Button("添加路点"))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]"))
             {
                 AddElement();
             }

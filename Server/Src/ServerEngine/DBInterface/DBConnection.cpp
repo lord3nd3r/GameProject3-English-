@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___DBInterface___DBConnection.cpp */
 ﻿#include "stdafx.h"
 #include "DBConnection.h"
 #include "DBStoredProc.h"
@@ -127,7 +128,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 
     if (pLastProcedure != NULL && pLastStmt != NULL)
     {
-        //如果是同一个存储需求，则直接用上一次的预handle
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]handle
         if (pLastProcedure == pDBStoredProcedure)
         {
             if (0 == mysql_stmt_execute(pLastStmt))
@@ -318,7 +319,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //      return FALSE;
 //  }
 //
-//  // 检查whether有结果集
+//  // [TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 //  MYSQL_RES* pMySqlResult = mysql_stmt_result_metadata( pMySqlStmt );
 //  if(pMySqlResult == NULL)
 //  {
@@ -336,7 +337,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //  }
 //  else
 //  {
-//      //zm :走到这里来，是不应该的， 更新存储过程最多可能带params，不允许返回结果集
+//      //zm :[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]params，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 //      mysql_stmt_store_result( pMySqlStmt );
 //      mysql_free_result( pMySqlResult );
 //      mysql_stmt_free_result( pMySqlStmt );
@@ -352,12 +353,12 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //              mysql_stmt_free_result( pMySqlStmt );
 //              if ( server_status & SERVER_PS_OUT_PARAMS )
 //              {
-//                  //此调用存储存在返回params值，请检查sql语句和存储过程实现!
+//                  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]params[TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]sql[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!
 //                  break;
 //              }
 //              else
 //              {
-//                  //执行查询操作不应该返回任何结果集，请检查sql语句和存储过程实现!
+//                  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]sql[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!
 //              }
 //          }
 //      }
@@ -421,7 +422,7 @@ BOOL CDBConnection::Query(CDBStoredProcedure* pDBStoredProcedure)
         return FALSE;
     }
 
-    // 检查whether有结果集
+    // [TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     MYSQL_RES* pMySqlResult = mysql_stmt_result_metadata( pMySqlStmt );
     if(pMySqlResult == NULL)
     {

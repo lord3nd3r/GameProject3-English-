@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___QuadTreeMgr.cpp */
 ﻿/****************************************************
-文件：QuadTreeManager.cpp
-作者：ylmbtm@163.com
-日期：2025/03/27 11:19:18
-功能：四叉树地图管理
+[TRANSLATED][TRANSLATED]：QuadTreeManager.cpp
+[TRANSLATED][TRANSLATED]：ylmbtm@163.com
+[TRANSLATED][TRANSLATED]：2025/03/27 11:19:18
+[TRANSLATED][TRANSLATED]：[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 *****************************************************/
 
 
@@ -76,13 +77,13 @@ BOOL QuadTreeNode::TrySplit()
 {
     if (m_objectList.size() <= NODE_SPLIT_NUM)
     {
-        //格子里的对象数少于NODE_SPLIT_NUM， 所以不需要分割
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]NODE_SPLIT_NUM， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         return TRUE;
     }
 
     if (m_nDepth >= NODE_MAX_DEPTH)
     {
-        //己达最大深度不再向下分割
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         return TRUE;
     }
 
@@ -90,7 +91,7 @@ BOOL QuadTreeNode::TrySplit()
     FLOAT nMidH = (m_fLeft + m_fRight) / 2;
     FLOAT nMidV = (m_fTop + m_fBottom) / 2;
 
-    m_bLeaf = FALSE;  //分割之后，本节点就不是叶子节点了
+    m_bLeaf = FALSE;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     m_pChildNodes[0] = new QuadTreeNode(this, m_fLeft, m_fTop, nMidH, nMidV, m_nDepth + 1);
     m_pChildNodes[1] = new QuadTreeNode(this, nMidH, m_fTop, m_fRight, nMidV, m_nDepth + 1);

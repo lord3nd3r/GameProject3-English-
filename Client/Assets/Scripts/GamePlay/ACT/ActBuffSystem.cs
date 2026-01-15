@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___ACT___ActBuffSystem.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ namespace ACT
             Buffs.TryGetValue(id, out tempBuff);
             if (tempBuff == null)
             {
-                Debug.LogError("找不到该Buff的模版, ID =" + id);
+                Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Buff[TRANSLATED][TRANSLATED][TRANSLATED], ID =" + id);
                 return null;
             }
             else

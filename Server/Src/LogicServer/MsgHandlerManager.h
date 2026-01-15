@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___MsgHandlerManager.h */
 ﻿#ifndef _MSG_HANDLER_MANAGER_H__
 #define _MSG_HANDLER_MANAGER_H__
 
@@ -111,7 +112,7 @@ public:
                 continue;
             }
 
-            //反注册并不真实删除，只是将this指针置空
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]this[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             (*itor)->EmptyThisAddr();
         }
         return true;

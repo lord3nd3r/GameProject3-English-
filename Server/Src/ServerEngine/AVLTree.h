@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___AVLTree.h */
 ﻿#ifndef __AVL_TREE_H__
 #define __AVL_TREE_H__
 #include <vector>
@@ -30,7 +31,7 @@ public:
     TreeNode<TKey, TValue>* m_pParent;
 };
 
-//AVL树类的属性和方法声明
+//AVL[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 class AVLTree
 {
@@ -53,7 +54,7 @@ public:
         Clear();
     }
 
-    //对外的接口
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 public:
     TValue*         InsertAlloc(TKey Key);
     bool            Insert(TKey Key, TValue Value);
@@ -73,21 +74,21 @@ public:
 
 private:
     TNodeTypePtr    FindInner(TNodeTypePtr pRootNode, TKey Key);
-    bool            InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr pInsertNode);   //插入
-    void            Insubtree(TNodeTypePtr pRootNode);                                  //中序遍历
-    bool            DeleteInner(TNodeTypePtr& pNode,  TKey Key);        //删除
-    void            SingRotateLeft(TNodeTypePtr& pNode);//左左情况下的旋转
-    void            SingRotateRight(TNodeTypePtr& pNode);//右右情况下的旋转
-    void            DoubleRotateLR(TNodeTypePtr& pNode);//左右情况下的旋转
-    void            DoubleRotateRL(TNodeTypePtr& pNode);//右左情况下的旋转
-    int             Max(int Value1, int Value2); //求最大值
+    bool            InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr pInsertNode);   //[TRANSLATED][TRANSLATED]
+    void            Insubtree(TNodeTypePtr pRootNode);                                  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    bool            DeleteInner(TNodeTypePtr& pNode,  TKey Key);        //[TRANSLATED][TRANSLATED]
+    void            SingRotateLeft(TNodeTypePtr& pNode);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    void            SingRotateRight(TNodeTypePtr& pNode);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    void            DoubleRotateLR(TNodeTypePtr& pNode);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    void            DoubleRotateRL(TNodeTypePtr& pNode);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    int             Max(int Value1, int Value2); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     int             GetHeight(TNodeTypePtr pNode);
 
 
     bool            AllocBufferNode(int nSize = 1024);
 
 private:
-    TNodeType* m_pRoot;       //根节点
+    TNodeType* m_pRoot;       //[TRANSLATED][TRANSLATED][TRANSLATED]
 
     TNodeType* m_pFreeHead;
 
@@ -125,7 +126,7 @@ TValue* AVLTree<TKey, TValue>::InsertAlloc( TKey Key )
         if(!InsertInner(m_pRoot, pNode))
         {
             FreeNode(pNode);
-            //表示插入Failure，这个key在树中already存在
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure，[TRANSLATED][TRANSLATED]key[TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED]
             return NULL;
         }
     }
@@ -337,7 +338,7 @@ int AVLTree<TKey, TValue>::Max( int Value1, int Value2 )
     return Value1 > Value2 ? Value1 : Value2;
 }
 
-//求最大值
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 int AVLTree<TKey, TValue>::GetHeight(TNodeTypePtr pNode)
 {
@@ -350,7 +351,7 @@ int AVLTree<TKey, TValue>::GetHeight(TNodeTypePtr pNode)
 
 }
 
-//左左情况下的旋转
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::SingRotateLeft(TNodeTypePtr& pNode)
 {
@@ -370,7 +371,7 @@ void AVLTree<TKey, TValue>::SingRotateLeft(TNodeTypePtr& pNode)
     pNode = pTempNode;
     pNode->m_pParent = pOrgParent;
 }
-//右右情况下的旋转
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::SingRotateRight(TNodeTypePtr& pNode)
 {
@@ -391,7 +392,7 @@ void AVLTree<TKey, TValue>::SingRotateRight(TNodeTypePtr& pNode)
     pNode = pTempNode;
     pNode->m_pParent = pOrgParent;
 }
-//左右情况的旋转
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::DoubleRotateLR(TNodeTypePtr& pNode)
 {
@@ -399,7 +400,7 @@ void AVLTree<TKey, TValue>::DoubleRotateLR(TNodeTypePtr& pNode)
 
     SingRotateLeft(pNode);
 }
-//右左情况的旋转
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::DoubleRotateRL(TNodeTypePtr& pNode)
 {
@@ -408,7 +409,7 @@ void AVLTree<TKey, TValue>::DoubleRotateRL(TNodeTypePtr& pNode)
     SingRotateRight(pNode);
 }
 
-//插入接口
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::Insert(TKey Key, TValue Value)
 {
@@ -434,7 +435,7 @@ bool AVLTree<TKey, TValue>::Insert(TKey Key, TValue Value)
     return InsertInner(m_pRoot, pNode);
 }
 
-//插入
+//[TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr pInsertNode)
 {
@@ -504,7 +505,7 @@ bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr 
     }
     else
     {
-        //already存在
+        //already[TRANSLATED][TRANSLATED]
         return false;
     }
 
@@ -517,30 +518,30 @@ bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr 
 template<typename TKey, typename TValue>
 TreeNode<TKey, TValue>* AVLTree<TKey, TValue>::FindInner(TNodeTypePtr pNode, TKey Key)
 {
-    if(pNode == NULL) //如果节点is空说明没找到,返回NULL
+    if(pNode == NULL) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED]NULL
     {
         return NULL;
     }
 
-    if(pNode->m_Key > Key)//如果x小于节点的值,就继续在节点的左子树中查找x
+    if(pNode->m_Key > Key)//[TRANSLATED][TRANSLATED]x[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]x
     {
         return FindInner(pNode->m_pLeft, Key);
     }
 
-    if(pNode->m_Key < Key) //如果x大于节点的值,就继续在节点的左子树中查找x
+    if(pNode->m_Key < Key) //[TRANSLATED][TRANSLATED]x[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]x
     {
         return FindInner(pNode->m_pRight, Key);
     }
 
     return pNode;
 }
-//查找接口
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 TreeNode<TKey, TValue>* AVLTree<TKey, TValue>::Find(TKey Key)
 {
     return FindInner(m_pRoot, Key);
 }
-//删除
+//[TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::DeleteInner(TNodeTypePtr& pNode, TKey Key)
 {
@@ -587,21 +588,21 @@ bool AVLTree<TKey, TValue>::DeleteInner(TNodeTypePtr& pNode, TKey Key)
             }
         }
     }
-    else//如果相等,此节点就是要删除的节点
+    else//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     {
-        if(pNode->m_pLeft && pNode->m_pRight)//此节点有两个儿子
+        if(pNode->m_pLeft && pNode->m_pRight)//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
-            TNodeTypePtr pTempNode = pNode->m_pRight;//temp指向节点的右儿子
+            TNodeTypePtr pTempNode = pNode->m_pRight;//temp[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             while(pTempNode->m_pLeft != NULL)
             {
-                pTempNode = pTempNode->m_pLeft;//找到右子树中值最小的节点
+                pTempNode = pTempNode->m_pLeft;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             }
 
-            //把右子树中最小节点的值赋值给本节点
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             pNode->m_Key  = pTempNode->m_Key;
             pNode->m_Data = pTempNode->m_Data;
 
-            if(!DeleteInner(pNode->m_pRight, pTempNode->m_Key))//删除右子树中最小值的节点
+            if(!DeleteInner(pNode->m_pRight, pTempNode->m_Key))//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 return false;
             }
@@ -618,16 +619,16 @@ bool AVLTree<TKey, TValue>::DeleteInner(TNodeTypePtr& pNode, TKey Key)
                 }
             }
         }
-        else//此节点有1个或0个儿子
+        else//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]1[TRANSLATED][TRANSLATED]0[TRANSLATED][TRANSLATED][TRANSLATED]
         {
             TNodeTypePtr pOrgParentNode = pNode->m_pParent;
             TNodeTypePtr pTempNode = pNode;
 
-            if(pNode->m_pLeft == NULL)//有右儿子或者没有儿子
+            if(pNode->m_pLeft == NULL)//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 pNode = pNode->m_pRight;
             }
-            else if(pNode->m_pRight == NULL)//有左儿子
+            else if(pNode->m_pRight == NULL)//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 pNode = pNode->m_pLeft;
             }
@@ -654,13 +655,13 @@ bool AVLTree<TKey, TValue>::DeleteInner(TNodeTypePtr& pNode, TKey Key)
 }
 
 
-//删除接口
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 bool AVLTree<TKey, TValue>::Delete(TKey Key)
 {
     return DeleteInner(m_pRoot, Key);
 }
-//中序遍历函数
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::Insubtree(TNodeTypePtr pNode)
 {
@@ -669,11 +670,11 @@ void AVLTree<TKey, TValue>::Insubtree(TNodeTypePtr pNode)
         return;
     }
 
-    Insubtree(pNode->m_pLeft);//先遍历左子树
+    Insubtree(pNode->m_pLeft);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     DoEnumNode(pNode);
-    Insubtree(pNode->m_pRight);//再遍历右子树
+    Insubtree(pNode->m_pRight);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 }
-//中序遍历接口
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 template<typename TKey, typename TValue>
 void AVLTree<TKey, TValue>::Traversal()
 {

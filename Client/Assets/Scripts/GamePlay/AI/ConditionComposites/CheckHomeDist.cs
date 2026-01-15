@@ -1,9 +1,10 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___ConditionComposites___CheckHomeDist.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/条件组合节点", Label = "CheckHomeDist")]
+    [NodeAttribute(Type = "AI/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "CheckHomeDist")]
     public class CheckHomeDist : AICondition
     {
         [SerializeField]
@@ -33,12 +34,12 @@ namespace BVT.AI
         {
             if (!Invert)
             {
-                string s = string.Format("当与出生点的距离<{0}时", Distance.ToEncode());
+                string s = string.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]<{0}[TRANSLATED]", Distance.ToEncode());
                 GUILayout.Label(s);
             }
             else
             {
-                string s = string.Format("当与出生点的距离>{0}时", Distance.ToEncode());
+                string s = string.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]>{0}[TRANSLATED]", Distance.ToEncode());
                 GUILayout.Label(s);
             }
         }

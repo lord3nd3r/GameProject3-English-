@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Gem___UIGem.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -170,7 +171,7 @@ public class UIGem : GTWindow
         int addExpNum = MLGem.Instance.GetExpByStrengthMatList(mStrengthenMats);
         GTItemHelper.ShowItemTexture(costMoneyTexture, levelDB.CostMoneyId);
         costMoneyNum.text = addExpNum.ToString();
-        gemLevel.text = GTTools.Format("强化Level {0}", gem.StrengthenLevel);
+        gemLevel.text = GTTools.Format("[TRANSLATED][TRANSLATED]Level {0}", gem.StrengthenLevel);
         GTItemHelper.ShowProgressText(gemExpNum, gem.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowProgressSlider(gemExpBar, gem.StrengthenExp, levelDB.RequireExp);
         GTItemHelper.ShowGemPropertyText(gemProperty, itemID, gem.StrengthenLevel, true);

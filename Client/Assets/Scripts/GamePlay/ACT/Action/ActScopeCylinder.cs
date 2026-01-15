@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___ACT___Action___ActScopeCylinder.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -6,11 +7,11 @@ namespace ACT
     public class ActScopeCylinder : ActScope
     {
         [SerializeField]
-        public float MaxDis;    //最大有效距离
+        public float MaxDis;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         [SerializeField]
-        public int   HAngle;    //水平角度range
+        public int   HAngle;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]range
         [SerializeField]
-        public float Height;    //圆柱有效高度
+        public float Height;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
         protected override bool IsTouch(Character cc, Vector3 hitPoint, Vector3 hitDir)
         {

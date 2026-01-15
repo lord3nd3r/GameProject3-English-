@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonConvert.cpp */
 ﻿#include "stdafx.h"
 #include "CommonConvert.h"
 
@@ -553,17 +554,17 @@ std::string CommonConvert::Ansi_To_Uft8( std::string strSrc )
 BOOL CommonConvert::IsTextUTF8(const char* str, INT32 nLength)
 {
     INT32 i;
-    INT32 nBytes = 0;//UFT8可用1-6个字节编码,ASCII用一个字节
+    INT32 nBytes = 0;//UFT8[TRANSLATED][TRANSLATED]1-6[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],ASCII[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     UINT8 chr;
-    BOOL bAllAscii = TRUE; //如果全部都是ASCII, 说明不是UTF-8
+    BOOL bAllAscii = TRUE; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ASCII, [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]UTF-8
     for (i = 0; i < nLength; i++)
     {
         chr = *(str + i);
-        if ((chr & 0x80) != 0) // 判断whetherASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存,最高位标记is0,o0xxxxxxx
+        if ((chr & 0x80) != 0) // [TRANSLATED][TRANSLATED]whetherASCII[TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]UTF-8,ASCII[TRANSLATED]7[TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is0,o0xxxxxxx
         {
             bAllAscii = FALSE;
         }
-        if (nBytes == 0) //如果不是ASCII码,应该是多字节符,计算字节数
+        if (nBytes == 0) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ASCII[TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
             if (chr >= 0x80)
             {
@@ -594,7 +595,7 @@ BOOL CommonConvert::IsTextUTF8(const char* str, INT32 nLength)
                 nBytes--;
             }
         }
-        else //多字节符的非首字节,应is 10xxxxxx
+        else //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED]is 10xxxxxx
         {
             if ((chr & 0xC0) != 0x80)
             {
@@ -603,11 +604,11 @@ BOOL CommonConvert::IsTextUTF8(const char* str, INT32 nLength)
             nBytes--;
         }
     }
-    if (nBytes > 0) //违返规则
+    if (nBytes > 0) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     {
         return FALSE;
     }
-    if (bAllAscii) //如果全部都是ASCII, 说明不是UTF-8
+    if (bAllAscii) //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ASCII, [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]UTF-8
     {
         return TRUE;
     }
@@ -761,7 +762,7 @@ BOOL CommonConvert::StringTrim(std::string& strValue)
     return TRUE;
 }
 
-/*      nLen的大小必须小于等于pszDest的大小                      */
+/*      nLen[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]pszDest[TRANSLATED][TRANSLATED][TRANSLATED]                      */
 BOOL CommonConvert::StrCopy(char* pszDest, const char* pszSrc, INT32 nLen)
 {
     if (pszDest == NULL || pszSrc == NULL)
@@ -786,7 +787,7 @@ BOOL CommonConvert::StrCopy(char* pszDest, const char* pszSrc, INT32 nLen)
         nCpyLen = nLen - 1;
     }
 
-    //这个方法并不会自动加上终止符
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     strncpy(pszDest, pszSrc, nCpyLen);
     pszDest[nCpyLen] = '\0';
 

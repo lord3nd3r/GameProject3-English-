@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CrashReport.h */
 ﻿#ifndef _CRASH_REPORT_H_
 #define _CRASH_REPORT_H_
 
@@ -9,7 +10,7 @@ void NewInvalidParamHandler(const wchar_t* expression,
 
 void NewPureCallHandler(void);
 
-/*安放crash定位*/
+/*[TRANSLATED][TRANSLATED]crash[TRANSLATED][TRANSLATED]*/
 void SetCrashReport(std::string strAppName);
 
 void UnSetCrashReport();

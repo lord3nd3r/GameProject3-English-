@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___NetManager.h */
 ﻿#ifndef _NET_MANAGER_H_
 #define _NET_MANAGER_H_
 #include "IBufferHandler.h"
@@ -30,7 +31,7 @@ public:
 
     BOOL    EnableCheck(BOOL bCheck);
 
-    //以下是完成端口部分
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 public:
     BOOL    InitNetwork();
 
@@ -65,9 +66,9 @@ public:
     SOCKET              m_hCurAcceptSocket;
     HANDLE              m_hCompletePort;
     CHAR                m_AddressBuf[128];
-    BOOL                m_bCloseEvent;      //whethershutdowneventhandle线程
+    BOOL                m_bCloseEvent;      //whethershutdowneventhandle[TRANSLATED][TRANSLATED]
 
-    //包序号检测
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL                m_bPacketNoCheck;
 
     IDataHandler*       m_pBufferHandler;

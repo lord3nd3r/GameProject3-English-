@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Camera___CameraFollow.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using DG.Tweening;
@@ -5,7 +6,7 @@ using DG.Tweening;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField]
-    private float           m_DefaultDistance = 12;                 // Default视距
+    private float           m_DefaultDistance = 12;                 // Default[TRANSLATED][TRANSLATED]
     [SerializeField]
     private float           m_MinDistance     = 8;
     [SerializeField]
@@ -15,7 +16,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private float           m_MaxVertAngle    = 70f;
     [SerializeField]
-    private float           m_CurrentXAngle   = 0;                 // 摄像机当前绕X轴旋转的角度
+    private float           m_CurrentXAngle   = 0;                 // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]X[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     [SerializeField]
     private float           m_ZoomRate        = 0.01f;
     [SerializeField]

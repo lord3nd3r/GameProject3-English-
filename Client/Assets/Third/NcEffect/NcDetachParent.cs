@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Third___NcEffect___NcDetachParent.cs */
 // ----------------------------------------------------------------------------------
 //
 // FXMaker
@@ -20,7 +21,7 @@ public class NcDetachParent : NcEffectBehaviour
 	public		bool				m_bSmoothHide				= true;
 
 	protected	bool				m_bStartDetach				= false;
-	protected	float				m_fStartDestroyTime;						// parent 肚绰 this啊 deactive 等 矫埃 (m_ReadonlybIsPlayed 曼捞等 矫埃)
+	protected	float				m_fStartDestroyTime;						// parent [TRANSLATED][TRANSLATED] this[TRANSLATED] deactive [TRANSLATED] [TRANSLATED][TRANSLATED] (m_ReadonlybIsPlayed [TRANSLATED][TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED])
 	protected	GameObject			m_ParentGameObject;
 	protected	NcTransformTool		m_OriginalPos				= new NcTransformTool();
 

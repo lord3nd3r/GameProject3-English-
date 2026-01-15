@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___ActivityData.h */
 ﻿#ifndef __ACTIVITY_DATA_OBJECT_H__
 #define __ACTIVITY_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
 
-//登录奖励
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 struct LoginAward
 {
 
@@ -33,14 +34,14 @@ struct  VipGift
 	UINT32 DeadLine[20];
 };
 
-//累充
+//[TRANSLATED][TRANSLATED]
 struct  SumRecharge
 {
-	UINT32 m_SumMoney;  //累计充值钱数
-	BOOL   m_AwardMark; //领奖标计
+	UINT32 m_SumMoney;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL   m_AwardMark; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
-//单充
+//[TRANSLATED][TRANSLATED]
 struct  SinRecharge
 {
 
@@ -60,14 +61,14 @@ struct ActivityDataObject : public ShareObject
 		memset(m_Data.m_Bytes, 0, sizeof(m_Data.m_Bytes));
 	}
 
-	UINT32 m_dwActivityID;  //活动ID
-	UINT64 m_uRoleID;		//角色ID
-	UINT32 m_dwActivityType;//活动type
-	UINT64 m_uJoinTime;     //参与时间
-	UINT32 m_dwDataLen;     //数据时间长度
+	UINT32 m_dwActivityID;  //[TRANSLATED][TRANSLATED]ID
+	UINT64 m_uRoleID;		//[TRANSLATED][TRANSLATED]ID
+	UINT32 m_dwActivityType;//[TRANSLATED][TRANSLATED]type
+	UINT64 m_uJoinTime;     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 m_dwDataLen;     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	union
 	{
-		BYTE			m_Bytes[1024];    //活动数据
+		BYTE			m_Bytes[1024];    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		FirstCharge		m_FirstCharge;
 		OpenFund		m_OpenFund;
 		LevelGift       m_LevelGift;

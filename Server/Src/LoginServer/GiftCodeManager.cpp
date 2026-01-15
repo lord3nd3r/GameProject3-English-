@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___GiftCodeManager.cpp */
 ﻿#include "stdafx.h"
 #include "GiftCodeManager.h"
 #include "../Message/Msg_RetCode.pb.h"
@@ -65,7 +66,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
         return FALSE;
     }
 
-    //先把礼包奖励全部load出来
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]load[TRANSLATED][TRANSLATED]
     std::map<INT32, AwardNode> mapAwardList;
 
     CodeReqNode* pTmpNode;
@@ -162,7 +163,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
                 continue;
             }
 
-            if (nUseType == 1)  //表示只能一人使用
+            if (nUseType == 1)  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 if (uRoleID > 0)
                 {
@@ -179,7 +180,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
                     continue;
                 }
             }
-            else if (nUseType == 2)  //表示can多人使用
+            else if (nUseType == 2)  //[TRANSLATED][TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 if (nUseNum >= nTotalNum)
                 {
@@ -221,7 +222,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
                     continue;
                 }
             }
-            else if (nUseType == 3)  //表示can多人使用
+            else if (nUseType == 3)  //[TRANSLATED][TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             {
                 if (uRoleID > 0)
                 {

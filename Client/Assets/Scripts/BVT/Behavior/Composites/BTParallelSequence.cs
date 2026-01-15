@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTParallelSequence.cs */
 ﻿using BVT;
 using System;
 using System.Collections.Generic;
@@ -6,8 +7,8 @@ using System.Text;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "并行-队列节点")]
-    [NodeDesc("一False则返回False，全True才返回True")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED]-[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED]False[TRANSLATED][TRANSLATED][TRANSLATED]False，[TRANSLATED]True[TRANSLATED][TRANSLATED][TRANSLATED]True")]
     [NodeName("ff64cb", "ParallelSequence")]
     public class BTParallelSequence : BTComposite
     {

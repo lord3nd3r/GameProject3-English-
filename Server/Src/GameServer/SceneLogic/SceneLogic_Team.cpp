@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_Team.cpp */
 ﻿#include "stdafx.h"
 #include "SceneLogic_Team.h"
 #include "../GameObject/SceneObject.h"
@@ -17,7 +18,7 @@ SceneLogic_Team::~SceneLogic_Team()
 BOOL SceneLogic_Team::OnObjectCreate(CSceneObject* pObject)
 {
 	SceneLogicBase::OnObjectCreate(pObject);
-	//player数据传过来了。
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 	if(pObject->GetObjType() == OT_PLAYER)
 	{
 		ERROR_RETURN_TRUE(pObject->m_dwCamp > 0);
@@ -32,7 +33,7 @@ BOOL SceneLogic_Team::OnObjectCreate(CSceneObject* pObject)
 
 BOOL SceneLogic_Team::OnObjectDie(CSceneObject* pObject)
 {
-	//对象死亡登陆进入副本了
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	return TRUE;
 }
@@ -40,14 +41,14 @@ BOOL SceneLogic_Team::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_Team::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//player登陆进入副本了
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	return TRUE;
 }
 
 BOOL SceneLogic_Team::OnPlayerLeave(CSceneObject* pPlayer, BOOL bDisConnect)
 {
-	//player离开副本了
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	m_pScene->BroadRemoveObject(pPlayer);
 
 	m_pScene->DeletePlayer(pPlayer->GetObjectGUID());
@@ -66,7 +67,7 @@ BOOL SceneLogic_Team::Update(UINT64 uTick)
 {
 	SceneLogicBase::Update(uTick);
 
-	//如果player死绝了就算输了．
+	//[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]．
 	if (m_pScene->IsCampAllDie(EBC_PLAYER))
 	{
 		m_pScene->SetFinished();

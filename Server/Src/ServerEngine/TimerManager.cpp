@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___TimerManager.cpp */
 ﻿#include "stdafx.h"
 #include "TimerManager.h"
 
@@ -83,7 +84,7 @@ VOID TimerManager::UpdateTimer()
         BOOL bRet = TRUE;
         if(m_uCurTime >= pCurEvent->m_uFireTime)
         {
-            //避免每次Start server，之前的定时器都执行一遍
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Start server，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             if(m_uInitTime <= pCurEvent->m_uFireTime)
             {
                 bRet = OnTimerEvent(pCurEvent);
@@ -103,10 +104,10 @@ VOID TimerManager::UpdateTimer()
 
         if(pCurEvent->m_nRepeateTimes <= 0 || !bRet)
         {
-            //首先从己用中删除
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             if (pCurEvent == m_pUsedHead)
             {
-                //自己是首结点
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 m_pUsedHead = pCurEvent->m_pNext;
                 if (m_pUsedHead != NULL)
                 {
@@ -152,7 +153,7 @@ BOOL TimerManager::OnTimerEvent(TimeEvent* pEvent)
 
     BOOL bRet = (*pEvent->m_pTimerFuncSlot)(pEvent->m_nData);
 
-    //如要定时器返回FALSE, 表示需要被删除
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]FALSE, [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     return bRet;
 }

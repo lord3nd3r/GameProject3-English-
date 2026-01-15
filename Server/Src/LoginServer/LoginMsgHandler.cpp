@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___LoginMsgHandler.cpp */
 ﻿#include "stdafx.h"
 #include "LoginMsgHandler.h"
 #include "GameService.h"
@@ -43,7 +44,7 @@ BOOL CLoginMsgHandler::DispatchPacket(NetPacket* pNetPacket)
 {
     switch(pNetPacket->m_nMsgID)
     {
-            //clientconnection上的第一个message，验证版本号
+            //clientconnection[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             PROCESS_MESSAGE_ITEM(MSG_CHECK_VERSION_REQ,     OnMsgCheckVersionReq);
             PROCESS_MESSAGE_ITEM(MSG_ACCOUNT_REG_REQ,       OnMsgAccountRegReq);
             PROCESS_MESSAGE_ITEM(MSG_ACCOUNT_LOGIN_REQ,     OnMsgAccountLoginReq);
@@ -139,13 +140,13 @@ BOOL CLoginMsgHandler::OnMsgServerListReq(NetPacket* pPacket)
 
     ClientServerListAck Ack;
 
-    //whether是评审服包
+    //whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL bReviewClient = Req.review();
 
     for(auto itor = m_LogicSvrMgr.begin(); itor != m_LogicSvrMgr.end(); itor++)
     {
         LogicServerNode* pTempNode = itor->second;
-        //如果是评审包
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if(bReviewClient)
         {
             if(pTempNode->m_ServerFlag != ESF_REVIEW)
@@ -162,19 +163,19 @@ BOOL CLoginMsgHandler::OnMsgServerListReq(NetPacket* pPacket)
 
             if (!pTempNode->CheckIP(nIpAddr))
             {
-                //需要检测IP
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]IP
                 continue;
             }
 
             if (!pTempNode->CheckChannel(Req.channel()))
             {
-                //需要检测渠道
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 continue;
             }
 
             if (!pTempNode->CheckVersion(Req.version()))
             {
-                //需要检测版本
+                //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 continue;
             }
         }
@@ -213,7 +214,7 @@ BOOL CLoginMsgHandler::OnMsgSelectServerReq(NetPacket* pPacket)
     ERROR_RETURN_TRUE(Req.accountid() > 0);
     if (!CLoginClientMgr::GetInstancePtr()->CheckClientMessage(nConnID, pPacket->m_nMsgID))
     {
-        CLog::GetInstancePtr()->LogError("非法的message请求SelectServer!!!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]message[TRANSLATED][TRANSLATED]SelectServer!!!");
         return TRUE;
     }
 
@@ -222,7 +223,7 @@ BOOL CLoginMsgHandler::OnMsgSelectServerReq(NetPacket* pPacket)
     LogicServerNode* pServerNode = m_LogicSvrMgr.GetLogicServerInfo(Req.serverid());
     if (pServerNode == NULL)
     {
-        CLog::GetInstancePtr()->LogError("选择servererror 无效的serverID:%d", Req.serverid());
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]servererror [TRANSLATED][TRANSLATED][TRANSLATED]serverID:%d", Req.serverid());
         SelectServerAck Ack;
         Ack.set_serveraddr("0.0.0.0");
         Ack.set_serverport(0);
@@ -233,7 +234,7 @@ BOOL CLoginMsgHandler::OnMsgSelectServerReq(NetPacket* pPacket)
 
     if (pServerNode->m_ServerFlag == ESF_MAINTAIN || pServerNode->m_ServerStatus != ESS_SVR_ONLINE)
     {
-        CLog::GetInstancePtr()->LogError("server:%d 维护中 ServerFlag:%d", Req.serverid(), pServerNode->m_ServerFlag);
+        CLog::GetInstancePtr()->LogError("server:%d [TRANSLATED][TRANSLATED][TRANSLATED] ServerFlag:%d", Req.serverid(), pServerNode->m_ServerFlag);
         SelectServerAck Ack;
         Ack.set_serveraddr("0.0.0.0");
         Ack.set_serverport(0);
@@ -244,7 +245,7 @@ BOOL CLoginMsgHandler::OnMsgSelectServerReq(NetPacket* pPacket)
 
     if (pServerNode->m_ServerStatus != ESS_SVR_ONLINE)
     {
-        CLog::GetInstancePtr()->LogError("选择servererror server:%d 不在线", Req.serverid());
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]servererror server:%d [TRANSLATED][TRANSLATED][TRANSLATED]", Req.serverid());
         SelectServerAck Ack;
         Ack.set_serveraddr("0.0.0.0");
         Ack.set_serverport(0);

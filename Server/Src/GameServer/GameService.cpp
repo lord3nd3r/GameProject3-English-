@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "DataBuffer.h"
@@ -67,7 +68,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
 
     if(!m_SceneManager.Init(TRUE))
     {
-        CLog::GetInstancePtr()->LogError("start场景管理器Failure!");
+        CLog::GetInstancePtr()->LogError("start[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
         return FALSE;
     }
 

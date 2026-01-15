@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Editor___ResourceAnimOptimize.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -14,10 +15,10 @@ class ExportFormate
 public class ResourceAnimOptimize
 {
     private static int number = 0;
-    static string ExePath = "F:/图集压缩方案/Unity骨骼动画压缩工具使用介绍/FBX/FBXCompress.exe";
+    static string ExePath = "F:/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]/Unity[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]/FBX/FBXCompress.exe";
     static DateTime time;
 
-    [MenuItem("优化/压缩动画文件")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void Execute()
     {
         number = 0;
@@ -28,11 +29,11 @@ public class ResourceAnimOptimize
             ForFun((GameObject.Instantiate(o) as AnimationClip), EditorUtility.GetAssetPath(o));
         }
         AssetDatabase.SaveAssets();
-        Log("一共压缩了" + number + "个动画文件!");
-        Log("耗时:" + ((DateTime.Now - time).TotalMilliseconds / 1000) + "秒.");
+        Log("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]" + number + "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!");
+        Log("[TRANSLATED][TRANSLATED]:" + ((DateTime.Now - time).TotalMilliseconds / 1000) + "[TRANSLATED].");
     }
 
-    [MenuItem("优化/压缩FBX")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED]FBX")]
     static void ExecuteFBX()
     {
         string RootPath = Application.dataPath;

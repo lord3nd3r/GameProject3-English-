@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Relics___UIRelics.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -378,7 +379,7 @@ public class UIRelics : GTWindow
     private void OnSkillClick(GameObject go)
     {
         GTAudioManager.Instance.PlayEffectAudio(GTAudioKey.SOUND_UI_CLICK);
-        GTItemHelper.ShowTip("没有开放这个功能");
+        GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
     }
 
     private void PlayMoveTween()
@@ -451,8 +452,8 @@ public class UIRelics : GTWindow
             GTItemHelper.ShowItemName(tab.itemName, itemID);
             GTItemHelper.ShowItemTexture(tab.itemTexture, itemID);
             GTItemHelper.ShowItemQuality(tab.itemQuality, itemID);
-            tab.itemNum.text = GTTools.Format("当前拥有：[d96016]{0}[-]", GTDataManager.Instance.GetItemCountById(itemID));
-            tab.tip.text = GTTools.Format("充能一次加 [d96916]{0}[-] 点经验", itemDB.Data1);
+            tab.itemNum.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：[d96016]{0}[-]", GTDataManager.Instance.GetItemCountById(itemID));
+            tab.tip.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] [d96916]{0}[-] [TRANSLATED][TRANSLATED][TRANSLATED]", itemDB.Data1);
 
             if (relics == null)
             {

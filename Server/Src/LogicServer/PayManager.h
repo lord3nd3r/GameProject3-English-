@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PayManager.h */
 ﻿#ifndef __PAY_MANAGER_H__
 #define __PAY_MANAGER_H__
 
@@ -28,7 +29,7 @@ public:
 
 	BOOL ProcessPlayerLogin(UINT64 uRoleID);
 
-	//handle订单并发货
+	//handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	BOOL ProcessSussessPayOrder(PayDataObject* pOrderData);
 
 public:

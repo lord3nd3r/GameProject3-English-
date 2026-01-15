@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___MAP___Editor___FTWorldMapInspector.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -17,13 +18,13 @@ namespace MAP
             GUILayout.Space(10);
             GUI.color = Color.red;
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("导入", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED]", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 worldMap.Import();
             }
 
             GUI.color = Color.green;
-            if (GUILayout.Button("导出", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("[TRANSLATED][TRANSLATED]", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 worldMap.Export();
             }

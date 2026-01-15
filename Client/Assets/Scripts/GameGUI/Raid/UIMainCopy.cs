@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Raid___UIMainCopy.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -120,11 +121,11 @@ public class UIMainCopy : GTWindow
     private void ShowView()
     {
         DCopy copyDB = ReadCfgCopy.GetDataById(mCopyID);
-        gateCopyDiffculty.text = "简单模式";
+        gateCopyDiffculty.text = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]";
         GTItemHelper.ShowTexture(gateTexture, copyDB.Texture);
         gateName.text = copyDB.Name;
         gateDesc.text = copyDB.Desc;
-        gateFightValue.text = GTTools.Format("推荐战力值：{0}", copyDB.FightValue);
+        gateFightValue.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}", copyDB.FightValue);
         gateBattleTimes.text = string.Empty;
         costActionNum.text = copyDB.CostActionNum.ToString();
         GTItemHelper.ShowItemTexture(costActionTexture,copyDB.CostActionId);

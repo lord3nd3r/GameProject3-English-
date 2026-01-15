@@ -1,11 +1,12 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Decorators___BTInterrupt.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "中断节点")]
-    [NodeDesc("如果条件满足，则返回Failure；否则，则一直running直至子节点返回Success或者返回Failure")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]Failure；[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]running[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure")]
     [NodeName("05CBF2", "Interrupt")]
     public class BTInterrupt : BTDecorator
     {

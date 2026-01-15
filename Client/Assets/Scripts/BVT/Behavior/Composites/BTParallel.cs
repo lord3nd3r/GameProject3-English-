@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Composites___BTParallel.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
@@ -5,8 +6,8 @@ using System.Collections.Generic;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "组合节点", Label = "并行节点")]
-    [NodeDesc("并行节点会依次执行所有的子节点，无论子节点返回“Success”或“Failure”都会继续running后续节点")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]“Success”[TRANSLATED]“Failure”[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]running[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     [NodeName("ff64cb", "Parallel")]
     public class BTParallel : BTComposite
     {

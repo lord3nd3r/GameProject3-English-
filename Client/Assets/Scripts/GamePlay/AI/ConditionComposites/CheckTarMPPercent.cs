@@ -1,10 +1,11 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___ConditionComposites___CheckTarMPPercent.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/条件组合节点", Label = "CheckMPPercent")]
+    [NodeAttribute(Type = "AI/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "CheckMPPercent")]
     public class CheckTarMPPercent : AICondition
     {
         [NodeVariable]

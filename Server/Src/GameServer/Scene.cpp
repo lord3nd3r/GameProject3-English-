@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___Scene.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "Scene.h"
@@ -44,7 +45,7 @@ BOOL CScene::Init(UINT32 dwCopyID, UINT32 dwCopyGuid, UINT32 dwCopyType, UINT32 
     m_uCreateTime       = CommonFunc::GetCurrTime();
     m_pMonsterCreator   = new MonsterCreator(this);
 
-    //表示这是一个自由进出的副本, 所以创建即begin
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin
     if (dwPlayerNum == 0)
     {
         m_uStartTime = CommonFunc::GetCurrTime();
@@ -229,7 +230,7 @@ BOOL CScene::OnMsgSkillCastReq(NetPacket* pNetPacket)
             return TRUE;
         }
 
-        //未登录的肯定不是player，不是player就不需要反馈
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player，[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if (!pSceneObj->IsEnterCopy())
         {
             return TRUE;
@@ -300,7 +301,7 @@ BOOL CScene::OnMsgRoleRebornReq(NetPacket* pNetPacket)
         return TRUE;
     }
 
-    //复活
+    //[TRANSLATED][TRANSLATED]
     pPlayer->Revive();
 
     Msg_RoleRebornAck Ack;
@@ -308,7 +309,7 @@ BOOL CScene::OnMsgRoleRebornReq(NetPacket* pNetPacket)
     pPlayer->SendMsgProtoBuf(MSG_ROLE_REBORN_ACK, Ack);
 
     /*
-    //先把player的完整包组装好
+    //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     ObjectNewNty Nty;
     pPlayer->SaveNewData(Nty);
 
@@ -413,7 +414,7 @@ BOOL CScene::BroadNewObject(CSceneObject* pSceneObject)
         return TRUE;
     }
 
-    //先把player的完整包组装好
+    //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     ObjectNewNty Nty;
     pSceneObject->SaveNewData(Nty);
 
@@ -470,7 +471,7 @@ BOOL CScene::BroadMessage(INT32 nMsgID, const google::protobuf::Message& pdata)
     return TRUE;
 }
 
-//player主动中止副本
+//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL CScene::OnMsgLeaveSceneReq(NetPacket* pNetPacket)
 {
     LeaveSceneReq Req;
@@ -503,10 +504,10 @@ BOOL CScene::OnMsgLeaveSceneReq(NetPacket* pNetPacket)
 
 BOOL CScene::OnMsgAbortSceneReq(NetPacket* pNetPacket)
 {
-    //如果是组队，就退出, 不删除
-    //如果是单人，就直接结算
-    //如果是pvp 2人，就直接结算．
-    //如果是多人pvp，就退出自己, 并且删掉
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED][TRANSLATED][TRANSLATED]pvp 2[TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]．
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]pvp，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     AbortSceneReq Req;
     Req.ParsePartialFromArray(pNetPacket->m_pDataBuffer->GetData(), pNetPacket->m_pDataBuffer->GetBodyLenth());
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
@@ -523,7 +524,7 @@ BOOL CScene::OnUpdate( UINT64 uTick )
 {
     if(IsFinished())
     {
-        //alreadyend不再handle
+        //alreadyend[TRANSLATED][TRANSLATED]handle
         return TRUE;
     }
 
@@ -543,13 +544,13 @@ BOOL CScene::OnUpdate( UINT64 uTick )
         pSceneObject->OnUpdate(uTick);
     }
 
-    //更新场景里所有bullet的状态
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]bullet[TRANSLATED][TRANSLATED][TRANSLATED]
     UpdateBulletStatus(uTick);
 
-    //同步所有对象的状态
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     SyncObjectStatus();
 
-    //把player死亡都同步一下
+    //[TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     for(auto itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); ++itor)
     {
         CSceneObject* pSceneObject = itor->second;
@@ -563,7 +564,7 @@ BOOL CScene::OnUpdate( UINT64 uTick )
         }
     }
 
-    //把怪物死亡同步一下
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     for (auto itor = m_mapMonster.begin(); itor != m_mapMonster.end(); ++itor)
     {
         CSceneObject* pSceneObject = itor->second;
@@ -651,21 +652,21 @@ BOOL CScene::OnMsgTransRoleDataReq(NetPacket* pNetPacket)
         const TransferDataItem& Item = Req.transdatas(i);
         CreatePlayer(Item.roledata(), pHeader->u64TargetID, Item.camp());
 
-        //whether有宠物
+        //whether[TRANSLATED][TRANSLATED][TRANSLATED]
         if(Item.has_petdata())
         {
             CreatePet(Item.petdata(), pHeader->u64TargetID, Item.camp());
         }
 
-        //whether有伙伴
+        //whether[TRANSLATED][TRANSLATED][TRANSLATED]
         if (Item.has_partnerdata())
         {
             CreatePartner(Item.partnerdata(), pHeader->u64TargetID, Item.camp());
         }
     }
 
-    //检查人齐没齐，如果齐了，就全部发准备好了的message
-    //有的副本不需要等人齐，有人就can进
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]can[TRANSLATED]
 
     TransferDataAck Ack;
     Ack.set_copyguid(m_dwCopyGuid);
@@ -695,11 +696,11 @@ BOOL CScene::OnMsgEnterSceneReq(NetPacket* pNetPacket)
 
     if (m_uStartTime <= 0)
     {
-        //对于普通的副本，有入进入就表示begin
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin
         m_uStartTime = CommonFunc::GetCurrTime();
     }
 
-    //发比较全的自己的信息
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     EnterSceneAck Ack;
     Ack.set_copyguid(m_dwCopyGuid);
     Ack.set_copyid(m_dwCopyID);
@@ -777,7 +778,7 @@ UINT32 CScene::GetCopyType()
 
 BOOL CScene::SendAllNewObjectToPlayer( CSceneObject* pSceneObject )
 {
-    //先把player的完整包组装好
+    //[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     ObjectNewNty Nty;
 
     for(std::map<UINT64, CSceneObject*>::iterator itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); itor++)
@@ -790,7 +791,7 @@ BOOL CScene::SendAllNewObjectToPlayer( CSceneObject* pSceneObject )
             continue;
         }
 
-        //如果是机器人，必须有实控人
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if (pOther->IsRobot())
         {
             ERROR_RETURN_FALSE(pOther->m_uControlerID != 0);
@@ -809,7 +810,7 @@ BOOL CScene::SendAllNewObjectToPlayer( CSceneObject* pSceneObject )
             continue;
         }
 
-        //宠物必须有控制人
+        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         ERROR_RETURN_FALSE(pOther->m_uControlerID != 0);
 
         pOther->SaveNewData(Nty);
@@ -1015,9 +1016,9 @@ CSceneObject* CScene::GetSceneObject(UINT64 uID)
 
 BOOL CScene::RemoveDeadObject()
 {
-    //is了方便结算时，生成汇报的结果，有些角色一般不删除
-    //如player角色, 伙伴，宠物之类的，
-    //由于目前不考虑战斗数据统计，就只保留角色
+    //is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    //[TRANSLATED]player[TRANSLATED][TRANSLATED], [TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     /*
     for (auto itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); )
     {
@@ -1053,7 +1054,7 @@ BOOL CScene::RemoveDeadObject()
     return TRUE;
 }
 
-//场景里有player进入和退出的时候，都要进行控制人检查
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL CScene::UpdateAiController(UINT64 uFilterID)
 {
     UINT64 u64ControllerID = SelectController(uFilterID);
@@ -1123,7 +1124,7 @@ BOOL CScene::SelectTargets(std::vector<CSceneObject*>& vTargets, UINT64 uExclude
     {
         case ERT_OBJECTS:
         {
-            //什么都不需要做，直接使用client传过来的targetlist
+            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]client[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]targetlist
         }
         break;
         case ERT_CIRCLE:
@@ -1481,7 +1482,7 @@ CSceneObject* CScene::CreateMonster(UINT32 dwActorID, UINT32 dwCamp, FLOAT x, FL
     }
 
     pObject->InitSkills();
-    //指定position
+    //[TRANSLATED][TRANSLATED]position
     pObject->SetPos(x, y, z, ft);
 
     m_pSceneLogic->OnObjectCreate(pObject);
@@ -1503,7 +1504,7 @@ CSceneObject* CScene::CreatePlayer(const TransRoleData& roleData, UINT64 uHostID
         pObject = new CSceneObject(roleData.roleid(), this);
         AddPlayer(pObject);
     }
-    //根据数据创建宠物，英雄
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]
     pObject->m_dwCamp = dwCamp;
     pObject->m_dwObjType = OT_PLAYER;
     pObject->m_dwActorID = roleData.actorid();
@@ -1538,7 +1539,7 @@ CSceneObject* CScene::CreatePet(const TransPetData& petData, UINT64 uHostID, UIN
     CSceneObject* pObject = new CSceneObject(petData.petguid(), this);
     ERROR_RETURN_NULL(pObject != NULL);
 
-    //根据数据创建宠物，英雄
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]
     pObject->m_dwCamp = dwCamp;
     pObject->m_uHostGuid = uHostID;
     pObject->m_dwObjType = OT_PET;
@@ -1551,10 +1552,10 @@ CSceneObject* CScene::CreatePet(const TransPetData& petData, UINT64 uHostID, UIN
         pObject->m_Propertys[i] = petData.propertys(i);
     }
 
-    //设置skill
+    //[TRANSLATED][TRANSLATED]skill
     pObject->InitSkills(petData.skills());
 
-    //指定坐标 在主人附近
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     CSceneObject* pHostObject = GetPlayer(uHostID);
     ERROR_RETURN_NULL(pHostObject != NULL);
 
@@ -1576,7 +1577,7 @@ CSceneObject* CScene::CreatePartner(const TransPartnerData& partnerData, UINT64 
     CSceneObject* pObject = new CSceneObject(partnerData.partnerguid(), this);
     ERROR_RETURN_NULL(pObject != NULL);
 
-    //根据数据创建宠物，英雄
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]
     pObject->m_dwCamp = dwCamp;
     pObject->m_uHostGuid = uHostID;
     pObject->m_dwObjType = OT_PARTNER;
@@ -1589,10 +1590,10 @@ CSceneObject* CScene::CreatePartner(const TransPartnerData& partnerData, UINT64 
         pObject->m_Propertys[i] = partnerData.propertys(i);
     }
 
-    //设置skill
+    //[TRANSLATED][TRANSLATED]skill
     pObject->InitSkills(partnerData.skills());
 
-    //指定坐标 在主人附近
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     CSceneObject* pHostObject = GetPlayer(uHostID);
     ERROR_RETURN_NULL(pHostObject != NULL);
 
@@ -1614,7 +1615,7 @@ CSceneObject* CScene::CreateSummon(UINT32 dwActorID, UINT64 uSummonerID, UINT32 
     ERROR_RETURN_NULL(pActorInfo != NULL);
     CSceneObject* pObject = new CSceneObject(GenNewGuid(), this);
 
-    //根据数据创建宠物，英雄
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]
     pObject->m_dwCamp = dwCamp;
     pObject->m_uSummonerID = uSummonerID;
     pObject->m_dwObjType = OT_SUMMON;
@@ -1628,7 +1629,7 @@ CSceneObject* CScene::CreateSummon(UINT32 dwActorID, UINT64 uSummonerID, UINT32 
 
     pObject->InitSkills();
 
-    //指定position
+    //[TRANSLATED][TRANSLATED]position
     pObject->SetPos(x, y, z, ft);
 
     m_pSceneLogic->OnObjectCreate(pObject);

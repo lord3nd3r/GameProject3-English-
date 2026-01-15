@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___TAS___Config___TaskDefine.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -6,17 +7,17 @@ namespace CFG
     public enum ETaskDialogAction
     {
         TYPE_NULL     = -1, 
-        TYPE_NEXT     =  0,//下一条
+        TYPE_NEXT     =  0,//[TRANSLATED][TRANSLATED][TRANSLATED]
         TYPE_LINK     =  1,//
-        TYPE_COMPLETE =  2,//完成
-        TYPE_PASS     =  3,//通过
+        TYPE_COMPLETE =  2,//[TRANSLATED][TRANSLATED]
+        TYPE_PASS     =  3,//[TRANSLATED][TRANSLATED]
     }
 
     public enum ETaskDialogPos
     {
         TYPE_NO  =-1,
-        TYPE_LF  = 0,//左
-        TYPE_RT  = 1 //右
+        TYPE_LF  = 0,//[TRANSLATED]
+        TYPE_RT  = 1 //[TRANSLATED]
     }
 
     public enum ETaskDialogRole
@@ -27,28 +28,28 @@ namespace CFG
 
     public enum ETaskDialogContent
     {
-        TYPE_NORMAL,     //正常显示
+        TYPE_NORMAL,     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         TYPE_TYPEEFFECT, //TypeEffect
     }
 
-    // 任务子功能type
+    // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
     public enum ETaskSubFuncType
     {
         TYPE_ERROR        =0, // errortype
-        TYPE_TALK         =1, // 对话
-        TYPE_HUNTER       =2, // 猎杀type
-        TYPE_COLLECT      =3, // 收集类
-        TYPE_INTERACTIVE  =4, // 交互type
-        TYPE_CONVOY       =5, // 护送类
-        TYPE_STORY        =6, // trigger剧情
-        TYPE_CUTSCENE     =7, // trigger过场动画	
-        TYPE_USEITEM      =8, // 使用道具类	
-        TYPE_USESKILL     =9, // 使用skill
-        TYPE_GATHER       =10,// 采集
+        TYPE_TALK         =1, // [TRANSLATED][TRANSLATED]
+        TYPE_HUNTER       =2, // [TRANSLATED][TRANSLATED]type
+        TYPE_COLLECT      =3, // [TRANSLATED][TRANSLATED][TRANSLATED]
+        TYPE_INTERACTIVE  =4, // [TRANSLATED][TRANSLATED]type
+        TYPE_CONVOY       =5, // [TRANSLATED][TRANSLATED][TRANSLATED]
+        TYPE_STORY        =6, // trigger[TRANSLATED][TRANSLATED]
+        TYPE_CUTSCENE     =7, // trigger[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]	
+        TYPE_USEITEM      =8, // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]	
+        TYPE_USESKILL     =9, // [TRANSLATED][TRANSLATED]skill
+        TYPE_GATHER       =10,// [TRANSLATED][TRANSLATED]
 
     }
 
-    //任务子功能状态
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     public enum ESubTaskState
     {
         TYPE_NONE,
@@ -61,20 +62,20 @@ namespace CFG
 
     public enum ETaskNPCFlag
     {
-        TYPE_NONE                 = 0,	// 没有任务handle(无标记)
-        TYPE_CANSUBMIT            = 1,  // 有can提交的任务(绿色问号)
-        TYPE_CANSUBMIT_REPEAT     = 2,	// 有can提交的重复任务(蓝色问号)
-        TYPE_NOT_COMPOLETE        = 3,	// 接受了但未完成的任务(红色问号)
-        TYPE_CAN_ACCEPT           = 4,	// can接受的任务(绿色叹号)
-        TYPE_CAN_ACCEPT_REPEAT    = 5,	// can接受的重复任务(蓝色叹号)
-        TYPE_NOT_ACCEPT           = 6,	// 没有达到接受条件的任务(红色叹号)
-        TYPE_LOW_LEVEL            = 7,	// 未做过的低Level任务
-        TYPE_INTERACTIVE          = 8,	// 多环节交互
+        TYPE_NONE                 = 0,	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]handle([TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_CANSUBMIT            = 1,  // [TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_CANSUBMIT_REPEAT     = 2,	// [TRANSLATED]can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_NOT_COMPOLETE        = 3,	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_CAN_ACCEPT           = 4,	// can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_CAN_ACCEPT_REPEAT    = 5,	// can[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_NOT_ACCEPT           = 6,	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
+        TYPE_LOW_LEVEL            = 7,	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Level[TRANSLATED][TRANSLATED]
+        TYPE_INTERACTIVE          = 8,	// [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     }
 
     public enum EConveyType
     {
-        TYPE_AUTO,   //Npc自动走
-        TYPE_FOLLOW, //跟随player
+        TYPE_AUTO,   //Npc[TRANSLATED][TRANSLATED][TRANSLATED]
+        TYPE_FOLLOW, //[TRANSLATED][TRANSLATED]player
     }
 }

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_asio___NetManager.h */
 ﻿#ifndef _NET_MANAGER_H_
 #define _NET_MANAGER_H_
 #include "IBufferHandler.h"
@@ -50,7 +51,7 @@ public:
     boost::asio::io_service         m_IoService;
     boost::thread*                  m_pWorkThread;
 
-    //包序号检测
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL                m_bPacketNoCheck;
     IDataHandler*                   m_pBufferHandler;
 };

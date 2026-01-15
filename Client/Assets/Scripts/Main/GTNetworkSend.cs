@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Main___GTNetworkSend.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -34,7 +35,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_SERVER_LIST_REQ, req, 0, 0);
     }
 
-    //确认当前server
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]server
     public void TrySelectServer(int ServerID)
     {
         SelectServerReq req = new SelectServerReq();
@@ -42,12 +43,12 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_SELECT_SERVER_REQ, req);
     }
 
-    //创建角色
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     public void TryCreateRole(string name, int carrerID, ulong accountID)
     {
         if (string.IsNullOrEmpty(name))
         {
-            GTItemHelper.ShowTip("Name不能is空");
+            GTItemHelper.ShowTip("Name[TRANSLATED][TRANSLATED]is[TRANSLATED]");
             return;
         }
         RoleCreateReq req = new RoleCreateReq();
@@ -57,7 +58,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_ROLE_CREATE_REQ, req);
     }
 
-    //取角色list
+    //[TRANSLATED][TRANSLATED][TRANSLATED]list
     public void TryGetRoleList()
     {
         RoleListReq req = new RoleListReq();
@@ -66,7 +67,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_ROLE_LIST_REQ, req);
     }
 
-    //登录角色
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     public void TryRoleLogin(UInt64 roleGUID)
     {
         RoleLoginReq req = new RoleLoginReq();
@@ -76,7 +77,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_ROLE_LOGIN_REQ, req);
     }
 
-    //进入副本场景或者主城场景
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     public void TryEnterScene(UInt64 roleID, Int32 copyID, Int32 copyGUID, Int32 ServerID)
     {
         EnterSceneReq req = new EnterSceneReq();
@@ -149,14 +150,14 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (items == null || items == null)
         {
-            GTItemHelper.ShowTip("缺少食物");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         for (int i = 0; i < items.Count; i++)
         {
             if (MLPet.Instance.IsFood(items[i].Id) == false)
             {
-                GTItemHelper.ShowTip("加入的食品list有误");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]list[TRANSLATED][TRANSLATED]");
                 return;
             }
         }
@@ -175,7 +176,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
 
             if (data.Level >= count)
             {
-                GTItemHelper.ShowTip("宠物Level已满");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED]Level[TRANSLATED][TRANSLATED]");
                 return;
             }
         }
@@ -191,7 +192,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         XCharacter role = GTGlobal.Main;
         if (role.PetID == id)
         {
-            GTItemHelper.ShowTip("你的伙伴已上阵");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
 
@@ -205,7 +206,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         XCharacter role = GTGlobal.Main;
         if (role.PetID != id)
         {
-            GTItemHelper.ShowTip("你没有上阵该伙伴");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
 
@@ -226,7 +227,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         XItem item = DataDBSBagItem.GetDataById(pos);
         if (item.Num < num)
         {
-            GTItemHelper.ShowTip("物品不足");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         DItem itemDB = ReadCfgItem.GetDataById(item.Id);
@@ -236,7 +237,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
             {
                 if (GTDataManager.Instance.GetItemCountById(itemDB.Data1) < num)
                 {
-                    GTItemHelper.ShowTip("需要足够的钥匙");
+                    GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                     return;
                 }
             }
@@ -327,7 +328,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (list.Count == 0)
         {
-            GTItemHelper.ShowTip("请添加装备或者水晶");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         int addExpNum = MLEquip.Instance.GetStrengthenExpByMatList(list);
@@ -346,7 +347,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (MLEquip.Instance.IsFullAdvanceLevel(equip))
         {
-            GTItemHelper.ShowTip("进阶Level已满");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED]Level[TRANSLATED][TRANSLATED]");
             return;
         }
         DEquip cfg = ReadCfgEquip.GetDataById(equip.Id);
@@ -368,7 +369,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
             list = MLEquip.Instance.GetBagSameEquipList(equip);
             if (list.Count < db.CostEquipNum)
             {
-                GTItemHelper.ShowTip("缺少同样的装备");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                 return;
             }
             list.RemoveRange(db.CostEquipNum, list.Count - db.CostEquipNum);
@@ -388,7 +389,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (MLEquip.Instance.IsFullStarLevel(equip))
         {
-            GTItemHelper.ShowTip("装备星级已满");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         DEquip equipDB = ReadCfgEquip.GetDataById(equip.Id);
@@ -412,12 +413,12 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (MLGem.Instance.IsFullStrengthenLevel(gem))
         {
-            GTItemHelper.ShowTip("宝石强化Level已满");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Level[TRANSLATED][TRANSLATED]");
             return;
         }
         if (list.Count == 0)
         {
-            GTItemHelper.ShowTip("请添加升级材料");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         int exp = MLGem.Instance.GetExpByStrengthMatList(list);
@@ -437,12 +438,12 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         DRelics db = ReadCfgRelics.GetDataById(relicsID);
         if (db == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         if (index > 3 || index < 1)
         {
-            GTItemHelper.ShowTip("非法索引" + index.ToString());
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]" + index.ToString());
             return;
         }
         XRelics relics = DataDBSRelics.GetDataById(relicsID);
@@ -450,7 +451,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         {
             if (MLRelics.Instance.GetExp(relics, index) >= db.LevelExp[relics.Level])
             {
-                GTItemHelper.ShowTip("你不能对此充能了");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                 return;
             }
         }
@@ -470,25 +471,25 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         DRelics db = ReadCfgRelics.GetDataById(relicsID);
         if (db == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         XRelics relics = DataDBSRelics.GetDataById(relicsID);
         if (relics == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         if (relics.Level == db.LevelExp.Length)
         {
-            GTItemHelper.ShowTip("已升到最大Level，无法继续升级");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Level，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         for (int i = 0; i < 3; i++)
         {
             if (MLRelics.Instance.GetExp(relics, i + 1) < db.LevelExp[relics.Level])
             {
-                GTItemHelper.ShowTip("神器未获得足够的充能");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                 return;
             }
         }
@@ -502,13 +503,13 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         DRelics db = ReadCfgRelics.GetDataById(relicsID);
         if (db == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         XCharacter role = GTGlobal.Main;
         if (role.Relic == relicsID)
         {
-            GTItemHelper.ShowTip("该神器已经上阵");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
 
@@ -522,13 +523,13 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         DRelics db = ReadCfgRelics.GetDataById(relicsID);
         if (db == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         XCharacter role = GTGlobal.Main;
         if (role.Relic != relicsID)
         {
-            GTItemHelper.ShowTip("该神器没有上阵，无法卸下");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         ReqUnloadRelics req = new ReqUnloadRelics();
@@ -541,7 +542,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         DStore storeDB = ReadCfgStore.GetDataById(storeID);
         if (storeDB == null)
         {
-            GTItemHelper.ShowTip("非法物品");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         if (GTItemHelper.CheckItemEnongh(storeDB.CostMoneyID, storeDB.CostMoneyNum) == false)
@@ -786,10 +787,10 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         switch (rewardState)
         {
             case ERewardState.NOT_RECEIVE:
-                GTItemHelper.ShowTip("未达成条件");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                 return;
             case ERewardState.HAS_RECEIVE:
-                GTItemHelper.ShowTip("奖励已领取");
+                GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
                 return;
         }
         DCopyMainChapter chapterDB = ReadCfgCopyMainChapter.GetDataById(chapter);

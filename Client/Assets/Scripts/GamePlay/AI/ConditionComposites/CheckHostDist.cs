@@ -1,9 +1,10 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___AI___ConditionComposites___CheckHostDist.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/条件组合节点", Label = "CheckHostDist")]
+    [NodeAttribute(Type = "AI/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "CheckHostDist")]
     public class CheckHostDist : AICondition
     {
         [NodeVariable]
@@ -32,12 +33,12 @@ namespace BVT.AI
         {
             if (!Invert)
             {
-                string s = string.Format("当与主人的距离<{0}时", Distance);
+                string s = string.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]<{0}[TRANSLATED]", Distance);
                 GUILayout.Label(s);
             }
             else
             {
-                string s = string.Format("当与主人的距离>{0}时", Distance);
+                string s = string.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]>{0}[TRANSLATED]", Distance);
                 GUILayout.Label(s);
             }
         }

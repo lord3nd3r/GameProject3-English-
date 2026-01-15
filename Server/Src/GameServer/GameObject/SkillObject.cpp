@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GameObject___SkillObject.cpp */
 ﻿#include "stdafx.h"
 #include "SkillObject.h"
 #include "SceneObject.h"
@@ -47,7 +48,7 @@ BOOL CSkillObject::OnUpdate( UINT64 uTick )
 
     if (uElaspedTick > m_pSkillEventInfo->uDuration)
     {
-        //响应skillend
+        //[TRANSLATED][TRANSLATED]skillend
         OnSkillComplete();
         return TRUE;
     }
@@ -58,7 +59,7 @@ BOOL CSkillObject::OnUpdate( UINT64 uTick )
 BOOL CSkillObject::OnSkillComplete()
 {
     m_SkillStatus = ESS_FINISHED;
-    //如果当前是
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (m_bComboSkill)
     {
         m_bComboSkill = FALSE;
@@ -106,14 +107,14 @@ BOOL CSkillObject::StartSkill(UINT32 dwSkillID, INT32 nLevel)
 
     m_SkillStatus = ESS_RUNNING;
 
-    //计算攻击target
-    //1.直接带有target， 2.需要自己计算target
-    //2.只给自己加buff的skill
-    //3.只给target加buff的skill
-    //4.加血的skill
-    //5.位移skill
-    //6.波次skill(闪电链)
-    //7.产生bullet的skill
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]target
+    //1.[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]target， 2.[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]target
+    //2.[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]buff[TRANSLATED]skill
+    //3.[TRANSLATED][TRANSLATED]target[TRANSLATED]buff[TRANSLATED]skill
+    //4.[TRANSLATED][TRANSLATED][TRANSLATED]skill
+    //5.[TRANSLATED][TRANSLATED]skill
+    //6.[TRANSLATED][TRANSLATED]skill([TRANSLATED][TRANSLATED][TRANSLATED])
+    //7.[TRANSLATED][TRANSLATED]bullet[TRANSLATED]skill
 
 
     OnUpdate(m_dwStartTick);
@@ -176,15 +177,15 @@ BOOL CSkillObject::AttackTarget(CSceneObject* pTarget, UINT32 HitActionID, UINT3
     ERROR_RETURN_FALSE(pScene != NULL);
 
     INT32 dwRandValue = CommonFunc::GetRandNum(1);
-    //先判断whether命中
+    //[TRANSLATED][TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED]
     if (dwRandValue > (8000 + m_pCastObject->m_Propertys[EA_HIT_RATE] - pTarget->m_Propertys[EA_DODGE]) && dwRandValue > 5000)
     {
-        //未命中
+        //[TRANSLATED][TRANSLATED][TRANSLATED]
         pScene->AddHitEffect(m_pCastObject->GetObjectGUID(), pTarget->GetObjectGUID(), 0, FALSE, HitActionID, HitEffectID, HitDistance);
         return TRUE;
     }
 
-    //判断whether爆击
+    //[TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED]
     dwRandValue = CommonFunc::GetRandNum(1);
     BOOL bCriticalHit = FALSE;
     if (dwRandValue < (m_pCastObject->m_Propertys[EA_CRIT_HIT] - pTarget->m_Propertys[EA_CRIT_DEF]) || dwRandValue < 100)
@@ -192,14 +193,14 @@ BOOL CSkillObject::AttackTarget(CSceneObject* pTarget, UINT32 HitActionID, UINT3
         bCriticalHit = TRUE;
     }
 
-    //最终伤害加成
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32 nFinalAdd = m_pCastObject->m_Propertys[EA_MORE_HURT] - pTarget->m_Propertys[EA_LESS_HURT];
     if (nFinalAdd < 0)
     {
         nFinalAdd = 0;
     }
 
-    //伤害随机
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32 nFightRand = 9000 + CommonFunc::GetRandNum(1) % 2000;
 
     INT32 nDefendValue = (m_pSkillInfo->SkillType == ESTMAGIC) ? pTarget->m_Propertys[EA_MAGIC_DEF] : pTarget->m_Propertys[EA_PHYSIC_DEF];
@@ -323,46 +324,46 @@ CBulletObject* CSkillObject::CreateBullet(StBulletObject& stBullet)
     CBulletObject* pBulletObject = pScene->CreateBullet(stBullet.BulletID, pBulletInfo, this, m_pCastObject->GetPos());
     ERROR_RETURN_NULL(pBulletObject != NULL);
 
-    //创建方向型的bullet
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]bullet
     switch (pBulletInfo->BulletType)
     {
-        case EBT_CHASE:         //追踪型飞弹:
+        case EBT_CHASE:         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:
         {
             pBulletObject->SetTargetObject(m_vtTargets.at(0));
         }
         break;
 
-        case EBT_FIXDIRECTION:  //固定方向型飞弹:
+        case EBT_FIXDIRECTION:  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:
         {
             pBulletObject->SetAngle(m_pCastObject->m_ft + stBullet.fAngle);
         }
         break;
-        case EBT_FIXTARGETPOS:  //固定target点飞弹
+        case EBT_FIXTARGETPOS:  //[TRANSLATED][TRANSLATED]target[TRANSLATED][TRANSLATED][TRANSLATED]
         {
             //pBulletObject->SetTargetPos();
         }
         break;
-        case EBT_POINT:         //固定点飞弹
+        case EBT_POINT:         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
         }
         break;
-        case EBT_LINK:          //connection飞弹
+        case EBT_LINK:          //connection[TRANSLATED][TRANSLATED]
         {
         }
         break;
-        case EBT_ANNULAR:       //环形飞弹
+        case EBT_ANNULAR:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
         }
         break;
-        case EBT_BACK:          //回旋飞弹
+        case EBT_BACK:          //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
         }
         break;
-        case EBT_EXTRACT:       //抽取飞弹
+        case EBT_EXTRACT:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
         }
         break;
-        case EBT_BOUNDCE:       //弹跳飞弹
+        case EBT_BOUNDCE:       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         {
         }
         break;

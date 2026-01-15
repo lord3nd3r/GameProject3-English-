@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CommonFunc.cpp */
 #include "stdafx.h"
 #include "CommonFunc.h"
 
@@ -441,7 +442,7 @@ HANDLE CommonFunc::CreateShareMemory(INT32 nModuleID, INT32 nPage, INT32 nSize)
     return hShare;
 }
 
-//下面是用路径来创建建共享内存，可惜linux有缺陷
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]linux[TRANSLATED][TRANSLATED][TRANSLATED]
 // HANDLE CommonFunc::CreateShareMemory(std::string strName, INT32 nSize)
 // {
 //  HANDLE hShare = NULL;
@@ -577,7 +578,7 @@ BOOL CommonFunc::IsProcessExist(INT32 nPid)
         return FALSE;
     }
 
-    //! 进程shutdown后, 句柄不一定is空, 需要获取进程退出码进一步判断
+    //! [TRANSLATED][TRANSLATED]shutdown[TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED], [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     GetExitCodeProcess(hPrc, &nExitCode);
     if (nExitCode != STILL_ACTIVE)
     {

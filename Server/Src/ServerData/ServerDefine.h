@@ -1,37 +1,38 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___ServerDefine.h */
 ﻿#ifndef __SERVER_DEFINE_H__
 #define __SERVER_DEFINE_H__
 
-//货币count
+//[TRANSLATED][TRANSLATED]count
 #define MONEY_NUM			15
 
-//行动力count
+//[TRANSLATED][TRANSLATED][TRANSLATED]count
 #define ACTION_NUM			4
 
-//角色属性个数
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 #define PROPERTY_NUM		21
 
-//角色的最大Level
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Level
 #define MAX_ROLE_LEVEL		150
 
-//server帧率
+//server[TRANSLATED][TRANSLATED]
 #define FPS_TIME_TICK		20
 
-//guild名长度
+//guild[TRANSLATED][TRANSLATED][TRANSLATED]
 #define GUILD_NAME_LEN		255
 #define GUILD_NOTICE_LEN	1024
 #define GUILD_MAX_APPLY_NUM 50
 
-//订单
+//[TRANSLATED][TRANSLATED]
 #define PAY_ORDERID_LEN    128
 
-//语言数
+//[TRANSLATED][TRANSLATED][TRANSLATED]
 #define MAX_LANGUAGE_NUM	15
 
 #define MAX_VIP_LEVEL		20
 
 #define SQL_BUFF_LEN		1024
 
-//邮件
+//[TRANSLATED][TRANSLATED]
 #define MAIL_CONTENT_LEN	2048
 #define MAIL_TITLE_LEN		255
 #define MAIL_ITEM_COUNT		10
@@ -42,7 +43,7 @@
 
 #define PARTNER_MAX_NUM		2
 
-//definition四种状态的基本移动速度
+//definition[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 #define SPEED_IDLE			(0.0f)
 #define SPEED_WALK			(2.5f)
 #define SPEED_RUN			(4.0f)
@@ -63,7 +64,7 @@ enum EMouduleType
 	MT_COUNTER,
 	MT_STORE,
 	MT_SKILL,
-	MT_MAIL,    //邮件
+	MT_MAIL,    //[TRANSLATED][TRANSLATED]
 	MT_FRIEND,
 	MT_END
 };
@@ -84,7 +85,7 @@ enum EShareData
 	ESD_TASK,
 	ESD_MOUNT,
 	ESD_MAIL,
-	ESD_OFFDATA,   //离线操作
+	ESD_OFFDATA,   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	ESD_GROUP_MAIL,
 	ESD_ACTIVITY,
 	ESD_COUNTER,
@@ -98,7 +99,7 @@ enum EShareData
 
 enum EAddWay
 {
-    ADD_GMCOMMAND       = 1,        //gm命令
+    ADD_GMCOMMAND       = 1,        //gm[TRANSLATED][TRANSLATED]
 	Add_ = 1,
 	Cost_
 };

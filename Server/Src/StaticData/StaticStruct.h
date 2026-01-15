@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___StaticData___StaticStruct.h */
 ﻿#ifndef __STATIC_STRUCT_H__
 #define __STATIC_STRUCT_H__
 #include "../Message/Game_Define.pb.h"
@@ -17,15 +18,15 @@ struct StCopyInfo
 	}
 
 	UINT32 dwCopyID;
-	UINT32 dwCopyType;     //副要type
-	UINT32 dwCostActID;    //消耗体力ID
-	UINT32 dwCostActNum;   //消耗体力count
-	UINT32 dwGetMoneyID;   //获取货币的ID
-	UINT32 dwGetMoneyRatio;//获取货币的系数
-	UINT32 dwGetExpRation; //获取经验的系数
-	UINT32 dwAwardID;      //奖励ID
-	UINT32 dwFirstAwardID; //首胜奖励ID
-	UINT32 dwBattleTimes;  //每日可战斗次数
+	UINT32 dwCopyType;     //[TRANSLATED][TRANSLATED]type
+	UINT32 dwCostActID;    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	UINT32 dwCostActNum;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]count
+	UINT32 dwGetMoneyID;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	UINT32 dwGetMoneyRatio;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 dwGetExpRation; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 dwAwardID;      //[TRANSLATED][TRANSLATED]ID
+	UINT32 dwFirstAwardID; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	UINT32 dwBattleTimes;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	std::string strXml;
 };
@@ -56,7 +57,7 @@ struct StActorInfo
 	FLOAT   fRadius;
 	FLOAT	fDefSpeed;
 	INT32   dwType;
-	INT32   InitLevel; //初始Level
+	INT32   InitLevel; //[TRANSLATED][TRANSLATED]Level
 	INT32   AiID;
 	INT32   Propertys[PROPERTY_NUM];
 
@@ -118,14 +119,14 @@ struct StActionInfo
 {
 	StActionInfo()
 	{
-		dwActionID = 0;		// 行动力ID
-		UnitTime = 0;		//恢复1个单位需要的时间(秒)
-		dwMax = 0;			//最大值
+		dwActionID = 0;		// [TRANSLATED][TRANSLATED][TRANSLATED]ID
+		UnitTime = 0;		//[TRANSLATED][TRANSLATED]1[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED])
+		dwMax = 0;			//[TRANSLATED][TRANSLATED][TRANSLATED]
 	}
 
-	UINT32 dwActionID;	// 行动力ID
-	INT32 UnitTime;		//恢复1个单位需要的时间(秒)
-	UINT32 dwMax;		//最大值
+	UINT32 dwActionID;	// [TRANSLATED][TRANSLATED][TRANSLATED]ID
+	INT32 UnitTime;		//[TRANSLATED][TRANSLATED]1[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED])
+	UINT32 dwMax;		//[TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 
@@ -136,36 +137,36 @@ struct  StItemData
 };
 
 
-//掉落项
+//[TRANSLATED][TRANSLATED][TRANSLATED]
 struct StDropItem
 {
-	UINT32 dwItemID;		//物品ID
-	UINT32 dwItemNum[2];	//物品count
-	UINT32 dwRatio;			//概率range
+	UINT32 dwItemID;		//[TRANSLATED][TRANSLATED]ID
+	UINT32 dwItemNum[2];	//[TRANSLATED][TRANSLATED]count
+	UINT32 dwRatio;			//[TRANSLATED][TRANSLATED]range
 };
 
-//奖励项
+//[TRANSLATED][TRANSLATED][TRANSLATED]
 struct StAwardItem
 {
-	INT32 dwAwardID;					//奖励ID
-	INT32 dwRatioCount;					//概率掉落个数
-	BOOL bDistinct;						//whether需要去重
-	INT32 nCarrer;						//职业
-	std::vector<StDropItem> FixItems;	//必掉物品
-	std::vector<StDropItem>  RatioItems;//机率掉落物品
+	INT32 dwAwardID;					//[TRANSLATED][TRANSLATED]ID
+	INT32 dwRatioCount;					//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL bDistinct;						//whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32 nCarrer;						//[TRANSLATED][TRANSLATED]
+	std::vector<StDropItem> FixItems;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	std::vector<StDropItem>  RatioItems;//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 struct StItemInfo
 {
-	UINT32 dwItemID;	//物品ID
-	EItemType eItemType;//物品type
-	UINT32 dwBagType;	//物品背包type
-	UINT32 Quality;		//物品的品质
-	UINT32 SellID;		//出售货币ID
-	INT32  SellPrice;	//出售价格
-	UINT32 UseType;		//使用type
-	UINT32 CarrerID;	//职业
-	INT64  StackMax;	//最大堆放数
+	UINT32 dwItemID;	//[TRANSLATED][TRANSLATED]ID
+	EItemType eItemType;//[TRANSLATED][TRANSLATED]type
+	UINT32 dwBagType;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+	UINT32 Quality;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 SellID;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	INT32  SellPrice;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 UseType;		//[TRANSLATED][TRANSLATED]type
+	UINT32 CarrerID;	//[TRANSLATED][TRANSLATED]
+	INT64  StackMax;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	INT32  Data1;		//params1
 	INT32  Data2;		//params2
 };
@@ -173,17 +174,17 @@ struct StItemInfo
 
 struct StFuncInfo
 {
-	UINT32 dwFuncID;	//! 功能ID
-	INT32 OpenLevel;	//! 开放Level
-	INT32 VipLevel;		//! VIP提前开放Level
-	INT32 Logic;		//! 逻辑关系 1:两者取其一; 2:两者都必须; 3: 满足VIP条件; 4:满足Level条件
+	UINT32 dwFuncID;	//! [TRANSLATED][TRANSLATED]ID
+	INT32 OpenLevel;	//! [TRANSLATED][TRANSLATED]Level
+	INT32 VipLevel;		//! VIP[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Level
+	INT32 Logic;		//! [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] 1:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]; 2:[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]; 3: [TRANSLATED][TRANSLATED]VIP[TRANSLATED][TRANSLATED]; 4:[TRANSLATED][TRANSLATED]Level[TRANSLATED][TRANSLATED]
 };
 
 
 struct StFuncVipInfo
 {
-	UINT32 dwFuncID;				//! 功能ID
-	INT32  VipValue[MAX_VIP_LEVEL];	//! 对应VIP数值
+	UINT32 dwFuncID;				//! [TRANSLATED][TRANSLATED]ID
+	INT32  VipValue[MAX_VIP_LEVEL];	//! [TRANSLATED][TRANSLATED]VIP[TRANSLATED][TRANSLATED]
 };
 
 
@@ -221,18 +222,18 @@ struct StMountInfo
 
 struct StTaskInfo
 {
-	UINT32 TaskID;		//! 任务ID
-	UINT32 PrevTaskID;  //! 前置任务ID
-	UINT32 TaskType;	//! 任务type(日常， 主线， 分支，guild)
-	UINT32 NeedCount;	//! 需要达成的条件数
-	UINT32 TaskEvent;	//! 任务event
-	INT32  NeedLevel;	//! 开放Level
-	UINT32 AwardID;		//! 任务奖励ID
+	UINT32 TaskID;		//! [TRANSLATED][TRANSLATED]ID
+	UINT32 PrevTaskID;  //! [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	UINT32 TaskType;	//! [TRANSLATED][TRANSLATED]type([TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED]，guild)
+	UINT32 NeedCount;	//! [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32 TaskEvent;	//! [TRANSLATED][TRANSLATED]event
+	INT32  NeedLevel;	//! [TRANSLATED][TRANSLATED]Level
+	UINT32 AwardID;		//! [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
 };
 
 struct StStoreItemInfo
 {
-	UINT32 StoreID;		//! 商品ID
+	UINT32 StoreID;		//! [TRANSLATED][TRANSLATED]ID
 	UINT32 ItemID;
 	UINT32 ItemNum;
 	UINT32 CostMoneyID;
@@ -242,7 +243,7 @@ struct StStoreItemInfo
 
 struct StActivityInfo
 {
-	UINT32 ActivityID;		//! 活动ID
+	UINT32 ActivityID;		//! [TRANSLATED][TRANSLATED]ID
 	std::string Name;
 	std::string Desc;
 	std::string Ad;

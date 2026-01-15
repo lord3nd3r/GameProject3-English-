@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___WinCondition.h */
 ﻿#ifndef __BATTLE_RESULT_H__
 #define __BATTLE_RESULT_H__
 #include "../../ServerData/ServerStruct.h"
@@ -20,7 +21,7 @@ public:
 
 	BOOL SetKillMonster(UINT32 dwMonsterID, UINT32 dwKillNum);
 private:
-	EWinCondition   m_ConditionType = EWC_NONE;//判定type
+	EWinCondition   m_ConditionType = EWC_NONE;//[TRANSLATED][TRANSLATED]type
 	Rect2D          m_DestRect;
 	UINT32          m_dwNpcID = 0;
 	UINT32          m_dwMonsterID = 0;

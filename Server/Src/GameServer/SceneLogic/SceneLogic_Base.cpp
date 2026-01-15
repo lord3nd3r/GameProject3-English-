@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_Base.cpp */
 ﻿#include "stdafx.h"
 #include "CommonMath.h"
 #include "SceneLogic_Base.h"
@@ -56,7 +57,7 @@ BOOL SceneLogicBase::Update(UINT64 uTick)
 {
 	if (m_pScene->GetStartTime() <= 0)
 	{
-		//如果创建完成60秒副本还没有begin，就要超时end
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]60[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]end
 		if (CommonFunc::GetCurrTime() - m_pScene->GetCreateTime() > 60)
 		{
 			OnTimeUP();

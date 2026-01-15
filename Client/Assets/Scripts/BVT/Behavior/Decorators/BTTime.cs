@@ -1,11 +1,12 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Decorators___BTTime.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "时间节点")]
-    [NodeDesc("在指定的时间内，持续调用其子节点")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     [NodeName("05CBF2", "Time")]
     public class BTTime : BTDecorator
     {
@@ -46,10 +47,10 @@ namespace BVT
 #if UNITY_EDITOR
         public override void DrawNodeWindowContents()
         {
-            GUILayout.Label(string.Format("<color=#ffffff>持续时间：{0}s</color>", this.Time));
+            GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}s</color>", this.Time));
             if (Running)
             {
-                GUILayout.Label(string.Format("<color=#ff64cb>running时间：{0}s</color>", mLastTime > this.Time ? this.Time : mLastTime));
+                GUILayout.Label(string.Format("<color=#ff64cb>running[TRANSLATED][TRANSLATED]：{0}s</color>", mLastTime > this.Time ? this.Time : mLastTime));
             }
         }
 #endif

@@ -1,4 +1,5 @@
-﻿// DBServer.cpp : definition控制台应用程序的入口点。
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___Main.cpp */
+﻿// DBServer.cpp : definition[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 //
 
 #include "stdafx.h"

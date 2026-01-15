@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Public___UIEquipInfo.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -203,12 +204,12 @@ public class UIEquipInfo : GTWindow
         if (equip == null) return;
         int itemID = equip.Id;
         ShowBaseView(itemID);
-        equipFightValue.text = GTTools.Format("战斗力 {0}", GTAttrHelper.GetFightValue(equip));
+        equipFightValue.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED] {0}", GTAttrHelper.GetFightValue(equip));
         equipAdvanceLevel.text = MLEquip.Instance.GetEquipAdvanceNameByLevel(equip.AdvanceLevel);
         Dictionary<EAttr, int> propertys = GTAttrHelper.GetPropertys(equip);
-        title3.text = GTTools.Format("装备星级 {0}", equip.StarLevel);
-        title2.text = GTTools.Format("进阶Level {0}", equip.AdvanceLevel);
-        title1.text = GTTools.Format("强化Level {0}", equip.StrengthenLevel);
+        title3.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] {0}", equip.StarLevel);
+        title2.text = GTTools.Format("[TRANSLATED][TRANSLATED]Level {0}", equip.AdvanceLevel);
+        title1.text = GTTools.Format("[TRANSLATED][TRANSLATED]Level {0}", equip.StrengthenLevel);
         GTItemHelper.ShowPropertyText(this.equipPropertys, propertys, true);
         GTItemHelper.ShowEquipStrengthText(text1, itemID, equip.StrengthenLevel);
         GTItemHelper.ShowEquipAdvanceText(text2, itemID, equip.AdvanceLevel);

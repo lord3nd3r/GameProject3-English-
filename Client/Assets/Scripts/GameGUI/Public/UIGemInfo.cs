@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Public___UIGemInfo.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -212,7 +213,7 @@ public class UIGemInfo : GTWindow
         int itemID = gem.Id;
         DGem gemDB = ReadCfgGem.GetDataById(itemID);
         gemLevel.text = GTTools.Format("Level {0}", gem.StrengthenLevel);
-        gemFightValue.text = GTTools.Format("战斗力 {0}", GTAttrHelper.GetFightValue(gem));
+        gemFightValue.text = GTTools.Format("[TRANSLATED][TRANSLATED][TRANSLATED] {0}", GTAttrHelper.GetFightValue(gem));
         ShowBaseView(itemID);
         GTItemHelper.ShowGemPropertyText(gemPropertys, itemID, gem.StrengthenLevel);
         DGemSuit suitDB = ReadCfgGemSuit.GetDataById(gemDB.Suit);

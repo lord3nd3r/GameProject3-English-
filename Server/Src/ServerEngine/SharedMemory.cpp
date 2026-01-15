@@ -1,8 +1,9 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SharedMemory.cpp */
 ﻿+﻿/****************************************************
-+文件：SharedMemory.cpp
-+作者：ylmbtm@163.com
-+日期：2025/03/27 11:19:18
-+功能：共享内存管理
++[TRANSLATED][TRANSLATED]：SharedMemory.cpp
++[TRANSLATED][TRANSLATED]：ylmbtm@163.com
++[TRANSLATED][TRANSLATED]：2025/03/27 11:19:18
++[TRANSLATED][TRANSLATED]：[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 +*****************************************************/
 #include "stdafx.h"
 #include "SharedMemory.h"
@@ -82,9 +83,9 @@ void ShareObject::Reset()
 }
 
 /******************************************************************
-每块共享内存都是由数据体和数据头组成,数据体在前面，数据头在后面Tis体His头
+[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Tis[TRANSLATED]His[TRANSLATED]
 TTTTTTTTTTTTTTTTTTTTTTHHHHHHHHHHHHHHHHHHHHH
-数据体和数据块的count是一样的
+[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]count[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 ********************************************************************/
 
 BOOL SharedMemoryBase::NewPage()
@@ -121,13 +122,13 @@ void SharedMemoryBase::InitPage(shareMemoryPage& rPage)
     char* pdata = rPage.m_pdata;
     memset(pdata, 0, nSize);
 
-    //设置防护区域
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     for (INT32 i = 0; i != m_nCountperPage; ++i)
     {
         *(pdata + (m_rawblockSize)*i) = BLOCK_CHECK_CODE;
     }
 
-    //m_pageCount已经包含当前页码，故需要减1
+    //m_pageCount[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]1
     INT32 nStartindex = m_nCountperPage * (m_nPageCount - 1);
     for (INT32 i = nStartindex; i < m_nCount; ++i)
     {
@@ -193,8 +194,8 @@ void SharedMemoryBase::ImportOtherPage()
         {
             break;
         }
-        ///如果原来就已经存过，初始化数据
-        ///找到头数据块的头
+        ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         page.m_pBlock = (_SMBlock*)(page.m_pdata + m_rawblockSize * m_nCountperPage);
         m_ShareMemoryPageMapping.push_back(page);
         m_nCount += m_nCountperPage;
@@ -202,9 +203,9 @@ void SharedMemoryBase::ImportOtherPage()
     }
 }
 
-/**@param name 共享内存Name，can通过Name找回,暂时如果有只打开内存中已经有的。
-*@param count  T的个数
-*@param noCreate 不允许创建
+/**@param name [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Name，can[TRANSLATED][TRANSLATED]Name[TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
+*@param count  T[TRANSLATED][TRANSLATED][TRANSLATED]
+*@param noCreate [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 */
 SharedMemoryBase::SharedMemoryBase(INT32 nModuleID, INT32 rawblockSize, INT32 nCountperPage, BOOL noCreate)
     : m_rawblockSize(rawblockSize), m_nCountperPage(nCountperPage), m_nSpace(rawblockSize + sizeof(_SMBlock)), m_nModuleID(nModuleID)
@@ -245,10 +246,10 @@ SharedMemoryBase::SharedMemoryBase(INT32 nModuleID, INT32 rawblockSize, INT32 nC
 
             firstpage.m_pdata = (CHAR*)CommonFunc::GetShareMemory(firstpage.m_shm);
 
-            ///找到头数据块的头
+            ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             firstpage.m_pBlock = (_SMBlock*)(firstpage.m_pdata + m_rawblockSize * m_nCountperPage);
 
-            ///清空所有内存;
+            ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED];
             memset(firstpage.m_pdata, 0, nSize);
 
             m_nPageCount++;
@@ -351,7 +352,7 @@ void SharedMemoryBase::ProcessCleanDirtyData()
 
 ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
 {
-    ///如果未分配内存没有了,则beginhandle脏数据
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED]beginhandle[TRANSLATED][TRANSLATED][TRANSLATED]
     if (m_mapFreeSMBlock.size() == 0)
     {
         ProcessCleanDirtyData();
@@ -367,7 +368,7 @@ ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
             return NULL;
         }
     }
-    ///从未分配的队列中拿出，加入到已分配队列当中
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     mapFreeSMBlock::iterator it = m_mapFreeSMBlock.begin();
     while (it != m_mapFreeSMBlock.end())
     {
@@ -378,7 +379,7 @@ ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
             ++it;
             continue;
         }
-        ///判断whether是删除状态
+        ///[TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if (!pobject->IsDestroy())
         {
             m_mapUsedSMBlock.insert(std::make_pair(pobject, pBlock));
@@ -393,7 +394,7 @@ ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
         it++;
     }
 
-    ////以下is新加的代码 zm
+    ////[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] zm
     ProcessCleanDirtyData();
 
     if (NewPage())

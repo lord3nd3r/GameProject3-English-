@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___TimerManager.h */
 ﻿#ifndef _TIMER_MANAGER__
 #define _TIMER_MANAGER__
 #include "CommonTime.h"
@@ -87,9 +88,9 @@ public:
     UINT64 m_uFireTime;  //Trigger Time
     INT32  m_nSec;
     INT32  m_nData;
-    TimeEvent* m_pPrev; //前一节点
-    TimeEvent* m_pNext; //后一节点
-    INT32  m_nType;   //eventtype,1 绝对时间定时器,2 相对时间定时器
+    TimeEvent* m_pPrev; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TimeEvent* m_pNext; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32  m_nType;   //eventtype,1 [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],2 [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32  m_nRepeateTimes;
     CTimerSlotBase* m_pTimerFuncSlot;
 };
@@ -204,7 +205,7 @@ public:
 
     UINT64     m_uCurTime;
 
-    UINT64     m_uInitTime;  //定时器begin工作时间(不对begin工作时间之前的定时器发生作用)
+    UINT64     m_uInitTime;  //[TRANSLATED][TRANSLATED][TRANSLATED]begin[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]([TRANSLATED][TRANSLATED]begin[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED])
 public:
 };
 

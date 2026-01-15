@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___FriendData.h */
 ﻿#ifndef __FRIEND_DATA_OBJECT_H__
 #define __FRIEND_DATA_OBJECT_H__
 #include "DBInterface/DBInterface.h"
@@ -9,8 +10,8 @@ struct FriendDataObject : public ShareObject
 
 	}
 
-	UINT64 m_uRoleID;		//角色ID
-	UINT64 m_uFriendID;     //好友ID
+	UINT64 m_uRoleID;		//[TRANSLATED][TRANSLATED]ID
+	UINT64 m_uFriendID;     //[TRANSLATED][TRANSLATED]ID
 
 	BOOL Create(IDBInterface* pDB)
 	{

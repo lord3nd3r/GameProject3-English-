@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Decorators___BTLoop.cs */
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,8 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "装饰节点", Label = "循环节点")]
-    [NodeDesc("循环节点循环执行指定的次数")]
+    [NodeAttribute(Type = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", Label = "[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
+    [NodeDesc("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     [NodeName("05CBF2", "Repeater")]
     public class BTLoop : BTDecorator
     {

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PayManager.cpp */
 ﻿#include "stdafx.h"
 #include "PayManager.h"
 #include "GameService.h"
@@ -69,7 +70,7 @@ BOOL CPayManager::Update()
 VOID CPayManager::WritePayRecordThread(CreatePaymentReq* pReq)
 {
     ERROR_RETURN_NONE(pReq != NULL);
-    std::unique_ptr<CreatePaymentReq> pCreatePayment(pReq); //用来自动释放内存
+    std::unique_ptr<CreatePaymentReq> pCreatePayment(pReq); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     std::string strHost = CConfigFile::GetInstancePtr()->GetStringValue("mysql_gm_svr_ip");
     INT32 nPort        = CConfigFile::GetInstancePtr()->GetIntValue("mysql_gm_svr_port");
     std::string strUser = CConfigFile::GetInstancePtr()->GetStringValue("mysql_gm_svr_user");
@@ -176,8 +177,8 @@ BOOL CPayManager::OnMsgCreatePayRecord(NetPacket* pNetPacket)
 
 void CPayManager::OnGmPayCallBack(HttpParameter& hParams, INT32 nConnID)
 {
-    UINT64 uRoleID = hParams.GetLongValue("roleid");        //角色ID
-    INT32 nProductID = hParams.GetIntValue("productid");  //充值档位
+    UINT64 uRoleID = hParams.GetLongValue("roleid");        //[TRANSLATED][TRANSLATED]ID
+    INT32 nProductID = hParams.GetIntValue("productid");  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32 nChannel = hParams.GetIntValue("channel");
     std::string strOrderID = hParams.GetStrValue("orderid");
     std::string strThirdID = hParams.GetStrValue("thirdid");
@@ -185,11 +186,11 @@ void CPayManager::OnGmPayCallBack(HttpParameter& hParams, INT32 nConnID)
     FLOAT fMoney = hParams.GetFloatValue("money");
     INT32 buyid = hParams.GetIntValue("buyid");
 
-    //通知支付服already收到支付通知，己Success加入等待发货队列，支付服的任务already完成
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED]Success[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED]
     std::string strResult = CommonConvert::IntToString((INT64)0);
     ServiceBase::GetInstancePtr()->SendMsgRawData(nConnID, MSG_PHP_GM_COMMAND_ACK, 0, 0, strResult.c_str(), (INT32)strResult.size());
 
-    //避免重复通知
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     if (GetPayOrderByID(strOrderID) != NULL)
     {
         CLog::GetInstancePtr()->LogError("CPayManager::OnGmPayCallBack Error! Duplicated strOrderID:%s", strOrderID.c_str());
@@ -200,7 +201,7 @@ void CPayManager::OnGmPayCallBack(HttpParameter& hParams, INT32 nConnID)
     pPayDataObject->Lock();
     pPayDataObject->m_uRoleID = uRoleID;
     pPayDataObject->m_nChannel = nChannel;
-    pPayDataObject->m_nStatus = EOS_WAIT; //待发货
+    pPayDataObject->m_nStatus = EOS_WAIT; //[TRANSLATED][TRANSLATED][TRANSLATED]
     pPayDataObject->m_fMoney = fMoney;
     pPayDataObject->m_uFinishTime = uFinishTime;
     pPayDataObject->m_nProductID = nProductID;
@@ -226,7 +227,7 @@ BOOL CPayManager::ProcessSussessPayOrder(PayDataObject* pOrderData)
     }
     pOrderData->Lock();
     pOrderData->m_uSendTime = CommonFunc::GetCurrTime();
-    pOrderData->m_nStatus = EOS_DONE; //已发货
+    pOrderData->m_nStatus = EOS_DONE; //[TRANSLATED][TRANSLATED][TRANSLATED]
     pOrderData->Unlock();
 
     return TRUE;

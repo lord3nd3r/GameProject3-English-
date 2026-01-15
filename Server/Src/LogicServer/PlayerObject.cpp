@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PlayerObject.cpp */
 ﻿#include "stdafx.h"
 #include "PlayerObject.h"
 #include "PacketHeader.h"
@@ -44,9 +45,9 @@ BOOL CPlayerObject::Init(UINT64 u64ID)
     m_uRoleID             = u64ID;
     m_nProxyConnID     = 0;
     m_nClientConnID    = 0;
-    m_dwCopyGuid        = 0;      //当前的副本ID
-    m_dwCopyID          = 0;        //当前的副本type
-    m_dwCopySvrID       = 0;        //副本server的ID
+    m_dwCopyGuid        = 0;      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+    m_dwCopyID          = 0;        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+    m_dwCopySvrID       = 0;        //[TRANSLATED][TRANSLATED]server[TRANSLATED]ID
     m_IsOnline          = FALSE;
     m_uRoomID           = 0;
     ERROR_RETURN_FALSE(CreateAllModule());
@@ -57,13 +58,13 @@ BOOL CPlayerObject::Init(UINT64 u64ID)
 BOOL CPlayerObject::Uninit()
 {
     DestroyAllModule();
-    m_uRoleID             = 0;      //角色ID
-    m_nProxyConnID     = 0;        //网关服的connectionID
-    m_nClientConnID    = 0;        //client的connectionID
-    m_dwCopyGuid        = 0;        //当前的副本ID
-    m_dwCopyID          = 0;        //当前的副本type
-    m_dwCopySvrID       = 0;        //副本server的ID
-    m_IsOnline          = FALSE;    //whether在线
+    m_uRoleID             = 0;      //[TRANSLATED][TRANSLATED]ID
+    m_nProxyConnID     = 0;        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionID
+    m_nClientConnID    = 0;        //client[TRANSLATED]connectionID
+    m_dwCopyGuid        = 0;        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+    m_dwCopyID          = 0;        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+    m_dwCopySvrID       = 0;        //[TRANSLATED][TRANSLATED]server[TRANSLATED]ID
+    m_IsOnline          = FALSE;    //whether[TRANSLATED][TRANSLATED]
     m_uRoomID           = 0;
     return TRUE;
 }
@@ -550,9 +551,9 @@ BOOL CPlayerObject::CalcFightDataInfo()
 
 BOOL CPlayerObject::ClearCopyStatus()
 {
-    m_dwCopyGuid = 0;           //当前的副本ID
-    m_dwCopyID = 0;             //当前的副本type
-    m_dwCopySvrID = 0;          //副本server的ID
+    m_dwCopyGuid = 0;           //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+    m_dwCopyID = 0;             //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+    m_dwCopySvrID = 0;          //[TRANSLATED][TRANSLATED]server[TRANSLATED]ID
     m_bMainCity = FALSE;
     return TRUE;
 }

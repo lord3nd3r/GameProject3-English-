@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___LuaManager.h */
 #ifndef __LUA_MANAGER_H__
 #define __LUA_MANAGER_H__
 
@@ -41,13 +42,13 @@ public:
 
 	BOOL	RegisterFunction(const char* name, lua_CFunction fn);
 
-	//获取堆栈脚本变量
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	BOOL	GetStackValue_Ptr(INT32 nStackIndex, VOID*& ptrValue);
 	BOOL	GetStackValue_Int(INT32 nStackIndex, INT32& intValue);
 	BOOL	GetStackValue_Double(INT32 nStackIndex, DOUBLE& doubleValue);
 	BOOL    GetStackValue_String(INT32 nStackIndex, const CHAR*& strValue);
 
-	//获取全局脚本变量
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	INT32	GetGlobalVarInt(const char* pszVarName);
 	BOOL	GetGlobalVarBoolean(const char* pszVarName);
 	DOUBLE  GetGlobalVarDouble(const char* pszVarName);

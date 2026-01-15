@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_Normal.cpp */
 ﻿#include "stdafx.h"
 #include "SceneLogic_Normal.h"
 #include "../GameObject/SceneObject.h"
@@ -27,7 +28,7 @@ BOOL SceneLogic_Normal::OnObjectCreate(CSceneObject* pObject)
 
 BOOL SceneLogic_Normal::OnObjectDie(CSceneObject* pObject)
 {
-	//对象死亡登陆进入副本了
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	return TRUE;
 }
@@ -35,14 +36,14 @@ BOOL SceneLogic_Normal::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_Normal::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//player登陆进入副本了
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	return TRUE;
 }
 
 BOOL SceneLogic_Normal::OnPlayerLeave(CSceneObject* pPlayer, BOOL bDisConnect)
 {
-	//player离开副本了
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	m_pScene->SetBattleResult(0, ECR_LOST);
 
 	m_pScene->SendBattleResult();
@@ -63,7 +64,7 @@ BOOL SceneLogic_Normal::Update(UINT64 uTick)
 
 	SceneLogicBase::Update(uTick);
 
-	//如果player死绝了就算输了．
+	//[TRANSLATED][TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]．
 	if (m_pScene->IsCampAllDie(EBC_PLAYER))
 	{
 		m_pScene->SetBattleResult(0, ECR_LOST);

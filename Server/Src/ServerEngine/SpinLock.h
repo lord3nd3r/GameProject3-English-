@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SpinLock.h */
 ﻿#ifndef __SPIN_LOCK_h__
 #define __SPIN_LOCK_h__
 #include <atomic>
@@ -69,13 +70,13 @@ public:
         {
             while (1)
             {
-                _mm_pause(); // pause指令 延迟时间大约是12纳秒
+                _mm_pause(); // pause[TRANSLATED][TRANSLATED] [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]12[TRANSLATED][TRANSLATED]
                 if (!d_atomic_bool.load(std::memory_order_relaxed))
                 {
                     break;
                 }
-                std::this_thread::yield(); // 在无其他线程等待执行的情况下，延迟时间113纳秒
-                // 在有其他线程等待执行情况下，将切换线程
+                std::this_thread::yield(); // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]113[TRANSLATED][TRANSLATED]
+                // [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 if (!d_atomic_bool.load(std::memory_order_relaxed))
                 {
                     break;
@@ -94,7 +95,7 @@ public:
 
     void unlock(void)
     {
-        d_atomic_bool.store(false, std::memory_order_release); // 设置isfalse
+        d_atomic_bool.store(false, std::memory_order_release); // [TRANSLATED][TRANSLATED]isfalse
         return;
     }
 

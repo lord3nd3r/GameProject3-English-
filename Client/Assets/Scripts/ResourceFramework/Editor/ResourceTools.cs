@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Editor___ResourceTools.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -12,7 +13,7 @@ public class ResourceTools
     private static Dictionary<string, GTResourceUnit> Units = new Dictionary<string, GTResourceUnit>();
 
 
-    [MenuItem("工具/新版config文件")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED]config[TRANSLATED][TRANSLATED]")]
     public static void BuildConfig()
     {
         DelBundles();
@@ -21,7 +22,7 @@ public class ResourceTools
         SetBundleNames();
     }
 
-    [MenuItem("工具/新版打包")]
+    [MenuItem("[TRANSLATED][TRANSLATED]/[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]")]
     public static void BuildBundle()
     {
         BuildBundles();

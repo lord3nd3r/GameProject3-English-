@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___DBServer___DBWriterManager.cpp */
 ﻿#include "stdafx.h"
 #include "DBWriterManager.h"
 
@@ -171,11 +172,11 @@ void CDBWriterManager::DBWriteThread()
 
         if (IsStop())
         {
-            CLog::GetInstancePtr()->LogError("begin退出将所有己修改的数据写入数据库.....");
+            CLog::GetInstancePtr()->LogError("begin[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].....");
             BOOL bHasWrite = WriteDataToDB();
             if (!bHasWrite)
             {
-                CLog::GetInstancePtr()->LogError("所有己修改的数据己写入数据库.");
+                CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].");
                 break;
             }
 
@@ -186,7 +187,7 @@ void CDBWriterManager::DBWriteThread()
             WriteDataToDB();
         }
 
-        CommonFunc::Sleep(60000); //休息10秒
+        CommonFunc::Sleep(60000); //[TRANSLATED][TRANSLATED]10[TRANSLATED]
     }
     m_DBConnection.Close();
     m_DBConnection.Uninit();

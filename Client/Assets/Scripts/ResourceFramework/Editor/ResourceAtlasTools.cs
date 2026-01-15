@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___ResourceFramework___Editor___ResourceAtlasTools.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEditor;
@@ -6,7 +7,7 @@ using System.IO;
 
 public class ResourceAtlasTools : Editor
 {
-    [MenuItem("图集handle/高清晰")]
+    [MenuItem("[TRANSLATED][TRANSLATED]handle/[TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void A()  
     {    
         ResourceAtlasCreate_RGBA32 ra = new ResourceAtlasCreate_RGBA32();
@@ -14,14 +15,14 @@ public class ResourceAtlasTools : Editor
     }
 
 
-    [MenuItem("图集handle/中清晰")]
+    [MenuItem("[TRANSLATED][TRANSLATED]handle/[TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void B_2()
     {
         ResourceAtlasCreate_RGBA16 ra = new ResourceAtlasCreate_RGBA16();
         ra.CreateUIAtlasPrefab(Selection.activeObject);
     }
 
-    [MenuItem("图集handle/低清晰")]
+    [MenuItem("[TRANSLATED][TRANSLATED]handle/[TRANSLATED][TRANSLATED][TRANSLATED]")]
     static void C()
     {
         switch (EditorUserBuildSettings.activeBuildTarget)

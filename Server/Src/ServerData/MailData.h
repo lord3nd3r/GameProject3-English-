@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___MailData.h */
 ﻿#ifndef __MAIL_DATA_OBJECT_H__
 #define __MAIL_DATA_OBJECT_H__
 #include "DBInterface/DBStoredProc.h"
@@ -29,16 +30,16 @@ struct GroupMailDataObject : public ShareObject
         memset(m_Items, 0, sizeof(StMailItem) * MAIL_ITEM_COUNT);
         memset(m_szSender, 0, sizeof(CHAR) * ROLE_NAME_LEN);
     }
-    UINT64 m_uGuid;                         //邮件ID
-    CHAR   m_szTitle[MAIL_TITLE_LEN];       //邮件标题
-    CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
-    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
-    UINT64 m_uTime;                         //邮件时间
-    INT32  m_nMailType;                    //邮件type
-    INT32  m_nChannel;                     //target渠道
-    INT32  m_nLanguage;                     //语言类别
-    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具list
-    INT32  m_nGroupType;                   //邮件type 1->当前player  2->当前player+未来player
+    UINT64 m_uGuid;                         //[TRANSLATED][TRANSLATED]ID
+    CHAR   m_szTitle[MAIL_TITLE_LEN];       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR   m_szContent[MAIL_CONTENT_LEN];   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR   m_szSender[ROLE_NAME_LEN];       //[TRANSLATED][TRANSLATED][TRANSLATED]Name
+    UINT64 m_uTime;                         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32  m_nMailType;                    //[TRANSLATED][TRANSLATED]type
+    INT32  m_nChannel;                     //target[TRANSLATED][TRANSLATED]
+    INT32  m_nLanguage;                     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    StMailItem m_Items[MAIL_ITEM_COUNT];    //[TRANSLATED][TRANSLATED]list
+    INT32  m_nGroupType;                   //[TRANSLATED][TRANSLATED]type 1->[TRANSLATED][TRANSLATED]player  2->[TRANSLATED][TRANSLATED]player+[TRANSLATED][TRANSLATED]player
 
     BOOL Create(IDBInterface* pDB)
     {
@@ -93,26 +94,26 @@ struct MailDataObject : public ShareObject
         m_uGuid = 0;
         m_uTime = 0;
         m_uSenderID = 0;
-        m_nMailType = 0; //邮件type
-        m_nStatus = 0;   //邮件状态
-        m_uGroupGuid = 0; //对应的群邮件ID
+        m_nMailType = 0; //[TRANSLATED][TRANSLATED]type
+        m_nStatus = 0;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+        m_uGroupGuid = 0; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
         memset(m_szSender, 0, sizeof(CHAR) * ROLE_NAME_LEN);
         memset(m_szTitle, 0, sizeof(CHAR) * MAIL_TITLE_LEN);
         memset(m_szContent, 0, sizeof(CHAR) * MAIL_CONTENT_LEN);
         memset(m_Items, 0, sizeof(StMailItem) * MAIL_ITEM_COUNT);
     }
 
-    UINT64 m_uGuid;                         //邮件ID
-    UINT64 m_uRoleID;                       //角色ID
-    UINT64 m_uGroupGuid;                    //群邮件ID
-    UINT64 m_uTime;                         //邮件时间
-    UINT64 m_uSenderID;                     //发送者ID
-    INT32  m_nMailType;                    //邮件type
-    INT32  m_nStatus;                      //邮件状态
-    CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
-    CHAR   m_szTitle[MAIL_TITLE_LEN];       //邮件标题
-    CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
-    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具list
+    UINT64 m_uGuid;                         //[TRANSLATED][TRANSLATED]ID
+    UINT64 m_uRoleID;                       //[TRANSLATED][TRANSLATED]ID
+    UINT64 m_uGroupGuid;                    //[TRANSLATED][TRANSLATED][TRANSLATED]ID
+    UINT64 m_uTime;                         //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    UINT64 m_uSenderID;                     //[TRANSLATED][TRANSLATED][TRANSLATED]ID
+    INT32  m_nMailType;                    //[TRANSLATED][TRANSLATED]type
+    INT32  m_nStatus;                      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR   m_szSender[ROLE_NAME_LEN];       //[TRANSLATED][TRANSLATED][TRANSLATED]Name
+    CHAR   m_szTitle[MAIL_TITLE_LEN];       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    CHAR   m_szContent[MAIL_CONTENT_LEN];   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    StMailItem m_Items[MAIL_ITEM_COUNT];    //[TRANSLATED][TRANSLATED]list
 
 
     BOOL Create(IDBInterface* pDB)
@@ -170,7 +171,7 @@ struct OffDataObject : public ShareObject
     }
 
     UINT32 m_nOpType;
-    UINT64 m_uRoleID;                       //角色ID
+    UINT64 m_uRoleID;                       //[TRANSLATED][TRANSLATED]ID
     union
     {
         UINT64          m_Parm64[4];

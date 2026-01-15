@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___StoreData.h */
 ﻿#ifndef __STORE_DATA_OBJECT_H__
 #define __STORE_DATA_OBJECT_H__
 
@@ -11,7 +12,7 @@ struct StoreDataObject : public ShareObject
 		m_uRoleID = 0;
 	}
 
-	UINT64 m_uRoleID;		//角色ID
+	UINT64 m_uRoleID;		//[TRANSLATED][TRANSLATED]ID
 
 	BOOL Create(IDBInterface* pDB)
 	{

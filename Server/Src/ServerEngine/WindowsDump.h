@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___WindowsDump.h */
 ﻿#ifndef __WINDOWS_DUMP_H__
 #define __WINDOWS_DUMP_H__
 
@@ -9,20 +10,20 @@
 
 void CreateDumpFile(LPCSTR lpstrDumpFilePathName, EXCEPTION_POINTERS *pException)  
 {  
-	// 创建Dump文件  
+	// [TRANSLATED][TRANSLATED]Dump[TRANSLATED][TRANSLATED]  
 	HANDLE hDumpFile = CreateFile(lpstrDumpFilePathName, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);  
 	if(hDumpFile ==INVALID_HANDLE_VALUE)
 	{
 		return ;
 	}
 
-	// Dump信息  
+	// Dump[TRANSLATED][TRANSLATED]  
 	MINIDUMP_EXCEPTION_INFORMATION dumpInfo;  
 	dumpInfo.ExceptionPointers	= pException;  
 	dumpInfo.ThreadId			= GetCurrentThreadId();  
 	dumpInfo.ClientPointers		= TRUE;  
 
-	// 写入Dump文件内容  
+	// [TRANSLATED][TRANSLATED]Dump[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]  
 	MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), hDumpFile, MiniDumpNormal, &dumpInfo, NULL, NULL);  
 
 	CloseHandle(hDumpFile);  
@@ -39,7 +40,7 @@ LONG ApplicationCrashHandler(EXCEPTION_POINTERS *pException)
 	return EXCEPTION_EXECUTE_HANDLER;  
 }  
 
-//例子
+//[TRANSLATED][TRANSLATED]
 /*
 	 SetUnhandledExceptionFilter(ApplicationCrashHandler);
 */

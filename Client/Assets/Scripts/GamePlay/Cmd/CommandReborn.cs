@@ -1,7 +1,8 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Cmd___CommandReborn.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
-//重生
+//[TRANSLATED][TRANSLATED]
 public class CommandReborn : ICommand
 {
     public float LastTime;

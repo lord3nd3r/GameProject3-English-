@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Core___GTWindow.cs */
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,14 +80,14 @@ public abstract class GTWindow
     {
         if (string.IsNullOrEmpty(Path))
         {
-            Debug.LogError("资源名is空");
+            Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED]is[TRANSLATED]");
             return false;
         }
         string path = string.Format("Guis/{0}", Path);
         GameObject prefab = GTResourceManager.Instance.Load<GameObject>(path);
         if (prefab == null)
         {
-            Debug.LogError(string.Format("loadWindow资源Failure:{0}", Path));
+            Debug.LogError(string.Format("loadWindow[TRANSLATED][TRANSLATED]Failure:{0}", Path));
             return false;
         }
         GameObject go = GameObject.Instantiate(prefab);

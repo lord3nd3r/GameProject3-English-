@@ -1,10 +1,11 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CMakeLists.txt */
 cmake_minimum_required(VERSION 2.8.9)
 project(ServerEngine)
 SET(PROJECT_ROOT_PATH ".")
 include_directories(./ ./DBInterface  ../../Common ../../Common/Mysql ../../Common/Lua ../../Common/protobuf/src ../PublicData)
 link_directories(../../Common/lib /usr/lib64/mysql)
 
-#DB接口
+#DB[TRANSLATED][TRANSLATED]
 set(DB_INTERFACE DBInterface)
 FILE(GLOB DB_INTERFACE "./DBInterface/*.cpp" "./DBInterface/*.h")
 

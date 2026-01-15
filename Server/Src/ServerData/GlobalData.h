@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerData___GlobalData.h */
 ﻿#ifndef __GLOBAL_DATA_OBJECT_H__
 #define __GLOBAL_DATA_OBJECT_H__
 #include "DBInterface/DBStoredProc.h"
@@ -10,15 +11,15 @@ struct GlobalDataObject : public ShareObject
 	GlobalDataObject()
 	{
 		m_dwServerID		= 0;			//serverID
-		m_u64Guid			= 0;			//全局GUID
-		m_dwMaxOnline		= 0;			//最大在线人数
+		m_u64Guid			= 0;			//[TRANSLATED][TRANSLATED]GUID
+		m_dwMaxOnline		= 0;			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 		memset(m_exData, 0, sizeof(INT32) * MAX_EXTRA_INDEX);
 	}
 
 	UINT32 m_dwServerID;        //serverID
-	UINT64 m_u64Guid;			//全局GUID
-	UINT32 m_dwMaxOnline;		//最大在线人数
-	INT32 m_exData[MAX_EXTRA_INDEX];      //扩展数据
+	UINT64 m_u64Guid;			//[TRANSLATED][TRANSLATED]GUID
+	UINT32 m_dwMaxOnline;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	INT32 m_exData[MAX_EXTRA_INDEX];      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	BOOL Create(IDBInterface* pDB)
 	{

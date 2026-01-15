@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___GridManager.cpp */
 ﻿#include "stdafx.h"
 #include "GridManager.h"
 
@@ -72,7 +73,7 @@ BOOL CGridManager::AddObjectToGrid( CMapObject* pMapObject, FLOAT x, FLOAT z )
 	return pGrid->AddObject(pMapObject);
 }
 
-//将对象添加到网格中
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL CGridManager::AddObjectToGrid(CMapObject* pMapObject, INT32 nIndex)
 {
 	CGrid* pGrid = GetGridByIndex(nIndex);
@@ -95,7 +96,7 @@ BOOL CGridManager::RemoveObjectFromGrid( CMapObject* pMapObject, FLOAT x, FLOAT 
 	return pGrid->RemoveObject(pMapObject);;
 }
 
-//将对象从网格中删除
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 BOOL CGridManager::RemoveObjectFromGrid(CMapObject* pMapObject, INT32 nIndex)
 {
 	CGrid* pGrid = GetGridByIndex(nIndex);

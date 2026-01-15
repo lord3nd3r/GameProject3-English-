@@ -1,5 +1,6 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Common___Mysql___mysql___service_mysql_string.h */
 ﻿/*
-   Copyright 漏 2012, Oracle and/or its affiliates. All rights reserved.
+   Copyright [TRANSLATED] 2012, Oracle and/or its affiliates. All rights reserved.
 
 
 

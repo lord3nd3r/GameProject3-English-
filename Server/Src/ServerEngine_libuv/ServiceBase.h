@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_libuv___ServiceBase.h */
 ﻿#ifndef __SERVICE_BASE_H__
 #define __SERVICE_BASE_H__
 
@@ -56,7 +57,7 @@ protected:
     INT32                               m_nHeartInterval;
     INT32                               m_nHeartTime;
 
-    //以下用于统计
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     UINT64                              m_uLastTick;
     INT32                               m_nRecvNum;
     INT32                               m_nSendNum;

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine_libuv___ServiceBase.cpp */
 ﻿#include "stdafx.h"
 #include "SpinLock.h"
 #include "ServiceBase.h"
@@ -59,7 +60,7 @@ BOOL ServiceBase::StartNetwork(UINT16 nPortNum, INT32 nMaxConn, IPacketDispatche
 
     if (!CNetManager::GetInstancePtr()->Start(nPortNum, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("start网络层Failure!");
+        CLog::GetInstancePtr()->LogError("start[TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
         return FALSE;
     }
 

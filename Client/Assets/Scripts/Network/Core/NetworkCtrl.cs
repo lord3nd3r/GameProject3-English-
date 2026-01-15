@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___Network___Core___NetworkCtrl.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -34,7 +35,7 @@ public class NetworkCtrl
         GTWindowManager.Instance.HideWindow(EWindowID.UINetWaiting);
         GTWindowManager.Instance.OpenWindow(EWindowID.UIMessageBoxForNetwork);
         UIMessageBoxForNetwork dialog = (UIMessageBoxForNetwork)GTWindowManager.Instance.GetWindow(EWindowID.UIMessageBoxForNetwork);
-        dialog.ShowView(string.Empty, "网络connectionFailure，请稍后重试", NetworkManager.Instance.ReConnect, () =>
+        dialog.ShowView(string.Empty, "[TRANSLATED][TRANSLATED]connectionFailure，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]", NetworkManager.Instance.ReConnect, () =>
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

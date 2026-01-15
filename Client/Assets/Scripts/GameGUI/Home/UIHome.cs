@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Home___UIHome.cs */
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -97,16 +98,16 @@ public class UIHome : GTWindow
         mTopBtnTemps = new List<ItemFunc>
         {
 
-           new ItemFunc {name="副本",icon="427",onClick=OnRaidClick},
-           new ItemFunc {name="商店",icon="425",onClick=OnShopClick},
-           new ItemFunc {name="冒险",icon="428",onClick=OnAdventureClick},
-           new ItemFunc {name="任务",icon="426",onClick=OnTaskClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="427",onClick=OnRaidClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="425",onClick=OnShopClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="428",onClick=OnAdventureClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="426",onClick=OnTaskClick},
            new ItemFunc {name="skill",icon="431",onClick=OnSkillClick},
-           new ItemFunc {name="神器",icon="432",onClick=OnRelicsClick},
-           new ItemFunc {name="坐骑",icon="422",onClick=OnMountClick},
-           new ItemFunc {name="伙伴",icon="430",onClick=OnPartnerClick},
-           new ItemFunc {name="宠物",icon="424",onClick=OnPetClick},
-           new ItemFunc {name="设置",icon="432",onClick=OnSettingClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="432",onClick=OnRelicsClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="422",onClick=OnMountClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="430",onClick=OnPartnerClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="424",onClick=OnPetClick},
+           new ItemFunc {name="[TRANSLATED][TRANSLATED]",icon="432",onClick=OnSettingClick},
         };
     }
 
@@ -532,8 +533,8 @@ public class UIHome : GTWindow
 
     private void OnUpdateBranchTask()
     {
-        string format = GTItemHelper.GetText("[00ffff]【支线】[-]{0}");
-        string content = GTItemHelper.GetText("没有发现新任务");
+        string format = GTItemHelper.GetText("[00ffff]【[TRANSLATED][TRANSLATED]】[-]{0}");
+        string content = GTItemHelper.GetText("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
         mTaskContentType2.text = GTTools.Format(format, content);
     }
 

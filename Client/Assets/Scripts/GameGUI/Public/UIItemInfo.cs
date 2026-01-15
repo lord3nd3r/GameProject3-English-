@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Public___UIItemInfo.cs */
 ﻿
 using UnityEngine;
 using System.Collections;
@@ -117,7 +118,7 @@ public class UIItemInfo : GTWindow
         int itemID = item.Id;
         DItem itemDB = ReadCfgItem.GetDataById(itemID);
         itemDesc.text = itemDB.Desc;
-        itemNum.text = GTTools.Format("拥有count：{0}", item.Num);
+        itemNum.text = GTTools.Format("[TRANSLATED][TRANSLATED]count：{0}", item.Num);
         GTItemHelper.ShowItemTexture(itemTexture, itemID);
         GTItemHelper.ShowItemName(itemName, itemID);
         GTItemHelper.ShowItemQuality(itemQuality, itemID);

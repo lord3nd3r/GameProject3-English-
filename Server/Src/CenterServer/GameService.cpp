@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___CenterServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "../Message/Msg_Game.pb.h"
@@ -40,7 +41,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("CenterServer"))
     {
-        CLog::GetInstancePtr()->LogError("CenterServeralready在running!");
+        CLog::GetInstancePtr()->LogError("CenterServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -50,7 +51,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetIntValue("center_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件center_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]center_svr_portconfigerror!");
         return FALSE;
     }
     INT32 nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("center_svr_max_con");

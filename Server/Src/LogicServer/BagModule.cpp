@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___BagModule.cpp */
 ﻿#include "stdafx.h"
 #include "BagModule.h"
 #include "DataPool.h"
@@ -163,7 +164,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pPetModule != NULL);
 			uItemGuid = pPetModule->AddPet(dwItemID);
 
-			//在这里要直接返回，因is宠物不进背包
+			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 			return TRUE;
 		}
 		break;
@@ -173,7 +174,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pMountModule != NULL);
 			uItemGuid = pMountModule->AddMount(dwItemID);
 
-			//在这里要直接返回，因is宠物不进背包
+			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 			return TRUE;
 		}
 		break;
@@ -183,7 +184,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pPartnerModule != NULL);
 			uItemGuid = pPartnerModule->AddPartner(dwItemID);
 
-			//在这里要直接返回，因is伙伴不进背包
+			//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 			return TRUE;
 		}
 		break;

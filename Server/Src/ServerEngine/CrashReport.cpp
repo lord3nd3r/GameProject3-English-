@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___CrashReport.cpp */
 ﻿#include "stdafx.h"
 
 #ifdef WIN32
@@ -100,19 +101,19 @@ void  SetCrashReport(std::string strAppName)
 {
     return;
     g_AppName = strAppName;
-    /*捕获异常信息 start*/
-    signal(SIGABRT, &exceptionalStack); //异常终止(abort)
-    signal(SIGBUS, &exceptionalStack); //硬件故障
-    signal(SIGFPE, &exceptionalStack); //算术异常
-    signal(SIGILL, &exceptionalStack); //非法硬件指令
-    signal(SIGIOT, &exceptionalStack); //硬件故障
-    signal(SIGQUIT, &exceptionalStack); //终端退出符
-    signal(SIGSEGV, &exceptionalStack); //无效存储访问
-    signal(SIGSYS, &exceptionalStack); //无效系统调用
-    signal(SIGTRAP, &exceptionalStack); //硬件故障
-    signal(SIGXCPU, &exceptionalStack); //超过CPU限制(setrlimit)
-    signal(SIGXFSZ, &exceptionalStack); //超过文件长度限制(setrlimit)
-    /*捕获异常信息 end*/
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] start*/
+    signal(SIGABRT, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED](abort)
+    signal(SIGBUS, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGFPE, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGILL, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGIOT, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGQUIT, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGSEGV, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGSYS, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGTRAP, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    signal(SIGXCPU, &exceptionalStack); //[TRANSLATED][TRANSLATED]CPU[TRANSLATED][TRANSLATED](setrlimit)
+    signal(SIGXFSZ, &exceptionalStack); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED](setrlimit)
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED] end*/
 
     setvbuf(stdout, NULL, _IONBF, 0);
     return ;

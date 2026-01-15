@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___ACT___ActDefine.cs */
 ﻿using UnityEngine;
 using System.Collections;
 
@@ -19,97 +20,97 @@ public enum EActType
 {
     TYPE_NONE             = 0,
 
-    TYPE_ADDATTR          = 1,  //增加属性
-    TYPE_SUBATTR          = 2,  //减少属性
+    TYPE_ADDATTR          = 1,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_SUBATTR          = 2,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     TYPE_HOT              = 3,  //HOT
     TYPE_DOT              = 4,  //DOT
-    TYPE_SUPER            = 5,  //霸体
-    TYPE_VARIATION        = 6,  //变形
-    TYPE_STUN             = 7,  //昏迷
-    TYPE_FIXBODY          = 8,  //定身
-    TYPE_STEALTH          = 9,  //隐身
-    TYPE_FROZEN           = 10, //冻住
+    TYPE_SUPER            = 5,  //[TRANSLATED][TRANSLATED]
+    TYPE_VARIATION        = 6,  //[TRANSLATED][TRANSLATED]
+    TYPE_STUN             = 7,  //[TRANSLATED][TRANSLATED]
+    TYPE_FIXBODY          = 8,  //[TRANSLATED][TRANSLATED]
+    TYPE_STEALTH          = 9,  //[TRANSLATED][TRANSLATED]
+    TYPE_FROZEN           = 10, //[TRANSLATED][TRANSLATED]
 
-    TYPE_BLIND            = 11, //致盲
-    TYPE_SILENT           = 12, //沉默
-    TYPE_SLEEP            = 13, //睡眠
-    TYPE_ABSORB           = 14, //吸收伤害
-    TYPE_SUCKBLOOD        = 15, //吸血
-    TYPE_DIVIVE           = 16, //无敌
-    TYPE_PARALY           = 17, //麻痹
-    TYPE_FEAR             = 18, //恐惧
-    TYPE_REFLEX           = 19, //反弹伤害
-    TYPE_TIMEDDEATH       = 20, //倒计时死亡
+    TYPE_BLIND            = 11, //[TRANSLATED][TRANSLATED]
+    TYPE_SILENT           = 12, //[TRANSLATED][TRANSLATED]
+    TYPE_SLEEP            = 13, //[TRANSLATED][TRANSLATED]
+    TYPE_ABSORB           = 14, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_SUCKBLOOD        = 15, //[TRANSLATED][TRANSLATED]
+    TYPE_DIVIVE           = 16, //[TRANSLATED][TRANSLATED]
+    TYPE_PARALY           = 17, //[TRANSLATED][TRANSLATED]
+    TYPE_FEAR             = 18, //[TRANSLATED][TRANSLATED]
+    TYPE_REFLEX           = 19, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_TIMEDDEATH       = 20, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-    TYPE_FLASH            = 21, //闪现
-    TYPE_SPURT            = 22, //冲锋
-    TYPE_BEATFLY          = 23, //击飞
-    TYPE_BEATDOWN         = 24, //击倒
-    TYPE_BEATBACK         = 25, //击退
+    TYPE_FLASH            = 21, //[TRANSLATED][TRANSLATED]
+    TYPE_SPURT            = 22, //[TRANSLATED][TRANSLATED]
+    TYPE_BEATFLY          = 23, //[TRANSLATED][TRANSLATED]
+    TYPE_BEATDOWN         = 24, //[TRANSLATED][TRANSLATED]
+    TYPE_BEATBACK         = 25, //[TRANSLATED][TRANSLATED]
     TYPE_HIT              = 26, //hit
-    TYPE_ANIM             = 27, //动画
-    TYPE_AUDIO            = 28, //声音
-    TYPE_AUDIOLOOP        = 29, //声音Loop
+    TYPE_ANIM             = 27, //[TRANSLATED][TRANSLATED]
+    TYPE_AUDIO            = 28, //[TRANSLATED][TRANSLATED]
+    TYPE_AUDIOLOOP        = 29, //[TRANSLATED][TRANSLATED]Loop
 
-    TYPE_FLOAT            = 31, //浮空
-    TYPE_PUSH             = 32, //推人
-    TYPE_FACETOTARGET     = 33, //朝向
-    TYPE_TAUNT            = 34, //嘲讽
-    TYPE_GATHER           = 35, //聚怪
-    TYPE_FALSEDEAD        = 36, //假死
+    TYPE_FLOAT            = 31, //[TRANSLATED][TRANSLATED]
+    TYPE_PUSH             = 32, //[TRANSLATED][TRANSLATED]
+    TYPE_FACETOTARGET     = 33, //[TRANSLATED][TRANSLATED]
+    TYPE_TAUNT            = 34, //[TRANSLATED][TRANSLATED]
+    TYPE_GATHER           = 35, //[TRANSLATED][TRANSLATED]
+    TYPE_FALSEDEAD        = 36, //[TRANSLATED][TRANSLATED]
 
-    TYPE_BEAM             = 40, //光束
-    TYPE_TRIGGER          = 41, //trigger器
+    TYPE_BEAM             = 40, //[TRANSLATED][TRANSLATED]
+    TYPE_TRIGGER          = 41, //trigger[TRANSLATED]
     TYPE_EFFECT           = 42, //effect
-    TYPE_FLYWEAPON        = 43, //飞行武器
-    TYPE_LIGHTING         = 44, //闪电
-    TYPE_MISSILE          = 45, //基础飞弹
-    TYPE_RAY              = 46, //射线
-    TYPE_WALL             = 47, //阻挡墙
-    TYPE_BINDEFFECT       = 48, //绑定effect
-    TYPE_SUMMON           = 49, //召唤
+    TYPE_FLYWEAPON        = 43, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_LIGHTING         = 44, //[TRANSLATED][TRANSLATED]
+    TYPE_MISSILE          = 45, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_RAY              = 46, //[TRANSLATED][TRANSLATED]
+    TYPE_WALL             = 47, //[TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_BINDEFFECT       = 48, //[TRANSLATED][TRANSLATED]effect
+    TYPE_SUMMON           = 49, //[TRANSLATED][TRANSLATED]
 
-    TYPE_MOVE             = 56, //位移
-    TYPE_THROUGHMOVESTART = 57, //穿插位移begin
-    TYPE_THROUGHMOVE      = 58, //穿插位移
-    TYPE_THROUGHMOVEEND   = 59, //穿插位移end
+    TYPE_MOVE             = 56, //[TRANSLATED][TRANSLATED]
+    TYPE_THROUGHMOVESTART = 57, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]begin
+    TYPE_THROUGHMOVE      = 58, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_THROUGHMOVEEND   = 59, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]end
 
-    TYPE_DAMAGE           = 62, //伤害
-    TYPE_HEAL             = 63, //治疗
+    TYPE_DAMAGE           = 62, //[TRANSLATED][TRANSLATED]
+    TYPE_HEAL             = 63, //[TRANSLATED][TRANSLATED]
 
 
-    TYPE_SCOPESPHERE      = 71, //球形range检测target
-    TYPE_SCOPECYLINDER    = 72, //弧形range检测target
-    TYPE_SCOPEBOX         = 73, //盒子range检测target
-    TYPE_SCOPETRIANGLE    = 74, //三角range检测target
-    TYPE_ADDBUFF          = 75, //添加BUFF
-    TYPE_DISPEL           = 76, //驱散
-    TYPE_STEALBUFF        = 77, //偷取BUFF
-    TYPE_WRITEWHEELEYE    = 78, //写轮眼
-    TYPE_AURA             = 79, //光环
+    TYPE_SCOPESPHERE      = 71, //[TRANSLATED][TRANSLATED]range[TRANSLATED][TRANSLATED]target
+    TYPE_SCOPECYLINDER    = 72, //[TRANSLATED][TRANSLATED]range[TRANSLATED][TRANSLATED]target
+    TYPE_SCOPEBOX         = 73, //[TRANSLATED][TRANSLATED]range[TRANSLATED][TRANSLATED]target
+    TYPE_SCOPETRIANGLE    = 74, //[TRANSLATED][TRANSLATED]range[TRANSLATED][TRANSLATED]target
+    TYPE_ADDBUFF          = 75, //[TRANSLATED][TRANSLATED]BUFF
+    TYPE_DISPEL           = 76, //[TRANSLATED][TRANSLATED]
+    TYPE_STEALBUFF        = 77, //[TRANSLATED][TRANSLATED]BUFF
+    TYPE_WRITEWHEELEYE    = 78, //[TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_AURA             = 79, //[TRANSLATED][TRANSLATED]
 
-    TYPE_SHADER           = 81, //Shader效果
-    TYPE_SCALE            = 82, //变换大小
-    TYPE_MATERIAL         = 83, //材质效果
+    TYPE_SHADER           = 81, //Shader[TRANSLATED][TRANSLATED]
+    TYPE_SCALE            = 82, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_MATERIAL         = 83, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-    TYPE_COLORSKY         = 85, //天空变色
-    TYPE_SHAKE            = 86, //震屏效果
-    TYPE_ROTATE           = 87, //旋转
-    TYPE_TIMESCALE        = 88, //时间控制
-    TYPE_HIDEWEAPON       = 89, //隐藏武器
+    TYPE_COLORSKY         = 85, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_SHAKE            = 86, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_ROTATE           = 87, //[TRANSLATED][TRANSLATED]
+    TYPE_TIMESCALE        = 88, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_HIDEWEAPON       = 89, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-    TYPE_RESETSKILLCD     = 91, //重置Skill CD
-    TYPE_SHORTENSKILLCD   = 92, //减少Skill CD
-    TYPE_EXTENDSKILLID    = 93, //延长Skill CD
-    TYPE_BREAKSKILL       = 94, //打断skill
-    TYPE_UPSKILLRESULT    = 95, //提高skill效果
-    TYPE_CHANGESKILL      = 96, //使当前skill升级is新的skill
+    TYPE_RESETSKILLCD     = 91, //[TRANSLATED][TRANSLATED]Skill CD
+    TYPE_SHORTENSKILLCD   = 92, //[TRANSLATED][TRANSLATED]Skill CD
+    TYPE_EXTENDSKILLID    = 93, //[TRANSLATED][TRANSLATED]Skill CD
+    TYPE_BREAKSKILL       = 94, //[TRANSLATED][TRANSLATED]skill
+    TYPE_UPSKILLRESULT    = 95, //[TRANSLATED][TRANSLATED]skill[TRANSLATED][TRANSLATED]
+    TYPE_CHANGESKILL      = 96, //[TRANSLATED][TRANSLATED][TRANSLATED]skill[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED]skill
 
-    TYPE_PROBABLY         = 101, //执行子节点们的可能性
-    TYPE_SEQUENCE         = 102, //对子节点执行队列操作
-    TYPE_CLONE            = 103, //克隆节点
-    TYPE_RANDOM           = 104, //对子节点执行随机执行一个的操作
-    TYPE_RANDOMMANY       = 105, //对子节点执行随机执行多个的操作
+    TYPE_PROBABLY         = 101, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_SEQUENCE         = 102, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_CLONE            = 103, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_RANDOM           = 104, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_RANDOMMANY       = 105, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     TYPE_TREE             = 106,
     TYPE_LOG              = 107,
 }
@@ -117,16 +118,16 @@ public enum EActType
 public enum ESkillCostType
 {
     NO,
-    MP = 1,//魔法
+    MP = 1,//[TRANSLATED][TRANSLATED]
     HP = 2,//life
-    SP = 3,//特殊资源
-    XP = 4,//经验
+    SP = 3,//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    XP = 4,//[TRANSLATED][TRANSLATED]
 }
 
 public enum ESkillType
 {
-    Postive = 0,//主动
-    Passive = 1,//被动
+    Postive = 0,//[TRANSLATED][TRANSLATED]
+    Passive = 1,//[TRANSLATED][TRANSLATED]
 }
 
 public enum ESkillMoveType
@@ -138,11 +139,11 @@ public enum ESkillMoveType
 
 public enum EDamageType
 {
-    TYPE_PHYSICS = 0,//物理
-    TYPE_FIRE    = 1,//火焰
-    TYPE_ICE     = 2,//冰霜
-    TYPE_DARK    = 3,//暗影
-    TYPE_LIGHT   = 4 //闪电
+    TYPE_PHYSICS = 0,//[TRANSLATED][TRANSLATED]
+    TYPE_FIRE    = 1,//[TRANSLATED][TRANSLATED]
+    TYPE_ICE     = 2,//[TRANSLATED][TRANSLATED]
+    TYPE_DARK    = 3,//[TRANSLATED][TRANSLATED]
+    TYPE_LIGHT   = 4 //[TRANSLATED][TRANSLATED]
 }
 
 
@@ -164,38 +165,38 @@ public enum ESelectTargetPolicy
 
 public enum EActStatus
 {
-    INITIAL,//初始化
+    INITIAL,//[TRANSLATED][TRANSLATED][TRANSLATED]
     STARTUP,//begin
     TRIGGER,//trigger
     RUNNING,//running
-    SELFEND,//本体runningend
+    SELFEND,//[TRANSLATED][TRANSLATED]runningend
     SUCCESS,//Success
 }
 
 
 public enum ESkillBreakReason
 {
-    TYPE_NONE,      //无
-    TYPE_BUFF,      //Buff打断
-    TYPE_STIFF,     //硬直打断
-    TYPE_NEWSKILL,  //新skill打断
-    TYPE_BEDAMAGE,  //受到伤害打断
-    TYPE_SPECIAL,   //特殊打断
+    TYPE_NONE,      //[TRANSLATED]
+    TYPE_BUFF,      //Buff[TRANSLATED][TRANSLATED]
+    TYPE_STIFF,     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_NEWSKILL,  //[TRANSLATED]skill[TRANSLATED][TRANSLATED]
+    TYPE_BEDAMAGE,  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    TYPE_SPECIAL,   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 }
 
 
 public enum EActEventType
 {
-    Special,//特殊
-    Instant,//瞬间
-    Subtain,//持续
+    Special,//[TRANSLATED][TRANSLATED]
+    Instant,//[TRANSLATED][TRANSLATED]
+    Subtain,//[TRANSLATED][TRANSLATED]
 }
 
 public enum EnumCameraShake
 {
-    Horizontal,             //水平
-    Vertical,               //垂直
-    HorizontalAndVertical   //水平和垂直都摇晃
+    Horizontal,             //[TRANSLATED][TRANSLATED]
+    Vertical,               //[TRANSLATED][TRANSLATED]
+    HorizontalAndVertical   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 }
 
 //Buffstacktype
@@ -207,7 +208,7 @@ public enum EBuffOverlayType
     OverlayAndRefresh,
 }
 
-//Buff销毁type
+//Buff[TRANSLATED][TRANSLATED]type
 public enum EBuffDestroyType
 {
     BY_NONE       = 0,
@@ -227,16 +228,16 @@ public enum EBuffType
 }
 
 
-//effect绑定position
+//effect[TRANSLATED][TRANSLATED]position
 public enum EBind
 {
     None  =-1,
-    Head  = 0, //出现在头部position
-    Body  = 1, //出现在身体position
-    Foot  = 2, //出现在脚部position
-    LHand = 3, //出现在左手上
-    RHand = 4, //出现在右手上
-    Buff  = 5, //Buff点
+    Head  = 0, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
+    Body  = 1, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
+    Foot  = 2, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
+    LHand = 3, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    RHand = 4, //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    Buff  = 5, //Buff[TRANSLATED]
 }
 
 public enum EBindTarget
@@ -245,7 +246,7 @@ public enum EBindTarget
     TYPE_TARGET = 1,
 }
 
-//移动朝向
+//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 public enum EMoveToward
 {
     MoveToTarget,

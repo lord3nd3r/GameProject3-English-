@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___Scene.h */
 ﻿#ifndef _SCENE_H_
 #define _SCENE_H_
 #include "GameObject/SceneObject.h"
@@ -68,29 +69,29 @@ public:
 
 	BOOL			SelectTargets(std::vector<CSceneObject*>& vTargets, UINT64 uExcludeID, UINT32 dwCamp, EHitShipType hitType, Vector3D hitPos, FLOAT fHitDir, ERangeType rangeType, FLOAT RangeParams[5]);
 
-	//在单人PVE情况下，副本应该只有一个人
+	//[TRANSLATED][TRANSLATED][TRANSLATED]PVE[TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	CSceneObject*   GetOwnPlayer();
 
 	//////////////////////////////////////////////////////////////////////////
-	//创建角色相关对象
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	CSceneObject*	CreatePlayer(const TransRoleData& roleData, UINT64 uHostID, UINT32 dwCamp );
 	CSceneObject*	CreatePet(const TransPetData& petData, UINT64 uHostID, UINT32 dwCamp );
 	CSceneObject*	CreatePartner(const TransPartnerData& partnerData, UINT64 uHostID, UINT32 dwCamp );
 
-	//创建怪物对象
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	CSceneObject*	CreateMonster( UINT32 dwActorID, UINT32 dwCamp, FLOAT x, FLOAT y, FLOAT z, FLOAT ft);
 
-	//创建召唤对象
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	CSceneObject*	CreateSummon( UINT32 dwActorID, UINT64 uSummonerID, UINT32 dwCamp, FLOAT x, FLOAT y, FLOAT z, FLOAT ft);
 
-	//创建bullet对象
+	//[TRANSLATED][TRANSLATED]bullet[TRANSLATED][TRANSLATED]
 	CBulletObject*	CreateBullet(UINT32 dwBulletID, StBulletInfo* pBulletInfo, CSkillObject* pSkillObject, Vector3D startPos);
 
-	BOOL			IsCampAllDie(UINT32 dwCamp);  //用于结算，判断阵营whether全部死亡.
-	BOOL			IsMonsterAllDie();            //用于判断下一波怪whether需要刷出.
-	BOOL            IsMonsterAllGen();            //whether所有怪物already出尽
+	BOOL			IsCampAllDie(UINT32 dwCamp);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].
+	BOOL			IsMonsterAllDie();            //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].
+	BOOL            IsMonsterAllGen();            //whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]already[TRANSLATED][TRANSLATED]
 
-	//解析场景config文件
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]config[TRANSLATED][TRANSLATED]
 	BOOL			ReadSceneXml();
 public:
 	BOOL			IsFinished();
@@ -105,27 +106,27 @@ public:
 	UINT64			GenNewGuid();
 
 public:
-	UINT32			m_dwPlayerNum;  //副本需要进入的人数
-	UINT32			m_dwLoginNum;   //登录副本的人数
-	UINT32			m_dwCopyGuid;	//当前副本实例ID
-	UINT32			m_dwCopyID;		//当前副本TYPE
-	UINT32			m_dwCopyType;	//逻辑type
-	UINT64          m_uCreateTime;  //副本create time
-	UINT64			m_uStartTime;   //副本begin时间
-	UINT64			m_uTotalTime;	//副本持续时间
-	UINT64			m_dwLastTick;	//上一个tick时间
-	UINT64			m_uMaxGuid;	    //场景里的最大GUID
-	UINT64			m_uCreateKey;	//创建副本的专用params
-	BOOL			m_bFinished;	//副本whether完成
+	UINT32			m_dwPlayerNum;  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32			m_dwLoginNum;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT32			m_dwCopyGuid;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+	UINT32			m_dwCopyID;		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]TYPE
+	UINT32			m_dwCopyType;	//[TRANSLATED][TRANSLATED]type
+	UINT64          m_uCreateTime;  //[TRANSLATED][TRANSLATED]create time
+	UINT64			m_uStartTime;   //[TRANSLATED][TRANSLATED]begin[TRANSLATED][TRANSLATED]
+	UINT64			m_uTotalTime;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	UINT64			m_dwLastTick;	//[TRANSLATED][TRANSLATED][TRANSLATED]tick[TRANSLATED][TRANSLATED]
+	UINT64			m_uMaxGuid;	    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]GUID
+	UINT64			m_uCreateKey;	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]params
+	BOOL			m_bFinished;	//[TRANSLATED][TRANSLATED]whether[TRANSLATED][TRANSLATED]
 	SceneLogicBase*	m_pSceneLogic;
 	MonsterCreator*	m_pMonsterCreator;
 
-	std::map<UINT64, CSceneObject*>	 m_mapPlayer;		//player管理器
-	std::map<UINT64, CSceneObject*>  m_mapMonster;      //怪物管理器
-	std::map<UINT64, CBulletObject*> m_mapBullet;		//bullet管理器
+	std::map<UINT64, CSceneObject*>	 m_mapPlayer;		//player[TRANSLATED][TRANSLATED][TRANSLATED]
+	std::map<UINT64, CSceneObject*>  m_mapMonster;      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	std::map<UINT64, CBulletObject*> m_mapBullet;		//bullet[TRANSLATED][TRANSLATED][TRANSLATED]
 
 	//////////////////////////////////////////////////////////////////////////
-	//伤害效果
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	HitEffectNtf    m_HitEffectNtf;
 	BOOL            AddHitEffect(UINT64 uAttackerID, UINT64 uTargetID, INT32 nHurtValue, BOOL bCritHit, INT32 nHitActionID, INT32 nHitEffectID, FLOAT fHitDistance);
 	BOOL            BroadHitEffect();

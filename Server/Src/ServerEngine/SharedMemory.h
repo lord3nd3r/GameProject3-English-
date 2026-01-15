@@ -1,36 +1,37 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___SharedMemory.h */
 ﻿#ifndef __SHARE_MEMORY_H__
 #define __SHARE_MEMORY_H__
 #include "DBInterface/DBInterface.h"
 
 #define BLOCK_CHECK_CODE    0x5A
 
-/**共享内存的状态
+/**[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 */
 enum SharedMemoryStatus
 {
-    SMS_NONE,       //未使用空闲状态
-    SMS_USE,        //已经使用了，数据库servercan读取修改写入数据库
-    SMS_LOCK,       //锁住状态，逻辑server正在写入
-    SMS_RELEASE,    //逻辑server已经释放了。数据库server写入修改后can置isSMS_NONE状态
-    SMS_DELETE,     //删除标志
+    SMS_NONE,       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    SMS_USE,        //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED]servercan[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    SMS_LOCK,       //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    SMS_RELEASE,    //[TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。[TRANSLATED][TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]can[TRANSLATED]isSMS_NONE[TRANSLATED][TRANSLATED]
+    SMS_DELETE,     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
-///所有放到sharedMemory里的元素都必须是从ShareObject派生的
+///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]sharedMemory[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ShareObject[TRANSLATED][TRANSLATED][TRANSLATED]
 class ShareObject
 {
 public:
     ShareObject();
 
-    ///begin修改，标记is被占用
+    ///begin[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED]
     void Lock();
 
-    ///标记is个改完成。
+    ///[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
     void Unlock();
 
-    ///标记is已经释放了
+    ///[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     void Release();
 
-    //标记is删除
+    //[TRANSLATED][TRANSLATED]is[TRANSLATED][TRANSLATED]
     void Destroy();
 
     void UseIt();
@@ -54,16 +55,16 @@ public:
 private:
     INT32                      m_nCheckCode;
     SharedMemoryStatus         m_Status;
-    time_t                     m_UpdateTime;    ///最后一次修改时间
+    time_t                     m_UpdateTime;    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
-///记录每个T块的状态
+///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]T[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 struct _SMBlock
 {
-    INT32           m_nIndex;      //数据当前编号
-    BOOL            m_bUse;         //whether在使用true是正在使用，false是没有使用
-    BOOL            m_bNewBlock;    //whether是刚刚新创建的区块
-    time_t          m_beforeTime;   //DSserver更新完成后回写的信息时间。
+    INT32           m_nIndex;      //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    BOOL            m_bUse;         //whether[TRANSLATED][TRANSLATED][TRANSLATED]true[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，false[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    BOOL            m_bNewBlock;    //whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    time_t          m_beforeTime;   //DSserver[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
     time_t          m_afterTime;
     _SMBlock()
     {
@@ -75,11 +76,11 @@ struct _SMBlock
     }
 };
 
-///共享内存页结构
+///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 struct shareMemoryPage
 {
-    char*        m_pdata;///指定共享内存地址
-    _SMBlock*    m_pBlock;///数据块的头position
+    char*        m_pdata;///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    _SMBlock*    m_pBlock;///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]position
     HANDLE       m_shm;///
 };
 
@@ -94,76 +95,76 @@ public:
 protected:
 
     typedef std::vector<shareMemoryPage> ShareMemoryPageMapping;
-    ///共享内存页映射.
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED].
     ShareMemoryPageMapping m_ShareMemoryPageMapping;
 
-    INT32           m_nCountperPage;    ///页面容纳Ttypecount
-    INT32           m_nPageCount;   ///页count
-    INT32           m_nCount;       ///Ttype的总个数,Ttype必须是定长的。
-    INT32           m_nSpace;       ///每个元素的宽度
+    INT32           m_nCountperPage;    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Ttypecount
+    INT32           m_nPageCount;   ///[TRANSLATED]count
+    INT32           m_nCount;       ///Ttype[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],Ttype[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
+    INT32           m_nSpace;       ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32           m_rawblockSize;
     INT32           m_nModuleID;
     BOOL            m_bEmpty;
 
-    ///所有数据头的集合
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     typedef  std::map<INT32, _SMBlock*>    mapSMBlock;
-    mapSMBlock                     m_mapSMBlock;///所有数据块头信息
+    mapSMBlock                     m_mapSMBlock;///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     typedef std::map<void*, _SMBlock*>  mapUsedSMBlock;
-    mapUsedSMBlock                 m_mapUsedSMBlock;    ///所有使用了块的数据信息
+    mapUsedSMBlock                 m_mapUsedSMBlock;    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
     typedef std::map<INT32, _SMBlock*> mapFreeSMBlock;
-    mapFreeSMBlock                 m_mapFreeSMBlock;///所有空闲的块信息
+    mapFreeSMBlock                 m_mapFreeSMBlock;///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 private:
-    ///创建一个新页
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL NewPage();
     /**
-    * @brief        初始化数据区域
-    * @details      数据清0，并设置保护区域
-    * @param[in]    rPage : 共享内存页
+    * @brief        [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    * @details      [TRANSLATED][TRANSLATED][TRANSLATED]0，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    * @param[in]    rPage : [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     * @return       void
     * @remarks
     */
     void InitPage(shareMemoryPage& rPage);
 
 public:
-    ///数据库server不需要初始化map,逻辑server才需要,所以分开
+    ///[TRANSLATED][TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]map,[TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     void InitToMap();
 
-    /**whether是首创共享内存*/
+    /**whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     BOOL IsFirstCreated();
 
-    /**从共享内存里恢复其他页*/
+    /**[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     void ImportOtherPage();
 
-    /**获取count*/
+    /**[TRANSLATED][TRANSLATED]count*/
     const INT32 GetCount()const;
 
-    /**获取还有多少块空闲内存    */
+    /**[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]    */
     INT32 GetFreeCount()const;
 
-    ///获取已经使用了多少块
+    ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     INT32 GetUseCount()const;
 
-    /**通过id获取原始内存中的描述块指针*/
+    /**[TRANSLATED][TRANSLATED]id[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     virtual _SMBlock* GetSMBbyRawIndex(INT32 index);
 
-    /**通过id获取原始内存中的描述块指针*/
+    /**[TRANSLATED][TRANSLATED]id[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     virtual ShareObject*  GetObjectByRawindex(INT32 index);
 
     const INT32 GetRawMemoryBlockSize();
 
     const INT32 GetBlockSize();
 
-    /*handle已用区块中被数据库server释放的区块*/
+    /*handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     void ProcessCleanDirtyData();
 
-    /*从空闲内存中分配一个块,如果没有了返回空
-    @param isNewBlock istrue时会在保存期调用saveobject 的Create虚函数
+    /*[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    @param isNewBlock istrue[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]saveobject [TRANSLATED]Create[TRANSLATED][TRANSLATED][TRANSLATED]
     */
     virtual ShareObject* NewObject(BOOL isNewBlock = false);
 
-    /**释放一块已经不再使用的内存*/
+    /**[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     virtual BOOL DestoryObject(ShareObject* pobject);
 
     mapUsedSMBlock& GetUsedDataList();
@@ -242,10 +243,10 @@ public:
         return m_nErrorCount;
     }
 
-    /**数据库修改*/
+    /**[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]*/
     BOOL SaveModifyToDB(IDBInterface* pdb)
     {
-        ///共享内存不存在直接返回
+        ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
         if (m_MemoryPool == NULL)
         {
             m_MemoryPool = new SharedMemory<T>(m_nModuleID, m_nCount, true);
@@ -257,7 +258,7 @@ public:
 
         if (m_MemoryPool->IsFirstCreated())
         {
-            ///共享内存还没创建
+            ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             delete m_MemoryPool;
             m_MemoryPool = NULL;
             return FALSE;
@@ -268,7 +269,7 @@ public:
 
         INT32 nCreateCount = 0, nUpdateCount = 0, nDeleteCount = 0, nRealseCount = 0;
         BOOL hasOprate = false;
-        ///获取所有修改过的数据,getRawMemoryBlockSize会重新计算所有共享块，
+        ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED],getRawMemoryBlockSize[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，
         INT32 nTemblockSize = m_MemoryPool->GetRawMemoryBlockSize();
         for (INT32 r = 0; r < nTemblockSize; r++)
         {
@@ -320,7 +321,7 @@ public:
                 nDeleteCount++;
                 continue;
             }
-            ///其次回调新建
+            ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
             if (pBlock->m_bNewBlock)
             {
                 pBlock->m_beforeTime = time(0);
@@ -370,7 +371,7 @@ public:
 
             if (pdata->IsRelease())
             {
-                ///释放的时候执行一次保存...如果上次没有保存Success或者，释放前修改了就再保存一次
+                ///[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]...[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
                 if ((lastMotifyTime > 0) && (afterTime < beforeTime || lastMotifyTime > beforeTime))
                 {
                     pBlock->m_beforeTime = time(0);
@@ -397,9 +398,9 @@ public:
         return hasOprate;
     }
 private:
-    SharedMemory<T>*    m_MemoryPool; //模块内存池
-    INT32               m_nCount;     //共享内存大小
-    INT32               m_nModuleID;  //模块ID
+    SharedMemory<T>*    m_MemoryPool; //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32               m_nCount;     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    INT32               m_nModuleID;  //[TRANSLATED][TRANSLATED]ID
     INT32               m_nErrorCount;
 };
 

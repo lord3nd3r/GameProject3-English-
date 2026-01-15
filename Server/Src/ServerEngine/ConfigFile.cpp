@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___ServerEngine___ConfigFile.cpp */
 ﻿#include "stdafx.h"
 #include "ConfigFile.h"
 
@@ -69,7 +70,7 @@ std::string CConfigFile::GetStringValue( std::string strName )
         return itor->second;
     }
 
-    CLog::GetInstancePtr()->LogError("无效的config选项: [%s]", strName.c_str());
+    CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]config[TRANSLATED][TRANSLATED]: [%s]", strName.c_str());
 
     return "";
 }

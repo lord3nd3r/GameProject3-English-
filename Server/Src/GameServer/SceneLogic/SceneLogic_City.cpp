@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_City.cpp */
 ﻿#include "stdafx.h"
 #include "SceneLogic_City.h"
 #include "../GameObject/SceneObject.h"
@@ -32,7 +33,7 @@ BOOL SceneLogic_City::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_City::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//player进入副本了。
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 
 	return TRUE;
 }
@@ -41,7 +42,7 @@ BOOL SceneLogic_City::OnPlayerLeave(CSceneObject* pPlayer, BOOL bDisConnect)
 {
 	m_pScene->BroadRemoveObject(pPlayer);
 	m_pScene->DeletePlayer(pPlayer->GetObjectGUID());
-	//在主城里下线，宠物和伙伴也应该清除
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 	CSceneObject* pPet = m_pScene->GetSceneObject(pPlayer->m_uPetGuid);
 	if (pPet != NULL)

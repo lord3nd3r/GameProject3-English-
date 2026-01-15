@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Flyword___FlywordSystem.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -79,7 +80,7 @@ public class FlywordSystem : IGameLoop
                 break;
             case EFlyWordType.TYPE_AVATAR_CRIT:
                 flyword.TextEnlarge = 1.5f;
-                flyword.Text = "爆击 " + value;
+                flyword.Text = "[TRANSLATED][TRANSLATED] " + value;
                 break;
             case EFlyWordType.TYPE_AVATAR_HURT:
                 flyword.Text = value;

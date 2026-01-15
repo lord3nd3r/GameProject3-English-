@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 
@@ -31,7 +32,7 @@ CGameService::CGameService(void)
     m_dwLogConnID    = 0;
     m_dwLoginConnID  = 0;
     m_dwDBConnID     = 0;
-    m_dwCenterConnID = 0;   //中心服的connectionID
+    m_dwCenterConnID = 0;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionID
     m_uSvrOpenTime   = 0;
     m_dwDbErrorCount = 0;
     m_bRegSuccessed  = FALSE;
@@ -42,7 +43,7 @@ CGameService::~CGameService(void)
     m_dwLogConnID   = 0;
     m_dwLoginConnID = 0;
     m_dwDBConnID    = 0;
-    m_dwCenterConnID  = 0;   //中心服的connectionID
+    m_dwCenterConnID  = 0;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]connectionID
     m_uSvrOpenTime  = 0;
     m_dwDbErrorCount = 0;
     m_bRegSuccessed = FALSE;
@@ -87,13 +88,13 @@ BOOL CGameService::Init()
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("load servercfg.ini文件Failure!");
+        CLog::GetInstancePtr()->LogError("load servercfg.ini[TRANSLATED][TRANSLATED]Failure!");
         return FALSE;
     }
 
     if (CommonFunc::IsAlreadyRun("LogicServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("LogicServeralready在running!");
+        CLog::GetInstancePtr()->LogError("LogicServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -102,7 +103,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("logic_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件logic_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]logic_svr_portconfigerror!");
         return FALSE;
     }
 
@@ -117,38 +118,38 @@ BOOL CGameService::Init()
 
     if (!CDataPool::GetInstancePtr()->InitDataPool())
     {
-        CLog::GetInstancePtr()->LogError("初始化共享内存池Failure!");
+        CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure!");
         return FALSE;
     }
 
     ///////////////////////////////////
-    //serverstart之前需要load的数据
+    //serverstart[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]load[TRANSLATED][TRANSLATED][TRANSLATED]
     if (!CStaticData::GetInstancePtr()->LoadConfigData("Config.db"))
     {
-        CLog::GetInstancePtr()->LogError("load静态config数据Failure!");
+        CLog::GetInstancePtr()->LogError("load[TRANSLATED][TRANSLATED]config[TRANSLATED][TRANSLATED]Failure!");
         return FALSE;
     }
 
     //if (!CLuaManager::GetInstancePtr()->Init())
     //{
-    //  CLog::GetInstancePtr()->LogError("初始化Lua环境Failure!");
+    //  CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED][TRANSLATED]Lua[TRANSLATED][TRANSLATED]Failure!");
     //  return FALSE;
     //}
 
     //if (!luaopen_LuaScript(CLuaManager::GetInstancePtr()->GetLuaState()))
     //{
-    //  CLog::GetInstancePtr()->LogError("导出Lua接口Failure!");
+    //  CLog::GetInstancePtr()->LogError("[TRANSLATED][TRANSLATED]Lua[TRANSLATED][TRANSLATED]Failure!");
     //  return FALSE;
     //}
 
     //if (!CLuaManager::GetInstancePtr()->LoadAllLua(".\\Lua"))
     //{
-    //  CLog::GetInstancePtr()->LogError("loadlua代码Failure!");
+    //  CLog::GetInstancePtr()->LogError("loadlua[TRANSLATED][TRANSLATED]Failure!");
     //  return FALSE;
     //}
 
     ///////////////////////////////////
-    //serverstart之前需要load的数据
+    //serverstart[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]load[TRANSLATED][TRANSLATED][TRANSLATED]
     std::string strHost = CConfigFile::GetInstancePtr()->GetStringValue("mysql_game_svr_ip");
     nPort = CConfigFile::GetInstancePtr()->GetIntValue("mysql_game_svr_port");
     std::string strUser = CConfigFile::GetInstancePtr()->GetStringValue("mysql_game_svr_user");
@@ -514,13 +515,13 @@ BOOL CGameService::ReportServerStatus()
 
     LogicUpdateInfoReq Req;
 
-    Req.set_maxonline(CGlobalDataManager::GetInstancePtr()->GetMaxOnline()); //最大在线人数
-    Req.set_curonline(CPlayerManager::GetInstancePtr()->GetOnlineCount());   //当前在线人数
-    Req.set_totalnum(CSimpleManager::GetInstancePtr()->GetTotalCount());     //总注册人数
-    Req.set_cachenum(CPlayerManager::GetInstancePtr()->GetCount());          //当前缓存人数
-    Req.set_serverid(CConfigFile::GetInstancePtr()->GetIntValue("areaid"));  //区服ID
-    Req.set_servername(CConfigFile::GetInstancePtr()->GetStringValue("areaname")); //区服Name
-    Req.set_dberrcnt(m_dwDbErrorCount);                                      //db写error数
+    Req.set_maxonline(CGlobalDataManager::GetInstancePtr()->GetMaxOnline()); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    Req.set_curonline(CPlayerManager::GetInstancePtr()->GetOnlineCount());   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    Req.set_totalnum(CSimpleManager::GetInstancePtr()->GetTotalCount());     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    Req.set_cachenum(CPlayerManager::GetInstancePtr()->GetCount());          //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+    Req.set_serverid(CConfigFile::GetInstancePtr()->GetIntValue("areaid"));  //[TRANSLATED][TRANSLATED]ID
+    Req.set_servername(CConfigFile::GetInstancePtr()->GetStringValue("areaname")); //[TRANSLATED][TRANSLATED]Name
+    Req.set_dberrcnt(m_dwDbErrorCount);                                      //db[TRANSLATED]error[TRANSLATED]
 
     return ServiceBase::GetInstancePtr()->SendMsgProtoBuf(m_dwLoginConnID, MSG_LOGIC_UPDATE_REQ, 0, 0, Req);
 }
@@ -532,12 +533,12 @@ BOOL CGameService::OnMsgRegToLoginAck(NetPacket* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
 
     ERROR_RETURN_TRUE(Ack.retcode() == MRC_SUCCESSED);
-    //表示注册Success
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success
     m_bRegSuccessed = TRUE;
 
     m_uSvrOpenTime = Ack.svropentime();
 
-    CLog::GetInstancePtr()->LogError("---------开服时间:%s--------", CommonFunc::TimeToString(m_uSvrOpenTime).c_str());
+    CLog::GetInstancePtr()->LogError("---------[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:%s--------", CommonFunc::TimeToString(m_uSvrOpenTime).c_str());
 
     return TRUE;
 }
@@ -565,8 +566,8 @@ BOOL CGameService::OnMsgUpdateInfoAck(NetPacket* pNetPacket)
 
     m_uSvrOpenTime = Ack.svropentime();
 
-    //这里handle开服时间发生改变有event
-    CLog::GetInstancePtr()->LogError("---------开服时间:%s--------", CommonFunc::TimeToString(m_uSvrOpenTime).c_str());
+    //[TRANSLATED][TRANSLATED]handle[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]event
+    CLog::GetInstancePtr()->LogError("---------[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]:%s--------", CommonFunc::TimeToString(m_uSvrOpenTime).c_str());
 
     return TRUE;
 }

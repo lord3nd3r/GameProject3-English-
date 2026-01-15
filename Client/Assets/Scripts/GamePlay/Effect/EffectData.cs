@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GamePlay___Effect___EffectData.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -63,7 +64,7 @@ public class EffectData : IObj
         this.Cfg = ReadCfgEffect.GetDataById(id);
         if (Cfg == null)
         {
-            Debug.LogError("不存在effectID =" + ID);
+            Debug.LogError("[TRANSLATED][TRANSLATED][TRANSLATED]effectID =" + ID);
             return;
         }
         GameObject go = GTPoolManager.Instance.GetObject(Cfg.Path);

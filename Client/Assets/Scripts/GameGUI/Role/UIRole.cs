@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Role___UIRole.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -110,7 +111,7 @@ public class UIRole : GTWindow
         XCharacter c = DataDBSCharacter.GetDataById(carrerID);
         if(c == null)
         {
-            GTItemHelper.ShowTip("你还没有创建这个角色");
+            GTItemHelper.ShowTip("[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         GTNetworkSend.Instance.TryRoleLogin(c.GUID);
@@ -141,7 +142,7 @@ public class UIRole : GTWindow
         btnRoll.SetActive(role == null);
         iptHeroName.gameObject.SetActive(role == null);
         btnEnterGame.SetActive(role != null);
-        labHeroName.text = role != null ? GTTools.Format("Lv.{0} {1}", role.Level, role.Name != null ? role.Name : actorDB.Name) : "未创建";
+        labHeroName.text = role != null ? GTTools.Format("Lv.{0} {1}", role.Level, role.Name != null ? role.Name : actorDB.Name) : "[TRANSLATED][TRANSLATED][TRANSLATED]";
     }
 
     private void InitView()

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___MountModule.h */
 ﻿#ifndef __MOUNT_MODULE_H__
 #define __MOUNT_MODULE_H__
 #include "ModuleBase.h"
@@ -42,8 +43,8 @@ public:
 
 
 	//********************* Message handlers begin ******************************
-	BOOL OnMsgSetupMountReq(NetPacket* pNetPacket);  //出战坐骑
-	BOOL OnMsgUnsetMountReq(NetPacket* pNetPacket);  //收回坐骑
+	BOOL OnMsgSetupMountReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
+	BOOL OnMsgUnsetMountReq(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	//********************* Message handlers end ******************************
 
 public:

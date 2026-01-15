@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___WatchServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 
@@ -36,7 +37,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("WatchServer"))
     {
-        CLog::GetInstancePtr()->LogError("WatchServeralready在running!");
+        CLog::GetInstancePtr()->LogError("WatchServeralready[TRANSLATED]running!");
         return FALSE;
     }
 

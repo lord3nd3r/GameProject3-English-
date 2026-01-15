@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___RoleModule.h */
 ﻿#ifndef __ROLE_MODULE_H__
 #define __ROLE_MODULE_H__
 #include "ModuleBase.h"
@@ -35,7 +36,7 @@ public:
 
 	INT64   GetProperty(ERoleProperty ePropertyID);
 public:
-	//扣除行动力， 如果返回Success，就是扣除Success， 如果返回Failure，就是行动力不足
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Failure，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	BOOL    CostAction(UINT32 dwActionID, INT32 nActionNum);
 
 	BOOL    CheckActionEnough(UINT32  dwActionID, INT32 nActionNum);

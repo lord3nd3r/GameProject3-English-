@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___GameGUI___Public___UIChipInfo.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using System;
@@ -86,7 +87,7 @@ public class UIChipInfo : GTWindow
         DItem sourceDB = ReadCfgItem.GetDataById(itemID);
         if(item.Num < sourceDB.Data1)
         {
-            GTItemHelper.ShowTip("count不足，无法合成");
+            GTItemHelper.ShowTip("count[TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]");
             return;
         }
         GTNetworkSend.Instance.TryComposeChip(pos);
@@ -119,12 +120,12 @@ public class UIChipInfo : GTWindow
 
         itemDesc.text = sourceDB.Desc;
 
-        sourceItemNum.text = GTTools.Format("拥有count：{0}", item.Num);
+        sourceItemNum.text = GTTools.Format("[TRANSLATED][TRANSLATED]count：{0}", item.Num);
         GTItemHelper.ShowItemTexture(sourceItemTexture, itemID);
         GTItemHelper.ShowItemName(sourceItemName, itemID);
         GTItemHelper.ShowItemQuality(sourceItemQuality, itemID);
 
-        targetItemNum.text = GTTools.Format("合成count：{0}", item.Num / sourceDB.Data1);
+        targetItemNum.text = GTTools.Format("[TRANSLATED][TRANSLATED]count：{0}", item.Num / sourceDB.Data1);
         GTItemHelper.ShowItemTexture(targetItemTexture, sourceDB.Data2);
         GTItemHelper.ShowItemName   (targetItemName, sourceDB.Data2);
         GTItemHelper.ShowItemQuality(targetItemQuality, sourceDB.Data2);

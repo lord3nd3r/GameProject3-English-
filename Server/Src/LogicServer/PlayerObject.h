@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___PlayerObject.h */
 ﻿#ifndef __WS_PLAYER_OBJECT_H__
 #define __WS_PLAYER_OBJECT_H__
 #include "AVLTree.h"
@@ -35,7 +36,7 @@ public:
 
     BOOL        SendMsgRawData(INT32 nMsgID, const char* pdata, UINT32 dwLen);
 
-    //向player所在的场景服发message
+    //[TRANSLATED]player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]message
     BOOL        SendMsgToScene(INT32 nMsgID, const google::protobuf::Message& pdata);
 
     BOOL        ToTransferData(TransferDataItem* pTransItem);
@@ -49,7 +50,7 @@ public:
     BOOL        NotifyChange();
 
 public:
-    //全部是操作方法
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL        SendIntoSceneNotify(UINT32 dwCopyGuid, UINT32 dwCopyID, UINT32 dwSvrID);
     BOOL        SendLeaveScene(UINT32 dwCopyGuid, UINT32 dwSvrID);
     BOOL        SendRoleLoginAck();
@@ -60,7 +61,7 @@ public:
     BOOL        ClearCopyStatus();
     BOOL        SetCopyStatus(UINT32 dwCopyGuid, UINT32 dwCopyID, UINT32 dwCopySvrID, BOOL bMainCity);
 
-    //模块函数
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL            CreateAllModule();
     BOOL            DestroyAllModule();
     CModuleBase*    GetModuleByType(UINT32 dwModuleType);
@@ -77,9 +78,9 @@ public:
     UINT32          GetCarrerID();
     INT64           GetProperty(ERoleProperty ePropertyID);
     //////////////////////////////////////////////////////////////////////////
-    //当前的多人排队情况
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
-    UINT64      m_uRoomID;      //房间ID
+    UINT64      m_uRoomID;      //[TRANSLATED][TRANSLATED]ID
 
     UINT64      GetRoomID();
 
@@ -87,17 +88,17 @@ public:
 
     //////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////
-    //计算角色，宠物， 伙伴的战斗属性
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]，[TRANSLATED][TRANSLATED]， [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     BOOL        CalcFightDataInfo();
 
     INT32       m_Propertys[PROPERTY_NUM];
 
     //////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////
-    //背包方法
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     //////////////////////////////////////////////////////////////////////////
 public:
-    //网络message泵
+    //[TRANSLATED][TRANSLATED]message[TRANSLATED]
 
     UINT64          m_uRoleID;
     INT32           m_nProxyConnID;
@@ -106,10 +107,10 @@ public:
     std::vector<CModuleBase*> m_MoudleList;
 
 public:
-    UINT32      m_dwCopyGuid;   //当前的副本实例ID
-    UINT32      m_dwCopyID;     //当前的副本type
-    UINT32      m_dwCopySvrID;  //副本server的ID
-    BOOL        m_bMainCity;    //whether在主城中
+    UINT32      m_dwCopyGuid;   //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]ID
+    UINT32      m_dwCopyID;     //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]type
+    UINT32      m_dwCopySvrID;  //[TRANSLATED][TRANSLATED]server[TRANSLATED]ID
+    BOOL        m_bMainCity;    //whether[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 
 
 

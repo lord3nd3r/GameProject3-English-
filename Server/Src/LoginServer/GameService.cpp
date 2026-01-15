@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LoginServer___GameService.cpp */
 ﻿#include "stdafx.h"
 #include "GameService.h"
 #include "TimerManager.h"
@@ -43,7 +44,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("LoginServer"))
     {
-        CLog::GetInstancePtr()->LogError("LoginServeralready在running!");
+        CLog::GetInstancePtr()->LogError("LoginServeralready[TRANSLATED]running!");
         return FALSE;
     }
 
@@ -52,7 +53,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetIntValue("login_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("config文件login_svr_portconfigerror!");
+        CLog::GetInstancePtr()->LogError("config[TRANSLATED][TRANSLATED]login_svr_portconfigerror!");
         return FALSE;
     }
 

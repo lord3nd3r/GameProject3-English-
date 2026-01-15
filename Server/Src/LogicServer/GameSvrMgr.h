@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___LogicServer___GameSvrMgr.h */
 ﻿#ifndef __GAME_SVR_MGR__
 #define __GAME_SVR_MGR__
 
@@ -14,7 +15,7 @@ struct GameSvrInfo
     }
     INT32 m_nSvrID;
     INT32 m_nConnID;
-    INT32 m_nLoad;      //负载值
+    INT32 m_nLoad;      //[TRANSLATED][TRANSLATED][TRANSLATED]
 };
 
 struct CityInfo
@@ -106,25 +107,25 @@ private:
 
 public:
 
-    //响应副本结果返回
+    //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
     //////////////////////////////////////////////////////////////////////////
     BOOL        OnMainCopyResult(BattleResultNty& Nty);
 
     //********************* Message handlers begin ******************************
 public:
     BOOL    OnCloseConnect(INT32 nConnID);
-    BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //响应副本server注册
-    BOOL    OnMsgCreateSceneAck(NetPacket* pNetPacket);  //响应创建副本Success
-    BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//响应角色数据传输Success
+    BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]server[TRANSLATED][TRANSLATED]
+    BOOL    OnMsgCreateSceneAck(NetPacket* pNetPacket);  //[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success
+    BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]Success
     BOOL    OnMsgCopyReportReq(NetPacket* pNetPacket);
     BOOL    OnMsgBattleResultNty(NetPacket* pNetPacket);
     //********************* Message handlers end ******************************
 public:
-    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //serverID-->副本Server information
+    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //serverID-->[TRANSLATED][TRANSLATED]Server information
 
     std::map<UINT32, CityInfo>      m_mapCity;
 
-    std::map<UINT32, UINT32>        m_GuidToSvrID;    //副本guid->副本serverID
+    std::map<UINT32, UINT32>        m_GuidToSvrID;    //[TRANSLATED][TRANSLATED]guid->[TRANSLATED][TRANSLATED]serverID
 
     CWaitCopyList                   m_WaitCopyList;
 };

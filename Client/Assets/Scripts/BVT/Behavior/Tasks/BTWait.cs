@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Client___Assets___Scripts___BVT___Behavior___Tasks___BTWait.cs */
 ﻿using UnityEngine;
 using System.Collections;
 using BVT;
@@ -5,7 +6,7 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "action节点", Label = "BTWait")]
+    [NodeAttribute(Type = "action[TRANSLATED][TRANSLATED]", Label = "BTWait")]
     public class BTWait : BTTask
     {
         [NodeVariable]
@@ -44,18 +45,18 @@ namespace BVT
         {
             if (Running)
             {
-                GUILayout.Label(string.Format("<color=#ffffff>等待时间：{0}s</color>", this.mWaitTime));
-                GUILayout.Label(string.Format("<color=#ff64cb>running时间：{0}s</color>", this.mLastTime > this.mWaitTime ? this.mWaitTime : this.mLastTime));
+                GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}s</color>", this.mWaitTime));
+                GUILayout.Label(string.Format("<color=#ff64cb>running[TRANSLATED][TRANSLATED]：{0}s</color>", this.mLastTime > this.mWaitTime ? this.mWaitTime : this.mLastTime));
             }
             else
             {
                 if (RandomWait)
                 {
-                    GUILayout.Label(string.Format("<color=#ffffff>等待时间：{0}s~{1}s</color>", this.RandomWaitMin, this.RandomWaitMax));
+                    GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}s~{1}s</color>", this.RandomWaitMin, this.RandomWaitMax));
                 }
                 else
                 {
-                    GUILayout.Label(string.Format("<color=#ffffff>等待时间：{0}s</color>", this.WaitTime));
+                    GUILayout.Label(string.Format("<color=#ffffff>[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]：{0}s</color>", this.WaitTime));
                 }
             }
         }

@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___GameServer___SceneLogic___SceneLogic_Arena.cpp */
 ﻿#include "stdafx.h"
 #include "SceneLogic_Arena.h"
 #include "../GameObject/SceneObject.h"
@@ -14,7 +15,7 @@ SceneLogic_Arena::~SceneLogic_Arena()
 
 BOOL SceneLogic_Arena::OnObjectCreate(CSceneObject* pObject)
 {
-	//基类里帮助设定出生点坐标
+	//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	SceneLogicBase::OnObjectCreate(pObject);
 
 	return TRUE;
@@ -28,7 +29,7 @@ BOOL SceneLogic_Arena::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_Arena::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//player进入副本了。
+	//player[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]。
 
 	return TRUE;
 }

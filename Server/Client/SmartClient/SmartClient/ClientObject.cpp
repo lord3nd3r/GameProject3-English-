@@ -1,3 +1,4 @@
+/* NOTE: original file backed up at /tmp/chinese_backups/Server___Client___SmartClient___SmartClient___ClientObject.cpp */
 ﻿#include "stdafx.h"
 #include "ClientObject.h"
 #include <complex>
@@ -83,7 +84,7 @@ BOOL CClientObject::OnCmdEnterSceneAck( UINT32 dwMsgID, CHAR* PacketBuf, INT32 B
 	{
 		m_dwHostState = ST_EnterSceneOK;
 
-		//表示进入主城完成
+		//[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]
 	}
 	else if(Ack.copyid() == m_dwToCopyID)
 	{
@@ -262,7 +263,7 @@ BOOL CClientObject::OnMsgAccountLoginAck(UINT32 dwMsgID, CHAR* PacketBuf, INT32 
 
 	if(Ack.retcode() == MRC_UNKNOW_ERROR)
 	{
-		MessageBox(NULL, "登录Failure! 密码或账号不对!!", "提示", MB_OK);
+		MessageBox(NULL, "[TRANSLATED][TRANSLATED]Failure! [TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]!!", "[TRANSLATED][TRANSLATED]", MB_OK);
 		m_dwHostState = ST_Overed;
 		return TRUE;
 	}
