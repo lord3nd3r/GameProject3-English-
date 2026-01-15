@@ -577,7 +577,7 @@ BOOL CommonFunc::IsProcessExist(INT32 nPid)
         return FALSE;
     }
 
-    //! 进程关闭后, 句柄不一定为空, 需要获取进程退出码进一步判断
+    //! 进程shutdown后, 句柄不一定is空, 需要获取进程退出码进一步判断
     GetExitCodeProcess(hPrc, &nExitCode);
     if (nExitCode != STILL_ACTIVE)
     {

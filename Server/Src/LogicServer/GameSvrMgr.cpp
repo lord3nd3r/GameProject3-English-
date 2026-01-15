@@ -80,19 +80,19 @@ BOOL CGameSvrMgr::CreateScene(UINT32 dwCopyID, UINT64 uCreateParam, UINT32 dwPla
     ERROR_RETURN_FALSE(dwCopyID != 0);
     ERROR_RETURN_FALSE(uCreateParam != 0);
 
-    //选择一个可用的副本服务器
+    //选择一个可用的副本server
     UINT32 dwServerID = GetBestGameServerID();
     if(dwServerID == 0)
     {
-        CLog::GetInstancePtr()->LogError("没有找到可用的场景服务器，或者说没有找到可用的副本服务器");
+        CLog::GetInstancePtr()->LogError("没有找到可用的场景server，或者说没有找到可用的副本server");
         return FALSE;
     }
 
-    //向副本服务器发送创建副本的消息
+    //向副本server发送创建副本的message
     if(!SendCreateSceneCmd(dwServerID, dwCopyID, dwCopyType, uCreateParam, dwPlayerNum))
     {
-        //发送创建副本的消息Failure
-        CLog::GetInstancePtr()->LogError("发送创建副本的消息Failure");
+        //发送创建副本的messageFailure
+        CLog::GetInstancePtr()->LogError("发送创建副本的messageFailure");
         return FALSE;
     }
 

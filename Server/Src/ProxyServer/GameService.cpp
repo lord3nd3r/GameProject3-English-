@@ -43,7 +43,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("ProxyServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("ProxyServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("ProxyServeralready在running!");
         return FALSE;
     }
 
@@ -52,7 +52,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("proxy_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("配制文件proxy_svr_port配制错误!");
+        CLog::GetInstancePtr()->LogError("config文件proxy_svr_portconfigerror!");
         return FALSE;
     }
 

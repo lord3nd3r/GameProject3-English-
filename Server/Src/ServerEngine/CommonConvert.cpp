@@ -559,7 +559,7 @@ BOOL CommonConvert::IsTextUTF8(const char* str, INT32 nLength)
     for (i = 0; i < nLength; i++)
     {
         chr = *(str + i);
-        if ((chr & 0x80) != 0) // 判断是否ASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存,最高位标记为0,o0xxxxxxx
+        if ((chr & 0x80) != 0) // 判断whetherASCII编码,如果不是,说明有可能是UTF-8,ASCII用7位编码,但用一个字节存,最高位标记is0,o0xxxxxxx
         {
             bAllAscii = FALSE;
         }
@@ -594,7 +594,7 @@ BOOL CommonConvert::IsTextUTF8(const char* str, INT32 nLength)
                 nBytes--;
             }
         }
-        else //多字节符的非首字节,应为 10xxxxxx
+        else //多字节符的非首字节,应is 10xxxxxx
         {
             if ((chr & 0xC0) != 0x80)
             {

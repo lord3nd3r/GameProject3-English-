@@ -353,7 +353,7 @@ BOOL CWatchMsgHandler::CheckServerStatus(BOOL bFrist)
                     continue;
                 }
 
-                //表示进程己经挂了
+                //表示进程already挂了
 
                 //
 

@@ -31,7 +31,7 @@ public:
 	//********************* Message handlers end ******************************
 
 public:
-	//数据库定义
+	//数据库definition
 	CDBManager							m_DBManager;
 
 	ArrayLockFreeQueue<NetPacket*>		m_PacketQueue;

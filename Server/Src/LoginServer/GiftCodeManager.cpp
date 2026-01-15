@@ -65,7 +65,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
         return FALSE;
     }
 
-    //先把礼包奖励全部加载出来
+    //先把礼包奖励全部load出来
     std::map<INT32, AwardNode> mapAwardList;
 
     CodeReqNode* pTmpNode;
@@ -179,7 +179,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
                     continue;
                 }
             }
-            else if (nUseType == 2)  //表示可以多人使用
+            else if (nUseType == 2)  //表示can多人使用
             {
                 if (nUseNum >= nTotalNum)
                 {
@@ -221,7 +221,7 @@ BOOL GiftCodeManager::ProceeGiftCodeThread()
                     continue;
                 }
             }
-            else if (nUseType == 3)  //表示可以多人使用
+            else if (nUseType == 3)  //表示can多人使用
             {
                 if (uRoleID > 0)
                 {

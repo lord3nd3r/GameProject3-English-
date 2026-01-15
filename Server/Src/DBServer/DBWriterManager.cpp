@@ -171,7 +171,7 @@ void CDBWriterManager::DBWriteThread()
 
         if (IsStop())
         {
-            CLog::GetInstancePtr()->LogError("开始退出将所有己修改的数据写入数据库.....");
+            CLog::GetInstancePtr()->LogError("begin退出将所有己修改的数据写入数据库.....");
             BOOL bHasWrite = WriteDataToDB();
             if (!bHasWrite)
             {

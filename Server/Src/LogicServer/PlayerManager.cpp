@@ -116,7 +116,7 @@ BOOL CPlayerManager::BroadMessageToAll(INT32 nMsgID, const google::protobuf::Mes
         }
     }
 
-    //因为所有玩家是一个ProxyID
+    //因is所有player是一个ProxyID
     ServiceBase::GetInstancePtr()->SendMsgProtoBuf(dwProxyID, MSG_BROAD_MESSAGE_NOTIFY, 0, 0, Nty);
 
     return TRUE;
@@ -185,7 +185,7 @@ BOOL CPlayerManager::OnUpdate(UINT64 uTick)
 
     if (uReleaseRoleID != 0 && GetCount() > m_nMaxCacheNum)
     {
-        //当内存中的人数超过人，就清理一个离线时间最长的玩家
+        //当内存中的人数超过人，就清理一个离线时间最长的player
         ReleasePlayer(uReleaseRoleID);
     }
 

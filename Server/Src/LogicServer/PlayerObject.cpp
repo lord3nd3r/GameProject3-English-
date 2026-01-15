@@ -45,8 +45,8 @@ BOOL CPlayerObject::Init(UINT64 u64ID)
     m_nProxyConnID     = 0;
     m_nClientConnID    = 0;
     m_dwCopyGuid        = 0;      //当前的副本ID
-    m_dwCopyID          = 0;        //当前的副本类型
-    m_dwCopySvrID       = 0;        //副本服务器的ID
+    m_dwCopyID          = 0;        //当前的副本type
+    m_dwCopySvrID       = 0;        //副本server的ID
     m_IsOnline          = FALSE;
     m_uRoomID           = 0;
     ERROR_RETURN_FALSE(CreateAllModule());
@@ -58,12 +58,12 @@ BOOL CPlayerObject::Uninit()
 {
     DestroyAllModule();
     m_uRoleID             = 0;      //角色ID
-    m_nProxyConnID     = 0;        //网关服的连接ID
-    m_nClientConnID    = 0;        //客户端的连接ID
+    m_nProxyConnID     = 0;        //网关服的connectionID
+    m_nClientConnID    = 0;        //client的connectionID
     m_dwCopyGuid        = 0;        //当前的副本ID
-    m_dwCopyID          = 0;        //当前的副本类型
-    m_dwCopySvrID       = 0;        //副本服务器的ID
-    m_IsOnline          = FALSE;    //是否在线
+    m_dwCopyID          = 0;        //当前的副本type
+    m_dwCopySvrID       = 0;        //副本server的ID
+    m_IsOnline          = FALSE;    //whether在线
     m_uRoomID           = 0;
     return TRUE;
 }
@@ -551,8 +551,8 @@ BOOL CPlayerObject::CalcFightDataInfo()
 BOOL CPlayerObject::ClearCopyStatus()
 {
     m_dwCopyGuid = 0;           //当前的副本ID
-    m_dwCopyID = 0;             //当前的副本类型
-    m_dwCopySvrID = 0;          //副本服务器的ID
+    m_dwCopyID = 0;             //当前的副本type
+    m_dwCopySvrID = 0;          //副本server的ID
     m_bMainCity = FALSE;
     return TRUE;
 }

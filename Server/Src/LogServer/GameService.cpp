@@ -30,7 +30,7 @@ BOOL CGameService::Init()
     {
         return FALSE;
     }
-    CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
+    CLog::GetInstancePtr()->LogInfo("---------serverbeginstart--------");
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
         CLog::GetInstancePtr()->LogError("Configuration file load Failure!");
@@ -39,7 +39,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("LogServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("LogServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("LogServeralready在running!");
         return FALSE;
     }
 
@@ -48,7 +48,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("log_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("配制文件log_svr_port配制错误!");
+        CLog::GetInstancePtr()->LogError("config文件log_svr_portconfigerror!");
         return FALSE;
     }
 

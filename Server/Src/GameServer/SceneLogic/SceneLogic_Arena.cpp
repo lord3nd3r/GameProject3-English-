@@ -28,7 +28,7 @@ BOOL SceneLogic_Arena::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_Arena::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//玩家进入副本了。
+	//player进入副本了。
 
 	return TRUE;
 }

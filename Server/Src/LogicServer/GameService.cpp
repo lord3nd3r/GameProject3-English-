@@ -31,7 +31,7 @@ CGameService::CGameService(void)
     m_dwLogConnID    = 0;
     m_dwLoginConnID  = 0;
     m_dwDBConnID     = 0;
-    m_dwCenterConnID = 0;   //中心服的连接ID
+    m_dwCenterConnID = 0;   //中心服的connectionID
     m_uSvrOpenTime   = 0;
     m_dwDbErrorCount = 0;
     m_bRegSuccessed  = FALSE;
@@ -42,7 +42,7 @@ CGameService::~CGameService(void)
     m_dwLogConnID   = 0;
     m_dwLoginConnID = 0;
     m_dwDBConnID    = 0;
-    m_dwCenterConnID  = 0;   //中心服的连接ID
+    m_dwCenterConnID  = 0;   //中心服的connectionID
     m_uSvrOpenTime  = 0;
     m_dwDbErrorCount = 0;
     m_bRegSuccessed = FALSE;
@@ -83,17 +83,17 @@ BOOL CGameService::Init()
         return FALSE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
+    CLog::GetInstancePtr()->LogInfo("---------serverbeginstart--------");
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("加载 servercfg.ini文件Failure!");
+        CLog::GetInstancePtr()->LogError("load servercfg.ini文件Failure!");
         return FALSE;
     }
 
     if (CommonFunc::IsAlreadyRun("LogicServer" + CConfigFile::GetInstancePtr()->GetStringValue("areaid")))
     {
-        CLog::GetInstancePtr()->LogError("LogicServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("LogicServeralready在running!");
         return FALSE;
     }
 
@@ -102,7 +102,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetRealNetPort("logic_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("配制文件logic_svr_port配制错误!");
+        CLog::GetInstancePtr()->LogError("config文件logic_svr_portconfigerror!");
         return FALSE;
     }
 
@@ -122,10 +122,10 @@ BOOL CGameService::Init()
     }
 
     ///////////////////////////////////
-    //服务器启动之前需要加载的数据
+    //serverstart之前需要load的数据
     if (!CStaticData::GetInstancePtr()->LoadConfigData("Config.db"))
     {
-        CLog::GetInstancePtr()->LogError("加载静态配制数据Failure!");
+        CLog::GetInstancePtr()->LogError("load静态config数据Failure!");
         return FALSE;
     }
 
@@ -143,12 +143,12 @@ BOOL CGameService::Init()
 
     //if (!CLuaManager::GetInstancePtr()->LoadAllLua(".\\Lua"))
     //{
-    //  CLog::GetInstancePtr()->LogError("加载lua代码Failure!");
+    //  CLog::GetInstancePtr()->LogError("loadlua代码Failure!");
     //  return FALSE;
     //}
 
     ///////////////////////////////////
-    //服务器启动之前需要加载的数据
+    //serverstart之前需要load的数据
     std::string strHost = CConfigFile::GetInstancePtr()->GetStringValue("mysql_game_svr_ip");
     nPort = CConfigFile::GetInstancePtr()->GetIntValue("mysql_game_svr_port");
     std::string strUser = CConfigFile::GetInstancePtr()->GetStringValue("mysql_game_svr_user");
@@ -520,7 +520,7 @@ BOOL CGameService::ReportServerStatus()
     Req.set_cachenum(CPlayerManager::GetInstancePtr()->GetCount());          //当前缓存人数
     Req.set_serverid(CConfigFile::GetInstancePtr()->GetIntValue("areaid"));  //区服ID
     Req.set_servername(CConfigFile::GetInstancePtr()->GetStringValue("areaname")); //区服Name
-    Req.set_dberrcnt(m_dwDbErrorCount);                                      //db写错误数
+    Req.set_dberrcnt(m_dwDbErrorCount);                                      //db写error数
 
     return ServiceBase::GetInstancePtr()->SendMsgProtoBuf(m_dwLoginConnID, MSG_LOGIC_UPDATE_REQ, 0, 0, Req);
 }
@@ -565,7 +565,7 @@ BOOL CGameService::OnMsgUpdateInfoAck(NetPacket* pNetPacket)
 
     m_uSvrOpenTime = Ack.svropentime();
 
-    //这里处理开服时间发生改变有事件
+    //这里handle开服时间发生改变有event
     CLog::GetInstancePtr()->LogError("---------开服时间:%s--------", CommonFunc::TimeToString(m_uSvrOpenTime).c_str());
 
     return TRUE;

@@ -73,7 +73,7 @@ public class ResourceAtlasCreate
 
 
     /// <summary>
-    /// 是否有alpha通道
+    /// whether有alpha通道
     /// </summary>
     /// <param name="_tex"></param>
     /// <returns></returns>
@@ -105,7 +105,7 @@ public class ResourceAtlasCreate
     }
 
     /// <summary>
-    /// 判断是否是图片格式
+    /// 判断whether是图片格式
     /// </summary>
     /// <param name="_path"></param>
     /// <returns></returns>
@@ -122,7 +122,7 @@ public class ResourceAtlasCreate
     /// <param name="val"></param>
     public static void ShowProgress(string path, float val)
     {
-        EditorUtility.DisplayProgressBar("图集处理中...", string.Format("Please wait...  Path:{0}", path), val);
+        EditorUtility.DisplayProgressBar("图集handle中...", string.Format("Please wait...  Path:{0}", path), val);
     }
 
     public virtual void CreateUIAtlasPrefab(UnityEngine.Object obj)

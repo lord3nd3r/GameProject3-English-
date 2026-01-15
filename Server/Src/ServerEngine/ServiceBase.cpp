@@ -58,7 +58,7 @@ BOOL ServiceBase::StartNetwork(UINT16 nPortNum, INT32 nMaxConn, IPacketDispatche
 
     if (!CNetManager::GetInstancePtr()->Start(nPortNum, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("启动网络层Failure!");
+        CLog::GetInstancePtr()->LogError("start网络层Failure!");
         return FALSE;
     }
 

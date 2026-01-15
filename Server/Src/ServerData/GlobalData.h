@@ -9,13 +9,13 @@ struct GlobalDataObject : public ShareObject
 {
 	GlobalDataObject()
 	{
-		m_dwServerID		= 0;			//服务器ID
+		m_dwServerID		= 0;			//serverID
 		m_u64Guid			= 0;			//全局GUID
 		m_dwMaxOnline		= 0;			//最大在线人数
 		memset(m_exData, 0, sizeof(INT32) * MAX_EXTRA_INDEX);
 	}
 
-	UINT32 m_dwServerID;        //服务器ID
+	UINT32 m_dwServerID;        //serverID
 	UINT64 m_u64Guid;			//全局GUID
 	UINT32 m_dwMaxOnline;		//最大在线人数
 	INT32 m_exData[MAX_EXTRA_INDEX];      //扩展数据

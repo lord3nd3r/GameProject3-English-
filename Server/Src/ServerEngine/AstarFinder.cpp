@@ -201,7 +201,7 @@ void AstarFinder::FindPath(int sx, int sy, int dx, int dy)
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::GetBestNode(void) //返回开列表中的f最小的节点，并将此节点插入关闭列表
+* AstarFinder::GetBestNode(void) //返回开list中的f最小的节点，并将此节点插入shutdownlist
 {
 	NODE* tmp;
 	if ( m_pOpenList->NextNode == NULL )
@@ -315,7 +315,7 @@ void AstarFinder::GenerateSucc(NODE* BestNode, int x, int y, int dx, int dy)
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::CheckOPEN(int tilenum) //遍历找完开列表，看tilenum是否在其中
+* AstarFinder::CheckOPEN(int tilenum) //遍历找完开list，看tilenumwhether在其中
 {
 	NODE* tmp;
 
@@ -333,7 +333,7 @@ AstarFinder::NODE
 ////////////////////////////////////////////////////////////////////////////////
 
 AstarFinder::NODE
-* AstarFinder::CheckCLOSED(int tilenum) //遍历找完闭列表，看tilenum是否在其中
+* AstarFinder::CheckCLOSED(int tilenum) //遍历找完闭list，看tilenumwhether在其中
 {
 	NODE* tmp;
 
@@ -351,7 +351,7 @@ AstarFinder::NODE
 
 ////////////////////////////////////////////////////////////////////////////////
 
-void AstarFinder::Insert(NODE* Successor)//在开列表中从小到大排序
+void AstarFinder::Insert(NODE* Successor)//在开list中从小到大排序
 {
 	NODE* tmp1, *tmp2;
 	int f;

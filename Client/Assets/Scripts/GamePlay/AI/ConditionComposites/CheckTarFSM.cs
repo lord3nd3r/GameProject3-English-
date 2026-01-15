@@ -24,12 +24,12 @@ namespace BVT.AI
         {
             if (!Invert)
             {
-                string s = string.Format("若目标现在是{0}状态", ApplyFSM);
+                string s = string.Format("若target现在是{0}状态", ApplyFSM);
                 GUILayout.Label(s);
             }
             else
             {
-                string s = string.Format("若目标现在不是{0}状态", ApplyFSM);
+                string s = string.Format("若target现在不是{0}状态", ApplyFSM);
                 GUILayout.Label(s);
             }
         }

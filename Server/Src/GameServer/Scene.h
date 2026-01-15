@@ -83,14 +83,14 @@ public:
 	//创建召唤对象
 	CSceneObject*	CreateSummon( UINT32 dwActorID, UINT64 uSummonerID, UINT32 dwCamp, FLOAT x, FLOAT y, FLOAT z, FLOAT ft);
 
-	//创建子弹对象
+	//创建bullet对象
 	CBulletObject*	CreateBullet(UINT32 dwBulletID, StBulletInfo* pBulletInfo, CSkillObject* pSkillObject, Vector3D startPos);
 
-	BOOL			IsCampAllDie(UINT32 dwCamp);  //用于结算，判断阵营是否全部死亡.
-	BOOL			IsMonsterAllDie();            //用于判断下一波怪是否需要刷出.
-	BOOL            IsMonsterAllGen();            //是否所有怪物己经出尽
+	BOOL			IsCampAllDie(UINT32 dwCamp);  //用于结算，判断阵营whether全部死亡.
+	BOOL			IsMonsterAllDie();            //用于判断下一波怪whether需要刷出.
+	BOOL            IsMonsterAllGen();            //whether所有怪物already出尽
 
-	//解析场景配制文件
+	//解析场景config文件
 	BOOL			ReadSceneXml();
 public:
 	BOOL			IsFinished();
@@ -109,20 +109,20 @@ public:
 	UINT32			m_dwLoginNum;   //登录副本的人数
 	UINT32			m_dwCopyGuid;	//当前副本实例ID
 	UINT32			m_dwCopyID;		//当前副本TYPE
-	UINT32			m_dwCopyType;	//逻辑类型
-	UINT64          m_uCreateTime;  //副本创建时间
-	UINT64			m_uStartTime;   //副本开始时间
+	UINT32			m_dwCopyType;	//逻辑type
+	UINT64          m_uCreateTime;  //副本create time
+	UINT64			m_uStartTime;   //副本begin时间
 	UINT64			m_uTotalTime;	//副本持续时间
 	UINT64			m_dwLastTick;	//上一个tick时间
 	UINT64			m_uMaxGuid;	    //场景里的最大GUID
-	UINT64			m_uCreateKey;	//创建副本的专用参数
-	BOOL			m_bFinished;	//副本是否完成
+	UINT64			m_uCreateKey;	//创建副本的专用params
+	BOOL			m_bFinished;	//副本whether完成
 	SceneLogicBase*	m_pSceneLogic;
 	MonsterCreator*	m_pMonsterCreator;
 
-	std::map<UINT64, CSceneObject*>	 m_mapPlayer;		//玩家管理器
+	std::map<UINT64, CSceneObject*>	 m_mapPlayer;		//player管理器
 	std::map<UINT64, CSceneObject*>  m_mapMonster;      //怪物管理器
-	std::map<UINT64, CBulletObject*> m_mapBullet;		//子弹管理器
+	std::map<UINT64, CBulletObject*> m_mapBullet;		//bullet管理器
 
 	//////////////////////////////////////////////////////////////////////////
 	//伤害效果

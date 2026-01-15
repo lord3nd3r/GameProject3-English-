@@ -114,7 +114,7 @@ namespace MAP
 
             GUI.color = Color.red;
             GUILayout.Space(10);
-            if (GUILayout.Button("所有目标贴近地面", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("所有target贴近地面", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 List<FTPoint> list = Points;
                 for (int i = 0; i < list.Count; i++)

@@ -8,7 +8,7 @@ namespace ACT
         [SerializeField]
         public float MaxDis;    //最大有效距离
         [SerializeField]
-        public int   HAngle;    //水平角度范围
+        public int   HAngle;    //水平角度range
         [SerializeField]
         public float Height;    //圆柱有效高度
 

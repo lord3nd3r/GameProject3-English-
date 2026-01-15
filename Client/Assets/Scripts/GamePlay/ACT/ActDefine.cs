@@ -46,7 +46,7 @@ public enum EActType
     TYPE_BEATFLY          = 23, //击飞
     TYPE_BEATDOWN         = 24, //击倒
     TYPE_BEATBACK         = 25, //击退
-    TYPE_HIT              = 26, //受击
+    TYPE_HIT              = 26, //hit
     TYPE_ANIM             = 27, //动画
     TYPE_AUDIO            = 28, //声音
     TYPE_AUDIOLOOP        = 29, //声音Loop
@@ -59,29 +59,29 @@ public enum EActType
     TYPE_FALSEDEAD        = 36, //假死
 
     TYPE_BEAM             = 40, //光束
-    TYPE_TRIGGER          = 41, //触发器
-    TYPE_EFFECT           = 42, //特效
+    TYPE_TRIGGER          = 41, //trigger器
+    TYPE_EFFECT           = 42, //effect
     TYPE_FLYWEAPON        = 43, //飞行武器
     TYPE_LIGHTING         = 44, //闪电
     TYPE_MISSILE          = 45, //基础飞弹
     TYPE_RAY              = 46, //射线
     TYPE_WALL             = 47, //阻挡墙
-    TYPE_BINDEFFECT       = 48, //绑定特效
+    TYPE_BINDEFFECT       = 48, //绑定effect
     TYPE_SUMMON           = 49, //召唤
 
     TYPE_MOVE             = 56, //位移
-    TYPE_THROUGHMOVESTART = 57, //穿插位移开始
+    TYPE_THROUGHMOVESTART = 57, //穿插位移begin
     TYPE_THROUGHMOVE      = 58, //穿插位移
-    TYPE_THROUGHMOVEEND   = 59, //穿插位移结束
+    TYPE_THROUGHMOVEEND   = 59, //穿插位移end
 
     TYPE_DAMAGE           = 62, //伤害
     TYPE_HEAL             = 63, //治疗
 
 
-    TYPE_SCOPESPHERE      = 71, //球形范围检测目标
-    TYPE_SCOPECYLINDER    = 72, //弧形范围检测目标
-    TYPE_SCOPEBOX         = 73, //盒子范围检测目标
-    TYPE_SCOPETRIANGLE    = 74, //三角范围检测目标
+    TYPE_SCOPESPHERE      = 71, //球形range检测target
+    TYPE_SCOPECYLINDER    = 72, //弧形range检测target
+    TYPE_SCOPEBOX         = 73, //盒子range检测target
+    TYPE_SCOPETRIANGLE    = 74, //三角range检测target
     TYPE_ADDBUFF          = 75, //添加BUFF
     TYPE_DISPEL           = 76, //驱散
     TYPE_STEALBUFF        = 77, //偷取BUFF
@@ -101,9 +101,9 @@ public enum EActType
     TYPE_RESETSKILLCD     = 91, //重置Skill CD
     TYPE_SHORTENSKILLCD   = 92, //减少Skill CD
     TYPE_EXTENDSKILLID    = 93, //延长Skill CD
-    TYPE_BREAKSKILL       = 94, //打断技能
-    TYPE_UPSKILLRESULT    = 95, //提高技能效果
-    TYPE_CHANGESKILL      = 96, //使当前技能升级为新的技能
+    TYPE_BREAKSKILL       = 94, //打断skill
+    TYPE_UPSKILLRESULT    = 95, //提高skill效果
+    TYPE_CHANGESKILL      = 96, //使当前skill升级is新的skill
 
     TYPE_PROBABLY         = 101, //执行子节点们的可能性
     TYPE_SEQUENCE         = 102, //对子节点执行队列操作
@@ -118,7 +118,7 @@ public enum ESkillCostType
 {
     NO,
     MP = 1,//魔法
-    HP = 2,//生命
+    HP = 2,//life
     SP = 3,//特殊资源
     XP = 4,//经验
 }
@@ -165,10 +165,10 @@ public enum ESelectTargetPolicy
 public enum EActStatus
 {
     INITIAL,//初始化
-    STARTUP,//开始
-    TRIGGER,//触发
-    RUNNING,//运行
-    SELFEND,//本体运行结束
+    STARTUP,//begin
+    TRIGGER,//trigger
+    RUNNING,//running
+    SELFEND,//本体runningend
     SUCCESS,//Success
 }
 
@@ -178,7 +178,7 @@ public enum ESkillBreakReason
     TYPE_NONE,      //无
     TYPE_BUFF,      //Buff打断
     TYPE_STIFF,     //硬直打断
-    TYPE_NEWSKILL,  //新技能打断
+    TYPE_NEWSKILL,  //新skill打断
     TYPE_BEDAMAGE,  //受到伤害打断
     TYPE_SPECIAL,   //特殊打断
 }
@@ -198,7 +198,7 @@ public enum EnumCameraShake
     HorizontalAndVertical   //水平和垂直都摇晃
 }
 
-//Buff叠加类型
+//Buffstacktype
 public enum EBuffOverlayType
 {
     UnChange,
@@ -207,7 +207,7 @@ public enum EBuffOverlayType
     OverlayAndRefresh,
 }
 
-//Buff销毁类型
+//Buff销毁type
 public enum EBuffDestroyType
 {
     BY_NONE       = 0,
@@ -227,13 +227,13 @@ public enum EBuffType
 }
 
 
-//特效绑定位置
+//effect绑定position
 public enum EBind
 {
     None  =-1,
-    Head  = 0, //出现在头部位置
-    Body  = 1, //出现在身体位置
-    Foot  = 2, //出现在脚部位置
+    Head  = 0, //出现在头部position
+    Body  = 1, //出现在身体position
+    Foot  = 2, //出现在脚部position
     LHand = 3, //出现在左手上
     RHand = 4, //出现在右手上
     Buff  = 5, //Buff点

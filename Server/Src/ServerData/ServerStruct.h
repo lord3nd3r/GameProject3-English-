@@ -23,7 +23,7 @@ enum EWinCondition
 {
 	EWC_NONE,
 	EWC_KILL_ALL,       //击杀全部怪物
-	EWC_KILL_NUM,       //击杀指定数量怪物
+	EWC_KILL_NUM,       //击杀指定count怪物
 	EWC_DESTINATION,    //达到目的地
 	EWC_PLAYER_ALIVE,   //存活下来
 	EWC_NPC_ALIVE,      //护送npc
@@ -33,15 +33,15 @@ enum EWinCondition
 enum EBattleCamp
 {
 	EBC_NONE,     //中立阵营
-	EBC_PLAYER,   //玩家阵营
+	EBC_PLAYER,   //player阵营
 	EBC_MONSTER,  //怪物阵营
 };
 
 enum ETriggerType
 {
-	ETT_NORMAL,     //直接触发
-	ETT_TRIBOX,     //触发盒触发
-	ETT_TIME,       //时间触发
+	ETT_NORMAL,     //直接trigger
+	ETT_TRIBOX,     //trigger盒trigger
+	ETT_TIME,       //时间trigger
 };
 
 

@@ -35,7 +35,7 @@ public:
 
     BOOL        SendMsgRawData(INT32 nMsgID, const char* pdata, UINT32 dwLen);
 
-    //向玩家所在的场景服发消息
+    //向player所在的场景服发message
     BOOL        SendMsgToScene(INT32 nMsgID, const google::protobuf::Message& pdata);
 
     BOOL        ToTransferData(TransferDataItem* pTransItem);
@@ -97,7 +97,7 @@ public:
     //背包方法
     //////////////////////////////////////////////////////////////////////////
 public:
-    //网络消息泵
+    //网络message泵
 
     UINT64          m_uRoleID;
     INT32           m_nProxyConnID;
@@ -107,9 +107,9 @@ public:
 
 public:
     UINT32      m_dwCopyGuid;   //当前的副本实例ID
-    UINT32      m_dwCopyID;     //当前的副本类型
-    UINT32      m_dwCopySvrID;  //副本服务器的ID
-    BOOL        m_bMainCity;    //是否在主城中
+    UINT32      m_dwCopyID;     //当前的副本type
+    UINT32      m_dwCopySvrID;  //副本server的ID
+    BOOL        m_bMainCity;    //whether在主城中
 
 
 

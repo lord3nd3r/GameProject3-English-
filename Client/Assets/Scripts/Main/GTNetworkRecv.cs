@@ -206,7 +206,7 @@ public class GTNetworkRecv : GTSingleton<GTNetworkRecv>
         XCharacter data = DataDBSCharacter.GetDataById(GTGlobal.CurPlayerCarrerID);
         if (data == null)
         {
-            GTItemHelper.ShowTip("职业错误");
+            GTItemHelper.ShowTip("职业error");
             return;
         }
         else

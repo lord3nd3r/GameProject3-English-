@@ -56,7 +56,7 @@ BOOL SceneLogicBase::Update(UINT64 uTick)
 {
 	if (m_pScene->GetStartTime() <= 0)
 	{
-		//如果创建完成60秒副本还没有开始，就要超时结束
+		//如果创建完成60秒副本还没有begin，就要超时end
 		if (CommonFunc::GetCurrTime() - m_pScene->GetCreateTime() > 60)
 		{
 			OnTimeUP();

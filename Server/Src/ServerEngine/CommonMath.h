@@ -54,13 +54,13 @@ public:
     //求到线段的距离
     FLOAT DistanceToSegment(Vector2D pt1, Vector2D pt2);
 
-    //求弧度范围: 0-π
+    //求弧度range: 0-π
     FLOAT AngleBetween(const Vector2D dest);
 
-    //向量转弧度范围: 0-2π
+    //向量转弧度range: 0-2π
     FLOAT ToRadiansAngle();
 
-    //向量转角度范围: 0-360
+    //向量转角度range: 0-360
     FLOAT ToDegreesAngle();
 
     Vector2D Rotate(Vector2D A, FLOAT radianAngle);
@@ -179,7 +179,7 @@ public:
 
     FLOAT Distance2D(Vector3D pos);
 
-    //求弧度范围: 0-π
+    //求弧度range: 0-π
     FLOAT AngleBetween2D(Vector3D& dest);
 
     Vector2D Rotate(Vector2D A, FLOAT radianAngle);
@@ -190,10 +190,10 @@ public:
     //求向量在对应向量的垂直分量
     Vector3D PerpendicularComponent(Vector3D& unitBasis);
 
-    //求弧度范围: 0-2π
+    //求弧度range: 0-2π
     FLOAT ToRadiansAngle();
 
-    //求角度范围: 0-360
+    //求角度range: 0-360
     FLOAT ToDegreesAngle();
 
     BOOL FromString(const char* pStr);

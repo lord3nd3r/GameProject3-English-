@@ -161,7 +161,7 @@ VOID CConnection::SetConnectionData( UINT64 uData )
 BOOL CConnection::ExtractBuffer()
 {
     //在这方法里返回FALSE。
-    //会在外面导致这个连接被关闭。
+    //会在外面导致这个connection被shutdown。
     if (m_nDataLen == 0)
     {
         return TRUE;
@@ -569,7 +569,7 @@ CConnection* CConnectionMgr::CreateConnection()
     m_ConnListMutex.lock();
     if (m_pFreeConnRoot == NULL)
     {
-        //表示己到达连接的上限，不能再创建新的连接了
+        //表示己到达connection的上限，不能再创建新的connection了
         m_ConnListMutex.unlock();
         return NULL;
     }
@@ -725,7 +725,7 @@ BOOL CConnectionMgr::CheckConntionAvalible(INT32 nInterval)
 
         if(uCurTick > (pConnection->m_uLastRecvTick + nInterval * 1000))
         {
-            CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible 超时主动断开连接 ConnID:%d", pConnection->GetConnectionID());
+            CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible 超时主动disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
             pConnection->Close();
         }
     }

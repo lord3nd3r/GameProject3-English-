@@ -9,7 +9,7 @@ struct LogicServerNode
         m_nServerID = 0;
     }
 
-    INT32       m_nConnID;   //连接ID
+    INT32       m_nConnID;   //connectionID
     INT32       m_nServerID;
     std::string m_strSvrName;
 };

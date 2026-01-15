@@ -17,18 +17,18 @@ enum ELogType
     ELT_ROLE_CHAT, //聊天
 };
 
-//角色日志
+//角色log
 struct Log_BaseData
 {
-    ELogType    m_LogType   = ELT_LOG_TYPE_NONE; //日志类型
+    ELogType    m_LogType   = ELT_LOG_TYPE_NONE; //logtype
     UINT64      m_uAccountID = 0; //账号ID
     UINT64      m_uRoleID    = 0; //角色ID
-    UINT64      m_uOpTime    = 0; //日志发生时间
+    UINT64      m_uOpTime    = 0; //log发生时间
     INT32       m_nChannel   = 0; //渠道
     INT32       m_nAreaID    = 0; //区服ID
-    CHAR        m_szIdfa[64] = { 0 };  //客户端idfa
+    CHAR        m_szIdfa[64] = { 0 };  //clientidfa
     CHAR        m_szRoleName[64] = { 0 };
-    //以下两条仅角色日志有效
+    //以下两条仅角色log有效
     INT32       m_nLevel     = 0;//角色Level
     INT32       m_nVipLevel  = 0;//角色VIPLevel
     INT32       m_nAddWay    = 0;//
@@ -36,7 +36,7 @@ struct Log_BaseData
 
 struct Log_AccountCreate : public Log_BaseData
 {
-    INT32       m_dwVersion      = 0;   //客户端版本号
+    INT32       m_dwVersion      = 0;   //client版本号
     INT32       m_dwIpAddr       = 0;    //登录IP
     CHAR        m_szImei[64]    = { 0 };  //手机的MEI
     CHAR        m_szModel[64]   = { 0 }; //手机的机型
@@ -58,7 +58,7 @@ struct Log_AccountCreate : public Log_BaseData
 
 struct Log_AccountLogin : public Log_BaseData
 {
-    INT32       m_dwVersion = 0;  //客户端版本号
+    INT32       m_dwVersion = 0;  //client版本号
     INT32       m_dwIpAddr = 0;   //登录IP
     CHAR        m_szImei[64] = { 0 }; //手机的MEI
     CHAR        m_szModel[64] = { 0 };//手机的机型
@@ -176,7 +176,7 @@ struct Log_RoleGold : public Log_BaseData
     }
 };
 
-//聊天日志
+//聊天log
 struct Log_RoleChat : public Log_BaseData
 {
     CHAR   m_szText[256] = { 0 };
@@ -200,7 +200,7 @@ struct Log_RoleChat : public Log_BaseData
     }
 };
 
-//Level变化日志
+//Level变化log
 struct Log_RoleLevel : public Log_BaseData
 {
     UINT32 m_uPreValue = 0;

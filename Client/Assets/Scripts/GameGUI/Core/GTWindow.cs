@@ -79,14 +79,14 @@ public abstract class GTWindow
     {
         if (string.IsNullOrEmpty(Path))
         {
-            Debug.LogError("资源名为空");
+            Debug.LogError("资源名is空");
             return false;
         }
         string path = string.Format("Guis/{0}", Path);
         GameObject prefab = GTResourceManager.Instance.Load<GameObject>(path);
         if (prefab == null)
         {
-            Debug.LogError(string.Format("加载Window资源Failure:{0}", Path));
+            Debug.LogError(string.Format("loadWindow资源Failure:{0}", Path));
             return false;
         }
         GameObject go = GameObject.Instantiate(prefab);

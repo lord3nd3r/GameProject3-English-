@@ -9,9 +9,9 @@
 enum SharedMemoryStatus
 {
     SMS_NONE,       //未使用空闲状态
-    SMS_USE,        //已经使用了，数据库服务器可以读取修改写入数据库
-    SMS_LOCK,       //锁住状态，逻辑服务器正在写入
-    SMS_RELEASE,    //逻辑服务器已经释放了。数据库服务器写入修改后可以置为SMS_NONE状态
+    SMS_USE,        //已经使用了，数据库servercan读取修改写入数据库
+    SMS_LOCK,       //锁住状态，逻辑server正在写入
+    SMS_RELEASE,    //逻辑server已经释放了。数据库server写入修改后can置isSMS_NONE状态
     SMS_DELETE,     //删除标志
 };
 
@@ -21,16 +21,16 @@ class ShareObject
 public:
     ShareObject();
 
-    ///开始修改，标记为被占用
+    ///begin修改，标记is被占用
     void Lock();
 
-    ///标记为个改完成。
+    ///标记is个改完成。
     void Unlock();
 
-    ///标记为已经释放了
+    ///标记is已经释放了
     void Release();
 
-    //标记为删除
+    //标记is删除
     void Destroy();
 
     void UseIt();
@@ -61,9 +61,9 @@ private:
 struct _SMBlock
 {
     INT32           m_nIndex;      //数据当前编号
-    BOOL            m_bUse;         //是否在使用true是正在使用，false是没有使用
-    BOOL            m_bNewBlock;    //是否是刚刚新创建的区块
-    time_t          m_beforeTime;   //DS服务器更新完成后回写的信息时间。
+    BOOL            m_bUse;         //whether在使用true是正在使用，false是没有使用
+    BOOL            m_bNewBlock;    //whether是刚刚新创建的区块
+    time_t          m_beforeTime;   //DSserver更新完成后回写的信息时间。
     time_t          m_afterTime;
     _SMBlock()
     {
@@ -79,7 +79,7 @@ struct _SMBlock
 struct shareMemoryPage
 {
     char*        m_pdata;///指定共享内存地址
-    _SMBlock*    m_pBlock;///数据块的头位置
+    _SMBlock*    m_pBlock;///数据块的头position
     HANDLE       m_shm;///
 };
 
@@ -97,9 +97,9 @@ protected:
     ///共享内存页映射.
     ShareMemoryPageMapping m_ShareMemoryPageMapping;
 
-    INT32           m_nCountperPage;    ///页面容纳T类型数量
-    INT32           m_nPageCount;   ///页数量
-    INT32           m_nCount;       ///T类型的总个数,T类型必须是定长的。
+    INT32           m_nCountperPage;    ///页面容纳Ttypecount
+    INT32           m_nPageCount;   ///页count
+    INT32           m_nCount;       ///Ttype的总个数,Ttype必须是定长的。
     INT32           m_nSpace;       ///每个元素的宽度
     INT32           m_rawblockSize;
     INT32           m_nModuleID;
@@ -127,16 +127,16 @@ private:
     void InitPage(shareMemoryPage& rPage);
 
 public:
-    ///数据库服务器不需要初始化map,逻辑服务器才需要,所以分开
+    ///数据库server不需要初始化map,逻辑server才需要,所以分开
     void InitToMap();
 
-    /**是否是首创共享内存*/
+    /**whether是首创共享内存*/
     BOOL IsFirstCreated();
 
     /**从共享内存里恢复其他页*/
     void ImportOtherPage();
 
-    /**获取数量*/
+    /**获取count*/
     const INT32 GetCount()const;
 
     /**获取还有多少块空闲内存    */
@@ -155,11 +155,11 @@ public:
 
     const INT32 GetBlockSize();
 
-    /*处理已用区块中被数据库服务器释放的区块*/
+    /*handle已用区块中被数据库server释放的区块*/
     void ProcessCleanDirtyData();
 
     /*从空闲内存中分配一个块,如果没有了返回空
-    @param isNewBlock 为true时会在保存期调用saveobject 的Create虚函数
+    @param isNewBlock istrue时会在保存期调用saveobject 的Create虚函数
     */
     virtual ShareObject* NewObject(BOOL isNewBlock = false);
 

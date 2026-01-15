@@ -86,7 +86,7 @@ public class UIChipInfo : GTWindow
         DItem sourceDB = ReadCfgItem.GetDataById(itemID);
         if(item.Num < sourceDB.Data1)
         {
-            GTItemHelper.ShowTip("数量不足，无法合成");
+            GTItemHelper.ShowTip("count不足，无法合成");
             return;
         }
         GTNetworkSend.Instance.TryComposeChip(pos);
@@ -119,12 +119,12 @@ public class UIChipInfo : GTWindow
 
         itemDesc.text = sourceDB.Desc;
 
-        sourceItemNum.text = GTTools.Format("拥有数量：{0}", item.Num);
+        sourceItemNum.text = GTTools.Format("拥有count：{0}", item.Num);
         GTItemHelper.ShowItemTexture(sourceItemTexture, itemID);
         GTItemHelper.ShowItemName(sourceItemName, itemID);
         GTItemHelper.ShowItemQuality(sourceItemQuality, itemID);
 
-        targetItemNum.text = GTTools.Format("合成数量：{0}", item.Num / sourceDB.Data1);
+        targetItemNum.text = GTTools.Format("合成count：{0}", item.Num / sourceDB.Data1);
         GTItemHelper.ShowItemTexture(targetItemTexture, sourceDB.Data2);
         GTItemHelper.ShowItemName   (targetItemName, sourceDB.Data2);
         GTItemHelper.ShowItemQuality(targetItemQuality, sourceDB.Data2);

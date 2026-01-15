@@ -34,7 +34,7 @@ public class NetworkCtrl
         GTWindowManager.Instance.HideWindow(EWindowID.UINetWaiting);
         GTWindowManager.Instance.OpenWindow(EWindowID.UIMessageBoxForNetwork);
         UIMessageBoxForNetwork dialog = (UIMessageBoxForNetwork)GTWindowManager.Instance.GetWindow(EWindowID.UIMessageBoxForNetwork);
-        dialog.ShowView(string.Empty, "网络连接Failure，请稍后重试", NetworkManager.Instance.ReConnect, () =>
+        dialog.ShowView(string.Empty, "网络connectionFailure，请稍后重试", NetworkManager.Instance.ReConnect, () =>
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

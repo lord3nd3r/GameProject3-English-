@@ -63,20 +63,20 @@ namespace MAP
     {
         FTEventBegin               = 0,
 
-        FTEventTriggerArea         = 1,  //触发一个区域
+        FTEventTriggerArea         = 1,  //trigger一个区域
         FTEventDestroyArea         = 2,  //销毁一个区域
-        FTEventTriggerBarrier      = 3,  //触发光墙
+        FTEventTriggerBarrier      = 3,  //trigger光墙
         FTEventDestroyBarrier      = 4,  //销毁光墙
-        FTEventTriggerSkill        = 5,  //触发关卡技能
-        FTEventTriggerSound        = 6,  //触发声音
-        FTEventTriggerStep         = 7,  //触发副本阶段
-        FTEventTriggerTask         = 8,  //触发任务
-        FTEventTriggerTeleport     = 9,  //触发传送
-        FTEventTriggerTimer        = 10, //触发计时器
-        FTEventDestroyTimer        = 11, //停止定时器
+        FTEventTriggerSkill        = 5,  //trigger关卡skill
+        FTEventTriggerSound        = 6,  //trigger声音
+        FTEventTriggerStep         = 7,  //trigger副本阶段
+        FTEventTriggerTask         = 8,  //trigger任务
+        FTEventTriggerTeleport     = 9,  //trigger传送
+        FTEventTriggerTimer        = 10, //trigger计时器
+        FTEventDestroyTimer        = 11, //stop定时器
         FTEventKillMe              = 12, //被秒杀
-        FTEventTriggerEffect       = 13, //触发特效
-        FTEventDestroyEffect       = 14, //销毁特效
+        FTEventTriggerEffect       = 13, //triggereffect
+        FTEventDestroyEffect       = 14, //销毁effect
 
         FTEventDestroyAllMonsters  = 15, 
         FTEventDestroyAllObjs      = 16,

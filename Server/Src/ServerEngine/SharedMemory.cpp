@@ -82,9 +82,9 @@ void ShareObject::Reset()
 }
 
 /******************************************************************
-每块共享内存都是由数据体和数据头组成,数据体在前面，数据头在后面T为体H为头
+每块共享内存都是由数据体和数据头组成,数据体在前面，数据头在后面Tis体His头
 TTTTTTTTTTTTTTTTTTTTTTHHHHHHHHHHHHHHHHHHHHH
-数据体和数据块的数量是一样的
+数据体和数据块的count是一样的
 ********************************************************************/
 
 BOOL SharedMemoryBase::NewPage()
@@ -202,7 +202,7 @@ void SharedMemoryBase::ImportOtherPage()
     }
 }
 
-/**@param name 共享内存Name，可以通过Name找回,暂时如果有只打开内存中已经有的。
+/**@param name 共享内存Name，can通过Name找回,暂时如果有只打开内存中已经有的。
 *@param count  T的个数
 *@param noCreate 不允许创建
 */
@@ -351,7 +351,7 @@ void SharedMemoryBase::ProcessCleanDirtyData()
 
 ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
 {
-    ///如果未分配内存没有了,则开始处理脏数据
+    ///如果未分配内存没有了,则beginhandle脏数据
     if (m_mapFreeSMBlock.size() == 0)
     {
         ProcessCleanDirtyData();
@@ -378,7 +378,7 @@ ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
             ++it;
             continue;
         }
-        ///判断是否是删除状态
+        ///判断whether是删除状态
         if (!pobject->IsDestroy())
         {
             m_mapUsedSMBlock.insert(std::make_pair(pobject, pBlock));
@@ -393,7 +393,7 @@ ShareObject* SharedMemoryBase::NewObject(BOOL isNewBlock/*=false*/)
         it++;
     }
 
-    ////以下为新加的代码 zm
+    ////以下is新加的代码 zm
     ProcessCleanDirtyData();
 
     if (NewPage())

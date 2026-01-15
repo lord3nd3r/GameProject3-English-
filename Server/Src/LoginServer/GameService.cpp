@@ -43,7 +43,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("LoginServer"))
     {
-        CLog::GetInstancePtr()->LogError("LoginServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("LoginServeralready在running!");
         return FALSE;
     }
 
@@ -52,7 +52,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetIntValue("login_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("配制文件login_svr_port配制错误!");
+        CLog::GetInstancePtr()->LogError("config文件login_svr_portconfigerror!");
         return FALSE;
     }
 

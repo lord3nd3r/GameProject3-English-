@@ -22,7 +22,7 @@ public class GTEventCenter
         Delegate ed = mEvents[e];
         if (ed != null && d.GetType() != ed.GetType())
         {
-            string error = string.Format("添加事件监听错误，EventID:{0}，添加的事件{1},已存在的事件{2}", e.ToString(), d.GetType().Name, ed.GetType().Name);
+            string error = string.Format("添加eventlistenerror，EventID:{0}，添加的event{1},已存在的event{2}", e.ToString(), d.GetType().Name, ed.GetType().Name);
             Debug.LogError(error);
         }
     }

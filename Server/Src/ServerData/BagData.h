@@ -19,8 +19,8 @@ struct BagDataObject : public ShareObject
 	UINT64	m_ItemGuid;		//物品guid
 	UINT32	m_ItemID;		//道具ID
 	INT64	m_nCount;		//个数
-	BOOL	m_bBind;		//是否是邦定
-	UINT32	m_nStatus;		//是否删除
+	BOOL	m_bBind;		//whether是邦定
+	UINT32	m_nStatus;		//whether删除
 
 	BOOL Create(IDBInterface* pDB)
 	{

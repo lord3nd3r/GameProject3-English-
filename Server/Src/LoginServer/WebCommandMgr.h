@@ -25,9 +25,9 @@ public:
     //********************* Message handlers end ******************************
 
 public:
-    //*********************WebAction处理定义开始******************************
+    //*********************WebActionhandledefinitionbegin******************************
     void OnGmSealAccount(HttpParameter& hParams, INT32 nConnID);
     void OnGmServerChange(HttpParameter& hParams, INT32 nConnID);
-    //*********************WebAction处理定义开始******************************
+    //*********************WebActionhandledefinitionbegin******************************
 };
 #endif

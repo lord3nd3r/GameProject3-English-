@@ -3,16 +3,16 @@ using System.Collections;
 
 public enum GTEventID : ushort
 {
-    TYPE_NETWORK_CONNECT             = 1000,   //准备连接
-    TYPE_NETWORK_CONNECT_FAIL        = 1001,   //连接Failure  
-    TYPE_NETWORK_CONNECT_SUCCESS     = 1002,   //连接Success
+    TYPE_NETWORK_CONNECT             = 1000,   //准备connection
+    TYPE_NETWORK_CONNECT_FAIL        = 1001,   //connectionFailure  
+    TYPE_NETWORK_CONNECT_SUCCESS     = 1002,   //connectionSuccess
 
     TYPE_LOGIN_ACCOUNT_REGISTER      = 1051,   //注册回调            
     TYPE_LOGIN_ACCOUNT_LOGIN         = 1052,   //登陆回调 
     TYPE_LOGIN_ROLECRATE             = 1053,   //创建角色
     TYPE_LOGIN_SELECTSERVER          = 1054,   //登陆游戏服回调
     TYPE_LOGIN_ROLELOGIN             = 1055,   //进入游戏
-    TYPE_LOGIN_GETSERVERLIST         = 1056,   //获取服务器列表回调
+    TYPE_LOGIN_GETSERVERLIST         = 1056,   //获取serverlist回调
 
     TYPE_CHANGE_MONEY                = 1108,   //金钱改变
     TYPE_CHANGE_ACTION               = 1109,   //行动力改变
@@ -40,19 +40,19 @@ public enum GTEventID : ushort
     TYPE_ECTYPE_BATTLECHECK          = 1403,   //战前检查
 
     TYPE_ACTOR_MOVE_JOYSTICK         = 1501,   //移动摇杆
-    TYPE_ACTOR_STOP_JOYSTICK         = 1502,   //停止摇杆
-    TYPE_ACTOR_JUMP                  = 1503,   //请求玩家跳跃
-    TYPE_ACTOR_CAST_SKILL            = 1504,   //主角释放技能
+    TYPE_ACTOR_STOP_JOYSTICK         = 1502,   //stop摇杆
+    TYPE_ACTOR_JUMP                  = 1503,   //请求player跳跃
+    TYPE_ACTOR_CAST_SKILL            = 1504,   //主角释放skill
     TYPE_ACTOR_MOVE_PURSUE           = 1505,   //请求寻路
     TYPE_ACTOR_KILL_MONSTER          = 1506,   //杀死一只怪物
     TYPE_ACTOR_AVATAR_DEAD           = 1507,   //主角死亡
 
-    TYPE_UPDATE_AVATAR_HP            = 1601,   //刷新主角生命
+    TYPE_UPDATE_AVATAR_HP            = 1601,   //刷新主角life
     TYPE_UPDATE_AVATAR_MP            = 1602,   //刷新主角能量
     TYPE_UPDATE_AVATAR_SP            = 1603,   //刷新主角SP
     TYPE_UPDATE_AVATAR_ATTR          = 1604,   //刷新主角属性
     TYPE_UPDATE_AVATAR_BUFF          = 1605,   //更新主角BUFF
-    TYPE_UPDATE_PARTNER_HP           = 1606,   //刷新伙伴生命
+    TYPE_UPDATE_PARTNER_HP           = 1606,   //刷新伙伴life
     TYPE_UPDATE_BOSS_HP              = 1607,   //刷新BOSS血量
 
     TYPE_MOUNT_STARTMOUNT            = 1801,   //骑坐骑
@@ -78,7 +78,7 @@ public enum GTEventID : ushort
     TYPE_SECOND_TICK                 = 2401,   //每秒更新
     TYPE_FORCE_STOPJOYSTICK          = 2402,   //暴力禁止摇杆
 
-    TYPE_TASK_STOP_AUTOTASK          = 2501,   //停止自动任务
+    TYPE_TASK_STOP_AUTOTASK          = 2501,   //stop自动任务
     TYPE_TASK_SUBMIT_TASK            = 2502,   //提交日常任务
     TYPE_TASK_THREAD_STATE           = 2601,   //更新主线任务状态
     TYPE_TASK_BRANCH_STATE           = 2602,   //更新支线任务状态

@@ -4,7 +4,7 @@ using ACT;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/动作节点", Label = "TryCastSkill")]
+    [NodeAttribute(Type = "AI/action节点", Label = "TryCastSkill")]
     public class TryCastSkill : AITask
     {
         public override ENST OnExecute()

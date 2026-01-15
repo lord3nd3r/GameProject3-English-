@@ -43,12 +43,12 @@ namespace BVT.AI
         {
             if (!Invert)
             {
-                string s = string.Format("当与目标的距离<{0}时", Distance.ToEncode());
+                string s = string.Format("当与target的距离<{0}时", Distance.ToEncode());
                 GUILayout.Label(s);
             }
             else
             {
-                string s = string.Format("当与目标的距离>{0}时", Distance.ToEncode());
+                string s = string.Format("当与target的距离>{0}时", Distance.ToEncode());
                 GUILayout.Label(s);
             }
         }

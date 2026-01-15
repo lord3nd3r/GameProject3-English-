@@ -63,7 +63,7 @@ public class EffectData : IObj
         this.Cfg = ReadCfgEffect.GetDataById(id);
         if (Cfg == null)
         {
-            Debug.LogError("不存在特效ID =" + ID);
+            Debug.LogError("不存在effectID =" + ID);
             return;
         }
         GameObject go = GTPoolManager.Instance.GetObject(Cfg.Path);

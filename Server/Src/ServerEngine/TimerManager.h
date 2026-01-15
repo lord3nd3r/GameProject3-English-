@@ -89,7 +89,7 @@ public:
     INT32  m_nData;
     TimeEvent* m_pPrev; //前一节点
     TimeEvent* m_pNext; //后一节点
-    INT32  m_nType;   //事件类型,1 绝对时间定时器,2 相对时间定时器
+    INT32  m_nType;   //eventtype,1 绝对时间定时器,2 相对时间定时器
     INT32  m_nRepeateTimes;
     CTimerSlotBase* m_pTimerFuncSlot;
 };
@@ -204,7 +204,7 @@ public:
 
     UINT64     m_uCurTime;
 
-    UINT64     m_uInitTime;  //定时器开始工作时间(不对开始工作时间之前的定时器发生作用)
+    UINT64     m_uInitTime;  //定时器begin工作时间(不对begin工作时间之前的定时器发生作用)
 public:
 };
 

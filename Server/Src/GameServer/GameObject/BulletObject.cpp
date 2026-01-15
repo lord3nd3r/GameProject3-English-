@@ -151,7 +151,7 @@ BOOL CBulletObject::CheckTargetObjects()
 
 BOOL CBulletObject::CheckLifeOver(UINT64 uTick)
 {
-	//检查是否该消失了
+	//检查whether该消失了
 	if ((uTick - m_uStartTick) > m_pBulletInfo->LifeTime)
 	{
 		m_bFinished = TRUE;
@@ -217,7 +217,7 @@ BOOL CBulletObject::UpdateBulletPos(UINT64 uTick)
 		}
 		break;
 
-		case EBT_FIXTARGETPOS:  //固定目标点飞弹
+		case EBT_FIXTARGETPOS:  //固定target点飞弹
 		case EBT_FIXDIRECTION:  //固定方向型飞弹:
 		{
 			if (m_fAngle < 0)
@@ -236,7 +236,7 @@ BOOL CBulletObject::UpdateBulletPos(UINT64 uTick)
 		{
 		}
 		break;
-		case EBT_LINK:          //连接飞弹
+		case EBT_LINK:          //connection飞弹
 		{
 		}
 		break;

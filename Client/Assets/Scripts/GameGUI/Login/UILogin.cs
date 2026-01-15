@@ -236,7 +236,7 @@ public class UILogin : GTWindow
     public void ShowCurrServer()
     {
         XServer data = MLLogin.Instance.GetCurrServer();
-        curServerName.text = data == null ? "服务器" : data.Name;
+        curServerName.text = data == null ? "server" : data.Name;
     }
 
     public void ShowUsernameAndPassword()

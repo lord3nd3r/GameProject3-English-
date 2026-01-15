@@ -11,10 +11,10 @@ public:
 	//初始化网格数据
 	BOOL		Init(INT32 nLeft, INT32 nRight, INT32 nTop, INT32 nBottom);
 
-	//根据位置坐标得到网格
+	//根据position坐标得到网格
 	CGrid*		GetGridByPos(FLOAT x, FLOAT z);
 
-	//根据位置坐标到得网格索引
+	//根据position坐标到得网格索引
 	INT32		GetIndexByPos(FLOAT x, FLOAT z);
 
 	//根据索引得到网格

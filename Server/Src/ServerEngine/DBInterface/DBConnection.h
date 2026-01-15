@@ -10,7 +10,7 @@
 #pragma comment(lib, "libmysql.lib")
 #endif
 
-#define ERROR_SLEEP_TIME 3000 // 执行SQL语句时出错，再次尝试执行间隔时间（毫秒）
+#define ERROR_SLEEP_TIME 3000 // 执行SQL语句时出错，再次尝试执行interval时间（毫秒）
 
 class CDBConnection  : public IDBInterface
 {

@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/动作节点", Label = "TryStopPursue")]
+    [NodeAttribute(Type = "AI/action节点", Label = "TryStopPursue")]
     public class TryStopPursue : AITask
     {
         public override ENST OnExecute()

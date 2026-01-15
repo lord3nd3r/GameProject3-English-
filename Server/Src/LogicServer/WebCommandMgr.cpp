@@ -251,7 +251,7 @@ void CWebCommandMgr::OnGmGroupMail(HttpParameter& hParams, INT32 nConnID)
 	std::string strTitle = hParams.GetStrValue("mail_title");
 	std::string strContent = hParams.GetStrValue("mail_content");
 	INT32 nLanguage = hParams.GetIntValue("language");
-	INT32 nRecvGroup = hParams.GetIntValue("reciver_group"); //1:全部玩家; 2:在线玩家
+	INT32 nRecvGroup = hParams.GetIntValue("reciver_group"); //1:全部player; 2:在线player
 
 
 	std::vector<StMailItem> vtItems;

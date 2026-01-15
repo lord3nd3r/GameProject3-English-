@@ -11,8 +11,8 @@ struct CounterDataObject : public ShareObject
 		m_dwIndex = 0;      //子索引
 		m_uValue = 0;       //计数器值
 		m_uTime = 0;        //参与时间
-		m_dwParam1 = 0;     //参数1
-		m_dwParam2 = 0;     //参数2
+		m_dwParam1 = 0;     //params1
+		m_dwParam2 = 0;     //params2
 	}
 
 	UINT64 m_uRoleID;       //角色ID
@@ -20,8 +20,8 @@ struct CounterDataObject : public ShareObject
 	UINT32 m_dwIndex;       //子索引
 	INT64  m_uValue;        //计数器值
 	UINT64 m_uTime;         //参与时间
-	UINT32 m_dwParam1;      //参数1
-	UINT32 m_dwParam2;      //参数2
+	UINT32 m_dwParam1;      //params1
+	UINT32 m_dwParam2;      //params2
 
 	BOOL Create(IDBInterface* pDB)
 	{

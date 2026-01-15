@@ -30,7 +30,7 @@ public:
 	BOOL ReloadConfigData(std::string strTbName);
 
 public:
-	//基本配制变量
+	//基本config变量
 	///////////////////////////////////////////////
 	std::map<std::string, INT32>m_mapConstantValue;
 	BOOL ReadConstantData(CppSQLite3Query& QueryData);
@@ -63,7 +63,7 @@ public:
 	BOOL ReadActor(CppSQLite3Query& QueryData);
 	StActorInfo* GetActorInfo(UINT32 dwActorID);
 
-	//角色技能关系表
+	//角色skill关系表
 	std::map<UINT32, StActorSkillInfo> m_mapActorSkill;
 	BOOL ReadActorSkillInfo(CppSQLite3Query& QueryData);
 	StActorSkillInfo* GetActorSkillInfo(UINT32 dwActorID);
@@ -74,7 +74,7 @@ public:
 	BOOL ReadCopyInfo(CppSQLite3Query& QueryData);
 	StCopyInfo* GetCopyInfo(UINT32 dwCopyID);
 	UINT32 GetCopyType(UINT32 dwCopyID);
-	//语言配制表
+	//语言config表
 	///////////////////////////////////////////////
 	std::map<UINT32, StLocalString> m_mapLanguage;
 	BOOL ReadLanguage(CppSQLite3Query& QueryData);
@@ -154,12 +154,12 @@ public:
 	StActivityInfo* GetActivityInfo(UINT32 dwActivityType);
 
 	//=================================================================
-	//技能
+	//skill
 	std::map<UINT32, StSkillInfo> m_mapSkillInfo;
 	BOOL ReadSkillInfo(CppSQLite3Query& QueryData);
 	StSkillInfo* GetSkillInfo(UINT32 dwSkillID, UINT32 dwLevel);
 
-	//技能事件
+	//skillevent
 	std::map<UINT32, StSkillEventInfo> m_mapSkillEvent;
 	BOOL ReadSkillEvent();
 	StSkillEventInfo* GetSkillEventInfo(UINT32 dwSkillID);
@@ -174,7 +174,7 @@ public:
 	BOOL ReadBuffInfo(CppSQLite3Query& QueryData);
 	StBuffInfo* GetBuffInfo(UINT32 dwBuffID);
 
-	//子弹信息
+	//bullet信息
 	std::map<UINT32, StBulletInfo> m_mapBulletInfo;
 	BOOL ReadBulletInfo(CppSQLite3Query& QueryData);
 	StBulletInfo* GetBulletInfo(UINT32 dwBulletID);

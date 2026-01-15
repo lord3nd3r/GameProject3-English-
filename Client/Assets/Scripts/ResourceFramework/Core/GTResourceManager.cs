@@ -6,9 +6,9 @@ using System.IO;
 
 public class GTResourceManager : GTSingleton<GTResourceManager>
 {
-    public Dictionary<string, GTResourceUnit>    Units          = new Dictionary<string, GTResourceUnit>();   //以AssetName为Key，保存Asset
+    public Dictionary<string, GTResourceUnit>    Units          = new Dictionary<string, GTResourceUnit>();   //以AssetNameisKey，保存Asset
     public Dictionary<string, GTResourceBundle>  Bundles        = new Dictionary<string, GTResourceBundle>(); //保存所有的AssetBundle
-    public ResourceType                          Type           = ResourceType.TYPE_BUNDLE;                 //资源加载方式
+    public ResourceType                          Type           = ResourceType.TYPE_BUNDLE;                 //资源load方式
     
     private bool                                 IsRead
     {
@@ -200,7 +200,7 @@ public class GTResourceManager : GTSingleton<GTResourceManager>
         Units.TryGetValue(assetName, out unit);
         if (unit == null)
         {
-            Debug.LogError("配置表中不存在：" + assetName);
+            Debug.LogError("config表中不存在：" + assetName);
             return;
         }
         GTResourceBundle bundle = null;
@@ -224,7 +224,7 @@ public class GTResourceManager : GTSingleton<GTResourceManager>
         Units.TryGetValue(assetName, out unit);
         if (unit == null)
         {
-            Debug.LogError("配置表中不存在：" + assetName);
+            Debug.LogError("config表中不存在：" + assetName);
             return;
         }
         Object asset = UnityEditor.AssetDatabase.LoadAssetAtPath<Object>(unit.Path);

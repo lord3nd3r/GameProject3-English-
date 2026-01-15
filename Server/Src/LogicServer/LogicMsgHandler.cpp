@@ -108,7 +108,7 @@ BOOL CLogicMsgHandler::OnMsgRoleListReq(NetPacket* pNetPacket)
 //      Ack.set_retcode(MRC_ILLEGAL_LOGIN_REQ);
 //      return ServiceBase::GetInstancePtr()->SendMsgProtoBuf(pNetPacket->m_nConnID, MSG_ROLE_LIST_ACK, 0, pHeader->dwUserData, Ack);
 
-        //还需要通知网关断开这个连结
+        //还需要通知网关disconnected这个连结
     }
 
     ServiceBase::GetInstancePtr()->SendMsgProtoBuf(CGameService::GetInstancePtr()->GetDBConnID(),  MSG_ROLE_LIST_REQ, pNetPacket->m_nConnID, pHeader->dwUserData, Req);
@@ -131,8 +131,8 @@ BOOL CLogicMsgHandler::OnMsgRoleListAck(NetPacket* pNetPacket)
         return ServiceBase::GetInstancePtr()->SendMsgProtoBuf((UINT32)pHeader->u64TargetID, MSG_ROLE_LIST_ACK, 0, pHeader->dwUserData, Ack);
     }
 
-    //否则说明有玩家的数据还没有写到数据库中
-    //这个时候就说明这个玩家的数据需要从内存中取
+    //否则说明有player的数据还没有写到数据库中
+    //这个时候就说明这个player的数据需要从内存中取
 
     for (INT32 i = 0; i < vtRoleIDs.size(); i++)
     {
@@ -176,7 +176,7 @@ BOOL CLogicMsgHandler::OnMsgRoleCreateReq(NetPacket* pNetPacket)
     Req.ParsePartialFromArray(pNetPacket->m_pDataBuffer->GetData(), pNetPacket->m_pDataBuffer->GetBodyLenth());
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
     ERROR_RETURN_TRUE(pHeader->dwUserData != 0);
-    //检验Name是否可用
+    //检验Namewhether可用
     ERROR_RETURN_TRUE(Req.accountid() != 0);
     ERROR_RETURN_TRUE(Req.carrer() != 0);
 
@@ -239,7 +239,7 @@ BOOL CLogicMsgHandler::OnMsgRoleDeleteReq(NetPacket* pNetPacket)
     PacketHeader* pHeader = (PacketHeader*)pNetPacket->m_pDataBuffer->GetBuffer();
     ERROR_RETURN_TRUE(pHeader->u64TargetID != 0);
 
-    //如果玩家在内存中，就在内存中删除，然后释放掉，如果玩家不在内存中，就向数据库发消息删除
+    //如果player在内存中，就在内存中删除，然后释放掉，如果player不在内存中，就向数据库发message删除
     CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(Req.roleid());
     if(pPlayer != NULL)
     {
@@ -288,11 +288,11 @@ BOOL CLogicMsgHandler::OnMsgRoleLoginReq(NetPacket* pNetPacket)
 
     if((pPlayer->m_nProxyConnID != 0) || (pPlayer->m_nClientConnID != 0))
     {
-        //表示玩家还没有退出，这个时候就是相当于挤的人情况发生了
+        //表示player还没有退出，这个时候就是相当于挤的人情况发生了
         //如果在副本中，通知副本里人物离开
         //如果在场景中，通知场景中人物离开
         //清理副本状态
-        //还需要通知玩家被人挤走了
+        //还需要通知player被人挤走了
 
         pPlayer->SendMsgRawData(MSG_ROLE_OTHER_LOGIN_NTY, NULL, 0);
         if(pPlayer->m_bMainCity)
@@ -468,7 +468,7 @@ BOOL CLogicMsgHandler::OnMsgChatMessageReq(NetPacket* pNetPacket)
     ERROR_RETURN_TRUE(pPlayer != NULL);
 
     //以下是走聊天逻辑
-    //如果条件不够返回错误码
+    //如果条件不够返回error码
     //ChatMessageAck Ack;
     //Ack.set_retcode(xxx);
     //pPlayer->SendMsgProtoBuf(MSG_CHAT_MESSAGE_ACK, Ack);
@@ -522,11 +522,11 @@ BOOL CLogicMsgHandler::OnMsgReconnectReq( NetPacket* pNetPacket )
 
     if((pPlayer->m_nProxyConnID != 0) || (pPlayer->m_nClientConnID != 0))
     {
-        //当重连发生的时候，理论上这个连接己经断开了。这两个值应该为空了，
-        //如果此时这两个值为空，那么，还会有其它的情况发生。
+        //当重连发生的时候，理论上这个connectionalreadydisconnected了。这两个值应该is空了，
+        //如果此时这两个值is空，那么，还会有其它的情况发生。
         //此时应该直接选设置这两个值
-        //由于副本己经被退出， 所以此时应该将玩家放到主城
-        CLog::GetInstancePtr()->LogError("OnMsgReconnectReq 断开消都还没有收到， 重连的消息就到了");
+        //由于副本already被退出， 所以此时应该将player放到主城
+        CLog::GetInstancePtr()->LogError("OnMsgReconnectReq disconnected消都还没有收到， 重连的message就到了");
     }
 
     pPlayer->SetOnline(TRUE);

@@ -7,7 +7,7 @@ namespace ACT
     public class ActRandomMany : ActItem
     {
         [SerializeField]
-        public int            RandomNum  = 1; //随机选取的数量
+        public int            RandomNum  = 1; //随机选取的count
 
         public List<ActItem>  RandomList
         {

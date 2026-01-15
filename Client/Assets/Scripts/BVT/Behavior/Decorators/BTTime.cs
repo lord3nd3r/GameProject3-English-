@@ -49,7 +49,7 @@ namespace BVT
             GUILayout.Label(string.Format("<color=#ffffff>持续时间：{0}s</color>", this.Time));
             if (Running)
             {
-                GUILayout.Label(string.Format("<color=#ff64cb>运行时间：{0}s</color>", mLastTime > this.Time ? this.Time : mLastTime));
+                GUILayout.Label(string.Format("<color=#ff64cb>running时间：{0}s</color>", mLastTime > this.Time ? this.Time : mLastTime));
             }
         }
 #endif

@@ -12,7 +12,7 @@ namespace MAP
 #if UNITY_EDITOR
             GUILayout.Space(10);
             GUI.color = Color.green;
-            if (GUILayout.Button("添加事件", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("添加event", FTGUIStyles.FTButtonStyle, GUILayout.Height(40)))
             {
                 FTEditorHelper.ShowMenu(typeof(FTEvent), (obj) =>
                 {

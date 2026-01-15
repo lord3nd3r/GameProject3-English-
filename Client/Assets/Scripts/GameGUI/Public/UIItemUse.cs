@@ -146,6 +146,6 @@ public class UIItemUse : GTWindow
         GTItemHelper.ShowItemTexture(itemTexture, item.Id);
         GTItemHelper.ShowItemQuality(itemQuality, item.Id);
         SetCurrCount(1);
-        itemNum.text = GTTools.Format("拥有数量：{0}", item.Num);
+        itemNum.text = GTTools.Format("拥有count：{0}", item.Num);
     }
 }

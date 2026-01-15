@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// 受击
+/// hit
 /// </summary>
 public class CommandWound : CommandAct
 {

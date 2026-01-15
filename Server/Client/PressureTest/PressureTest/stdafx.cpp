@@ -1,5 +1,5 @@
 ﻿// stdafx.cpp : 只包括标准包含文件的源文件
-// PressureTest.pch 将作为预编译头
+// PressureTest.pch 将作is预编译头
 // stdafx.obj will contain precompiled type information
 
 #include "stdafx.h"

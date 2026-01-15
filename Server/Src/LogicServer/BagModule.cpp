@@ -163,7 +163,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pPetModule != NULL);
 			uItemGuid = pPetModule->AddPet(dwItemID);
 
-			//在这里要直接返回，因为宠物不进背包
+			//在这里要直接返回，因is宠物不进背包
 			return TRUE;
 		}
 		break;
@@ -173,7 +173,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pMountModule != NULL);
 			uItemGuid = pMountModule->AddMount(dwItemID);
 
-			//在这里要直接返回，因为宠物不进背包
+			//在这里要直接返回，因is宠物不进背包
 			return TRUE;
 		}
 		break;
@@ -183,7 +183,7 @@ BOOL CBagModule::AddItem(UINT32 dwItemID, INT64 nCount)
 			ERROR_RETURN_FALSE(pPartnerModule != NULL);
 			uItemGuid = pPartnerModule->AddPartner(dwItemID);
 
-			//在这里要直接返回，因为伙伴不进背包
+			//在这里要直接返回，因is伙伴不进背包
 			return TRUE;
 		}
 		break;

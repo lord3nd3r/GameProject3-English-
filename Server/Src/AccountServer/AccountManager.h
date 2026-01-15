@@ -11,8 +11,8 @@ struct CAccountObject
     std::string m_strPassword;
     INT32       m_nLastSvrID[2] = {0};
     INT32       m_nChannel = 0;    //渠道ID
-    UINT64      m_uSealTime = 0;    //封禁结束时间
-    UINT64      m_uCreateTime = 0;  //创建时间
+    UINT64      m_uSealTime = 0;    //封禁end时间
+    UINT64      m_uCreateTime = 0;  //create time
     INT32       m_nLoginCount = 0;
 };
 
@@ -62,7 +62,7 @@ public:
 
     UINT64              m_u64MaxID;
 
-    BOOL                m_bCrossChannel;   //是否区分渠道
+    BOOL                m_bCrossChannel;   //whether区分渠道
 };
 
 #endif //__DB_ACCOUNT_OBJECT_H__

@@ -37,7 +37,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
         return FALSE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("---------服务器开始启动-ServerID:%d--Port:%d--------", nServerID, nPort);
+    CLog::GetInstancePtr()->LogInfo("---------serverbeginstart-ServerID:%d--Port:%d--------", nServerID, nPort);
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
@@ -67,7 +67,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
 
     if(!m_SceneManager.Init(TRUE))
     {
-        CLog::GetInstancePtr()->LogError("启动场景管理器Failure!");
+        CLog::GetInstancePtr()->LogError("start场景管理器Failure!");
         return FALSE;
     }
 

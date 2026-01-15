@@ -1,4 +1,4 @@
-﻿// WatchServer.cpp : 定义控制台应用程序的入口点。
+﻿// WatchServer.cpp : definition控制台应用程序的入口点。
 //
 
 #include "stdafx.h"

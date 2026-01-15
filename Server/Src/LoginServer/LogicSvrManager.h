@@ -10,7 +10,7 @@ enum EStatusFlag
     ESF_BUSY        = 2,//拥挤
     ESF_FULL        = 3,//爆满
     ESF_MAINTAIN    = 4,//维护
-    ESF_SHUTDOWN    = 5,//关闭
+    ESF_SHUTDOWN    = 5,//shutdown
     ESF_REVIEW      = 6,//评审
 };
 
@@ -33,7 +33,7 @@ enum EServerStatus
 {
     ESS_SVR_OFFLINE     = 0, //掉线
     ESS_SVR_ONLINE      = 1, //在线
-    ESS_SVR_STARTING    = 2, //启动中
+    ESS_SVR_STARTING    = 2, //start中
     ESS_SVR_UPDATING    = 3, //更新中
 };
 
@@ -67,30 +67,30 @@ struct LogicServerNode
 
     BOOL CheckVersion(std::string strVersion);
 
-    INT32       m_nConnID;     //连接ID
-    INT32       m_nServerID;   //服务器ID
+    INT32       m_nConnID;     //connectionID
+    INT32       m_nServerID;   //serverID
     INT32       m_nPort;       //游戏端口号
     INT32       m_nHttpPort;   //http端口
-    INT32       m_ServerFlag;   //服务器标记
-    INT32       m_CornerMark;   //服务器角标
+    INT32       m_ServerFlag;   //server标记
+    INT32       m_CornerMark;   //server角标
     INT32       m_nMinVersion; //最小可见版本
     INT32       m_nMaxVersion; //最大可见版本
     UINT64      m_uSvrOpenTime; //开服时间
-    std::string m_strSvrName;   //服务器Name
-    std::string m_strOuterAddr; //服务器的外网地址
-    std::string m_strInnerAddr; //服务器的内网地址
-    UINT64      m_uLastUpdate;  //服务器最后更新时间
+    std::string m_strSvrName;   //serverName
+    std::string m_strOuterAddr; //server的外网地址
+    std::string m_strInnerAddr; //server的内网地址
+    UINT64      m_uLastUpdate;  //server最后更新时间
     std::set<INT32> m_CheckIpList;   //IP白名单
     std::set<INT32>  m_CheckChannelList; //渠道白名单
     std::set<UINT64>  m_CheckAccountList; //账号白名单
-    EServerStatus    m_ServerStatus;   //服务器状态
+    EServerStatus    m_ServerStatus;   //server状态
 
     INT32       m_nMaxOnline;   //最大在线人数
     INT32       m_nCurOnline;   //当前最大人数
     INT32       m_nTotalNum;    //总注册人数
     INT32       m_nCacheNum;    //当前缓存人数
     INT32       m_nErrorCnt;    //数据库写Failure次数
-    INT32       m_nFileVer;     //服务器文件版本
+    INT32       m_nFileVer;     //server文件版本
 
     EUpdateStatus       m_eChangeStatus;
 
@@ -100,7 +100,7 @@ struct GameParamNode
 {
     INT32 m_nChannel;  //渠道
     std::string m_strParamKey;//
-    std::string m_strParamValue; //实际服务器ID
+    std::string m_strParamValue; //实际serverID
 };
 
 class LogicSvrManager : public std::map<INT32, LogicServerNode*>

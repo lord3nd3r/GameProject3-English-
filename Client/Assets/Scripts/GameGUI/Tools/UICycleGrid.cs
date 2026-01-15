@@ -27,7 +27,7 @@ public class UICycleGrid : MonoBehaviour
     private List<Transform>       m_Children   = new List<Transform>();
     private Vector3               m_PanelTrans;
     private Vector2               m_PanelOffset;
-    private Vector2               m_FirstPoint; //初始化位置
+    private Vector2               m_FirstPoint; //初始化position
     private float                 m_Extents;
     private int                   m_CurUseCount = 0;
     private int                   minIndex = 0;

@@ -520,8 +520,8 @@ BOOL CommonSocket::SetSocketKeepAlive( SOCKET hSocket, int nKeepInterval, int nK
 {
 #ifdef WIN32
     tcp_keepalive  alive_in = { 0 }, alive_out = { 0 };
-    alive_in.keepalivetime = nKeepIdle;                // 开始首次KeepAlive探测前的TCP空闭时间
-    alive_in.keepaliveinterval = nKeepInterval;            // 两次KeepAlive探测间的时间间隔
+    alive_in.keepalivetime = nKeepIdle;                // begin首次KeepAlive探测前的TCP空闭时间
+    alive_in.keepaliveinterval = nKeepInterval;            // 两次KeepAlive探测间的时间interval
     alive_in.onoff = TRUE;
     unsigned long ulBytesReturn = 0;
     int nRet = WSAIoctl(hSocket, SIO_KEEPALIVE_VALS, &alive_in, sizeof(alive_in),

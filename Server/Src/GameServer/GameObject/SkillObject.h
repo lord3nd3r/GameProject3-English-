@@ -49,7 +49,7 @@ public:
 	CBulletObject* CreateBullet(StBulletObject& stBullet);
 
 public:
-	UINT64              m_dwStartTick; //开始时间
+	UINT64              m_dwStartTick; //begin时间
 	UINT32              m_dwSkillID;   //Skill ID
 	UINT32              m_dwEventIndex;
 	StSkillInfo*        m_pSkillInfo;

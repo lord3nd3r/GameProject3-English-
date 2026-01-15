@@ -12,7 +12,7 @@ public class ResourceTools
     private static Dictionary<string, GTResourceUnit> Units = new Dictionary<string, GTResourceUnit>();
 
 
-    [MenuItem("工具/新版配置文件")]
+    [MenuItem("工具/新版config文件")]
     public static void BuildConfig()
     {
         DelBundles();

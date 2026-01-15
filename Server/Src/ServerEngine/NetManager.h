@@ -65,7 +65,7 @@ public:
     SOCKET              m_hCurAcceptSocket;
     HANDLE              m_hCompletePort;
     CHAR                m_AddressBuf[128];
-    BOOL                m_bCloseEvent;      //是否关闭事件处理线程
+    BOOL                m_bCloseEvent;      //whethershutdowneventhandle线程
 
     //包序号检测
     BOOL                m_bPacketNoCheck;

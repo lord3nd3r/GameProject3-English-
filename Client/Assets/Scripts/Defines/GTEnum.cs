@@ -148,7 +148,7 @@ public enum EBattleCamp
 
 public enum EDropType
 {
-    ONERAN = 1,//随机掉落一定数量的单个物品
+    ONERAN = 1,//随机掉落一定count的单个物品
     MULFIX = 2,//固定掉落多个物品
     MULRAN = 3,//随机掉落多个物品
 }
@@ -204,7 +204,7 @@ public enum ETaskTargetType
     TYPE_UPPET          = 4,//升级宠物
     TYPE_UPGEM          = 5,//升级星石
     TYPE_UPPARTNER      = 6,//升级伙伴
-    TYPE_UPSKILL        = 7,//升级角色技能
+    TYPE_UPSKILL        = 7,//升级角色skill
     TYPE_TALK           = 8,//对话
     TYPE_ROB_TREASURE   = 9,//夺宝
     TYPE_AREAE          = 10,//竞技场战斗
@@ -226,7 +226,7 @@ public enum ETaskCycleType
 
 public enum ETaskState
 {
-    QUEST_NONE,           //无类型
+    QUEST_NONE,           //无type
     QUEST_DOING,          //正在进行任务
     QUEST_CANSUBMIT,      //可提交
     QUEST_FAILED,         //任务Failure
@@ -240,17 +240,17 @@ public enum Resp : byte
     TYPE_CANNOT_CONTROLSELF   = 2,  //角色被控制，无法操控
 
     TYPE_CANNOT_MOVE          = 3,  //角色无法移动 
-    TYPE_CANNOT_MOVETODEST    = 4,  //无法到达此位置 
+    TYPE_CANNOT_MOVETODEST    = 4,  //无法到达此position 
     TYPE_HAS_DEAD             = 5,  //角色已死亡
 
     TYPE_SKILL_LACKHP         = 11,  //缺少HP
     TYPE_SKILL_LACKMP         = 12,  //缺少MP
     TYPE_SKILL_LACKSP         = 13,  //缺少SP
-    TYPE_SKILL_CASTING        = 14,  //正在释放技能
-    TYPE_SKILL_LEADING        = 15,  //正在引导技能
-    TYPE_SKILL_CD             = 16,  //技能还未冷却
-    TYPE_SKILL_NOTFIND        = 17,  //找不到这个技能
-    TYPE_SKILL_NOTDOATSCENE   = 18,  //当前场景无法使用技能
+    TYPE_SKILL_CASTING        = 14,  //正在释放skill
+    TYPE_SKILL_LEADING        = 15,  //正在引导skill
+    TYPE_SKILL_CD             = 16,  //skill还未冷却
+    TYPE_SKILL_NOTFIND        = 17,  //找不到这个skill
+    TYPE_SKILL_NOTDOATSCENE   = 18,  //当前场景无法使用skill
     TYPE_SKILL_LACKXP         = 19,  //缺乏经验
     TYPE_SKILL_SILENT         = 20,  //沉默
 
@@ -281,7 +281,7 @@ public enum FSMState : int
     FSM_DEAD,                //死亡
     FSM_REBORN,              //重生
 
-    FSM_WOUND,               //受击
+    FSM_WOUND,               //hit
     FSM_BEATBACK,            //击退
     FSM_BEATDOWN,            //击倒
     FSM_BEATFLY,             //击飞
@@ -328,7 +328,7 @@ public enum EActorNature
     CAN_BEATBACK,      //可击退
     CAN_BEATFLY,       //可击飞
     CAN_BEATDOWN,      //可击倒
-    CAN_WOUND,         //可受击
+    CAN_WOUND,         //可hit
     CAN_REDUCESPEED,   //可减速
     CAN_FIXBODY,       //可定身
     CAN_SLEEP,         //可睡眠
@@ -339,7 +339,7 @@ public enum EActorNature
 
 public enum EActorType
 {
-    PLAYER  = 0,  //玩家
+    PLAYER  = 0,  //player
     NPC     = 1,  //NPC
     MONSTER = 2,  //怪物
     PET     = 3,  //宠物
@@ -355,7 +355,7 @@ public enum EActorSex
     X,//未知
 }
 
-//怪物类型
+//怪物type
 public enum EActorSort
 {
     None   = 0,
@@ -388,7 +388,7 @@ public enum EActorRace
 
 public enum EAttr : int
 {
-    HP         = 1,   //生命值
+    HP         = 1,   //life值
     AP         = 2,   //攻击力
     DF         = 3,   //防御力
     CRIT       = 4,   //爆击
@@ -407,7 +407,7 @@ public enum EAttr : int
     SPEED      = 16,  //速度
 
     PAP        = 17,  //攻击百分比
-    PHP        = 18,  //生命百分比
+    PHP        = 18,  //life百分比
     PDF        = 19,  //防御百分比
     PMP        = 20,  //魔法百分比
 
@@ -426,7 +426,7 @@ public enum EAttr : int
     BDF        = 31,  //暗攻击
     LDF        = 32,  //电攻击
 
-    MAXHP      = 33,  //最大生命值 
+    MAXHP      = 33,  //最大life值 
     MAXMP      = 34,  //最大魔法值
     MAXSP      = 35,  //最大灵力值
     ABSORB     = 36,  //伤害吸收

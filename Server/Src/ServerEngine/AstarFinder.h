@@ -5,7 +5,7 @@
 #define MAPDATANOCOPY		//use the pointer for mapdata
 
 //说明
-/* 对TileMap来说， 每一位表示一块方各，当位为1表示不可通行， 0:表示可以通行*/
+/* 对TileMap来说， 每一位表示一块方各，当位is1表示不可通行， 0:表示can通行*/
 
 
 
@@ -38,7 +38,7 @@ public:
 	INT32	NodeGetX();
 	INT32	NodeGetY();
 	INT32	GetTileNum(int x, int y);
-	INT32	IsTileAviable(int x, int y); ////为真表示不能通过
+	INT32	IsTileAviable(int x, int y); ////is真表示不能通过
 
 private:
 	void	FreeNodes(void);

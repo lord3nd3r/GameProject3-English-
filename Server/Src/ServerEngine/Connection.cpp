@@ -79,18 +79,18 @@ BOOL CConnection::DoReceive()
     int nRet = WSARecv(m_hSocket, &DataBuf, 1, &nRecvBytes, &nFlags, (LPOVERLAPPED)&m_IoOverlapRecv, NULL);
     if(nRet != 0)
     {
-        //对于WSARecv来说， 只要返回0,就表示没有错误发生。
-        //当返回为ERROR_IO_PENDING时，表示提交读数据请求Success， 其它的返回值都是错误。
+        //对于WSARecv来说， 只要返回0,就表示没有error发生。
+        //当返回isERROR_IO_PENDING时，表示提交读数据请求Success， 其它的返回值都是error。
         int nError = CommonSocket::GetSocketLastError();
         if(nError != ERROR_IO_PENDING )
         {
-            CLog::GetInstancePtr()->LogWarn("关闭连接，因为接收数据发生错误:%s!", CommonFunc::GetLastErrorStr(nError).c_str());
+            CLog::GetInstancePtr()->LogWarn("shutdownconnection，因is接收数据发生error:%s!", CommonFunc::GetLastErrorStr(nError).c_str());
 
             return FALSE;
         }
     }
 
-    //对于WSARecv来说， 只要返回0,就表示没有错误发生。
+    //对于WSARecv来说， 只要返回0,就表示没有error发生。
 
     return TRUE;
 }
@@ -176,7 +176,7 @@ BOOL CConnection::Shutdown()
 BOOL CConnection::ExtractBuffer()
 {
     //在这方法里返回FALSE。
-    //会在外面导致这个连接被关闭。
+    //会在外面导致这个connection被shutdown。
     if (m_nDataLen == 0)
     {
         return TRUE;
@@ -580,7 +580,7 @@ BOOL CConnection::DoSend()
             pSendingBuffer->Release();
             pSendingBuffer = NULL;
             Close();
-            CLog::GetInstancePtr()->LogError("发送线程:发送Failure, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
+            CLog::GetInstancePtr()->LogError("发送线程:发送Failure, connectionshutdown原因:%s!", CommonFunc::GetLastErrorStr(errCode).c_str());
         }
     }
 
@@ -590,15 +590,15 @@ BOOL CConnection::DoSend()
 #else
 BOOL CConnection::DoSend()
 {
-    //返回值为正数， 分为完全发送，和部分发送，部分发送，用另一个缓冲区装着继续发送
-    //返回值为负数   错误码：
+    //返回值is正数， 分is完全发送，和部分发送，部分发送，用另一个缓冲区装着继续发送
+    //返回值is负数   error码：
     //
     //if (errno != EAGAIN)
     //{
     //  //ERROR("TcpConnection sendInLoop");
     //  if (errno == EPIPE || errno == ECONNRESET)
     //  {
-    //      faultError = true;//这就是真实的错误了
+    //      faultError = true;//这就是真实的error了
     //  }
     //}
     // #define E_SEND_SUCCESS               1
@@ -616,7 +616,7 @@ BOOL CConnection::DoSend()
                 m_pSendingBuffer->Release();
                 m_pSendingBuffer = NULL;
                 m_nSendingPos = 0;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, 连接关闭原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, connectionshutdown原因:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 
@@ -650,7 +650,7 @@ BOOL CConnection::DoSend()
             {
                 pBuffer->Release();
                 pBuffer = NULL;
-                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, 连接关闭原因2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
+                CLog::GetInstancePtr()->LogWarn("发送线程:发送Failure, connectionshutdown原因2:%s!", CommonFunc::GetLastErrorStr(errno).c_str());
                 return E_SEND_ERROR;
             }
 
@@ -695,7 +695,7 @@ CConnection* CConnectionMgr::CreateConnection()
     m_ConnListMutex.lock();
     if (m_pFreeConnRoot == NULL)
     {
-        //表示己到达连接的上限，不能再创建新的连接了
+        //表示己到达connection的上限，不能再创建新的connection了
         m_ConnListMutex.unlock();
         return NULL;
     }
@@ -855,12 +855,12 @@ BOOL CConnectionMgr::CheckConntionAvalible(INT32 nInterval)
             continue;
         }
 
-        //如果当前是等待关闭的状态
+        //如果当前是等待shutdown的状态
         if (pConnection->GetConnectStatus() == ENS_CLOSEING)
         {
             if (uCurTick > (pConnection->m_uLastRecvTick + 10 * 1000))
             {
-                CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible WAIT超时主动断开连接 ConnID:%d", pConnection->GetConnectionID());
+                CLog::GetInstancePtr()->LogError("CConnectionMgr::CheckConntionAvalible WAIT超时主动disconnectedconnection ConnID:%d", pConnection->GetConnectionID());
                 pConnection->Close();
             }
 

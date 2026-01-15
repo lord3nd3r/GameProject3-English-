@@ -32,7 +32,7 @@ BOOL SceneLogic_City::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_City::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//玩家进入副本了。
+	//player进入副本了。
 
 	return TRUE;
 }

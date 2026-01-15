@@ -31,7 +31,7 @@ BOOL CGameService::Init()
     {
         return FALSE;
     }
-    CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
+    CLog::GetInstancePtr()->LogInfo("---------serverbeginstart--------");
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
         CLog::GetInstancePtr()->LogError("Configuration file load Failure!");
@@ -40,7 +40,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("CenterServer"))
     {
-        CLog::GetInstancePtr()->LogError("CenterServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("CenterServeralready在running!");
         return FALSE;
     }
 
@@ -50,7 +50,7 @@ BOOL CGameService::Init()
     UINT16 nPort = CConfigFile::GetInstancePtr()->GetIntValue("center_svr_port");
     if (nPort <= 0)
     {
-        CLog::GetInstancePtr()->LogError("配制文件center_svr_port配制错误!");
+        CLog::GetInstancePtr()->LogError("config文件center_svr_portconfigerror!");
         return FALSE;
     }
     INT32 nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("center_svr_max_con");

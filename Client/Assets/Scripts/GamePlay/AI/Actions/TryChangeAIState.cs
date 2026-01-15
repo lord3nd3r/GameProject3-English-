@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/动作节点", Label = "TryChangeAIState")]
+    [NodeAttribute(Type = "AI/action节点", Label = "TryChangeAIState")]
     [NodeName("ff64cb", "<size=12>TryChangeAIState</size>")]
     public class TryChangeAIState : AITask
     {

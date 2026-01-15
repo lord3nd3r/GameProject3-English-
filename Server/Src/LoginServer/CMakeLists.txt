@@ -5,7 +5,7 @@ include_directories(./ ../ServerEngine  ../ServerEngine/DBInterface ../PublicDat
 link_directories(../../Common/lib /usr/lib64/mysql)	
 
 
-#消息
+#message
 set(PROTO Proto)
 FILE(GLOB PROTO "../Message/Msg_Account.pb.cc" 
                 "../Message/Msg_Account.pb.h"

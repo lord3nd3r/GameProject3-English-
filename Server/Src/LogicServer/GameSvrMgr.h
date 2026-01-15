@@ -113,18 +113,18 @@ public:
     //********************* Message handlers begin ******************************
 public:
     BOOL    OnCloseConnect(INT32 nConnID);
-    BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //响应副本服务器注册
+    BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //响应副本server注册
     BOOL    OnMsgCreateSceneAck(NetPacket* pNetPacket);  //响应创建副本Success
     BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//响应角色数据传输Success
     BOOL    OnMsgCopyReportReq(NetPacket* pNetPacket);
     BOOL    OnMsgBattleResultNty(NetPacket* pNetPacket);
     //********************* Message handlers end ******************************
 public:
-    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //服务器ID-->副本Server information
+    std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //serverID-->副本Server information
 
     std::map<UINT32, CityInfo>      m_mapCity;
 
-    std::map<UINT32, UINT32>        m_GuidToSvrID;    //副本guid->副本服务器ID
+    std::map<UINT32, UINT32>        m_GuidToSvrID;    //副本guid->副本serverID
 
     CWaitCopyList                   m_WaitCopyList;
 };

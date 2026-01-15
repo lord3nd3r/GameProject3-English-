@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/动作节点", Label = "TryFollowHost")]
+    [NodeAttribute(Type = "AI/action节点", Label = "TryFollowHost")]
     public class TryFollowHost : AITask
     {
         public override ENST OnExecute()

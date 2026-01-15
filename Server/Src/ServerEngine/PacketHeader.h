@@ -13,7 +13,7 @@ struct PacketHeader
     INT32    nSize;
     INT32    nPacketNo;    //生成序号 = nMsgID^nSize+index(每个包自动增长索引); 还原序号 = pHeader->dwPacketNo - pHeader->nMsgID^pHeader->nSize;
     UINT64   u64TargetID;
-    UINT32   dwUserData;    //客户端在副本中的情况下，dwUserData是copyguid， 在逻辑服的情况下， 部分协议充当客户端连接ID
+    UINT32   dwUserData;    //client在副本中的情况下，dwUserData是copyguid， 在逻辑服的情况下， 部分协议充当clientconnectionID
 };
 
 struct PacketHeader2
@@ -25,7 +25,7 @@ struct PacketHeader2
     UINT32   Encrypt : 1;
     UINT32   nMsgID: 22;
     UINT64   u64TargetID;
-    UINT32   dwUserData;    //客户端在副本中的情况下，dwUserData是copyguid， 在逻辑服的情况下， 部分协议充当客户端连接ID
+    UINT32   dwUserData;    //client在副本中的情况下，dwUserData是copyguid， 在逻辑服的情况下， 部分协议充当clientconnectionID
 };
 
 

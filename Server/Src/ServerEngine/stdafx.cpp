@@ -1,5 +1,5 @@
 ﻿// stdafx.cpp : 只包括标准包含文件的源文件
-// TestServer.pch 将作为预编译头
+// TestServer.pch 将作is预编译头
 // stdafx.obj will contain precompiled type information
 
 #include "stdafx.h"

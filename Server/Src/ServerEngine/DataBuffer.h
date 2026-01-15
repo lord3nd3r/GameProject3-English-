@@ -332,7 +332,7 @@ public:
     CBufferManager<32768>  m_BufferManager32K;      //管理<=32k的内存池，
     CBufferManager<65536>  m_BufferManager64K;      //管理<=64k的内存池，
 
-    CBufferManager<10 * 1024 * 1014> m_BufferManagerAny;        //管理<=10M的内存, 并不用池管理, 直接申请, 直接释放.
+    CBufferManager<10 * 1024 * 1014> m_BufferManagerAny;        //管理<=10M的内存, 并不用池管理, 直接apply, 直接释放.
 };
 
 #endif

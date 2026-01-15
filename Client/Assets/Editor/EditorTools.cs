@@ -209,7 +209,7 @@ public class EditorTools : Editor
         EditorResourceBuild.Build();
     }
 
-    [MenuItem("编辑器/建立行为树")]
+    [MenuItem("编辑器/建立行is树")]
     static void BuildBTTree()
     {
         NodeTree tree = BTHelper.CreatePrefab<NodeTree>(true);

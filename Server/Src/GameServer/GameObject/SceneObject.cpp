@@ -455,7 +455,7 @@ BOOL CSceneObject::IsInCircle(Vector3D hitPoint, float radius, float height)
 
 BOOL CSceneObject::IsInSquare(Vector3D hitPoint, FLOAT hitDegree, float length, float width)
 {
-	float radius = 1.0f; //玩家自身的半径
+	float radius = 1.0f; //player自身的半径
 
 	CPoint2D A(-width / 2, -length / 2), B(-width / 2, length / 2), C(width / 2, length / 2), D(width / 2, -length / 2);
 
@@ -841,20 +841,20 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 {
 	ERROR_RETURN_VALUE(m_pScene != NULL, MRC_UNKNOW_ERROR);
 
-	//取技能Level
+	//取skillLevel
 	INT32 nLevel = GetSkillLevel(Req.skillid());
 	ERROR_RETURN_VALUE(nLevel > 0, MRC_INVALID_SKILL_ID);
 
 	StSkillInfo* pSkillInfo = CStaticData::GetInstancePtr()->GetSkillInfo(Req.skillid(), nLevel);
 	ERROR_RETURN_VALUE(pSkillInfo != NULL, MRC_INVALID_SKILL_ID);
 
-	//3. 扣除放技能需要的东西
+	//3. 扣除放skill需要的东西
 	//if (GetMp() < pSkillInfo->CostMp)
 	//{
 	//	return MRC_SKILL_CD_ERROR;
 	//}
 
-	//是否是普通的Combo skills
+	//whether是普通的Combo skills
 	if (m_vtNormals.size() > 0 && Req.skillid() == m_vtNormals[0].dwSkillID)
 	{
 		//如果是普通的Combo skills
@@ -867,15 +867,15 @@ UINT32 CSceneObject::ProcessSkill(const SkillCastReq& Req)
 
 	m_SkillObject.SetComboSkill(FALSE);
 
-	//Skill CD是否可以施放。
+	//Skill CDwhethercan施放。
 	if (!CheckSkillCD(Req.skillid(), pSkillInfo->CD))
 	{
 		return MRC_SKILL_CD_ERROR;
 	}
 
-	m_SkillObject.StopSkill(); //停止当前的技能
+	m_SkillObject.StopSkill(); //stop当前的skill
 
-	//技能是否可以打中指定的目标.(带有目标的技能要检查目标是否合法)
+	//skillwhethercan打中指定的target.(带有target的skill要检查targetwhether合法)
 	if (Req.targetobjects_size() > 0)
 	{
 		for (int i = 0; i < Req.targetobjects_size(); i++)

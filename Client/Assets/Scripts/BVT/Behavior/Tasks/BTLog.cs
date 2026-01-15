@@ -4,7 +4,7 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "动作节点", Label = "BTLog")]
+    [NodeAttribute(Type = "action节点", Label = "BTLog")]
     public class BTLog : BTTask
     {
         public enum ELogLevel

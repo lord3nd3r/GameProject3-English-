@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// 场景加载
+/// 场景load
 /// </summary>
 public class CommandLoadScene : ICommand
 {

@@ -34,11 +34,11 @@ struct GroupMailDataObject : public ShareObject
     CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
     CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
     UINT64 m_uTime;                         //邮件时间
-    INT32  m_nMailType;                    //邮件类型
-    INT32  m_nChannel;                     //目标渠道
+    INT32  m_nMailType;                    //邮件type
+    INT32  m_nChannel;                     //target渠道
     INT32  m_nLanguage;                     //语言类别
-    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具列表
-    INT32  m_nGroupType;                   //邮件类型 1->当前玩家  2->当前玩家+未来玩家
+    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具list
+    INT32  m_nGroupType;                   //邮件type 1->当前player  2->当前player+未来player
 
     BOOL Create(IDBInterface* pDB)
     {
@@ -93,7 +93,7 @@ struct MailDataObject : public ShareObject
         m_uGuid = 0;
         m_uTime = 0;
         m_uSenderID = 0;
-        m_nMailType = 0; //邮件类型
+        m_nMailType = 0; //邮件type
         m_nStatus = 0;   //邮件状态
         m_uGroupGuid = 0; //对应的群邮件ID
         memset(m_szSender, 0, sizeof(CHAR) * ROLE_NAME_LEN);
@@ -107,12 +107,12 @@ struct MailDataObject : public ShareObject
     UINT64 m_uGroupGuid;                    //群邮件ID
     UINT64 m_uTime;                         //邮件时间
     UINT64 m_uSenderID;                     //发送者ID
-    INT32  m_nMailType;                    //邮件类型
+    INT32  m_nMailType;                    //邮件type
     INT32  m_nStatus;                      //邮件状态
     CHAR   m_szSender[ROLE_NAME_LEN];       //发送者Name
     CHAR   m_szTitle[MAIL_TITLE_LEN];       //邮件标题
     CHAR   m_szContent[MAIL_CONTENT_LEN];   //邮件内容
-    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具列表
+    StMailItem m_Items[MAIL_ITEM_COUNT];    //道具list
 
 
     BOOL Create(IDBInterface* pDB)
@@ -175,7 +175,7 @@ struct OffDataObject : public ShareObject
     {
         UINT64          m_Parm64[4];
         UINT32          m_Parm32[8];
-    } m_Param; //事件参数
+    } m_Param; //eventparams
 
 
 

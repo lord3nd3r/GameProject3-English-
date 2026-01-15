@@ -21,7 +21,7 @@ namespace CFG
 
     public enum ETaskDialogRole
     {
-        TYPE_PLAYER = 0,//玩家
+        TYPE_PLAYER = 0,//player
         TYPE_NPC    = 1,//Npc
     }
 
@@ -31,19 +31,19 @@ namespace CFG
         TYPE_TYPEEFFECT, //TypeEffect
     }
 
-    // 任务子功能类型
+    // 任务子功能type
     public enum ETaskSubFuncType
     {
-        TYPE_ERROR        =0, // 错误类型
+        TYPE_ERROR        =0, // errortype
         TYPE_TALK         =1, // 对话
-        TYPE_HUNTER       =2, // 猎杀类型
+        TYPE_HUNTER       =2, // 猎杀type
         TYPE_COLLECT      =3, // 收集类
-        TYPE_INTERACTIVE  =4, // 交互类型
+        TYPE_INTERACTIVE  =4, // 交互type
         TYPE_CONVOY       =5, // 护送类
-        TYPE_STORY        =6, // 触发剧情
-        TYPE_CUTSCENE     =7, // 触发过场动画	
+        TYPE_STORY        =6, // trigger剧情
+        TYPE_CUTSCENE     =7, // trigger过场动画	
         TYPE_USEITEM      =8, // 使用道具类	
-        TYPE_USESKILL     =9, // 使用技能
+        TYPE_USESKILL     =9, // 使用skill
         TYPE_GATHER       =10,// 采集
 
     }
@@ -61,12 +61,12 @@ namespace CFG
 
     public enum ETaskNPCFlag
     {
-        TYPE_NONE                 = 0,	// 没有任务处理(无标记)
-        TYPE_CANSUBMIT            = 1,  // 有可以提交的任务(绿色问号)
-        TYPE_CANSUBMIT_REPEAT     = 2,	// 有可以提交的重复任务(蓝色问号)
+        TYPE_NONE                 = 0,	// 没有任务handle(无标记)
+        TYPE_CANSUBMIT            = 1,  // 有can提交的任务(绿色问号)
+        TYPE_CANSUBMIT_REPEAT     = 2,	// 有can提交的重复任务(蓝色问号)
         TYPE_NOT_COMPOLETE        = 3,	// 接受了但未完成的任务(红色问号)
-        TYPE_CAN_ACCEPT           = 4,	// 可以接受的任务(绿色叹号)
-        TYPE_CAN_ACCEPT_REPEAT    = 5,	// 可以接受的重复任务(蓝色叹号)
+        TYPE_CAN_ACCEPT           = 4,	// can接受的任务(绿色叹号)
+        TYPE_CAN_ACCEPT_REPEAT    = 5,	// can接受的重复任务(蓝色叹号)
         TYPE_NOT_ACCEPT           = 6,	// 没有达到接受条件的任务(红色叹号)
         TYPE_LOW_LEVEL            = 7,	// 未做过的低Level任务
         TYPE_INTERACTIVE          = 8,	// 多环节交互
@@ -75,6 +75,6 @@ namespace CFG
     public enum EConveyType
     {
         TYPE_AUTO,   //Npc自动走
-        TYPE_FOLLOW, //跟随玩家
+        TYPE_FOLLOW, //跟随player
     }
 }

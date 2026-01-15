@@ -4,8 +4,8 @@
 #include "CommonMath.h"
 #include "GameObject/MapObject.h"
 
-#define NODE_SPLIT_NUM 8   //格子对象数达到就开始分割
-#define NODE_MERGE_NUM 4   //格子对象数小于就开始合并
+#define NODE_SPLIT_NUM 8   //格子对象数达到就begin分割
+#define NODE_MERGE_NUM 4   //格子对象数小于就begin合并
 #define NODE_MAX_CHILD 4   //最大分割子格子数
 #define NODE_MAX_DEPTH 5   //最大分割层数
 

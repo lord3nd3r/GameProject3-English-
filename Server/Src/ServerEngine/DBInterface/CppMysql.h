@@ -81,27 +81,27 @@ public:
     /* 返回句柄 */
     MYSQL* getMysql();
 
-    /* 处理返回多行的查询，返回影响的行数 */
-    //返回引用是因为在CppMySQLQuery的赋值构造函数中要把成员变量_mysql_res置为空
+    /* handle返回多行的查询，返回影响的行数 */
+    //返回引用是因is在CppMySQLQuery的赋值构造函数中要把成员变量_mysql_res置is空
     CppMySQLQuery& querySQL(const char* sql, bool recon = true);
 
     /* 执行非返回结果查询 */
     int execSQL(const char* sql, bool recon = true);
 
-    /* 测试mysql服务器是否存活 */
+    /* 测试mysqlserverwhether存活 */
     bool ping();
 
-    /* 关闭mysql 服务器 */
+    /* shutdownmysql server */
     bool shutDown();
 
-    /* 主要功能:重新启动mysql 服务器 */
+    /* 主要功能:重新startmysql server */
     bool reboot();
 
-    /* 主要功能:重新连接mysql 服务器 */
+    /* 主要功能:重新connectionmysql server */
     bool reconnect();
 
-    /*说明:事务支持InnoDB or BDB表类型*/
-    /* 主要功能:开始事务 */
+    /*说明:事务支持InnoDB or BDB表type*/
+    /* 主要功能:begin事务 */
     bool startTransaction();
 
     /* 主要功能:提交事务 */
@@ -126,10 +126,10 @@ public:
 
     int         GetErrorNo();
 
-    /*主要功能:得到服务器版本信息*/
+    /*主要功能:得到server版本信息*/
     const unsigned long  GetDBVersion();
 
-    /*主要功能:得到 当前连接的Default字符集*/
+    /*主要功能:得到 当前connection的Default字符集*/
     const char*   getCharacterSetName();
 
     /* 建立新数据库 */
@@ -150,7 +150,7 @@ private:
     CppMySQL3DB& operator=(const CppMySQL3DB& db);
 
 private:
-    /* msyql 连接句柄 */
+    /* msyql connection句柄 */
     MYSQL* m_pMySqlDB;
     CppMySQLQuery m_dbQuery;
 

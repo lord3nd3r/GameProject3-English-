@@ -81,7 +81,7 @@ BOOL CTeamCopyMgr::OnMsgCreateRoom(NetPacket* pNetPacket)
     CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(pHeader->u64TargetID);
     ERROR_RETURN_TRUE(pPlayer != NULL);
 
-    //理论上不应该有在房间的情况还来创建房间，除非是掉线消息丢失
+    //理论上不应该有在房间的情况还来创建房间，除非是掉线message丢失
     ERROR_RETURN_TRUE(pPlayer->GetRoomID() == 0);
 
     CRoomItem* pRoomItem = CreateRoom(Req.copyid(), pHeader->u64TargetID);
@@ -97,12 +97,12 @@ BOOL CTeamCopyMgr::OnMsgCreateRoom(NetPacket* pNetPacket)
 
     m_WaitRoomList.NotifyRoomChange(pRoomItem);
 
-    //验证玩家是否合法
-    //玩家是否在其它的房间内没有退出。
-    //清理其它房间内的玩家
+    //验证playerwhether合法
+    //playerwhether在其它的房间内没有退出。
+    //清理其它房间内的player
     //创建新的房间  6
-    //返回房间的id给客户端
-    //返回Success的消息
+    //返回房间的id给client
+    //返回Success的message
     return TRUE;
 }
 
@@ -136,11 +136,11 @@ BOOL CTeamCopyMgr::OnMsgLeaveRoom(NetPacket* pNetPacket)
 
     m_WaitRoomList.NotifyRoomChange(pRoomItem);
 
-    //验证玩家是否合法
-    //验证玩家是否在这个房间内
+    //验证playerwhether合法
+    //验证playerwhether在这个房间内
     //如果房间只有一个人，退出，房间销毁
     //如果房间内还有其它的人，转移房主的权力
-    //房间状态通知其它的玩家
+    //房间状态通知其它的player
     //返回Success
     return TRUE;
 }
@@ -211,18 +211,18 @@ BOOL CTeamCopyMgr::OnMsgJoinRoom(NetPacket* pNetPacket)
     m_WaitRoomList.NotifyRoomChange(pRoomItem);
 
     //1.指定加入
-    //验证玩家是否合法
-    //验证房间是否存在
-    //房间内是否还有位置
+    //验证playerwhether合法
+    //验证房间whether存在
+    //房间内whether还有position
     //加入房间
-    //房间状态通知其它的玩家
+    //房间状态通知其它的player
     //返回结果
 
     //2.搜索加入
-    //验证玩家是否合法
-    //是否能找到需要人的房间
+    //验证playerwhether合法
+    //whether能找到需要人的房间
     //加入房间
-    //房间状态通知其它的玩家
+    //房间状态通知其它的player
     //返回结果
 
     return TRUE;

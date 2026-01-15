@@ -34,7 +34,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_SERVER_LIST_REQ, req, 0, 0);
     }
 
-    //确认当前服务器
+    //确认当前server
     public void TrySelectServer(int ServerID)
     {
         SelectServerReq req = new SelectServerReq();
@@ -47,7 +47,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
     {
         if (string.IsNullOrEmpty(name))
         {
-            GTItemHelper.ShowTip("Name不能为空");
+            GTItemHelper.ShowTip("Name不能is空");
             return;
         }
         RoleCreateReq req = new RoleCreateReq();
@@ -57,7 +57,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         NetworkManager.Instance.Send(MessageID.MSG_ROLE_CREATE_REQ, req);
     }
 
-    //取角色列表
+    //取角色list
     public void TryGetRoleList()
     {
         RoleListReq req = new RoleListReq();
@@ -156,7 +156,7 @@ public class GTNetworkSend : GTSingleton<GTNetworkSend>
         {
             if (MLPet.Instance.IsFood(items[i].Id) == false)
             {
-                GTItemHelper.ShowTip("加入的食品列表有误");
+                GTItemHelper.ShowTip("加入的食品list有误");
                 return;
             }
         }

@@ -2,7 +2,7 @@
 using System.Collections;
 
 /// <summary>
-/// 使用技能
+/// 使用skill
 /// </summary>
 public class CommandUseSkill : CommandAct
 {

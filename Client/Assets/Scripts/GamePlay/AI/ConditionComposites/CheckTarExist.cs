@@ -18,11 +18,11 @@ namespace BVT.AI
         {
             if (index == 0)
             {
-                return Invert == false ? "存在目标时" : "不存在目标时";
+                return Invert == false ? "存在target时" : "不存在target时";
             }
             else
             {
-                return Invert == false ? "不存在目标时" : "存在目标时";
+                return Invert == false ? "不存在target时" : "存在target时";
             }
         }
 #endif

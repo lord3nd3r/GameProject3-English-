@@ -17,9 +17,9 @@ struct StCopyInfo
 	}
 
 	UINT32 dwCopyID;
-	UINT32 dwCopyType;     //副要类型
+	UINT32 dwCopyType;     //副要type
 	UINT32 dwCostActID;    //消耗体力ID
-	UINT32 dwCostActNum;   //消耗体力数量
+	UINT32 dwCostActNum;   //消耗体力count
 	UINT32 dwGetMoneyID;   //获取货币的ID
 	UINT32 dwGetMoneyRatio;//获取货币的系数
 	UINT32 dwGetExpRation; //获取经验的系数
@@ -140,8 +140,8 @@ struct  StItemData
 struct StDropItem
 {
 	UINT32 dwItemID;		//物品ID
-	UINT32 dwItemNum[2];	//物品数量
-	UINT32 dwRatio;			//概率范围
+	UINT32 dwItemNum[2];	//物品count
+	UINT32 dwRatio;			//概率range
 };
 
 //奖励项
@@ -149,7 +149,7 @@ struct StAwardItem
 {
 	INT32 dwAwardID;					//奖励ID
 	INT32 dwRatioCount;					//概率掉落个数
-	BOOL bDistinct;						//是否需要去重
+	BOOL bDistinct;						//whether需要去重
 	INT32 nCarrer;						//职业
 	std::vector<StDropItem> FixItems;	//必掉物品
 	std::vector<StDropItem>  RatioItems;//机率掉落物品
@@ -158,16 +158,16 @@ struct StAwardItem
 struct StItemInfo
 {
 	UINT32 dwItemID;	//物品ID
-	EItemType eItemType;//物品类型
-	UINT32 dwBagType;	//物品背包类型
+	EItemType eItemType;//物品type
+	UINT32 dwBagType;	//物品背包type
 	UINT32 Quality;		//物品的品质
 	UINT32 SellID;		//出售货币ID
 	INT32  SellPrice;	//出售价格
-	UINT32 UseType;		//使用类型
+	UINT32 UseType;		//使用type
 	UINT32 CarrerID;	//职业
 	INT64  StackMax;	//最大堆放数
-	INT32  Data1;		//参数1
-	INT32  Data2;		//参数2
+	INT32  Data1;		//params1
+	INT32  Data2;		//params2
 };
 
 
@@ -223,9 +223,9 @@ struct StTaskInfo
 {
 	UINT32 TaskID;		//! 任务ID
 	UINT32 PrevTaskID;  //! 前置任务ID
-	UINT32 TaskType;	//! 任务类型(日常， 主线， 分支，公会)
+	UINT32 TaskType;	//! 任务type(日常， 主线， 分支，guild)
 	UINT32 NeedCount;	//! 需要达成的条件数
-	UINT32 TaskEvent;	//! 任务事件
+	UINT32 TaskEvent;	//! 任务event
 	INT32  NeedLevel;	//! 开放Level
 	UINT32 AwardID;		//! 任务奖励ID
 };

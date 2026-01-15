@@ -21,7 +21,7 @@ public:
 
 public:
 	UINT32  m_dwBuffID;    //buffID
-	UINT32  m_dwStartTime; //开始时间
+	UINT32  m_dwStartTime; //begin时间
 	UINT32  m_dwLastTime;  //上次作用时间
 	BOOL	m_bOver;
 	INT32   m_PtyChange[PROPERTY_NUM];

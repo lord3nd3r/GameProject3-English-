@@ -5,7 +5,7 @@ using BVT;
 namespace BVT
 {
     [NodeAttribute(Type = "装饰节点", Label = "中断节点")]
-    [NodeDesc("如果条件满足，则返回Failure；否则，则一直运行直至子节点返回Success或者返回Failure")]
+    [NodeDesc("如果条件满足，则返回Failure；否则，则一直running直至子节点返回Success或者返回Failure")]
     [NodeName("05CBF2", "Interrupt")]
     public class BTInterrupt : BTDecorator
     {

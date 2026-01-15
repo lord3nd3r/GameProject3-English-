@@ -117,7 +117,7 @@ public class UIItemInfo : GTWindow
         int itemID = item.Id;
         DItem itemDB = ReadCfgItem.GetDataById(itemID);
         itemDesc.text = itemDB.Desc;
-        itemNum.text = GTTools.Format("拥有数量：{0}", item.Num);
+        itemNum.text = GTTools.Format("拥有count：{0}", item.Num);
         GTItemHelper.ShowItemTexture(itemTexture, itemID);
         GTItemHelper.ShowItemName(itemName, itemID);
         GTItemHelper.ShowItemQuality(itemQuality, itemID);

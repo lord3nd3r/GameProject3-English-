@@ -16,7 +16,7 @@ namespace EDT
             EditorGUILayout.LabelField("Next game status", manager.NextSceneType.ToString());
 
             manager.UseGuide     = EditorGUILayout.Toggle("Use novice guide", manager.UseGuide);
-            bool musicActive  = EditorGUILayout.Toggle("关闭音乐", manager.MusicDisable);
+            bool musicActive  = EditorGUILayout.Toggle("shutdown音乐", manager.MusicDisable);
             if(manager.MusicDisable != musicActive)
             {
                 manager.MusicDisable = musicActive;

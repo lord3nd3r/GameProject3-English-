@@ -58,7 +58,7 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                 {
                     RelayToConnect(pPacketHeader->dwUserData, pNetPacket->m_pDataBuffer);
                 }
-                else //这是客户端发过来的消息
+                else //这是client发过来的message
                 {
                     CConnection* pConnection = ServiceBase::GetInstancePtr()->GetConnectionByID(pNetPacket->m_nConnID);
                     ERROR_RETURN_TRUE(pConnection !=  NULL);
@@ -77,7 +77,7 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                 {
                     RelayToConnect(pPacketHeader->dwUserData, pNetPacket->m_pDataBuffer);
                 }
-                else //这是客户端发过来的消息
+                else //这是client发过来的message
                 {
                     CProxyPlayer* pPlayer = CProxyPlayerMgr::GetInstancePtr()->GetByRoleID(pPacketHeader->u64TargetID);
                     ERROR_RETURN_TRUE(pPlayer != NULL);
@@ -86,7 +86,7 @@ BOOL CProxyMsgHandler::DispatchPacket(NetPacket* pNetPacket)
                     ERROR_RETURN_TRUE(nConnID != 0);
 
                     //pPacketHeader->dwUserData = pPlayer->GetCopyGuid();
-                    //疑问, pPakcetHeader->dwUserData字段需不需要由客户端来填，现在proxyserver也可以获取到.
+                    //疑问, pPakcetHeader->dwUserData字段需不需要由client来填，现在proxyserver也can获取到.
                     //这个可能会加快向游戏服的转发速度
 
                     RelayToConnect(nConnID, pNetPacket->m_pDataBuffer);
@@ -364,7 +364,7 @@ BOOL CProxyMsgHandler::OnMsgReconnectReq(NetPacket* pPacket)
     if (!CGameService::GetInstancePtr()->m_bLogicConnect)
     {
         RoleReconnectAck Ack;
-        Ack.set_retcode(MRC_CANNOT_RECONNECT); //内存己经没有玩家必须要重登
+        Ack.set_retcode(MRC_CANNOT_RECONNECT); //内存already没有player必须要重登
         ServiceBase::GetInstancePtr()->SendMsgProtoBuf(pPacket->m_nConnID, MSG_ROLE_RECONNECT_ACK, 0, 0, Ack);
         return TRUE;
     }

@@ -1,10 +1,10 @@
 ﻿#ifndef __SERVER_DEFINE_H__
 #define __SERVER_DEFINE_H__
 
-//货币数量
+//货币count
 #define MONEY_NUM			15
 
-//行动力数量
+//行动力count
 #define ACTION_NUM			4
 
 //角色属性个数
@@ -13,10 +13,10 @@
 //角色的最大Level
 #define MAX_ROLE_LEVEL		150
 
-//服务器帧率
+//server帧率
 #define FPS_TIME_TICK		20
 
-//公会名长度
+//guild名长度
 #define GUILD_NAME_LEN		255
 #define GUILD_NOTICE_LEN	1024
 #define GUILD_MAX_APPLY_NUM 50
@@ -42,7 +42,7 @@
 
 #define PARTNER_MAX_NUM		2
 
-//定义四种状态的基本移动速度
+//definition四种状态的基本移动速度
 #define SPEED_IDLE			(0.0f)
 #define SPEED_WALK			(2.5f)
 #define SPEED_RUN			(4.0f)

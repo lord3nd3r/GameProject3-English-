@@ -5,7 +5,7 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "动作节点", Label = "BTWait")]
+    [NodeAttribute(Type = "action节点", Label = "BTWait")]
     public class BTWait : BTTask
     {
         [NodeVariable]
@@ -45,7 +45,7 @@ namespace BVT
             if (Running)
             {
                 GUILayout.Label(string.Format("<color=#ffffff>等待时间：{0}s</color>", this.mWaitTime));
-                GUILayout.Label(string.Format("<color=#ff64cb>运行时间：{0}s</color>", this.mLastTime > this.mWaitTime ? this.mWaitTime : this.mLastTime));
+                GUILayout.Label(string.Format("<color=#ff64cb>running时间：{0}s</color>", this.mLastTime > this.mWaitTime ? this.mWaitTime : this.mLastTime));
             }
             else
             {

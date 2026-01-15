@@ -4,7 +4,7 @@ using BVT;
 
 namespace BVT
 {
-    [NodeAttribute(Type = "动作节点", Label = "BTWaitFrames")]
+    [NodeAttribute(Type = "action节点", Label = "BTWaitFrames")]
     public class BTWaitFrames : BTTask
     {
         [NodeVariable]
@@ -46,7 +46,7 @@ namespace BVT
             {
                 int lastFrames = Time.frameCount - mStFrames;
                 GUILayout.Label(string.Format("<color=#ffffff>等待帧数：{0}</color>", mDrFrames));
-                GUILayout.Label(string.Format("<color=#ff64cb>运行帧数：{0}</color>", lastFrames > this.mDrFrames ? this.mDrFrames : lastFrames));
+                GUILayout.Label(string.Format("<color=#ff64cb>running帧数：{0}</color>", lastFrames > this.mDrFrames ? this.mDrFrames : lastFrames));
             }
             else
             {

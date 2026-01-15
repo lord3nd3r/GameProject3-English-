@@ -27,7 +27,7 @@ BOOL CGameService::Init()
         return FALSE;
     }
 
-    CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
+    CLog::GetInstancePtr()->LogInfo("---------serverbeginstart--------");
     if(!CConfigFile::GetInstancePtr()->Load("watchcfg.ini"))
     {
         CLog::GetInstancePtr()->LogError("Configuration file load Failure!");
@@ -36,7 +36,7 @@ BOOL CGameService::Init()
 
     if (CommonFunc::IsAlreadyRun("WatchServer"))
     {
-        CLog::GetInstancePtr()->LogError("WatchServer己经在运行!");
+        CLog::GetInstancePtr()->LogError("WatchServeralready在running!");
         return FALSE;
     }
 

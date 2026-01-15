@@ -94,7 +94,7 @@ public:
 
     void unlock(void)
     {
-        d_atomic_bool.store(false, std::memory_order_release); // 设置为false
+        d_atomic_bool.store(false, std::memory_order_release); // 设置isfalse
         return;
     }
 

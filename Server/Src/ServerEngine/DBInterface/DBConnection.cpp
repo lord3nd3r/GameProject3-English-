@@ -127,7 +127,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 
     if (pLastProcedure != NULL && pLastStmt != NULL)
     {
-        //如果是同一个存储需求，则直接用上一次的预处理
+        //如果是同一个存储需求，则直接用上一次的预handle
         if (pLastProcedure == pDBStoredProcedure)
         {
             if (0 == mysql_stmt_execute(pLastStmt))
@@ -318,7 +318,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //      return FALSE;
 //  }
 //
-//  // 检查是否有结果集
+//  // 检查whether有结果集
 //  MYSQL_RES* pMySqlResult = mysql_stmt_result_metadata( pMySqlStmt );
 //  if(pMySqlResult == NULL)
 //  {
@@ -336,7 +336,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //  }
 //  else
 //  {
-//      //zm :走到这里来，是不应该的， 更新存储过程最多可能带参数，不允许返回结果集
+//      //zm :走到这里来，是不应该的， 更新存储过程最多可能带params，不允许返回结果集
 //      mysql_stmt_store_result( pMySqlStmt );
 //      mysql_free_result( pMySqlResult );
 //      mysql_stmt_free_result( pMySqlStmt );
@@ -352,7 +352,7 @@ BOOL CDBConnection::Execute(CDBStoredProcedure* pDBStoredProcedure)
 //              mysql_stmt_free_result( pMySqlStmt );
 //              if ( server_status & SERVER_PS_OUT_PARAMS )
 //              {
-//                  //此调用存储存在返回参数值，请检查sql语句和存储过程实现!
+//                  //此调用存储存在返回params值，请检查sql语句和存储过程实现!
 //                  break;
 //              }
 //              else
@@ -421,7 +421,7 @@ BOOL CDBConnection::Query(CDBStoredProcedure* pDBStoredProcedure)
         return FALSE;
     }
 
-    // 检查是否有结果集
+    // 检查whether有结果集
     MYSQL_RES* pMySqlResult = mysql_stmt_result_metadata( pMySqlStmt );
     if(pMySqlResult == NULL)
     {

@@ -62,7 +62,7 @@ public:
 	UINT32			m_dwLogConnID;
 	UINT32			m_dwLoginConnID;
 	UINT32			m_dwDBConnID;
-	UINT32          m_dwCenterConnID;   //中心服的连接ID
+	UINT32          m_dwCenterConnID;   //中心服的connectionID
 	UINT64          m_uSvrOpenTime;
 	UINT32          m_dwDbErrorCount;
 	BOOL            m_bRegSuccessed;

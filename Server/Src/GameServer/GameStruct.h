@@ -17,7 +17,7 @@ typedef struct St_ObjectStatus
         struct
         {
             UINT32  nDir    : 9;    // 朝向
-            UINT32  bDead   : 1;    // 是否死亡
+            UINT32  bDead   : 1;    // whether死亡
         };
     };
 } St_ObjectStatus;
@@ -30,7 +30,7 @@ typedef struct St_ChangeStatus
         struct
         {
             UINT32  bBase   : 1;    // 基础数据,属性, 行动状态, 坐标, 朝向
-            UINT32  bDead   : 1;    // 是否死亡
+            UINT32  bDead   : 1;    // whether死亡
             UINT32  bEquip  : 1;    // 装备
             UINT32  bActor  : 1;    // 角色
             UINT32  bAction : 1;    // 行动状态

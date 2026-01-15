@@ -37,7 +37,7 @@ public:
 	FLOAT  m_x, m_y, m_z, m_ft; //Monster spawn position
 
 	UINT64 m_uObjectGuid;       //刷出怪的实例ID
-	BOOL   m_bDead;             //刷出怪是否死亡
+	BOOL   m_bDead;             //刷出怪whether死亡
 
 };
 

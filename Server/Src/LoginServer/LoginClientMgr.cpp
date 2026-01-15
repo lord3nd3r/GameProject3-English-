@@ -79,7 +79,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return TRUE;
     }
 
-    //如果是Initial state，则只能接收MSG_CHECK_VERSION_REQ版本验证消息，否则非法
+    //如果是Initial state，则只能接收MSG_CHECK_VERSION_REQ版本验证message，否则非法
     if (pLoginClient->m_ClientStatue == ECS_NONE)
     {
         if (nMsgID == MSG_CHECK_VERSION_REQ)
@@ -91,7 +91,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return FALSE;
     }
 
-    //如果版本己验证，则下一个消息必须是账号注册或登录，否则非法
+    //如果版本己验证，则下一个message必须是账号注册或登录，否则非法
     if(pLoginClient->m_ClientStatue == ECS_VER_CHECKED)
     {
         if (nMsgID == MSG_ACCOUNT_LOGIN_REQ || nMsgID == MSG_ACCOUNT_REG_REQ)
@@ -103,7 +103,7 @@ BOOL CLoginClientMgr::CheckClientMessage(INT32 nConnID, INT32 nMsgID)
         return FALSE;
     }
 
-    //如果账号密码己验证，则下一个消息必须是选服消息，否则非法
+    //如果账号密码己验证，则下一个message必须是选服message，否则非法
     if (pLoginClient->m_ClientStatue == ECS_PSD_CHECKED)
     {
         if (nMsgID == MSG_SERVER_LIST_REQ)

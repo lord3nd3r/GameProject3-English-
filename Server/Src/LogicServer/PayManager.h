@@ -28,7 +28,7 @@ public:
 
 	BOOL ProcessPlayerLogin(UINT64 uRoleID);
 
-	//处理订单并发货
+	//handle订单并发货
 	BOOL ProcessSussessPayOrder(PayDataObject* pOrderData);
 
 public:

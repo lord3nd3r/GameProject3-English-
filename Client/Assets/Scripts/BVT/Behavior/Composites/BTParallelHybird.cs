@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace BVT
 {
     [NodeAttribute(Type = "组合节点", Label = "并行-Hybird节点")]
-    [NodeDesc("指定数量的Child Node返回True或False后才决定结果")]
+    [NodeDesc("指定count的Child Node返回True或False后才决定结果")]
     [NodeName("ff64cb", "ParallelHybird")]
     public class BTParallelHybird : BTComposite
     {

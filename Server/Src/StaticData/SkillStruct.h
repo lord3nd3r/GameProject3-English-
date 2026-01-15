@@ -87,7 +87,7 @@ enum ESkillType
 //  EOS_RUN = 4;//跑
 //  EOS_FLY = 5;//飞
 //  EOS_NOT_MOVE = 6;//不能移动
-//  EOS_NOT_CAST = 7;//不能放技能
+//  EOS_NOT_CAST = 7;//不能放skill
 //  EOS_NOT_BEHURT = 8;//不能被攻击
 //  EOS_NOT_BECONTROL = 9;//无法被控制
 //  EOS_STEALTH = 10;//隐身
@@ -101,16 +101,16 @@ enum ESkillType
 struct StBuffInfo
 {
     UINT32 BuffID;                      //BuffID
-    UINT32 EffectID;                  //Buff目标需要加的特效
+    UINT32 EffectID;                  //Bufftarget需要加的effect
     INT32  PtyValue[PROPERTY_NUM];      //加属性值
     INT32  PtyPercent[PROPERTY_NUM];    //加属性百分比
-    INT32  TotalTime;                   //总时长(ms)
-    INT32  Interval;                    //间隔时长
-    UINT32 ChangeStatus;                //修改玩家的状态
-    BOOL   OverLay;                     //是否可以叠加
-    std::string   LuaAdd;               //是否有lua事件
-    std::string   LuaTick;              //是否有lua事件
-    std::string   LuaRemove;            //是否有lua事件
+    INT32  TotalTime;                   //total duration(ms)
+    INT32  Interval;                    //interval时长
+    UINT32 ChangeStatus;                //修改player的状态
+    BOOL   OverLay;                     //whethercanstack
+    std::string   LuaAdd;               //whether有luaevent
+    std::string   LuaTick;              //whether有luaevent
+    std::string   LuaRemove;            //whether有luaevent
 };
 
 struct StBulletInfo
@@ -147,7 +147,7 @@ struct StSkillEvent
     UINT32 TargetBuffID = 0;                //Target Buff ID
     FLOAT  RangeParams[5] = {0};            //Range Parameters
     ERangeType RangeType = ERT_OBJECTS;     //Range Type
-    UINT32 CenterType = 0;                  //中心点类型
+    UINT32 CenterType = 0;                  //中心点type
     std::vector<StBulletObject> vtBullets;  //Bullet List
     std::vector<StGoblinInfo> vtGoblins;    //Summoned goblins list
     UINT32 HitActionID = 0;                 //Hit Action, 击退，击飞， 击倒
@@ -158,7 +158,7 @@ struct StSkillEvent
 struct StSkillInfo
 {
     UINT32        SkillID;        //Skill ID
-    UINT32        Level;          //技能Level
+    UINT32        Level;          //skillLevel
     UINT32        SkillType;      //Skill Type,1:物理伤害,2:法术伤害
     EHitShipType  HitShipType;    //Target relation,
     BOOL          HitMyself;      //HitMyself

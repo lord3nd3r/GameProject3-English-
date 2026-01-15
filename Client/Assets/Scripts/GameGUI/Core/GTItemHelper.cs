@@ -246,7 +246,7 @@ public class GTItemHelper
                 int lv = i + 1;
                 DEquipStar starDB = ReadCfgEquipStar.GetDataById(equipDB.Quality * 1000 + lv);
                 float percent = starDB == null ? 0 : starDB.Percent;
-                string desc = GTTools.Format("生命、攻击和防御+{0}%", percent);
+                string desc = GTTools.Format("life、攻击和防御+{0}%", percent);
                 string v = string.Empty;
                 if (starLevel >= lv)
                 {
@@ -264,7 +264,7 @@ public class GTItemHelper
             DEquipStar starDB = ReadCfgEquipStar.GetDataById(equipDB.Quality * 1000 + starLevel);
             string format = "{0}提高 [00ff00]{1}[-] %";
             float percent = starDB == null ? 0 : starDB.Percent;
-            label.Append(GTTools.Format(format, "生命", percent));
+            label.Append(GTTools.Format(format, "life", percent));
             label.Append(GTTools.Format(format, "攻击", percent));
             label.Append(GTTools.Format(format, "防御", percent));
         }
@@ -536,7 +536,7 @@ public class GTItemHelper
     {
         if (errorCode != 0)
         {
-            GTItemHelper.ShowTip(string.Format("网络错误：{0}", errorCode));
+            GTItemHelper.ShowTip(string.Format("网络error：{0}", errorCode));
             return false;
         }
         else

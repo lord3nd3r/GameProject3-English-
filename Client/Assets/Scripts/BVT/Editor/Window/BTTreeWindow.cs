@@ -324,7 +324,7 @@ namespace BVT
             bool showNodeDesc     = BTSettings.ShowNodeComment;
 
             GUI.backgroundColor = new Color(0.8f, 0.8f, 1);
-            if (GUILayout.Button("类型", ToolbarButtonStyle, GUILayout.Width(120)))
+            if (GUILayout.Button("type", ToolbarButtonStyle, GUILayout.Width(120)))
             {
 
             }
@@ -337,7 +337,7 @@ namespace BVT
 
             GUILayout.FlexibleSpace();
             GUI.backgroundColor = Color.cyan;
-            if (GUILayout.Button("加载Tree", ToolbarButtonStyle, GUILayout.Width(120)))
+            if (GUILayout.Button("loadTree", ToolbarButtonStyle, GUILayout.Width(120)))
             {
 
             }

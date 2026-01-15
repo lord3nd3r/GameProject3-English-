@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace BVT.AI
 {
-    [NodeAttribute(Type = "AI/动作节点", Label = "TryFindTargetNearest")]
+    [NodeAttribute(Type = "AI/action节点", Label = "TryFindTargetNearest")]
     [NodeName("ff64cb", "<size=10>TryFindTargetNearest</size>")]
     public class TryFindTargetNearest : AITask
     {

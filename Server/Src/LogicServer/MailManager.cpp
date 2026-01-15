@@ -65,7 +65,7 @@ BOOL CMailManager::SendGroupMail(std::string strSender, std::string strTitle, st
     GroupMailDataObject* pGroupMailObject = DataPool::CreateObject<GroupMailDataObject>(ESD_GROUP_MAIL, TRUE);
     pGroupMailObject->Lock();
     pGroupMailObject->m_uGuid = CGlobalDataManager::GetInstancePtr()->MakeNewGuid();
-    pGroupMailObject->m_nMailType = EMT_CUSTOM;                     //邮件类型
+    pGroupMailObject->m_nMailType = EMT_CUSTOM;                     //邮件type
     pGroupMailObject->m_uTime = CommonFunc::GetCurrTime();
     CommonConvert::StrCopy(pGroupMailObject->m_szTitle, strTitle.c_str(), MAIL_TITLE_LEN);
     CommonConvert::StrCopy(pGroupMailObject->m_szContent, strContent.c_str(), MAIL_CONTENT_LEN);
@@ -113,7 +113,7 @@ BOOL CMailManager::SendSingleMail(UINT64 uRoleID, EMailType eMailType, std::stri
     ERROR_RETURN_FALSE(eMailType > 0);
 
     CPlayerObject* pPlayer = CPlayerManager::GetInstancePtr()->GetPlayer(uRoleID);
-    if (pPlayer != NULL) //玩家在线，直接发给玩家数据
+    if (pPlayer != NULL) //player在线，直接发给player数据
     {
         CMailModule* pMailModule = (CMailModule*)pPlayer->GetModuleByType(MT_MAIL);
         ERROR_RETURN_FALSE(pMailModule != NULL);
@@ -121,7 +121,7 @@ BOOL CMailManager::SendSingleMail(UINT64 uRoleID, EMailType eMailType, std::stri
         return pMailModule->AddMail(eMailType, strSender, strTitle, strContent, vtItems);
     }
 
-    //玩家不在线，放到离线内存数据内
+    //player不在线，放到离线内存数据内
 
     MailDataObject* pMailObject = DataPool::CreateObject<MailDataObject>(ESD_MAIL, TRUE);
     pMailObject->Lock();
@@ -200,7 +200,7 @@ BOOL CMailManager::LoadGroupMailData(CppMySQL3DB& tDBConnection)
     while (!QueryResult.eof())
     {
         GroupMailDataObject* pGroupMail = DataPool::CreateObject<GroupMailDataObject>(ESD_GROUP_MAIL, FALSE);
-        pGroupMail->m_nMailType = EMT_CUSTOM;                   //邮件类型
+        pGroupMail->m_nMailType = EMT_CUSTOM;                   //邮件type
         pGroupMail->m_nChannel = QueryResult.getIntField("channel");
         pGroupMail->m_uGuid = QueryResult.getInt64Field("id");
         pGroupMail->m_uTime = QueryResult.getInt64Field("mail_time");

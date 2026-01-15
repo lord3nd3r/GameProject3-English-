@@ -36,7 +36,7 @@ struct CodeReqNode
     INT32       m_nAreaID;     //区服ID
     INT32       m_nChannel;    //渠道号
     INT32       m_nResult;     //返回码
-    INT32       m_nConnID;     //连接ID
+    INT32       m_nConnID;     //connectionID
     INT32       m_nItemID[GIFT_AWARD_ITEM_NUM] = { 0 };
     INT32       m_nItemNum[GIFT_AWARD_ITEM_NUM] = { 0 };
 };

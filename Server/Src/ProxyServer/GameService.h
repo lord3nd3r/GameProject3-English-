@@ -31,7 +31,7 @@ public:
     BOOL        ConnectToLogicSvr();
 
 public:
-    //处理普通的网络连接
+    //handle普通的网络connection
     CProxyMsgHandler    m_ProxyMsgHandler;
 
     INT32               m_nLogicConnID;

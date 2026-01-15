@@ -125,7 +125,7 @@ TValue* AVLTree<TKey, TValue>::InsertAlloc( TKey Key )
         if(!InsertInner(m_pRoot, pNode))
         {
             FreeNode(pNode);
-            //表示插入Failure，这个key在树中己经存在
+            //表示插入Failure，这个key在树中already存在
             return NULL;
         }
     }
@@ -504,7 +504,7 @@ bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr 
     }
     else
     {
-        //己经存在
+        //already存在
         return false;
     }
 
@@ -517,7 +517,7 @@ bool AVLTree<TKey, TValue>::InsertInner(TNodeTypePtr& pParentNode, TNodeTypePtr 
 template<typename TKey, typename TValue>
 TreeNode<TKey, TValue>* AVLTree<TKey, TValue>::FindInner(TNodeTypePtr pNode, TKey Key)
 {
-    if(pNode == NULL) //如果节点为空说明没找到,返回NULL
+    if(pNode == NULL) //如果节点is空说明没找到,返回NULL
     {
         return NULL;
     }

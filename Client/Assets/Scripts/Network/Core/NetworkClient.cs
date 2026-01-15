@@ -121,7 +121,7 @@ public class NetworkClient
         int nPacketSize = BitConverter.ToUInt16(m_DataBuffer, 8);
         if (nPacketSize > m_DataLen)
         {
-            //暂时这样处理
+            //暂时这样handle
             return false;
         }
         byte[] realPacket = new byte[nPacketSize];

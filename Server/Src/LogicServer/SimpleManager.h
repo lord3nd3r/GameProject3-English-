@@ -30,7 +30,7 @@ struct CSimpleInfo
 	UINT64	m_uLogonTime;
 	UINT64	m_uCreateTime;
 	std::string m_strName;
-	BOOL    m_IsDelete; //是否被删除
+	BOOL    m_IsDelete; //whether被删除
 	UINT32  m_nLogonStatus;  //0:表示正常，1:表示正在db服取数据
 };
 

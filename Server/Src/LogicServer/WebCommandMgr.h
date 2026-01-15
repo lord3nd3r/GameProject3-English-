@@ -25,14 +25,14 @@ public:
 	//********************* Message handlers end ******************************
 
 public:
-	//*********************WebAction处理定义开始******************************
+	//*********************WebActionhandledefinitionbegin******************************
 	void OnGmReloadTable(HttpParameter& hParams, INT32 nConnID);
 	void OnGmSealRole(HttpParameter& hParams, INT32 nConnID);
 	void OnGmSingleMail(HttpParameter& hParams, INT32 nConnID); //Send single mail
 	void OnGmGroupMail(HttpParameter& hParams, INT32 nConnID);  //Send group mail
 	void OnGmDeleteMail(HttpParameter& hParams, INT32 nConnID); //Delete mail
 	void OnGmCommand(HttpParameter& hParams, INT32 nConnID);
-	//*********************WebAction处理定义开始******************************
+	//*********************WebActionhandledefinitionbegin******************************
 
 };
 #endif

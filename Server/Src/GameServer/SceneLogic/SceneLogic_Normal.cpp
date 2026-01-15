@@ -35,14 +35,14 @@ BOOL SceneLogic_Normal::OnObjectDie(CSceneObject* pObject)
 
 BOOL SceneLogic_Normal::OnPlayerEnter(CSceneObject* pPlayer)
 {
-	//玩家登陆进入副本了
+	//player登陆进入副本了
 
 	return TRUE;
 }
 
 BOOL SceneLogic_Normal::OnPlayerLeave(CSceneObject* pPlayer, BOOL bDisConnect)
 {
-	//玩家离开副本了
+	//player离开副本了
 	m_pScene->SetBattleResult(0, ECR_LOST);
 
 	m_pScene->SendBattleResult();
@@ -63,7 +63,7 @@ BOOL SceneLogic_Normal::Update(UINT64 uTick)
 
 	SceneLogicBase::Update(uTick);
 
-	//如果玩家死绝了就算输了．
+	//如果player死绝了就算输了．
 	if (m_pScene->IsCampAllDie(EBC_PLAYER))
 	{
 		m_pScene->SetBattleResult(0, ECR_LOST);

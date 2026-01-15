@@ -11,7 +11,7 @@ namespace BVT.AI
 
         public override string Name
         {
-            get { return !Invert ? "目标AI Is " + ApplyAIState.ToString() : string.Format("目标AI Not {0}", ApplyAIState); }
+            get { return !Invert ? "targetAI Is " + ApplyAIState.ToString() : string.Format("targetAI Not {0}", ApplyAIState); }
         }
 
         public override bool Check()

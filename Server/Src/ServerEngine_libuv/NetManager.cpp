@@ -197,7 +197,7 @@ void CNetManager::HandleAccept(CConnection* pConnection, INT32 nStatus)
     else
     {
         pConnection->Close();
-        //处理错误
+        //handleerror
     }
 
     return;
@@ -218,7 +218,7 @@ BOOL    CNetManager::SendMessageBuff(INT32 nConnID, IDataBuffer* pBuffer)
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示连接己经Failure断开了，这个连接ID不可用了。
+        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
         return FALSE;
     }
 
@@ -249,7 +249,7 @@ BOOL CNetManager::SendMessageData(INT32 nConnID, INT32 nMsgID, UINT64 u64TargetI
     CConnection* pConn = CConnectionMgr::GetInstancePtr()->GetConnectionByID(nConnID);
     if (pConn == NULL)
     {
-        //表示连接己经Failure断开了，这个连接ID不可用了。
+        //表示connectionalreadyFailuredisconnected了，这个connectionID不可用了。
         return FALSE;
     }
 

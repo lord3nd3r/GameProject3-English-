@@ -14,7 +14,7 @@ public enum EWindowType
 public enum EWindowShowMode
 {
     DoNothing,              //打开时啥事也不干
-    HideOther,              //打开时会关闭其它窗口
+    HideOther,              //打开时会shutdown其它窗口
     SaveTarget,             //打开时会保存当前的全屏大窗口，以便全屏窗口管理
 }
 

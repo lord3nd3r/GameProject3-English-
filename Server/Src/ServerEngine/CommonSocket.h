@@ -5,10 +5,10 @@
 
 namespace CommonSocket
 {
-//设置套接字为可重用状态
+//设置套接字is可重用状态
 BOOL        SetSocketReuseable(SOCKET hSocket);
 
-//设置套接字为非阻塞状态
+//设置套接字is非阻塞状态
 BOOL        SetSocketBlock(SOCKET hSocket, BOOL bBlock);
 
 BOOL        SetSocketNoDelay(SOCKET hSocket);

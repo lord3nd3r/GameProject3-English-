@@ -101,7 +101,7 @@ public class UIHome : GTWindow
            new ItemFunc {name="商店",icon="425",onClick=OnShopClick},
            new ItemFunc {name="冒险",icon="428",onClick=OnAdventureClick},
            new ItemFunc {name="任务",icon="426",onClick=OnTaskClick},
-           new ItemFunc {name="技能",icon="431",onClick=OnSkillClick},
+           new ItemFunc {name="skill",icon="431",onClick=OnSkillClick},
            new ItemFunc {name="神器",icon="432",onClick=OnRelicsClick},
            new ItemFunc {name="坐骑",icon="422",onClick=OnMountClick},
            new ItemFunc {name="伙伴",icon="430",onClick=OnPartnerClick},

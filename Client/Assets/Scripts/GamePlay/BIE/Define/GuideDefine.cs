@@ -63,16 +63,16 @@ namespace BIE
 
     public enum EGuideCondition
     {
-        CheckItemAmount                =  1,   //检查物品数量
-        CheckPlayerLevel               =  2,   //检查玩家Level
-        CheckPlayerVip                 =  3,   //检查玩家Vip
+        CheckItemAmount                =  1,   //检查物品count
+        CheckPlayerLevel               =  2,   //检查playerLevel
+        CheckPlayerVip                 =  3,   //检查playerVip
         CheckOpenUI                    =  4,   //检查打开UI
-        CheckHideUI                    =  5,   //检查关闭UI
+        CheckHideUI                    =  5,   //检查shutdownUI
         CheckMonsterAppear             =  6,   //怪物出现
         CheckMonsterHP                 =  7,   //检查怪物血量
         CheckScene                     =  8,   //检查场景
         CheckWeekday                   =  9,   //检查星期数
-        CheckPlayerHP                  =  10,  //检查玩家HP
-        CheckPlayerHPPercent           =  11,  //检查玩家HP百分比
+        CheckPlayerHP                  =  10,  //检查playerHP
+        CheckPlayerHPPercent           =  11,  //检查playerHP百分比
     }
 }

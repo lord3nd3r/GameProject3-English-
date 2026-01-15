@@ -185,7 +185,7 @@ void CPayManager::OnGmPayCallBack(HttpParameter& hParams, INT32 nConnID)
     FLOAT fMoney = hParams.GetFloatValue("money");
     INT32 buyid = hParams.GetIntValue("buyid");
 
-    //通知支付服己经收到支付通知，己Success加入等待发货队列，支付服的任务己经完成
+    //通知支付服already收到支付通知，己Success加入等待发货队列，支付服的任务already完成
     std::string strResult = CommonConvert::IntToString((INT64)0);
     ServiceBase::GetInstancePtr()->SendMsgRawData(nConnID, MSG_PHP_GM_COMMAND_ACK, 0, 0, strResult.c_str(), (INT32)strResult.size());
 

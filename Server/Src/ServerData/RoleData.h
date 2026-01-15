@@ -14,10 +14,10 @@ struct RoleDataObject : public ShareObject
 		m_u64Fight		= 0;            //战力
 		m_nVipLvl		= 0;            //VIPLevel
 		m_nVipExp		= 0;            //VIP经验
-		m_CityCopyID	= 0;            //主城副本类型
-		m_bDelete       = FALSE;        //是否删除
+		m_CityCopyID	= 0;            //主城副本type
+		m_bDelete       = FALSE;        //whether删除
 		m_CarrerID      = 0;            //职业
-		m_uCreateTime	= 0;            //角色创建时间
+		m_uCreateTime	= 0;            //角色create time
 		m_uLogonTime	= 0;            //最近一次登录时间
 		m_uLogoffTime	= 0;            //最近一次离线时间
 		m_nChannel      = 0;            //角色渠道
@@ -36,15 +36,15 @@ struct RoleDataObject : public ShareObject
 	INT64		m_u64Fight;             //战力
 	INT32		m_nVipLvl;               //VIPLevel
 	INT32		m_nVipExp;               //VIP经验
-	INT32		m_CityCopyID;           //主城副本类型
+	INT32		m_CityCopyID;           //主城副本type
 	INT32		m_nChannel;             //角色渠道
-	BOOL		m_bDelete;              //是否删除
+	BOOL		m_bDelete;              //whether删除
 	INT64       m_uQQ;                  //QQ号
-	UINT64      m_uCreateTime;          //角色创建时间
+	UINT64      m_uCreateTime;          //角色create time
 	UINT64      m_uLogonTime;           //本次登录时间
 	UINT64      m_uLogoffTime;          //离线时间
 	UINT64      m_uGroupMailTime;       //群邮件接收时间
-	UINT64      m_uGuildID;             //公会ID
+	UINT64      m_uGuildID;             //guildID
 	UINT32      m_nOnlineTime;          //在线时长
 	//签到数据
 	INT32		m_nSignNum;             //签到天数

@@ -47,7 +47,7 @@ BOOL CSkillObject::OnUpdate( UINT64 uTick )
 
     if (uElaspedTick > m_pSkillEventInfo->uDuration)
     {
-        //响应技能结束
+        //响应skillend
         OnSkillComplete();
         return TRUE;
     }
@@ -106,14 +106,14 @@ BOOL CSkillObject::StartSkill(UINT32 dwSkillID, INT32 nLevel)
 
     m_SkillStatus = ESS_RUNNING;
 
-    //计算攻击目标
-    //1.直接带有目标， 2.需要自己计算目标
-    //2.只给自己加buff的技能
-    //3.只给目标加buff的技能
-    //4.加血的技能
-    //5.位移技能
-    //6.波次技能(闪电链)
-    //7.产生子弹的技能
+    //计算攻击target
+    //1.直接带有target， 2.需要自己计算target
+    //2.只给自己加buff的skill
+    //3.只给target加buff的skill
+    //4.加血的skill
+    //5.位移skill
+    //6.波次skill(闪电链)
+    //7.产生bullet的skill
 
 
     OnUpdate(m_dwStartTick);
@@ -176,7 +176,7 @@ BOOL CSkillObject::AttackTarget(CSceneObject* pTarget, UINT32 HitActionID, UINT3
     ERROR_RETURN_FALSE(pScene != NULL);
 
     INT32 dwRandValue = CommonFunc::GetRandNum(1);
-    //先判断是否命中
+    //先判断whether命中
     if (dwRandValue > (8000 + m_pCastObject->m_Propertys[EA_HIT_RATE] - pTarget->m_Propertys[EA_DODGE]) && dwRandValue > 5000)
     {
         //未命中
@@ -184,7 +184,7 @@ BOOL CSkillObject::AttackTarget(CSceneObject* pTarget, UINT32 HitActionID, UINT3
         return TRUE;
     }
 
-    //判断是否爆击
+    //判断whether爆击
     dwRandValue = CommonFunc::GetRandNum(1);
     BOOL bCriticalHit = FALSE;
     if (dwRandValue < (m_pCastObject->m_Propertys[EA_CRIT_HIT] - pTarget->m_Propertys[EA_CRIT_DEF]) || dwRandValue < 100)
@@ -323,7 +323,7 @@ CBulletObject* CSkillObject::CreateBullet(StBulletObject& stBullet)
     CBulletObject* pBulletObject = pScene->CreateBullet(stBullet.BulletID, pBulletInfo, this, m_pCastObject->GetPos());
     ERROR_RETURN_NULL(pBulletObject != NULL);
 
-    //创建方向型的子弹
+    //创建方向型的bullet
     switch (pBulletInfo->BulletType)
     {
         case EBT_CHASE:         //追踪型飞弹:
@@ -337,7 +337,7 @@ CBulletObject* CSkillObject::CreateBullet(StBulletObject& stBullet)
             pBulletObject->SetAngle(m_pCastObject->m_ft + stBullet.fAngle);
         }
         break;
-        case EBT_FIXTARGETPOS:  //固定目标点飞弹
+        case EBT_FIXTARGETPOS:  //固定target点飞弹
         {
             //pBulletObject->SetTargetPos();
         }
@@ -346,7 +346,7 @@ CBulletObject* CSkillObject::CreateBullet(StBulletObject& stBullet)
         {
         }
         break;
-        case EBT_LINK:          //连接飞弹
+        case EBT_LINK:          //connection飞弹
         {
         }
         break;

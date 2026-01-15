@@ -31,11 +31,11 @@ CppMySQLQuery& CppMySQLQuery::operator=(CppMySQLQuery& rQuery)
     _field = NULL;
     if ( m_MysqlRes != NULL )
     {
-        //定位游标位置到第一个位置
+        //定位游标position到第一个position
         mysql_data_seek(m_MysqlRes, 0);
         _row =  mysql_fetch_row( m_MysqlRes );
         _row_count = (int)mysql_num_rows( m_MysqlRes );
-        //得到字段数量
+        //得到字段count
         _field_count = mysql_num_fields( m_MysqlRes );
     }
     rQuery.m_MysqlRes = NULL;
@@ -429,7 +429,7 @@ bool CppMySQL3DB::open(const char* host, const char* user, const char* passwd, c
     //  goto EXT;
     //}
 
-    //如果连接Failure，返回NULL。对于Success的连接，返回值与第1个参数的值相同。
+    //如果connectionFailure，返回NULL。对于Success的connection，返回值与第1个params的值相同。
     if ( NULL == mysql_real_connect( m_pMySqlDB, host, user, passwd, db, port, NULL, 0) )
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -456,7 +456,7 @@ bool CppMySQL3DB::open(const char* host, const char* user, const char* passwd, c
     m_strCharSet    = charSetName;
 
     //选择制定的数据库Failure
-    //0表示Success，非0值表示出现错误。
+    //0表示Success，非0值表示出现error。
     if ( mysql_select_db( m_pMySqlDB, db ) != 0 )
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -494,7 +494,7 @@ MYSQL* CppMySQL3DB::getMysql()
     return m_pMySqlDB;
 }
 
-/* 处理返回多行的查询，返回影响的行数 */
+/* handle返回多行的查询，返回影响的行数 */
 CppMySQLQuery& CppMySQL3DB::querySQL(const char* sql, bool recon)
 {
     m_nErrNo = 0;
@@ -577,7 +577,7 @@ int CppMySQL3DB::execSQL(const char* sql, bool recon)
     return (int)mysql_affected_rows(m_pMySqlDB);
 }
 
-/* 测试mysql服务器是否存活 */
+/* 测试mysqlserverwhether存活 */
 bool CppMySQL3DB::ping()
 {
     if( mysql_ping(m_pMySqlDB) == 0 )
@@ -588,7 +588,7 @@ bool CppMySQL3DB::ping()
     return false;
 }
 
-/* 关闭mysql 服务器 */
+/* shutdownmysql server */
 bool CppMySQL3DB::shutDown()
 {
     if( mysql_shutdown(m_pMySqlDB, SHUTDOWN_DEFAULT) == 0 )
@@ -599,7 +599,7 @@ bool CppMySQL3DB::shutDown()
     return false;
 }
 
-/* 主要功能:重新启动mysql 服务器 */
+/* 主要功能:重新startmysql server */
 bool CppMySQL3DB::reboot()
 {
     if(!mysql_reload(m_pMySqlDB))
@@ -625,7 +625,7 @@ bool CppMySQL3DB::reconnect()
         return false;
     }
 
-    //如果连接Failure，返回NULL。对于Success的连接，返回值与第1个参数的值相同。
+    //如果connectionFailure，返回NULL。对于Success的connection，返回值与第1个params的值相同。
     if (NULL == mysql_real_connect(m_pMySqlDB, m_strHost.c_str(), m_strUser.c_str(), m_strPwd.c_str(), m_strDB.c_str(), m_nPort, NULL, 0))
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -643,7 +643,7 @@ bool CppMySQL3DB::reconnect()
     }
 
     //选择制定的数据库Failure
-    //0表示Success，非0值表示出现错误。
+    //0表示Success，非0值表示出现error。
     if (mysql_select_db(m_pMySqlDB, m_strDB.c_str()) != 0)
     {
         m_nErrNo = mysql_errno(m_pMySqlDB);
@@ -656,9 +656,9 @@ bool CppMySQL3DB::reconnect()
 }
 
 /*
-* 说明:事务支持InnoDB or BDB表类型
+* 说明:事务支持InnoDB or BDB表type
 */
-/* 主要功能:开始事务 */
+/* 主要功能:begin事务 */
 bool CppMySQL3DB::startTransaction()
 {
     m_nErrNo = 0;
@@ -737,13 +737,13 @@ int CppMySQL3DB::GetErrorNo()
     return m_nErrNo;
 }
 
-/*主要功能:得到服务器版本信息*/
+/*主要功能:得到server版本信息*/
 const unsigned long  CppMySQL3DB::GetDBVersion()
 {
     return mysql_get_server_version(m_pMySqlDB);
 }
 
-/*主要功能:得到 当前连接的Default字符集*/
+/*主要功能:得到 当前connection的Default字符集*/
 const char*   CppMySQL3DB::getCharacterSetName()
 {
     return mysql_character_set_name(m_pMySqlDB);

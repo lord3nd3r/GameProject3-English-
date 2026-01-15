@@ -30,7 +30,7 @@ public:
 	BOOL            SaveUpdateData(ObjectActionNty& Nty);
 	BOOL            Reset();
 
-	//以下为对象的操作方法
+	//以下is对象的操作方法
 public:
 	UINT32          GetHp();
 	UINT32          GetMp();
@@ -70,7 +70,7 @@ public:
 	BOOL            IsRobot();
 public:
 	//////////////////////////////////////////////////////////////////////////
-	//buff的处理
+	//buff的handle
 	BOOL			AddBuff(UINT32 dwBuffID);
 	BOOL			RemoveBuff(UINT32 dwBuffID);
 	BOOL			UpdateBuff(UINT64 uTick);
@@ -79,7 +79,7 @@ public:
 	//////////////////////////////////////////////////////////////////////////
 
 	//////////////////////////////////////////////////////////////////////////
-	//技能
+	//skill
 	std::vector<St_SkillData> m_vtNormals;
 	std::vector<St_SkillData> m_vtSpecials;
 	CSkillObject	m_SkillObject;
@@ -112,19 +112,19 @@ public:
 	//对象的基本信息
 	//////////////////////////////////////////////////////////
 	std::string     m_strName;						//对象的Name
-	UINT64          m_uGuid;						//实例ID, 对玩家是角色ID
+	UINT64          m_uGuid;						//实例ID, 对player是角色ID
 	UINT32          m_dwActorID;					//对象ID
-	UINT32          m_dwObjType;					//对象类型 玩家，宠物， NPC之类的
+	UINT32          m_dwObjType;					//对象type player，宠物， NPC之类的
 	INT32           m_dwCamp;						//阵营
-	UINT32          m_dwActionID;					//当前动作状态
-	Vector3D        m_Pos;							//位置
+	UINT32          m_dwActionID;					//当前action状态
+	Vector3D        m_Pos;							//position
 	FLOAT           m_ft;							//对象坐标, 朝向
 	UINT32          m_dwStatus;				        //对象当前的状态
 	INT32           m_dwLevel;						//Level
 	INT32           m_Propertys[PROPERTY_NUM];		//15个属性的数值
 	UINT32          m_Equips[EQUIP_MAX_NUM];		//角色装备
 	UINT32          m_dwMountID;                    //坐骑ID
-	BOOL            m_bRiding;                      //是否正在骑乘
+	BOOL            m_bRiding;                      //whether正在骑乘
 	BOOL            m_bRobot;                       //机器人
 	St_ChangeStatus m_ChangeFlag;					//数据改变标记
 
@@ -135,19 +135,19 @@ public:
 	UINT64          m_uPartnerGuid;                 //伙伴guid
 	UINT64          m_uLastMoveTick;
 
-	BOOL            m_bIsCampCheck;					//是否影响阵营结算
-	BOOL            m_bIsMonsCheck;					//是否影响刷怪(玩家阵营的都不影响, 宠物，招唤物, 配制的特定物)
+	BOOL            m_bIsCampCheck;					//whether影响阵营结算
+	BOOL            m_bIsMonsCheck;					//whether影响刷怪(player阵营的都不影响, 宠物，招唤物, config的特定物)
 	StActorInfo*    m_pActorInfo;                   //对象的基本信息
 	ECopyResult     m_nBattleResult;                //副本战斗结果
 
 	HitEffectNtf    m_EffectNtf;
 	//////////////////////////////////////////////////////////
 	//对象的一些标记
-	BOOL            m_bEnter;   //玩家是否己经进入副本
+	BOOL            m_bEnter;   //playerwhetheralready进入副本
 
 	//对象的副本结算数据
 
-	//对象的连接情况，仅玩家有效
+	//对象的connection情况，仅player有效
 	////////////////////////////////////////////////////////////////
 	UINT32          m_dwProxyConnID;
 	UINT32          m_dwClientConnID;

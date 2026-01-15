@@ -13,7 +13,7 @@ struct PartnerDataObject : public ShareObject
 		m_StarLevel = 0;		//星级
 		m_RefineExp = 0;		//精验的经验
 		m_StarExp = 0;			//星级经验
-		m_SetPos = 0;			//当前上阵位置
+		m_SetPos = 0;			//当前上阵position
 	}
 
 	UINT64 m_uRoleID;			//角色ID

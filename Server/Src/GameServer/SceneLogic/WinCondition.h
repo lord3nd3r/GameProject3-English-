@@ -20,7 +20,7 @@ public:
 
 	BOOL SetKillMonster(UINT32 dwMonsterID, UINT32 dwKillNum);
 private:
-	EWinCondition   m_ConditionType = EWC_NONE;//判定类型
+	EWinCondition   m_ConditionType = EWC_NONE;//判定type
 	Rect2D          m_DestRect;
 	UINT32          m_dwNpcID = 0;
 	UINT32          m_dwMonsterID = 0;

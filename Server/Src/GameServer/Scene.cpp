@@ -44,7 +44,7 @@ BOOL CScene::Init(UINT32 dwCopyID, UINT32 dwCopyGuid, UINT32 dwCopyType, UINT32 
     m_uCreateTime       = CommonFunc::GetCurrTime();
     m_pMonsterCreator   = new MonsterCreator(this);
 
-    //表示这是一个自由进出的副本, 所以创建即开始
+    //表示这是一个自由进出的副本, 所以创建即begin
     if (dwPlayerNum == 0)
     {
         m_uStartTime = CommonFunc::GetCurrTime();
@@ -229,7 +229,7 @@ BOOL CScene::OnMsgSkillCastReq(NetPacket* pNetPacket)
             return TRUE;
         }
 
-        //未登录的肯定不是玩家，不是玩家就不需要反馈
+        //未登录的肯定不是player，不是player就不需要反馈
         if (!pSceneObj->IsEnterCopy())
         {
             return TRUE;
@@ -308,7 +308,7 @@ BOOL CScene::OnMsgRoleRebornReq(NetPacket* pNetPacket)
     pPlayer->SendMsgProtoBuf(MSG_ROLE_REBORN_ACK, Ack);
 
     /*
-    //先把玩家的完整包组装好
+    //先把player的完整包组装好
     ObjectNewNty Nty;
     pPlayer->SaveNewData(Nty);
 
@@ -413,7 +413,7 @@ BOOL CScene::BroadNewObject(CSceneObject* pSceneObject)
         return TRUE;
     }
 
-    //先把玩家的完整包组装好
+    //先把player的完整包组装好
     ObjectNewNty Nty;
     pSceneObject->SaveNewData(Nty);
 
@@ -470,7 +470,7 @@ BOOL CScene::BroadMessage(INT32 nMsgID, const google::protobuf::Message& pdata)
     return TRUE;
 }
 
-//玩家主动中止副本
+//player主动中止副本
 BOOL CScene::OnMsgLeaveSceneReq(NetPacket* pNetPacket)
 {
     LeaveSceneReq Req;
@@ -523,7 +523,7 @@ BOOL CScene::OnUpdate( UINT64 uTick )
 {
     if(IsFinished())
     {
-        //己经结束不再处理
+        //alreadyend不再handle
         return TRUE;
     }
 
@@ -543,13 +543,13 @@ BOOL CScene::OnUpdate( UINT64 uTick )
         pSceneObject->OnUpdate(uTick);
     }
 
-    //更新场景里所有子弹的状态
+    //更新场景里所有bullet的状态
     UpdateBulletStatus(uTick);
 
     //同步所有对象的状态
     SyncObjectStatus();
 
-    //把玩家死亡都同步一下
+    //把player死亡都同步一下
     for(auto itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); ++itor)
     {
         CSceneObject* pSceneObject = itor->second;
@@ -651,21 +651,21 @@ BOOL CScene::OnMsgTransRoleDataReq(NetPacket* pNetPacket)
         const TransferDataItem& Item = Req.transdatas(i);
         CreatePlayer(Item.roledata(), pHeader->u64TargetID, Item.camp());
 
-        //是否有宠物
+        //whether有宠物
         if(Item.has_petdata())
         {
             CreatePet(Item.petdata(), pHeader->u64TargetID, Item.camp());
         }
 
-        //是否有伙伴
+        //whether有伙伴
         if (Item.has_partnerdata())
         {
             CreatePartner(Item.partnerdata(), pHeader->u64TargetID, Item.camp());
         }
     }
 
-    //检查人齐没齐，如果齐了，就全部发准备好了的消息
-    //有的副本不需要等人齐，有人就可以进
+    //检查人齐没齐，如果齐了，就全部发准备好了的message
+    //有的副本不需要等人齐，有人就can进
 
     TransferDataAck Ack;
     Ack.set_copyguid(m_dwCopyGuid);
@@ -695,7 +695,7 @@ BOOL CScene::OnMsgEnterSceneReq(NetPacket* pNetPacket)
 
     if (m_uStartTime <= 0)
     {
-        //对于普通的副本，有入进入就表示开始
+        //对于普通的副本，有入进入就表示begin
         m_uStartTime = CommonFunc::GetCurrTime();
     }
 
@@ -777,7 +777,7 @@ UINT32 CScene::GetCopyType()
 
 BOOL CScene::SendAllNewObjectToPlayer( CSceneObject* pSceneObject )
 {
-    //先把玩家的完整包组装好
+    //先把player的完整包组装好
     ObjectNewNty Nty;
 
     for(std::map<UINT64, CSceneObject*>::iterator itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); itor++)
@@ -1015,8 +1015,8 @@ CSceneObject* CScene::GetSceneObject(UINT64 uID)
 
 BOOL CScene::RemoveDeadObject()
 {
-    //为了方便结算时，生成汇报的结果，有些角色一般不删除
-    //如玩家角色, 伙伴，宠物之类的，
+    //is了方便结算时，生成汇报的结果，有些角色一般不删除
+    //如player角色, 伙伴，宠物之类的，
     //由于目前不考虑战斗数据统计，就只保留角色
     /*
     for (auto itor = m_mapPlayer.begin(); itor != m_mapPlayer.end(); )
@@ -1053,7 +1053,7 @@ BOOL CScene::RemoveDeadObject()
     return TRUE;
 }
 
-//场景里有玩家进入和退出的时候，都要进行控制人检查
+//场景里有player进入和退出的时候，都要进行控制人检查
 BOOL CScene::UpdateAiController(UINT64 uFilterID)
 {
     UINT64 u64ControllerID = SelectController(uFilterID);
@@ -1123,7 +1123,7 @@ BOOL CScene::SelectTargets(std::vector<CSceneObject*>& vTargets, UINT64 uExclude
     {
         case ERT_OBJECTS:
         {
-            //什么都不需要做，直接使用客户端传过来的目标列表
+            //什么都不需要做，直接使用client传过来的targetlist
         }
         break;
         case ERT_CIRCLE:
@@ -1481,7 +1481,7 @@ CSceneObject* CScene::CreateMonster(UINT32 dwActorID, UINT32 dwCamp, FLOAT x, FL
     }
 
     pObject->InitSkills();
-    //指定位置
+    //指定position
     pObject->SetPos(x, y, z, ft);
 
     m_pSceneLogic->OnObjectCreate(pObject);
@@ -1551,7 +1551,7 @@ CSceneObject* CScene::CreatePet(const TransPetData& petData, UINT64 uHostID, UIN
         pObject->m_Propertys[i] = petData.propertys(i);
     }
 
-    //设置技能
+    //设置skill
     pObject->InitSkills(petData.skills());
 
     //指定坐标 在主人附近
@@ -1589,7 +1589,7 @@ CSceneObject* CScene::CreatePartner(const TransPartnerData& partnerData, UINT64 
         pObject->m_Propertys[i] = partnerData.propertys(i);
     }
 
-    //设置技能
+    //设置skill
     pObject->InitSkills(partnerData.skills());
 
     //指定坐标 在主人附近
@@ -1628,7 +1628,7 @@ CSceneObject* CScene::CreateSummon(UINT32 dwActorID, UINT64 uSummonerID, UINT32 
 
     pObject->InitSkills();
 
-    //指定位置
+    //指定position
     pObject->SetPos(x, y, z, ft);
 
     m_pSceneLogic->OnObjectCreate(pObject);
