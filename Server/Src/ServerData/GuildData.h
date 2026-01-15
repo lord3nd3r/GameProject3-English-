@@ -9,17 +9,17 @@ struct GuildDataObject : public ShareObject
 	GuildDataObject()
 	{
 		m_uGuid = 0;
-		m_Level = 0;
+		m_Level = 0; // Level
 		m_uCreateTime = 0;
 		memset(m_szName, 0, GUILD_NAME_LEN);
 		memset(m_szNotice, 0, GUILD_NOTICE_LEN);
 	}
 
-	INT32   m_Level;                            //等级
-	UINT64  m_uGuid;			                //guid
-	CHAR    m_szName[GUILD_NAME_LEN];           //名字
-	CHAR    m_szNotice[GUILD_NOTICE_LEN];       //公告
-	UINT64  m_ApplyRoles[GUILD_MAX_APPLY_NUM];  //申请id
+		INT32   m_Level;                            // Level
+		UINT64  m_uGuid;			                // GUID
+	CHAR    m_szName[GUILD_NAME_LEN];           // Name
+	CHAR    m_szNotice[GUILD_NOTICE_LEN];       // Notice
+	UINT64  m_ApplyRoles[GUILD_MAX_APPLY_NUM];  // Applicant IDs
 	UINT64  m_uCreateTime;
 
 	BOOL Create(IDBInterface* pDB)
@@ -63,8 +63,8 @@ struct MemberDataObject : public ShareObject
 	}
 
 	UINT64 m_uRoleID;
-	UINT64 m_uGuildID;			//公会的guid
-	UINT32 m_Pos;
+	UINT64 m_uGuildID;			// Guild GUID
+	UINT32 m_Pos;               // Position
 	UINT64 m_uJoinTime;
 
 	BOOL Create(IDBInterface* pDB)

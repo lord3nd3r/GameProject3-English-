@@ -59,7 +59,7 @@ BOOL ServiceBase::StartNetwork(UINT16 nPortNum, INT32 nMaxConn, IPacketDispatche
 
     if (!CNetManager::GetInstancePtr()->Start(nPortNum, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("启动网络层失败!");
+        CLog::GetInstancePtr()->LogError("Failed to start network layer!");
         return FALSE;
     }
 
@@ -205,12 +205,12 @@ BOOL ServiceBase::Update()
             {
                 m_pPacketDispatcher->OnNewConnect(item.m_nConnID);
             }
-            else if (item.m_nMsgID == CLOSE_CONNECTION)
-            {
-                m_pPacketDispatcher->OnCloseConnect(item.m_nConnID);
-                //发送通知
-                CConnectionMgr::GetInstancePtr()->DeleteConnection(item.m_nConnID);
-            }
+                else if (item.m_nMsgID == CLOSE_CONNECTION)
+                {
+                    m_pPacketDispatcher->OnCloseConnect(item.m_nConnID);
+                    // send notification
+                    CConnectionMgr::GetInstancePtr()->DeleteConnection(item.m_nConnID);
+                }
             else
             {
                 m_nLastMsgID = item.m_nMsgID;

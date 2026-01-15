@@ -64,7 +64,7 @@ BOOL CClientConnector::SendData( char* pData, INT32 dwLen )
 	{
 		DWORD nError = CommonSocket::GetSocketLastError();
 
-		printf("发送数据发生错误:%s!\n", CommonFunc::GetLastErrorStr(nError).c_str());
+		printf("Error sending data: %s\n", CommonFunc::GetLastErrorStr(nError).c_str());
 
 		return FALSE;
 	}
@@ -157,7 +157,7 @@ BOOL CClientConnector::ConnectTo( std::string strIpAddr, UINT16 sPort )
 {
 	if(m_ConnectState != ECS_NO_CONNECT)
 	{
-		printf("连接服务器失败， 服务器己连接!\n");
+		printf("Failed to connect: already connected!\n");
 
 		return FALSE;
 	}
@@ -167,7 +167,7 @@ BOOL CClientConnector::ConnectTo( std::string strIpAddr, UINT16 sPort )
 	m_hSocket = CommonSocket::CreateSocket(AF_INET, SOCK_STREAM, 0);
 	if((m_hSocket == INVALID_SOCKET) || (m_hSocket == NULL))
 	{
-		printf("创建套接字失败!\n");
+		printf("Failed to create socket!\n");
 
 		SetConnectState(ECS_NO_CONNECT);
 
@@ -177,7 +177,7 @@ BOOL CClientConnector::ConnectTo( std::string strIpAddr, UINT16 sPort )
 
 	if(!CommonSocket::ConnectSocket(m_hSocket, strIpAddr.c_str(), sPort))
 	{
-		printf("连接服务器失败!\n");
+		printf("Failed to connect to server!\n");
 
 		SetConnectState(ECS_NO_CONNECT);
 
@@ -219,7 +219,7 @@ void CClientConnector::SetConnectState( ConnectState val )
 {
 	if(val == ECS_CONNECTED)
 	{
-		printf("连接服务器成功!\n");
+		printf("Successfully connected to server!\n");
 	}
 
 	m_ConnectState = val;
@@ -239,7 +239,7 @@ BOOL CClientConnector::ReceiveData()
 		DWORD nError = CommonSocket::GetSocketLastError();
 		if(nError != WSAEWOULDBLOCK)
 		{
-			printf("接收数据发生错误:%s!\n", CommonFunc::GetLastErrorStr(nError).c_str());
+			printf("Error receiving data: %s\n", CommonFunc::GetLastErrorStr(nError).c_str());
 
 			SetConnectState(ECS_NO_CONNECT);
 
@@ -250,7 +250,7 @@ BOOL CClientConnector::ReceiveData()
 	}
 	else if(nReadLen == 0)
 	{
-		printf("对方关闭了连接!\n");
+		printf("Peer closed the connection!\n");
 
 		SetConnectState(ECS_NO_CONNECT);
 

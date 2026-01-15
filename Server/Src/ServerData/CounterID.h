@@ -4,7 +4,7 @@
 
 enum ECounterID
 {
-	CID_COMMON_BIT = 1, //保留为bit用
+	CID_COMMON_BIT = 1, // Reserved for bit usage
 
 
 

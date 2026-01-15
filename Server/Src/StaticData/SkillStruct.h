@@ -5,70 +5,70 @@
 
 enum ECenterType
 {
-    ECT_TARGET_POS      = 1,//以客户端选定的位置为中心
-    ECT_TARTGT_OBJ      = 2,//以客户端选定的对象为中心
-    ECT_CASTER_POS      = 3,//以施法者为中心
-    ECT_CASTER_OFFSET   = 4,//以施法者为中心的偏移位置为中心
+    ECT_TARGET_POS      = 1, // Centered on position selected by client
+    ECT_TARTGT_OBJ      = 2, // Centered on object selected by client
+    ECT_CASTER_POS      = 3, // Centered on caster
+    ECT_CASTER_OFFSET   = 4, // Centered on caster with offset
 };
 
 enum ESkillCastType
 {
-    ESCT_TYPE_INSTANT       = 0,    // 瞬发（无选择）
-    ESCT_TYPE_TARGET        = 1,    // 对象选取辅助（目标）
-    ESCT_TYPE_DIRECTION     = 2,    // 方向贴花辅助（朝向）
-    ESCT_TYPE_POS           = 3,    // 地面贴花辅助（AOE区域）
-    ESCT_TYPE_DIRECTIONARC  = 4,    // 扇形方向贴花辅助（朝向）
-    ESCT_TYPE_EFFECT        = 5,    // 模型特效辅助（召唤）
-    ESCT_TYPE_SIGHT         = 6,    // 准星UI变化辅助（射击）
-    ESCT_TYPE_PARABOLA      = 7,    // 抛物线辅助（投掷）
-    ESCT_TYPE_DRAGLINE      = 8,    // 拉线辅助（墙类召唤)
-    ESCT_TYPE_GESTURE       = 9,    // 鼠标手势辅助（多段线条传入点）
+    ESCT_TYPE_INSTANT       = 0,    // Instant (no targeting)
+    ESCT_TYPE_TARGET        = 1,    // Target selection helper (object)
+    ESCT_TYPE_DIRECTION     = 2,    // Direction decal helper (facing)
+    ESCT_TYPE_POS           = 3,    // Ground decal helper (AOE area)
+    ESCT_TYPE_DIRECTIONARC  = 4,    // Fan-shaped direction decal helper (facing)
+    ESCT_TYPE_EFFECT        = 5,    // Model effect helper (summon)
+    ESCT_TYPE_SIGHT         = 6,    // Crosshair UI change helper (shooting)
+    ESCT_TYPE_PARABOLA      = 7,    // Parabola helper (throwing)
+    ESCT_TYPE_DRAGLINE      = 8,    // Drag-line helper (wall-type summons)
+    ESCT_TYPE_GESTURE       = 9,    // Mouse gesture helper (multi-segment points)
 };
 
 enum ERangeType
 {
-    ERT_OBJECTS     = 1,//客户端指定的目标
-    ERT_CYLINDER    = 2,//扇形圆柱
-    ERT_CIRCLE      = 3,//圆形圆柱
-    ERT_BOX         = 4,//矩形区域
+    ERT_OBJECTS     = 1, // Targets specified by client
+    ERT_CYLINDER    = 2, // Sector cylinder
+    ERT_CIRCLE      = 3, // Circular cylinder
+    ERT_BOX         = 4, // Rectangular area
 };
 
 enum EBulletType
 {
-    EBT_CHASE           = 0,//追踪型飞弹
-    EBT_FIXDIRECTION    = 1,//固定方向型飞弹
-    EBT_FIXTARGETPOS    = 2,//固定目标点飞弹
-    EBT_POINT           = 3,//固定点飞弹
-    EBT_LINK            = 4,//连接飞弹
-    EBT_ANNULAR         = 5,//环形飞弹
-    EBT_BACK            = 6,//回旋飞弹
-    EBT_EXTRACT         = 7,//抽取飞弹
-    EBT_BOUNDCE         = 8,//弹跳飞弹
-    EBT_WAVE            = 9,//冲击波
+    EBT_CHASE           = 0, // Homing projectile
+    EBT_FIXDIRECTION    = 1, // Fixed-direction projectile
+    EBT_FIXTARGETPOS    = 2, // Fixed target position projectile
+    EBT_POINT           = 3, // Fixed-point projectile
+    EBT_LINK            = 4, // Linked projectile
+    EBT_ANNULAR         = 5, // Annular projectile
+    EBT_BACK            = 6, // Returning projectile
+    EBT_EXTRACT         = 7, // Extracting projectile
+    EBT_BOUNDCE         = 8, // Bouncing projectile
+    EBT_WAVE            = 9, // Shockwave
 };
 
 enum ESkillStatus
 {
-    ESS_INIT        = 0,    //初始状态
-    ESS_RUNNING     = 1,    //正在运行
-    ESS_FINISHED    = 2,    //己完成
+    ESS_INIT        = 0,    // Initial state
+    ESS_RUNNING     = 1,    // Running
+    ESS_FINISHED    = 2,    // Finished
 };
 
 enum EAffectShip
 {
-    EAS_Self = 0, //影响自己
-    EAS_Enem = 1, //影响敌方
-    EAS_Ally = 2, //影响友方
-    EAS_Each = 3, //影响所有
+    EAS_Self = 0, // Affects self
+    EAS_Enem = 1, // Affects enemies
+    EAS_Ally = 2, // Affects allies
+    EAS_Each = 3, // Affects all
 };
 
 enum ESelectPolicy
 {
-    ESP_DEFAULT         = 0,//默认
-    ESP_BY_MOREHEALTH   = 1,//按血量比例最高
-    ESP_BY_LESSHEALTH   = 2,//按血量比例最低
-    ESP_BY_MOREDISTANCE = 3,//按距离比例最高
-    ESP_BY_LESSDISTANCE = 4,//按距离比例最低
+    ESP_DEFAULT         = 0, // Default
+    ESP_BY_MOREHEALTH   = 1, // Highest health percentage
+    ESP_BY_LESSHEALTH   = 2, // Lowest health percentage
+    ESP_BY_MOREDISTANCE = 3, // Furthest distance
+    ESP_BY_LESSDISTANCE = 4, // Nearest distance
 };
 
 enum ESkillType

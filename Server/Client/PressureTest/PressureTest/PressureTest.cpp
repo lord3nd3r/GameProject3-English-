@@ -1,4 +1,4 @@
-﻿// PressureTest.cpp : 定义控制台应用程序的入口点。
+﻿// PressureTest.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -13,7 +13,7 @@ std::vector<CClientObject*> g_vtClientList;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int nRobotNum = 0;
-	printf("请输入需要启动的机器人数目: ");
+	printf("Please enter the number of bots to start: ");
 	scanf_s("%d", &nRobotNum);
 
 	CommonSocket::InitNetwork();
@@ -41,7 +41,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 
-	//十个以下机器人，不需要开线程　
+	// For fewer than ten bots, no separate threads are required
 
 	while (true)
 	{

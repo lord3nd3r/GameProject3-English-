@@ -5,9 +5,9 @@
 
 enum ConnectState
 {
-	ECS_NO_CONNECT,	//无连接
-	ECS_CONNECTING, //连接中
-	ECS_CONNECTED	//己连接
+	ECS_NO_CONNECT,\t//No connection
+	ECS_CONNECTING, //Connecting
+	ECS_CONNECTED	//Connected
 };
 
 #define CONST_BUFF_SIZE 1024000
@@ -53,7 +53,7 @@ protected:
 
 	BOOL	SendData(char* pData, INT32 dwLen);
 
-	//以下是内部的消息处理
+	// The following are internal message handlers
 	BOOL	DispatchPacket(UINT32 dwMsgID, CHAR* PacketBuf, INT32 BufLen);
 
 
