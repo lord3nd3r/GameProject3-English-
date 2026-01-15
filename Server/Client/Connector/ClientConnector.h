@@ -1,11 +1,12 @@
 ﻿#pragma once
 #ifndef __CLIENT_CONNECTOR_H__
 #define __CLIENT_CONNECTOR_H__
-#include "..\Src\Message\Msg_ID.pb.h"
+#include "../../Src/ServerEngine/Platform.h"
+#include "../../Src/Message/Msg_ID.pb.h"
 
 enum ConnectState
 {
-	ECS_NO_CONNECT,\t//No connection
+	ECS_NO_CONNECT, //No connection
 	ECS_CONNECTING, //Connecting
 	ECS_CONNECTED	//Connected
 };

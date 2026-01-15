@@ -1,20 +1,22 @@
 ﻿// PressureTest.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include "ClientObject.h"
-#include "..\Src\ServerEngine\CommonFunc.h"
-#include "..\Src\ServerEngine\CommonSocket.h"
+#include "../../Src/ServerEngine/CommonFunc.h"
+#include "../../Src/ServerEngine/CommonSocket.h"
 
 #define RUN_TIME 50
 
 std::vector<CClientObject*> g_vtClientList;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
-	int nRobotNum = 0;
-	printf("Please enter the number of bots to start: ");
-	scanf_s("%d", &nRobotNum);
+	setvbuf(stdout, NULL, _IONBF, 0);
+	setvbuf(stderr, NULL, _IONBF, 0);
+
+	int nRobotNum = 1;
+	printf("Starting PressureTest with 1 bot...\n");
+	// scanf("%d", &nRobotNum);
 
 	CommonSocket::InitNetwork();
 
@@ -45,7 +47,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	while (true)
 	{
-		DWORD dwTickLast = GetTickCount();
 		for (std::vector<CClientObject*>::iterator itor = g_vtClientList.begin(); itor != g_vtClientList.end(); itor++)
 		{
 			CClientObject* pClient = *itor;

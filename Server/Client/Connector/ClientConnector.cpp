@@ -1,9 +1,9 @@
-﻿#include "stdafx.h"
-#include "ClientConnector.h"
-#include "google\protobuf\message.h"
-#include "..\Src\ServerEngine\CommonSocket.h"
-#include "..\Src\ServerEngine\PacketHeader.h"
-#include "..\Src\ServerEngine\CommonFunc.h"
+﻿#include "ClientConnector.h"
+#include "google/protobuf/message.h"
+#include "../../Src/ServerEngine/CommonTime.h"
+#include "../../Src/ServerEngine/CommonSocket.h"
+#include "../../Src/ServerEngine/PacketHeader.h"
+#include "../../Src/ServerEngine/CommonFunc.h"
 
 CClientConnector::CClientConnector(void)
 {
@@ -36,10 +36,10 @@ BOOL CClientConnector::SendData(UINT32 dwMsgID, const google::protobuf::Message&
 	PacketHeader* pHeader = (PacketHeader*)szBuff;
 
 	pHeader->CheckCode = 0x88;
-	pHeader->dwMsgID = dwMsgID;
+	pHeader->nMsgID = dwMsgID;
 	pHeader->u64TargetID = u64TargetID;
 	pHeader->dwUserData = dwUserData;
-	pHeader->dwSize = 28 + pdata.ByteSize();
+	pHeader->nSize = 28 + pdata.ByteSize();
 
 	pdata.SerializePartialToArray(szBuff + 28, pdata.ByteSize());
 
@@ -50,7 +50,7 @@ BOOL CClientConnector::SendData( char* pData, INT32 dwLen )
 {
 	if((pData == NULL) || (dwLen == 0))
 	{
-		ASSERT_FAIELD;
+		ASSERT(FALSE);
 		return FALSE;
 	}
 
@@ -62,7 +62,7 @@ BOOL CClientConnector::SendData( char* pData, INT32 dwLen )
 	int nWriteLen = send(m_hSocket,  (char*)pData, dwLen, 0);
 	if(nWriteLen < 0)
 	{
-		DWORD nError = CommonSocket::GetSocketLastError();
+		UINT32 nError = CommonSocket::GetSocketLastError();
 
 		printf("Error sending data: %s\n", CommonFunc::GetLastErrorStr(nError).c_str());
 
@@ -197,8 +197,8 @@ BOOL CClientConnector::ConnectTo( std::string strIpAddr, UINT16 sPort )
 
 BOOL CClientConnector::DisConnect()
 {
-	CommonSocket::ShutDownRecv(m_hSocket);
-	CommonSocket::ShutDownSend(m_hSocket);
+	CommonSocket::ShutdownRecv(m_hSocket);
+	CommonSocket::ShutdownSend(m_hSocket);
 	CommonSocket::CloseSocket(m_hSocket);
 
 	m_ConnectState = ECS_NO_CONNECT;
@@ -236,7 +236,7 @@ BOOL CClientConnector::ReceiveData()
 	int nReadLen = recv(m_hSocket, m_DataBuffer + m_nDataLen, CONST_BUFF_SIZE - m_nDataLen, 0);
 	if(nReadLen < 0)
 	{
-		DWORD nError = CommonSocket::GetSocketLastError();
+		UINT32 nError = CommonSocket::GetSocketLastError();
 		if(nError != WSAEWOULDBLOCK)
 		{
 			printf("Error receiving data: %s\n", CommonFunc::GetLastErrorStr(nError).c_str());
@@ -277,44 +277,44 @@ BOOL CClientConnector::ProcessData()
 	PacketHeader* pHeader = (PacketHeader*)m_DataBuffer;
 	if(pHeader->CheckCode != 0x88)
 	{
-		ASSERT_FAIELD;
+		ASSERT(FALSE);
 		return FALSE;
 	}
 
-	if(pHeader->dwSize == 0)
+	if(pHeader->nSize == 0)
 	{
-		ASSERT_FAIELD;
+		ASSERT(FALSE);
 		return FALSE;
 	}
 
-	if(pHeader->dwSize > m_nDataLen)
+	if(pHeader->nSize > m_nDataLen)
 	{
 		return FALSE;
 	}
 
-	memcpy(m_PackBuffer, m_DataBuffer, pHeader->dwSize);
-	m_PacketLen = pHeader->dwSize;
-	m_nDataLen -= pHeader->dwSize;
+	memcpy(m_PackBuffer, m_DataBuffer, pHeader->nSize);
+	m_PacketLen = pHeader->nSize;
+	m_nDataLen -= pHeader->nSize;
 
 	if(m_nDataLen > 0)
 	{
-		memmove(m_DataBuffer, m_DataBuffer + pHeader->dwSize, m_nDataLen);
+		memmove(m_DataBuffer, m_DataBuffer + pHeader->nSize, m_nDataLen);
 	}
 	else if(m_nDataLen < 0)
 	{
-		ASSERT_FAIELD;
+		ASSERT(FALSE);
 	}
 
 	PacketHeader* pMsgHeader = (PacketHeader*)m_PackBuffer;
 
-	DispatchPacket(pMsgHeader->dwMsgID, m_PackBuffer + 28, m_PacketLen - 28);
+	DispatchPacket(pMsgHeader->nMsgID, m_PackBuffer + 28, m_PacketLen - 28);
 
 	return TRUE;
 }
 
 UINT32 CClientConnector::GetServerTime()
 {
-	UINT32 dwTick = ::GetTickCount();
+	UINT32 dwTick = CommonFunc::GetCurMsTime();
 
 	return m_dwServerTime + (m_dwServerTick - dwTick) / 1000;
 }

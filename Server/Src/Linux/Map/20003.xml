@@ -1,4 +1,3 @@
-/* NOTE: original file backed up at /tmp/chinese_backups/Server___Src___Linux___Map___20003.xml */
 <Root MapID="20003" MapType="0" MapName="[TRANSLATED][TRANSLATED][TRANSLATED][TRANSLATED]" AllowRide="true" AllowPK="true" AllowTrade="true">
   <MapAreaMonsters>
     <MapAreaMonster ID="1" MonsterID="50003" RebornCD="20.00" RebornType="0" PatrolType="0" PatrolTypeID="0" Pos="(0.00,0.00,0.00)">

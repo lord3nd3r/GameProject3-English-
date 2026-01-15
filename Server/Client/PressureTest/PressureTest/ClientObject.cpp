@@ -1,14 +1,17 @@
-﻿#include "stdafx.h"
-#include "ClientObject.h"
-#include "..\Src\Message\Msg_RetCode.pb.h"
-#include "..\Src\Message\Msg_Move.pb.h"
-#include "..\Src\Message\Game_Define.pb.h"
-#include "..\Src\Message\Msg_Copy.pb.h"
-#include "..\Src\Message\Msg_Game.pb.h"
-#include "..\Src\Message\Msg_LoginCltData.pb.h"
-#include "..\Src\ServerEngine\XMath.h"
-#include "..\Src\ServerEngine\CommonFunc.h"
-#include "..\Src\ServerEngine\PacketHeader.h"
+﻿#include "ClientObject.h"
+#include "../../Src/Message/Msg_RetCode.pb.h"
+#include "../../Src/Message/Msg_Move.pb.h"
+#include "../../Src/Message/Game_Define.pb.h"
+#include "../../Src/Message/Msg_Copy.pb.h"
+#include "../../Src/Message/Msg_Game.pb.h"
+#include "../../Src/Message/Msg_LoginCltData.pb.h"
+#include "../../Src/Message/Msg_Account.pb.h"
+#include "../../Src/Message/Msg_Role.pb.h"
+#include "../../Src/ServerEngine/CommonMath.h"
+#include "../../Src/ServerEngine/CommonConvert.h"
+#include "../../Src/ServerEngine/CommonTime.h"
+#include "../../Src/ServerEngine/CommonFunc.h"
+#include "../../Src/ServerEngine/PacketHeader.h"
 
 #define PROCESS_MESSAGE_ITEM_CLIENT__(dwMsgID, Func) \
 		case dwMsgID:{\
@@ -170,8 +173,8 @@ BOOL CClientObject::OnUpdate( UINT32 dwTick )
 	{
 		if(m_ClientConnector.GetConnectState() == ECS_NO_CONNECT)
 		{
-			//m_ClientConnector.ConnectTo("127.0.0.1", 9001);
-			m_ClientConnector.ConnectTo("47.93.31.69", 9001);
+			m_ClientConnector.ConnectTo("127.0.0.1", 9001);
+			//m_ClientConnector.ConnectTo("47.93.31.69", 9001);
 			//m_ClientConnector.ConnectTo("47.105.89.43", 9001);
 		}
 		else if (m_ClientConnector.GetConnectState() == ECS_CONNECTED)
@@ -191,7 +194,7 @@ BOOL CClientObject::OnUpdate( UINT32 dwTick )
 
 	if(m_dwHostState == ST_AccountLoginOK)
 	{
-		SendSelectSvrReq(202);
+		SendSelectSvrReq(1);
 
 		m_dwHostState = ST_SelectSvr;
 	}
@@ -296,7 +299,11 @@ BOOL CClientObject::OnMsgSelectServerAck(UINT32 dwMsgID, CHAR* PacketBuf, INT32 
 	Ack.ParsePartialFromArray(PacketBuf, BufLen);
 	PacketHeader* pHeader = (PacketHeader*)PacketBuf;
 	m_ClientConnector.DisConnect();
-	m_ClientConnector.ConnectTo(Ack.serveraddr(), Ack.serverport());
+	// m_ClientConnector.ConnectTo(Ack.serveraddr(), Ack.serverport());
+	int targetPort = Ack.serverport();
+	if (targetPort == 0) targetPort = 9008;
+	printf("Redirecting to GameServer: %s:%d -> 127.0.0.1:%d\n", Ack.serveraddr().c_str(), Ack.serverport(), targetPort);
+	m_ClientConnector.ConnectTo("127.0.0.1", targetPort);
 	m_dwHostState = ST_SelectSvrOK;
 	return TRUE;
 }
@@ -417,11 +424,11 @@ VOID CClientObject::TestMove()
 
 	if (m_uMoveTime <= 0)
 	{
-		m_uMoveTime = CommonFunc::GetTickCount();
+		m_uMoveTime = CommonFunc::GetCurMsTime();
 	}
 
 
-	UINT64 dwTimeDiff = CommonFunc::GetTickCount() - m_uMoveTime;
+	UINT64 dwTimeDiff = CommonFunc::GetCurMsTime() - m_uMoveTime;
 	if (dwTimeDiff > 100)
 	{
 		FLOAT fSpeed = 6.25f;
@@ -434,7 +441,7 @@ VOID CClientObject::TestMove()
 
 		MoveForward(fSpeed * fTime);
 
-		m_uMoveTime = CommonFunc::GetTickCount();
+		m_uMoveTime = CommonFunc::GetCurMsTime();
 
 		bool bTrun = false;
 
@@ -481,10 +488,10 @@ VOID CClientObject::TestCastSkill()
 {
 	if (m_uSkillTime == 0)
 	{
-		m_uSkillTime = CommonFunc::GetTickCount();
+		m_uSkillTime = CommonFunc::GetCurMsTime();
 	}
 
-	UINT64 dwTimeDiff = CommonFunc::GetTickCount() - m_uSkillTime;
+	UINT64 dwTimeDiff = CommonFunc::GetCurMsTime() - m_uSkillTime;
 	if (dwTimeDiff < 10000)
 	{
 
@@ -495,7 +502,7 @@ VOID CClientObject::TestCastSkill()
 	Req.set_objectguid(m_RoleIDList[0]);
 	Req.set_skillid(m_SkillID);
 
-	m_uSkillTime = CommonFunc::GetTickCount();
+	m_uSkillTime = CommonFunc::GetCurMsTime();
 
 	m_ClientConnector.SendData(MSG_SKILL_CAST_REQ, Req, m_RoleIDList[0], m_dwCopyGuid);
 }
@@ -510,7 +517,6 @@ BOOL CClientObject::SendRoleLoginReq(UINT64 u64CharID)
 	RoleLoginReq Req;
 	Req.set_accountid(m_dwAccountID);
 	Req.set_roleid(u64CharID);
-	Req.set_logincode(11111);
 	m_ClientConnector.SendData(MSG_ROLE_LOGIN_REQ, Req, 0, 0);
 	return TRUE;
 }
@@ -519,7 +525,7 @@ BOOL CClientObject::SendRoleListReq()
 {
 	if(m_dwAccountID == 0)
 	{
-		ASSERT_FAIELD;
+		ASSERT(FALSE);
 		m_dwHostState = ST_Overed;
 		return TRUE;
 	}
