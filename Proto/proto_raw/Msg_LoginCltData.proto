@@ -6,7 +6,7 @@ message BagItem {
     uint64   ItemGuid    = 2;
     int32    ItemID      = 3;
     int64    ItemNum     = 4;
-    bool     Bind        = 5;    //是否是邦定
+    bool     Bind        = 5;    //Whether bound
 }
 
 message BagChangeNty{
@@ -17,12 +17,12 @@ message BagChangeNty{
 message EquipItem {
     uint64   Guid        = 1;
     int32    EquipID     = 2;
-    int32    StrengthLvl = 3;   //强化等级
-    int32    RefineLevel = 4;   //精炼等级
-    int32    StarLevel   = 5;      //星级
-    int32    RefineExp   = 6;      //精验的经验
-    int32    StarExp     = 7;          //星级经验
-    int32    IsUsing     = 8;          //是否上阵
+    int32    StrengthLvl = 3;   //Enhancement level
+    int32    RefineLevel = 4;   //Refine level
+    int32    StarLevel   = 5;      //Star level
+    int32    RefineExp   = 6;      //Refine experience
+    int32    StarExp     = 7;          //Star experience
+    int32    IsUsing     = 8;          //Whether in use
 }
 
 message EquipChangeNty{
@@ -34,12 +34,12 @@ message EquipChangeNty{
 message GemItem {
     uint64   Guid        = 1;
     int32    GemID       = 2;
-    int32    StrengthLvl = 3;    //强化等级
-    int32    RefineLevel = 4;    //精炼等级
-    int32    StarLevel   = 5;    //星级
-    int32    RefineExp   = 6;    //精验的经验
-    int32    StarExp     = 7;    //星级经验
-    int32    Pos         = 8;    //位置
+    int32    StrengthLvl = 3;    //Enhancement level
+    int32    RefineLevel = 4;    //Refine level
+    int32    StarLevel   = 5;    //Star level
+    int32    RefineExp   = 6;    //Refine experience
+    int32    StarExp     = 7;    //Star experience
+    int32    Pos         = 8;    //Position
 }
 
 message GemChangeNty{
@@ -50,12 +50,12 @@ message GemChangeNty{
 message PetItem {
     uint64 Guid = 1;
     int32  PetID = 2;
-    int32  StrengthLvl = 3;   //强化等级
-    int32  RefineLevel = 4;   //精炼等级
-    int32  StarLevel = 5;      //星级
-    int32  RefineExp = 6;      //精验的经验
-    int32  StarExp = 7;          //星级经验
-    int32  IsUsing = 8;          //是否上阵
+    int32  StrengthLvl = 3;   //Enhancement level
+    int32  RefineLevel = 4;   //Refine level
+    int32  StarLevel = 5;      //Star level
+    int32  RefineExp = 6;      //Refine experience
+    int32  StarExp = 7;          //Star experience
+    int32  IsUsing = 8;          //Whether in use
 }
 
 message PetChangeNty{
@@ -66,12 +66,12 @@ message PetChangeNty{
 message PartnerItem {
     uint64 Guid = 1;
     int32  PartnerID = 2;
-    int32  StrengthLvl = 3;   //强化等级
-    int32  RefineLevel = 4;   //精炼等级
-    int32  StarLevel = 5;      //星级
-    int32  RefineExp = 6;      //精验的经验
-    int32  StarExp = 7;          //星级经验
-    int32  SetPos = 8;          //上阵位置
+    int32  StrengthLvl = 3;   //Enhancement level
+    int32  RefineLevel = 4;   //Refine level
+    int32  StarLevel = 5;      //Star level
+    int32  RefineExp = 6;      //Refine experience
+    int32  StarExp = 7;          //Star experience
+    int32  SetPos = 8;          //Set position
 }
 
 message PartnerChangeNty{
@@ -82,12 +82,12 @@ message PartnerChangeNty{
 message MountItem {
     uint64 Guid = 1;
     int32  MountID = 2;
-    int32  StrengthLvl = 3;   //强化等级
-    int32  RefineLevel = 4;   //精炼等级
-    int32  StarLevel = 5;      //星级
-    int32  RefineExp = 6;      //精验的经验
-    int32  StarExp = 7;          //星级经验
-    int32  IsUsing = 8;          //是否上阵
+    int32  StrengthLvl = 3;   //Enhancement level
+    int32  RefineLevel = 4;   //Refine level
+    int32  StarLevel = 5;      //Star level
+    int32  RefineExp = 6;      //Refine experience
+    int32  StarExp = 7;          //Star experience
+    int32  IsUsing = 8;          //Whether in use
 }
 
 message MountChangeNty{
@@ -97,13 +97,13 @@ message MountChangeNty{
 
 message MailItem {
     uint64 Guid      = 1;
-    int32  MailType  = 2;   //邮件类型
-    int32  Status    = 3;   //邮件状态
-    string Title     = 4;   //邮件标题
-    string Content   = 5;   //邮件内容
-    string Sender    = 6;   //发送者
-    repeated int32 ItemID   = 8;   //邮件道具ID
-    repeated int32 ItemNum   = 9;   //邮件道具Num
+    int32  MailType  = 2;   //Mail type
+    int32  Status    = 3;   //Mail status
+    string Title     = 4;   //Mail title
+    string Content   = 5;   //Mail content
+    string Sender    = 6;   //Sender
+    repeated int32 ItemID   = 8;   //Mail item ID
+    repeated int32 ItemNum   = 9;   //Mail item num
 }
 
 message MailChangeNty{

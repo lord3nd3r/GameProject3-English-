@@ -167,7 +167,7 @@ CREATE TABLE `guild`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `guild_member`;
 CREATE TABLE `guild_member`  (
-  `guildid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `guildid` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Auto-increment ID',
   `roleid` bigint(20) NOT NULL,
   `join_time` bigint(20) NOT NULL,
   `pose` int(11) NOT NULL,
@@ -181,10 +181,10 @@ CREATE TABLE `guild_member`  (
 DROP TABLE IF EXISTS `mail`;
 CREATE TABLE `mail`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `groupid` bigint(20) NULL DEFAULT NULL COMMENT '群邮件的guid',
+  `groupid` bigint(20) NULL DEFAULT NULL COMMENT 'Group mail GUID',
   `roleid` bigint(20) NOT NULL,
-  `mailtype` int(11) NULL DEFAULT NULL COMMENT '邮件类型',
-  `mailstatus` int(255) NULL DEFAULT NULL COMMENT '邮件状态',
+  `mailtype` int(11) NULL DEFAULT NULL COMMENT 'Mail type',
+  `mailstatus` int(255) NULL DEFAULT NULL COMMENT 'Mail status',
   `senderid` bigint(20) NOT NULL,
   `sendername` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `mail_time` bigint(20) NOT NULL,
@@ -282,7 +282,7 @@ CREATE TABLE `player`  (
   `actime3` bigint(20) NULL DEFAULT NULL,
   `actime4` bigint(20) NULL DEFAULT NULL,
   `fightvalue` bigint(20) NULL DEFAULT NULL,
-  `isdelete` int(11) NOT NULL DEFAULT 0 COMMENT '删除标志',
+  `isdelete` int(11) NOT NULL DEFAULT 0 COMMENT 'Delete flag',
   `createtime` bigint(20) NULL DEFAULT NULL,
   `logontime` bigint(20) NULL DEFAULT NULL,
   `logofftime` bigint(20) NULL DEFAULT NULL,
@@ -333,11 +333,11 @@ use db_log;
 -- ----------------------------
 DROP TABLE IF EXISTS `account_create`;
 CREATE TABLE `account_create`  (
-  `accountid` bigint(22) NOT NULL COMMENT '帐号',
+  `accountid` bigint(22) NOT NULL COMMENT 'Account',
   `version` int(11) NULL DEFAULT NULL,
-  `channel` int(11) NULL DEFAULT NULL COMMENT '平台ID',
-  `optime` datetime(0) NOT NULL COMMENT '创建帐号时间',
-  `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '机型',
+  `channel` int(11) NULL DEFAULT NULL COMMENT 'Platform ID',
+  `optime` datetime(0) NOT NULL COMMENT 'Account creation time',
+  `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Device model',
   `imei` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `ip` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `openid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -351,13 +351,13 @@ CREATE TABLE `account_create`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `account_login`;
 CREATE TABLE `account_login`  (
-  `accountid` bigint(20) NOT NULL COMMENT '帐号ID',
-  `channel` int(11) NULL DEFAULT NULL COMMENT '平台ID',
-  `version` int(11) NULL DEFAULT NULL COMMENT '版本ID',
-  `optime` datetime(0) NOT NULL COMMENT '登出时间',
-  `ip` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '登入IP',
+  `accountid` bigint(20) NOT NULL COMMENT 'Account ID',
+  `channel` int(11) NULL DEFAULT NULL COMMENT 'Platform ID',
+  `version` int(11) NULL DEFAULT NULL COMMENT 'Version ID',
+  `optime` datetime(0) NOT NULL COMMENT 'Logout time',
+  `ip` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Login IP',
   `openid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `uuid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '登入设备UUID',
+  `uuid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Login device UUID',
   `idfa` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `imei` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
@@ -388,12 +388,12 @@ CREATE TABLE `role_chat`  (
 DROP TABLE IF EXISTS `role_create`;
 CREATE TABLE `role_create`  (
   `roleid` bigint(22) NOT NULL,
-  `accountid` bigint(22) NOT NULL COMMENT '帐号',
+  `accountid` bigint(22) NOT NULL COMMENT 'Account',
   `areaid` int(11) NULL DEFAULT NULL,
-  `channel` int(11) NULL DEFAULT NULL COMMENT '平台ID',
-  `optime` datetime(0) NOT NULL COMMENT '创建帐号时间',
+  `channel` int(11) NULL DEFAULT NULL COMMENT 'Platform ID',
+  `optime` datetime(0) NOT NULL COMMENT 'Account creation time',
   `rolename` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '机型',
+  `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Device model',
   `imei` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `idfa` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `uuid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -406,14 +406,14 @@ CREATE TABLE `role_create`  (
 DROP TABLE IF EXISTS `role_login`;
 CREATE TABLE `role_login`  (
   `roleid` bigint(20) NOT NULL,
-  `accountid` bigint(20) NOT NULL COMMENT '帐号ID',
-  `channel` int(11) NULL DEFAULT NULL COMMENT '平台ID',
-  `level` int(11) NULL DEFAULT NULL COMMENT '等级',
-  `viplevel` int(11) NULL DEFAULT NULL COMMENT 'vip等级',
-  `optime` datetime(0) NOT NULL COMMENT '登出时间',
-  `areaid` int(11) NULL DEFAULT NULL COMMENT '区服ID',
+  `accountid` bigint(20) NOT NULL COMMENT 'Account ID',
+  `channel` int(11) NULL DEFAULT NULL COMMENT 'Platform ID',
+  `level` int(11) NULL DEFAULT NULL COMMENT 'Level',
+  `viplevel` int(11) NULL DEFAULT NULL COMMENT 'VIP level',
+  `optime` datetime(0) NOT NULL COMMENT 'Logout time',
+  `areaid` int(11) NULL DEFAULT NULL COMMENT 'Server ID',
   `rolename` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `uuid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '登入设备UUID',
+  `uuid` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Login device UUID',
   `idfa` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `imei` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `imodel` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
@@ -425,12 +425,12 @@ CREATE TABLE `role_login`  (
 DROP TABLE IF EXISTS `role_logout`;
 CREATE TABLE `role_logout`  (
   `roleid` bigint(20) NOT NULL,
-  `accountid` bigint(20) NOT NULL COMMENT '帐号ID',
-  `channel` int(11) NULL DEFAULT NULL COMMENT '平台ID',
-  `level` int(11) NULL DEFAULT NULL COMMENT '等级',
-  `viplevel` int(11) NULL DEFAULT NULL COMMENT 'vip等级',
-  `optime` datetime(0) NOT NULL COMMENT '登出时间',
-  `areaid` int(11) NULL DEFAULT NULL COMMENT '区服ID',
+  `accountid` bigint(20) NOT NULL COMMENT 'Account ID',
+  `channel` int(11) NULL DEFAULT NULL COMMENT 'Platform ID',
+  `level` int(11) NULL DEFAULT NULL COMMENT 'Level',
+  `viplevel` int(11) NULL DEFAULT NULL COMMENT 'VIP level',
+  `optime` datetime(0) NOT NULL COMMENT 'Logout time',
+  `areaid` int(11) NULL DEFAULT NULL COMMENT 'Server ID',
   `rolename` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `createtime` datetime(0) NULL DEFAULT NULL,
   `idfa` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -444,10 +444,10 @@ use db_gm;
 -- ----------------------------
 DROP TABLE IF EXISTS `admin_config`;
 CREATE TABLE `admin_config`  (
-  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '配置名称',
-  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '配置内容',
+  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'Configuration name',
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Configuration content',
   PRIMARY KEY (`name`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '配置信息表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'Configuration information table' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for admin_log
@@ -455,35 +455,35 @@ CREATE TABLE `admin_config`  (
 DROP TABLE IF EXISTS `admin_log`;
 CREATE TABLE `admin_log`  (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '管理员名字',
+  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'Administrator name',
   `url` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `modulename` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '模块名',
-  `extramsg` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加信息',
-  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '内容',
-  `createtime` datetime(0) NOT NULL COMMENT '操作时间',
+  `modulename` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT 'Module name',
+  `extramsg` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Additional information',
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Content',
+  `createtime` datetime(0) NOT NULL COMMENT 'Operation time',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `name`(`username`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '管理员操作日志表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'Administrator operation log table' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for admin_role
 -- ----------------------------
 DROP TABLE IF EXISTS `admin_role`;
 CREATE TABLE `admin_role`  (
-  `id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '主键',
-  `father_id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0' COMMENT '权限父ID',
-  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色名称',
-  `rank` int(10) NOT NULL DEFAULT 0 COMMENT '角色权限等级',
-  `permission` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '角色权限',
-  `createtime` int(10) NOT NULL COMMENT '角色创建时间',
-  `modifytime` int(10) NOT NULL COMMENT '角色修改时间',
+  `id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Primary key',
+  `father_id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0' COMMENT 'Permission parent ID',
+  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Role name',
+  `rank` int(10) NOT NULL DEFAULT 0 COMMENT 'Role permission level',
+  `permission` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Role permissions',
+  `createtime` int(10) NOT NULL COMMENT 'Role creation time',
+  `modifytime` int(10) NOT NULL COMMENT 'Role modification time',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '角色表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'Role table' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_role
 -- ----------------------------
-INSERT INTO `admin_role` VALUES ('43163187-f63f-409a-807c-7723d5919b62', '请选择', '超级管理员', 100, 'a:3:{s:9:\"allow_uri\";a:1:{i:0;s:0:\"\";}s:8:\"deny_uri\";a:1:{i:0;s:0:\"\";}s:5:\"admin\";a:16:{i:0;s:7:\"general\";s:7:\"general\";a:3:{i:0;s:4:\"main\";i:1;s:6:\"config\";s:6:\"config\";a:3:{i:0;s:5:\"index\";i:1;s:4:\"edit\";i:2;s:7:\"restore\";}}i:1;s:4:\"role\";s:4:\"role\";a:6:{i:0;s:4:\"role\";s:4:\"role\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:5:\"admin\";s:5:\"admin\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:2;s:3:\"log\";s:3:\"log\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:2;s:14:\"datastatistics\";i:3;s:4:\"area\";s:4:\"area\";a:4:{i:0;s:4:\"area\";s:4:\"area\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:8:\"realtime\";s:8:\"realtime\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:4;s:4:\"seal\";s:4:\"seal\";a:13:{i:0;s:15:\"sealaccountlist\";s:15:\"sealaccountlist\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:10:\"sealplayer\";s:10:\"sealplayer\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:2;s:8:\"sealchat\";s:8:\"sealchat\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:3;s:13:\"passwordreset\";i:4;s:9:\"flashmove\";s:9:\"flashmove\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:5;s:9:\"gmcommand\";s:9:\"gmcommand\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:6;s:13:\"pullrolelevel\";s:13:\"pullrolelevel\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:5;s:8:\"activity\";s:8:\"activity\";a:4:{i:0;s:12:\"activitytime\";s:12:\"activitytime\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:7:\"giftbag\";s:7:\"giftbag\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:6;s:4:\"mail\";s:4:\"mail\";a:4:{i:0;s:10:\"singlemail\";s:10:\"singlemail\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:9:\"groupmail\";s:9:\"groupmail\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:7;s:9:\"broadcast\";s:9:\"broadcast\";a:2:{i:0;s:15:\"broadcastmamage\";s:15:\"broadcastmamage\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:8;s:6:\"notice\";}}', 1389364254, 1522668025);
+INSERT INTO `admin_role` VALUES ('43163187-f63f-409a-807c-7723d5919b62', 'Please select', 'Super administrator', 100, 'a:3:{s:9:\"allow_uri\";a:1:{i:0;s:0:\"\";}s:8:\"deny_uri\";a:1:{i:0;s:0:\"\";}s:5:\"admin\";a:16:{i:0;s:7:\"general\";s:7:\"general\";a:3:{i:0;s:4:\"main\";i:1;s:6:\"config\";s:6:\"config\";a:3:{i:0;s:5:\"index\";i:1;s:4:\"edit\";i:2;s:7:\"restore\";}}i:1;s:4:\"role\";s:4:\"role\";a:6:{i:0;s:4:\"role\";s:4:\"role\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:5:\"admin\";s:5:\"admin\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:2;s:3:\"log\";s:3:\"log\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:2;s:14:\"datastatistics\";i:3;s:4:\"area\";s:4:\"area\";a:4:{i:0;s:4:\"area\";s:4:\"area\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:8:\"realtime\";s:8:\"realtime\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:4;s:4:\"seal\";s:4:\"seal\";a:13:{i:0;s:15:\"sealaccountlist\";s:15:\"sealaccountlist\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:10:\"sealplayer\";s:10:\"sealplayer\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:2;s:8:\"sealchat\";s:8:\"sealchat\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:3;s:13:\"passwordreset\";i:4;s:9:\"flashmove\";s:9:\"flashmove\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:5;s:9:\"gmcommand\";s:9:\"gmcommand\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:6;s:13:\"pullrolelevel\";s:13:\"pullrolelevel\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:5;s:8:\"activity\";s:8:\"activity\";a:4:{i:0;s:12:\"activitytime\";s:12:\"activitytime\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:7:\"giftbag\";s:7:\"giftbag\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:6;s:4:\"mail\";s:4:\"mail\";a:4:{i:0;s:10:\"singlemail\";s:10:\"singlemail\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}i:1;s:9:\"groupmail\";s:9:\"groupmail\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:7;s:9:\"broadcast\";s:9:\"broadcast\";a:2:{i:0;s:15:\"broadcastmamage\";s:15:\"broadcastmamage\";a:4:{i:0;s:5:\"index\";i:1;s:3:\"add\";i:2;s:4:\"edit\";i:3;s:3:\"del\";}}i:8;s:6:\"notice\";}}', 1389364254, 1522668025);
 
 -- ----------------------------
 -- Table structure for admin_user
@@ -492,17 +492,17 @@ DROP TABLE IF EXISTS `admin_user`;
 CREATE TABLE `admin_user`  (
   `id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `role_id` varchar(36) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '0',
-  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
-  `password` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
-  `sex` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '性别',
-  `createtime` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
-  `logintime` int(10) NOT NULL DEFAULT 0 COMMENT '加入时间',
-  `loginfailure` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT '登录失败次数',
+  `username` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Username',
+  `password` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'Password',
+  `sex` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Gender',
+  `createtime` int(10) NOT NULL DEFAULT 0 COMMENT 'Creation time',
+  `logintime` int(10) NOT NULL DEFAULT 0 COMMENT 'Join time',
+  `loginfailure` tinyint(1) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Login failure count',
   `sessionid` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '',
-  `pagesize` int(10) UNSIGNED NOT NULL DEFAULT 20 COMMENT '分页大小',
-  `searchbar` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT '是否显示搜索栏',
+  `pagesize` int(10) UNSIGNED NOT NULL DEFAULT 20 COMMENT 'Page size',
+  `searchbar` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Whether to display search bar',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '管理员表' ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'Administrator table' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of admin_user
@@ -529,20 +529,20 @@ CREATE TABLE `gm_command`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `mail_data`;
 CREATE TABLE `mail_data`  (
-  `autoid` int(6) NOT NULL AUTO_INCREMENT COMMENT '标识ID',
-  `area_host` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '区号',
-  `type` int(1) NULL DEFAULT NULL COMMENT '0为单发，1为群发',
-  `reciver_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '玩家名称',
-  `mail_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮件标题',
-  `keep_time` int(3) NULL DEFAULT NULL COMMENT '客户端保存时间',
-  `mail_content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '邮件内容',
-  `itemid1` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加1',
-  `itemid2` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加2',
-  `itemid3` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加3',
-  `itemid4` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加4',
-  `reciver_group` int(1) NULL DEFAULT NULL COMMENT '0为区所有玩家，1为工会',
-  `group_name` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '团队名称',
-  `insert_time` datetime(0) NULL DEFAULT NULL COMMENT '添加时间',
+  `autoid` int(6) NOT NULL AUTO_INCREMENT COMMENT 'Identification ID',
+  `area_host` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'Area number',
+  `type` int(1) NULL DEFAULT NULL COMMENT '0 for single send, 1 for group send',
+  `reciver_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Player name',
+  `mail_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Mail title',
+  `keep_time` int(3) NULL DEFAULT NULL COMMENT 'Client save time',
+  `mail_content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'Mail content',
+  `itemid1` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 1',
+  `itemid2` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 2',
+  `itemid3` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 3',
+  `itemid4` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 4',
+  `reciver_group` int(1) NULL DEFAULT NULL COMMENT '0 for all players in the area, 1 for guild',
+  `group_name` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Team name',
+  `insert_time` datetime(0) NULL DEFAULT NULL COMMENT 'Add time',
   `receiver_id` bigint(20) NULL DEFAULT 0,
   `reason` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sendmanager` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -557,20 +557,20 @@ CREATE TABLE `mail_data`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `mail_data_backup`;
 CREATE TABLE `mail_data_backup`  (
-  `autoid` int(6) NOT NULL AUTO_INCREMENT COMMENT '标识ID',
-  `area_host` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '区号',
-  `type` int(1) NULL DEFAULT NULL COMMENT '0为单发，1为群发',
-  `reciver_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '玩家名称',
-  `mail_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '邮件标题',
-  `keep_time` int(3) NULL DEFAULT NULL COMMENT '客户端保存时间',
-  `mail_content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '邮件内容',
-  `itemid1` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加1',
-  `itemid2` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加2',
-  `itemid3` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加3',
-  `itemid4` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '附加4',
-  `reciver_group` int(1) NULL DEFAULT NULL COMMENT '0为区所有玩家，1为工会',
-  `group_name` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '团队名称',
-  `insert_time` datetime(0) NULL DEFAULT NULL COMMENT '添加时间',
+  `autoid` int(6) NOT NULL AUTO_INCREMENT COMMENT 'Identification ID',
+  `area_host` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'Area number',
+  `type` int(1) NULL DEFAULT NULL COMMENT '0 for single send, 1 for group send',
+  `reciver_name` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Player name',
+  `mail_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Mail title',
+  `keep_time` int(3) NULL DEFAULT NULL COMMENT 'Client save time',
+  `mail_content` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT 'Mail content',
+  `itemid1` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 1',
+  `itemid2` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 2',
+  `itemid3` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 3',
+  `itemid4` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Attachment 4',
+  `reciver_group` int(1) NULL DEFAULT NULL COMMENT '0 for all players in the area, 1 for guild',
+  `group_name` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Team name',
+  `insert_time` datetime(0) NULL DEFAULT NULL COMMENT 'Add time',
   `receiver_id` bigint(20) NULL DEFAULT NULL,
   `reason` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sendmanager` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -600,10 +600,10 @@ CREATE TABLE `seal_account`  (
   `accountid` bigint(11) NULL DEFAULT NULL,
   `accountname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `accounttime` bigint(20) NULL DEFAULT NULL,
-  `areaid` int(11) NULL DEFAULT NULL COMMENT '区号',
-  `rolename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '角色名',
-  `sealendtime` bigint(20) NULL DEFAULT NULL COMMENT '封禁结束时间',
-  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
+  `areaid` int(11) NULL DEFAULT NULL COMMENT 'Area number',
+  `rolename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Role name',
+  `sealendtime` bigint(20) NULL DEFAULT NULL COMMENT 'Ban end time',
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Description',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
@@ -613,13 +613,13 @@ CREATE TABLE `seal_account`  (
 DROP TABLE IF EXISTS `seal_player`;
 CREATE TABLE `seal_player`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `areaid` int(11) NULL DEFAULT NULL COMMENT '区号',
+  `areaid` int(11) NULL DEFAULT NULL COMMENT 'Area number',
   `accountid` bigint(50) NULL DEFAULT NULL,
-  `roleid` bigint(11) NULL DEFAULT NULL COMMENT '角色id',
+  `roleid` bigint(11) NULL DEFAULT NULL COMMENT 'Role ID',
   `rolename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `rolelevel` int(11) NULL DEFAULT NULL,
-  `sealtype` int(11) NULL DEFAULT NULL COMMENT '封号类型 1：禁登陆 2：禁聊天 3：禁交易 4：禁pvp',
-  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '描述',
+  `sealtype` int(11) NULL DEFAULT NULL COMMENT 'Ban type 1: Login ban 2: Chat ban 3: Trade ban 4: PVP ban',
+  `description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Description',
   `optime` datetime(0) NULL DEFAULT NULL,
   `operator` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `sealtime` bigint(20) NULL DEFAULT NULL,
@@ -632,13 +632,13 @@ CREATE TABLE `seal_player`  (
 DROP TABLE IF EXISTS `server_db`;
 CREATE TABLE `server_db`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `areanum` int(11) NULL DEFAULT NULL COMMENT '区号',
-  `areaname` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '区名',
-  `dbip` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '数据库ip',
-  `dbtype` int(11) NULL DEFAULT NULL COMMENT '数据库类型(0:database 1:dyn 2:type 3:log 4:gm 5:account )',
-  `dbname` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '数据库名字',
-  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '用户名',
-  `userpwd` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '户用密码',
+  `areanum` int(11) NULL DEFAULT NULL COMMENT 'Area number',
+  `areaname` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Area name',
+  `dbip` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Database IP',
+  `dbtype` int(11) NULL DEFAULT NULL COMMENT 'Database type (0:database 1:dyn 2:type 3:log 4:gm 5:account )',
+  `dbname` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT 'Database name',
+  `username` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'Username',
+  `userpwd` varchar(16) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT 'User password',
   `starttime` bigint(20) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
@@ -675,8 +675,8 @@ CREATE TABLE `server_status`  (
   `curr_online` int(11) NULL DEFAULT NULL,
   `max_online` int(11) NULL DEFAULT 0,
   `total_cnt` int(11) NULL DEFAULT 0,
-  `cache_cnt` int(11) NULL DEFAULT NULL COMMENT '缓存人数',
-  `dberr_cnt` int(11) NULL DEFAULT NULL COMMENT '数据库写失败次数',
+  `cache_cnt` int(11) NULL DEFAULT NULL COMMENT 'Cached number of people',
+  `dberr_cnt` int(11) NULL DEFAULT NULL COMMENT 'Database write failure count',
   `update_time` bigint(11) NULL DEFAULT 0,
   `status` int(11) NULL DEFAULT 0,
   `file_version` int(11) NULL DEFAULT 0,

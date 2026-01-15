@@ -7,7 +7,7 @@ include_directories(./ ../StaticData ../../Common/Sqlite ../WatcherClient ../Pub
 link_directories(../../Common/lib /usr/lib64/mysql)	
 
 
-#消息
+#Message
 set(PROTO Proto)
 FILE(GLOB PROTO "../Message/Game_Define.pb.cc" 
 				"../Message/Game_Define.pb.h"
@@ -23,7 +23,7 @@ FILE(GLOB PROTO "../Message/Game_Define.pb.cc"
 				"../Message/Msg_Move.pb.h")
 
 
-#游戏逻辑相关
+#Game logic related
 set(SCENE_LOGICAL SceneLogic)
 FILE(GLOB SCENE_LOGICAL "./SceneLogic/SceneLogic_Arena.cpp"
 					"./SceneLogic/SceneLogic_Arena.h"
@@ -40,7 +40,7 @@ FILE(GLOB SCENE_LOGICAL "./SceneLogic/SceneLogic_Arena.cpp"
 					"./SceneLogic/WinCondition.cpp"
 					"./SceneLogic/WinCondition.h")
 
-#场景对象
+#Scene object
 set(SCENE_OBJECT GameObject)
 FILE(GLOB SCENE_OBJECT "./GameObject/BuffObject.cpp"
 					"./GameObject/BuffObject.h"

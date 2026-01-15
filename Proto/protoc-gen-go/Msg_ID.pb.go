@@ -31,7 +31,7 @@ type MessageID int32
 const (
 	MessageID_MSG_BEGIN MessageID = 0
 	// ============================================================================================
-	// 				一般消息定义
+	// 				General message definitions
 	// ============================================================================================
 	MessageID_MSG_NORMAL_MSGID_BEGIN     MessageID = 1000000
 	MessageID_MSG_CHECK_VERSION_REQ      MessageID = 1000001

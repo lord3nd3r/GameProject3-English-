@@ -19,7 +19,7 @@ public:
 
 	CMapObject* GetHeadObject();
 
-	//以下是新的版本
+	//The following is the new version
 	CMapObject* m_pHead;
 };
 

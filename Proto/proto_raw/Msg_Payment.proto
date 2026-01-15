@@ -2,16 +2,16 @@ syntax = "proto3";
 
 message CreatePaymentReq
 {
-	string OrderID    = 1;  //订单ID
-	int32  Platform   = 2;  //平台 1:安卓，2:ios
-	int32  Channel    = 3;  //渠道
-	uint64 RoleID     = 4;  //角色ID
-	int32  ServerID   = 5;  //区服ID
-	uint64 AccountID  = 6;  //账号ID
-	int32  ProductID  = 7;  //档位ID
-	int32  BuyID      = 8; //购买的游戏内的商品ID
-	int32  ProxyID    = 9;  //不需要客户端传
-	int32  ClientID   = 10;  //不需要客户端传
+	string OrderID    = 1;  //Order ID
+	int32  Platform   = 2;  //Platform 1:Android, 2:iOS
+	int32  Channel    = 3;  //Channel
+	uint64 RoleID     = 4;  //Role ID
+	int32  ServerID   = 5;  //Server ID
+	uint64 AccountID  = 6;  //Account ID
+	int32  ProductID  = 7;  //Product ID
+	int32  BuyID      = 8; //Purchased in-game item ID
+	int32  ProxyID    = 9;  //Not needed by client
+	int32  ClientID   = 10;  //Not needed by client
 }
 
 message CreatePaymentAck

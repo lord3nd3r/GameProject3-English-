@@ -8,16 +8,16 @@ class MonsterData
 public:
 	MonsterData()
 	{
-		m_dwActorID     = 0;	//怪物类型ID
-		m_dwType        = 0;	//怪物类别
-		m_dwCamp        = 0;	//阵营
-		m_dwDropID      = 0;	//掉落ID
-		m_bCheckCamp    = 0;    //是否影响结算
-		m_bCheckDie     = 0;    //是否影响刷怪
+		m_dwActorID     = 0;	//Monster type ID
+		m_dwType        = 0;	//Monster category
+		m_dwCamp        = 0;	//Camp
+		m_dwDropID      = 0;	//Drop ID
+		m_bCheckCamp    = 0;    //Whether affects settlement
+		m_bCheckDie     = 0;    //Whether affects monster spawning
 		m_x             = 0;
 		m_y             = 0;
 		m_z             = 0;
-		m_ft            = 0;	//怪物出生位置
+		m_ft            = 0;	//Monster spawn position
 
 		m_uObjectGuid   = 0;
 		m_bDead         = FALSE;
@@ -28,13 +28,13 @@ public:
 	}
 
 
-	UINT32 m_dwActorID;         //怪物类型ID
-	UINT32 m_dwType;            //怪物类别
-	UINT32 m_dwCamp;            //阵营
-	UINT32 m_dwDropID;          //掉落ID
-	BOOL   m_bCheckCamp;        //是否影响结算
-	BOOL   m_bCheckDie;         //是否影响刷怪
-	FLOAT  m_x, m_y, m_z, m_ft; //怪物出生位置
+	UINT32 m_dwActorID;         //Monster type ID
+	UINT32 m_dwType;            //Monster category
+	UINT32 m_dwCamp;            //Camp
+	UINT32 m_dwDropID;          //Drop ID
+	BOOL   m_bCheckCamp;        //Whether affects settlement
+	BOOL   m_bCheckDie;         //Whether affects monster spawning
+	FLOAT  m_x, m_y, m_z, m_ft; //Monster spawn position
 
 	UINT64 m_uObjectGuid;       //刷出怪的实例ID
 	BOOL   m_bDead;             //刷出怪是否死亡

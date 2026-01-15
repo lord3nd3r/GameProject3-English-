@@ -1,8 +1,8 @@
 syntax = "proto3";
 
 message CheckVersionReq {
-    string   ClientVerion   = 1;  //客户端版本号 xxx.xxx.xxx
-    int32    Channel        = 2;  //渠道ID  
+    string   ClientVerion   = 1;  //Client version xxx.xxx.xxx
+    int32    Channel        = 2;  //Channel ID  
 }
 
 message CheckVersionAck {
@@ -12,61 +12,61 @@ message CheckVersionAck {
 
 message AccountLog
 {
-    int32  Channel    = 1;   //渠道ID
-    string Version    = 2;   //版本
-    uint64 AccountID  = 3;   //帐号
-    string Uuid       = 4;   //设备UUID
+    int32  Channel    = 1;   //Channel ID
+    string Version    = 2;   //Version
+    uint64 AccountID  = 3;   //Account
+    string Uuid       = 4;   //Device UUID
     string Idfa       = 5;   //idfa
-    string Imodel     = 6;   //机型
-    string Imei       = 7;   //手机MEI
-    int32  IpAddr     = 8;   //ip地址
+    string Imodel     = 6;   //Device model
+    string Imei       = 7;   //Phone IMEI
+    int32  IpAddr     = 8;   //IP address
 }  
 
 message AccountRegReq {
-    string     AccountName = 1; //账号名
-    string     Password    = 2; //密码
-    int32      Channel     = 3; //渠道
-    AccountLog RegLog      = 4; //客户端信息
+    string     AccountName = 1; //Account name
+    string     Password    = 2; //Password
+    int32      Channel     = 3; //Channel
+    AccountLog RegLog      = 4; //Client information
 }
 
 message AccountRegAck {
     uint32    RetCode      = 1;
-    uint64    AccountID    = 2; //账号ID
+    uint64    AccountID    = 2; //Account ID
 }
 
 message AccountLoginReq {
-    string     AccountName    = 1; //账号名
-    string     Password       = 2; //密码
-    int32      Channel        = 3; //渠道
-    bool       FromChannel    = 4; //来自渠道
-    bool       Review         = 5; //是否评审
-    AccountLog LoginLog      = 6; //登录日志
+    string     AccountName    = 1; //Account name
+    string     Password       = 2; //Password
+    int32      Channel        = 3; //Channel
+    bool       FromChannel    = 4; //From channel
+    bool       Review         = 5; //Whether review
+    AccountLog LoginLog      = 6; //Login log
 }
 
 message AccountLoginAck {
     uint32    RetCode        = 1;
     uint64    AccountID      = 2;
-    int32     LastSvrID      = 3;  //上次登录SvrID
+    int32     LastSvrID      = 3;  //Last login SvrID
     string    LastSvrName    = 4;
     bool      Review         = 5; 
     int32     Channel        = 6;
-    int32     IpAddr         = 7;   //ip地址
+    int32     IpAddr         = 7;   //IP address
 }
 
 message ClientServerListReq {
     uint64    AccountID      = 1;
-    int32     Channel        = 2; //渠道包
-    string    Version        = 3; //客户端版本号
+    int32     Channel        = 2; //Channel package
+    string    Version        = 3; //Client version
     bool      Review         = 4; 
 }
 
 message ClientServerNode {
     int32    SvrID          = 1;
     string   SvrName        = 2;
-    int32    SvrFlag        = 3; //服务器标记 0:未知, 1:流畅,2:拥挤,3:爆满,4:维护,5:关闭 6:评审 
-    int32    CornerMark     = 4; //服务器角标 0:无, 1:新服,2:推荐
-    int64    SvrOpenTime    = 5; //开服时间
-    int32    SvrStatus      = 6; //1:表示服务器在线，0:表示不在线
+    int32    SvrFlag        = 3; //Server flag 0:Unknown, 1:Smooth,2:Crowded,3:Full,4:Maintenance,5:Closed 6:Review 
+    int32    CornerMark     = 4; //Server corner mark 0:None, 1:New server,2:Recommended
+    int64    SvrOpenTime    = 5; //Server open time
+    int32    SvrStatus      = 6; //1: Server online, 0: Server offline
 }
 
 message ClientServerListAck {
@@ -77,16 +77,16 @@ message ClientServerListAck {
 message SelectServerReq {
     uint64    AccountID   = 1;
     int32     ServerID    = 2;
-    bool      CheckRole   = 3;  //是否必须有角色
+    bool      CheckRole   = 3;  //Whether must have role
 }
 
 message SelectServerAck {
     uint32   RetCode     = 1;
     uint64   AccountID   = 2;
     int32    ServerID    = 3;
-    string   ServerAddr  = 4; //区服地址
-    int32    ServerPort  = 5; //区服端口
-    int32    LoginCode   = 6; //登录验证码，客户端需要用此码连接游戏服
+    string   ServerAddr  = 4; //Server address
+    int32    ServerPort  = 5; //Server port
+    int32    LoginCode   = 6; //Login verification code, client needs to use this code to connect to game server
 }
 
 message SealAccountReq {
@@ -100,12 +100,12 @@ message SealAccountReq {
 message SealAccountAck {
     uint32    RetCode        = 1;
     string    AccountName    = 2;
-    uint64    AccountID      = 3; //账号ID
-    int32     ServerID       = 4; //上次登录SvrID
+    uint64    AccountID      = 3; //Account ID
+    int32     ServerID       = 4; //Last login SvrID
 }
 
 message SealAccountNtf {
-    uint64    AccountID      = 1; //账号ID
+    uint64    AccountID      = 1; //Account ID
 }
 
 message SetLastServerNty {

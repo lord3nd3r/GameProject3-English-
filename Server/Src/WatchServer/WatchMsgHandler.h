@@ -7,9 +7,9 @@
 
 enum EProcessStatus
 {
-    EPS_Stop,       //停止状态
-    EPS_Start,      //启动状态
-    EPS_Checking,   //检测状态
+    EPS_Stop,       //Stop status
+    EPS_Start,      //Start status
+    EPS_Checking,   //Checking status
 };
 
 struct ProcessInfo
@@ -23,7 +23,7 @@ struct ServerInfo
 {
     INT32           nAreaID = 0;
     BOOL            bWatch = FALSE;
-    UINT64          uLastOpTime = 0; //上一次操作时间
+    UINT64          uLastOpTime = 0; //Last operation time
     std::vector<ProcessInfo> ProcessList;
 };
 
@@ -52,17 +52,17 @@ public:
 
     BOOL        SendWebResult(INT32 nConnID, EWebResult eResult);
 public:
-    //*********************消息处理定义开始******************************
+    //*********************Message processing definition start******************************
     BOOL OnMsgWebCommandReq(NetPacket* pNetPacket);
-    //*********************消息处理定义结束******************************
+    //*********************Message processing definition end******************************
 
 public:
-    //*********************WebAction处理定义开始******************************
+    //*********************WebAction processing definition start******************************
     void OnGmServerStart(HttpParameter& hParams, INT32 nConnID);
     void OnGmServerStop(HttpParameter& hParams, INT32 nConnID);
     void OnGmServerUpdate(HttpParameter& hParams, INT32 nConnID);
     void OnGmServerInfo(HttpParameter& hParams, INT32 nConnID);
-    //*********************WebAction处理定义开始******************************
+    //*********************WebAction processing definition end******************************
 
 protected:
 

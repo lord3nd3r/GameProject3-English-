@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
+    <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="头文件">
+    <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
+    <Filter Include="资Source Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
@@ -40,22 +40,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameService.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameSvrMgr.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlayerObject.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlayerManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DataPool.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\StaticData\StaticData.cpp">
       <Filter>StaticData</Filter>
@@ -64,7 +64,7 @@
       <Filter>Proto</Filter>
     </ClCompile>
     <ClCompile Include="GlobalDataMgr.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Msg_Copy.pb.cc">
       <Filter>Proto</Filter>
@@ -79,25 +79,25 @@
       <Filter>Proto</Filter>
     </ClCompile>
     <ClCompile Include="RankMananger.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SimpleManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ActivityManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Game_Define.pb.cc">
       <Filter>Proto</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LogicMsgHandler.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PayManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Msg_ID.pb.cc">
       <Filter>Proto</Filter>
@@ -160,7 +160,7 @@
       <Filter>Modules</Filter>
     </ClCompile>
     <ClCompile Include="TeamCopyMgr.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MailManager.cpp">
       <Filter>Mail</Filter>
@@ -169,16 +169,16 @@
       <Filter>LoginCode</Filter>
     </ClCompile>
     <ClCompile Include="EventManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameLogManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WebCommandMgr.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\WatcherClient\WatcherClient.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Msg_Role.pb.cc">
       <Filter>Proto</Filter>
@@ -187,33 +187,33 @@
       <Filter>Proto</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Msg_Payment.pb.cc">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Message\Msg_Base.pb.cc">
       <Filter>Proto</Filter>
     </ClCompile>
     <ClCompile Include="SealManager.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameService.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameSvrMgr.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PlayerObject.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PlayerManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DataPool.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\ServerData\ServerStruct.h">
       <Filter>ServerData</Filter>
@@ -237,7 +237,7 @@
       <Filter>Proto</Filter>
     </ClInclude>
     <ClInclude Include="GlobalDataMgr.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\ServerData\GlobalData.h">
       <Filter>ServerData</Filter>
@@ -261,7 +261,7 @@
       <Filter>Proto</Filter>
     </ClInclude>
     <ClInclude Include="RankMananger.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\ServerData\GuildData.h">
       <Filter>ServerData</Filter>
@@ -270,10 +270,10 @@
       <Filter>ServerData</Filter>
     </ClInclude>
     <ClInclude Include="SimpleManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ActivityManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Message\Game_Define.pb.h">
       <Filter>Proto</Filter>
@@ -282,7 +282,7 @@
       <Filter>ServerData</Filter>
     </ClInclude>
     <ClInclude Include="LogicMsgHandler.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\StaticData\ConfigDefine.h">
       <Filter>StaticData</Filter>
@@ -297,7 +297,7 @@
       <Filter>ServerData</Filter>
     </ClInclude>
     <ClInclude Include="PayManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Message\Msg_ID.pb.h">
       <Filter>Proto</Filter>
@@ -315,7 +315,7 @@
       <Filter>ServerData</Filter>
     </ClInclude>
     <ClInclude Include="Lua_Script.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\ServerData\SkillData.h">
       <Filter>ServerData</Filter>
@@ -381,28 +381,28 @@
       <Filter>Modules</Filter>
     </ClInclude>
     <ClInclude Include="TeamCopyMgr.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MailManager.h">
       <Filter>Mail</Filter>
     </ClInclude>
     <ClInclude Include="MsgHandlerManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LoginCodeMgr.h">
       <Filter>LoginCode</Filter>
     </ClInclude>
     <ClInclude Include="EventManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameLogManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WebCommandMgr.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\WatcherClient\WatcherClient.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Message\Msg_Role.pb.h">
       <Filter>Proto</Filter>
@@ -414,7 +414,7 @@
       <Filter>Proto</Filter>
     </ClInclude>
     <ClInclude Include="SealManager.h">
-      <Filter>头文件</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

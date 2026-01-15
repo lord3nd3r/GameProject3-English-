@@ -85,7 +85,7 @@ BOOL CClientObject::OnCmdEnterSceneAck( UINT32 dwMsgID, CHAR* PacketBuf, INT32 B
 	{
 		m_dwHostState = ST_EnterSceneOK;
 
-		//表示进入主城完成
+		//Indicates entering main city completed
 	}
 	else if(Ack.copyid() == m_dwToCopyID)
 	{

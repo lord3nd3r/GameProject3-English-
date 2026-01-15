@@ -4,30 +4,30 @@ enum MessageID {
     MSG_BEGIN                        = 0;
 
     //============================================================================================
-    //                 一般消息定义
+    //                 General message definitions
     //============================================================================================
     MSG_NORMAL_MSGID_BEGIN           = 100000;
 
-    MSG_CHECK_VERSION_REQ            = 100001;    //版本验证
-    MSG_CHECK_VERSION_ACK            = 100002;    //版本验证返回
+    MSG_CHECK_VERSION_REQ            = 100001;    //Version verification
+    MSG_CHECK_VERSION_ACK            = 100002;    //Version verification response
 
-    MSG_ACCOUNT_REG_REQ              = 100003;    //注册账号
-    MSG_ACCOUNT_REG_ACK              = 100004;    //注册账号返回
+    MSG_ACCOUNT_REG_REQ              = 100003;    //Register account
+    MSG_ACCOUNT_REG_ACK              = 100004;    //Register account response
 
-    MSG_ACCOUNT_LOGIN_REQ            = 100005;    //账号登录
-    MSG_ACCOUNT_LOGIN_ACK            = 100006;    //账号登录返回
+    MSG_ACCOUNT_LOGIN_REQ            = 100005;    //Account login
+    MSG_ACCOUNT_LOGIN_ACK            = 100006;    //Account login response
     
-    MSG_DB_EXE_SQL_REQ               = 100007;    //执行Sql语句请求
-    MSG_DB_EXE_SQL_ACK               = 100008;    //执行Sql语句请求返回
+    MSG_DB_EXE_SQL_REQ               = 100007;    //Execute SQL statement request
+    MSG_DB_EXE_SQL_ACK               = 100008;    //Execute SQL statement request response
     
-    MSG_SERVER_LIST_REQ              = 100009;    //服务器列表请求
-    MSG_SERVER_LIST_ACK              = 100010;    //服务器列表的返回
+    MSG_SERVER_LIST_REQ              = 100009;    //Server list request
+    MSG_SERVER_LIST_ACK              = 100010;    //Server list response
     
-    MSG_SELECT_SERVER_REQ            = 100011;    //选择服务器请求
-    MSG_SELECT_SERVER_ACK            = 100012;    //选择服务器请求返回
+    MSG_SELECT_SERVER_REQ            = 100011;    //Select server request
+    MSG_SELECT_SERVER_ACK            = 100012;    //Select server request response
     
-    MSG_LOGIC_REGTO_LOGIN_REQ        = 100013;    //注册服务器请求
-    MSG_LOGIC_REGTO_LOGIN_ACK        = 100014;    //注册服务器请求返回
+    MSG_LOGIC_REGTO_LOGIN_REQ        = 100013;    //Register server request
+    MSG_LOGIC_REGTO_LOGIN_ACK        = 100014;    //Register server request response
 
     MSG_LOGIC_UPDATE_REQ             = 100015;
     MSG_LOGIC_UPDATE_ACK             = 100016;
@@ -47,12 +47,12 @@ enum MessageID {
     MSG_WATCH_HEART_BEAT_ACK         = 100025;
 
     MSG_REMOVE_CONNECT_NTY           = 100026;
-    MSG_DISCONNECT_NTY               = 100027;    //断开连接
+    MSG_DISCONNECT_NTY               = 100027;    //Disconnect
     
-    MSG_NETWORK_STATUS_NTY           = 100028;    //客户端专用网络状态通知
+    MSG_NETWORK_STATUS_NTY           = 100028;    //Client-specific network status notification
     
-    MSG_LOGIC_REGTO_DBSVR_REQ        = 100031;    //逻辑服注册到db服请求
-    MSG_LOGIC_REGTO_DBSVR_ACK        = 100032;    //逻辑服注册到db服返回
+    MSG_LOGIC_REGTO_DBSVR_REQ        = 100031;    //Logic server register to db server request
+    MSG_LOGIC_REGTO_DBSVR_ACK        = 100032;    //Logic server register to db server response
     
     MSG_SET_LAST_SERVER_NTY          = 100033;
     
@@ -62,15 +62,15 @@ enum MessageID {
     MSG_UDP_CONNECT_REQ              = 100037;
     MSG_UDP_CONNECT_ACK              = 100038;
 
-    MSG_SEAL_ACCOUNT_REQ             = 100039;   //封号请求
-    MSG_SEAL_ACCOUNT_ACK             = 100040;   //封号请求返回
+    MSG_SEAL_ACCOUNT_REQ             = 100039;   //Seal account request
+    MSG_SEAL_ACCOUNT_ACK             = 100040;   //Seal account request response
     
-    MSG_DB_WRITE_ERROR_NTY           = 100041;   //DB写错误通知
+    MSG_DB_WRITE_ERROR_NTY           = 100041;   //DB write error notification
     
-    MSG_SEAL_ACCOUNT_NTY             = 100042;   //封账号通知
+    MSG_SEAL_ACCOUNT_NTY             = 100042;   //Seal account notification
     
-    MSG_GAME_PARAM_REQ               = 100043;   //游戏参数请求
-    MSG_GAME_PARAM_ACK               = 100044;   //游戏参数请求返回
+    MSG_GAME_PARAM_REQ               = 100043;   //Game parameter request
+    MSG_GAME_PARAM_ACK               = 100044;   //Game parameter request response
     MSG_NORMAL_MSGID_END             = 199999;
     
     //============================================================================================
@@ -80,33 +80,33 @@ enum MessageID {
     MSG_ROLE_LIST_REQ                = 200001;
     MSG_ROLE_LIST_ACK                = 200002;
 
-    MSG_ROLE_CREATE_REQ              = 200003;   //创角请求
-    MSG_ROLE_CREATE_ACK              = 200004;   //创角请求返回
+    MSG_ROLE_CREATE_REQ              = 200003;   //Create role request
+    MSG_ROLE_CREATE_ACK              = 200004;   //Create role request response
     
-    MSG_ROLE_DELETE_REQ              = 200005;   //删角请求
-    MSG_ROLE_DELETE_ACK              = 200006;   //删角请求返回
+    MSG_ROLE_DELETE_REQ              = 200005;   //Delete role request
+    MSG_ROLE_DELETE_ACK              = 200006;   //Delete role request response
     
-    MSG_ROLE_LOGIN_REQ               = 200007;   //登录请求
-    MSG_ROLE_LOGIN_ACK               = 200008;   //登录请求返回
+    MSG_ROLE_LOGIN_REQ               = 200007;   //Login request
+    MSG_ROLE_LOGIN_ACK               = 200008;   //Login request response
     
-    MSG_ROLE_LOGOUT_REQ              = 200009;   //登出请求
-    MSG_ROLE_LOGOUT_ACK              = 200010;   //登出请求返回
+    MSG_ROLE_LOGOUT_REQ              = 200009;   //Logout request
+    MSG_ROLE_LOGOUT_ACK              = 200010;   //Logout request response
 
-    MSG_RECV_GIFTCODE_REQ            = 200011; //领取礼包码请求
-    MSG_RECV_GIFTCODE_ACK            = 200012; //领取礼包码返回
+    MSG_RECV_GIFTCODE_REQ            = 200011; //Receive gift code request
+    MSG_RECV_GIFTCODE_ACK            = 200012; //Receive gift code response
     MSG_NOTIFY_INTO_SCENE            = 200014;
     MSG_COPYINFO_REPORT_REQ          = 200016;
     MSG_MAIN_COPY_REQ                = 200017;
     MSG_MAIN_COPY_ACK                = 200018;
-    MSG_ABORT_SCENE_NTF              = 200019;   //离开副本通知
-    MSG_CLIENT_LOG_REQ               = 200020;   //客户端日志请求
+    MSG_ABORT_SCENE_NTF              = 200019;   //Leave copy notification
+    MSG_CLIENT_LOG_REQ               = 200020;   //Client log request
 
     MSG_BACK_TO_CITY_REQ             = 200021;
     MSG_BACK_TO_CITY_ACK             = 200022;
 
-    MSG_BATTLE_RESULT_NTY            = 200023;//副本服发给逻辑服的通知
+    MSG_BATTLE_RESULT_NTY            = 200023;//Notification from copy server to logic server
 
-    MSG_MAINCOPY_RESULT_NTY          = 200024;//主线副本的结果（发给客户端)
+    MSG_MAINCOPY_RESULT_NTY          = 200024;//Main line copy result (sent to client)
 
     MSG_ROLE_CHANG_NTY               = 200025;
     MSG_BAG_CHANGE_NTY               = 200026;
@@ -118,10 +118,10 @@ enum MessageID {
     MSG_CHAT_MESSAGE_REQ             = 200032;
     MSG_CHAT_MESSAGE_ACK             = 200033;
     MSG_CHAT_MESSAGE_NTY             = 200034;
-    MSG_SETUP_EQUIP_REQ              = 200035;//穿装备
-    MSG_SETUP_EQUIP_ACK              = 200036;//穿装备
-    MSG_UNSET_EQUIP_REQ              = 200037;//卸装备
-    MSG_UNSET_EQUIP_ACK              = 200038;//卸装备
+    MSG_SETUP_EQUIP_REQ              = 200035;//Equip
+    MSG_SETUP_EQUIP_ACK              = 200036;//Equip
+    MSG_UNSET_EQUIP_REQ              = 200037;//Unequip
+    MSG_UNSET_EQUIP_ACK              = 200038;//Unequip
     MSG_SETUP_PET_REQ                = 200039;
     MSG_SETUP_PET_ACK                = 200040;
     MSG_UNSET_PET_REQ                = 200041;
@@ -162,7 +162,7 @@ enum MessageID {
     MSG_ROLE_REBORN_ACK              = 200070;
     
     
-    //多人组队副本
+    //Multiplayer team copy
     MSG_CREATE_ROOM_REQ              = 200071;
     MSG_CREATE_ROOM_ACK              = 200072;
 
@@ -200,7 +200,7 @@ enum MessageID {
     MSG_NOTIFY_ROLE_ENTER_REQ        = 300009;
     MSG_NOTIFY_ROLE_ENTER_ACK        = 300010;
     MSG_ENTER_SCENE_REQ              = 300011;
-    MSG_ENTER_SCENE_ACK              = 300012; //发送自己的数据
+    MSG_ENTER_SCENE_ACK              = 300012; //Send own data
     MSG_LEAVE_SCENE_REQ              = 300013;
     MSG_LEAVE_SCENE_ACK              = 300014;
     MSG_ABORT_SCENE_REQ              = 300015;

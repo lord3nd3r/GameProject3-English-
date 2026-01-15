@@ -84,14 +84,14 @@ public enum EBagType
     RUNE    = 5,
     TASK    = 6,
     SOUL    = 7,
-    CARD    = 8  //英雄卡
+    CARD    = 8  //Hero card
 }
 
 public enum ERuneType
 {
-    LIT = 1,//小雕文
-    MID = 2,//中雕文
-    BIG = 3 //大雕文
+    LIT = 1,//Small rune
+    MID = 2,//Medium rune
+    BIG = 3 //Large rune
 }
 
 public enum ECopyType
@@ -115,22 +115,22 @@ public enum EStarCondition
 
 public enum ECompare
 {
-    EQ = 0,//等于
-    GT = 1,//大于
-    LT = 2,//小于
-    GE = 3,//大于等于
-    LE = 4,//小于等于
-    NO = 5,//不等于
+    EQ = 0,//Equal
+    GT = 1,//Greater than
+    LT = 2,//Less than
+    GE = 3,//Greater than or equal
+    LE = 4,//Less than or equal
+    NO = 5,//Not equal
 }
 
 public enum EAffect
 {
-    Self = 1,//影响自己
-    Enem = 2,//影响敌方
-    Ally = 3,//影响友方
-    Each = 4,//影响所有
-    Boss = 5,//影响Boss
-    Host = 6,//影响主人
+    Self = 1,//Affect self
+    Enem = 2,//Affect enemy
+    Ally = 3,//Affect ally
+    Each = 4,//Affect all
+    Boss = 5,//Affect Boss
+    Host = 6,//Affect master
 }
 
 public enum EBattleCamp

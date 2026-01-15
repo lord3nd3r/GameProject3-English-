@@ -45,7 +45,7 @@ message RemoveConnectNty {
     uint64    RoleID = 1;
 }
 
-///创建场景
+///Create scene
 message CreateNewSceneReq{
     int32    CopyID        = 1;
     int32    CopyType      = 2;
@@ -53,7 +53,7 @@ message CreateNewSceneReq{
     uint64   CreateParam   = 4;
 }
 
-///创建场景
+///Create scene
 message CreateNewSceneAck{
     uint32    RetCode        = 1;
     int32     CopyID         = 2;
@@ -67,16 +67,16 @@ message CreateNewSceneAck{
 ////
 message EnterSceneReq {
     uint64   RoleID      = 1;
-    int32    ServerID    = 2;  //场景服ID
-    int32    CopyGuid    = 3;  //副本实例ID
-    int32    CopyID      = 4;  //副本类型ID
+    int32    ServerID    = 2;  //Scene server ID
+    int32    CopyGuid    = 3;  //Copy instance ID
+    int32    CopyID      = 4;  //Copy type ID
 }
 
 message EnterSceneAck {
     uint32   RetCode        = 1;
     int32    CopyID         = 2;
     int32    CopyGuid       = 3;
-    //以下是主角创建需要信息
+    //The following is the information needed to create the protagonist
     uint64   RoleID         = 4;
     int32    Carrer         = 5;
     int32    ActorID        = 6;
@@ -92,8 +92,8 @@ message EnterSceneAck {
     int32    MpMax          = 16;
     int32    Speed          = 17;
     int32    MountID        = 18;
-    repeated int32 Equips   = 19; //武器
-    repeated SkillItem Skills  = 20;//技能
+    repeated int32 Equips   = 19; //Weapon
+    repeated SkillItem Skills  = 20;//Skills
 }
 
 message BackToCityReq {
@@ -124,7 +124,7 @@ message AbortSceneAck {
 
 message AbortSceneNty {
     uint64   RoleID      = 1;
-    int32    CopyID      = 2;  //副本类型
+    int32    CopyID      = 2;  //Copy type
     int32    CopyGuid    = 3;
     int32    CopyType    = 4;
     int32    ServerID    = 5;
@@ -138,7 +138,7 @@ message TransRoleData {
     int32    ActorID        = 4;
     int32    Level          = 5;
     int32    MountID        = 6;
-    int32    Robot          = 7; //是否是机器人
+    int32    Robot          = 7; //Whether it is a robot
     repeated int32 Equips   = 8;
     repeated int32 Propertys= 9;
     repeated SkillItem Skills = 10;
@@ -166,7 +166,7 @@ message TransPartnerData {
 }
 
 message TransferDataItem {
-    int32               Camp        = 1;            //战场中的阵营
+    int32               Camp        = 1;            //Camp in the battlefield
     TransRoleData       RoleData    = 2;
     TransPetData        PetData     = 3;
     TransPartnerData    PartnerData = 4;
@@ -231,9 +231,9 @@ message UseMpBottleAck {
 message ChatMessageReq {
     string    SrcName        = 1;
     uint64    SrcID          = 2;
-    uint64    TargetID       = 3; //目标ID
-    int32     ChatChl        = 4; //聊天频道; 
-    uint64    GuildID        = 5; //公会ID
+    uint64    TargetID       = 3; //Target ID
+    int32     ChatChl        = 4; //Chat channel; 
+    uint64    GuildID        = 5; //Guild ID
     string    Content        = 6;
 }
 
@@ -245,7 +245,7 @@ message ChatMessageNty {
     string    SrcName        = 1;
     uint64    SrcID          = 2;
     int32     SrcLevel       = 3;
-    uint64    TargetID       = 4; //目标ID
+    uint64    TargetID       = 4; //Target ID
     int32     ChatChl        = 5;
     uint64    GuildID        = 6;
     uint64    TimeStamp      = 7;
@@ -277,7 +277,7 @@ message LogicRegToLoginReq {
 message LogicRegToLoginAck {
     uint32    RetCode       = 1;
     string    NewSvrName    = 2;
-    uint64    SvrOpenTime   = 3; //开服时间
+    uint64    SvrOpenTime   = 3; //Server open time
 }
 
 message LogicRegToDbSvrReq {
@@ -298,12 +298,12 @@ message LogicUpdateInfoReq {
     int32     TotalNum     = 5;
     int32     CacheNum     = 6;
     int32     Status       = 7;
-    int32     DbErrCnt     = 8; //数据库写失败次数
+    int32     DbErrCnt     = 8; //Database write failure count
 }
 
 message LogicUpdateInfoAck {
     uint32    RetCode       = 1;
-    uint64    SvrOpenTime   = 2; //开服时间
+    uint64    SvrOpenTime   = 2; //Server open time
 }
 
 message SetupEquipReq {
@@ -417,10 +417,10 @@ message StoreBuyAck {
     uint32    RetCode    = 1;
 }
 
-//玩家一些数据发生变化，由逻辑服通知战斗服
+//Some player data has changed, notified by logic server to battle server
 message ObjectChangeNotify {
-    int64   RoleID      = 1;        //变化的角色ID
-    int32   ChangeType  = 2; //变化的类型
+    int64   RoleID      = 1;        //Changed role ID
+    int32   ChangeType  = 2; //Changed type
     int64   IntValue1   = 3;
     int64   IntValue2   = 4;
     string  StrValue    = 5;
@@ -428,10 +428,10 @@ message ObjectChangeNotify {
 
 message HitEffectItem
 {
-    uint64            CastGuid    = 1; //施放者GUID
-    uint64            TargetGuid  = 2; //目标GUID
-    int32             HurtValue   = 3; //伤害值
-    bool              Crit        = 4; //是否暴击
+    uint64            CastGuid    = 1; //Caster GUID
+    uint64            TargetGuid  = 2; //Target GUID
+    int32             HurtValue   = 3; //Damage value
+    bool              Crit        = 4; //Whether critical hit
     uint32            HitActionID = 5;
     uint32            HitEffectID = 6;
     float             HitDistance = 7;
@@ -462,12 +462,12 @@ message Msg_DbErrorCountNty{
 
 message Msg_GameParamReq
 {
-    int32  Channel       =   1;      //渠道
-    string ClientVer    =   2;      //版本
+    int32  Channel       =   1;      //Channel
+    string ClientVer    =   2;      //Version
 }
 
 message Msg_GameParamAck
 {
-    repeated string ParamKey   = 1;      //参数key
-    repeated string ParamValue = 2;     //参数值
+    repeated string ParamKey   = 1;      //Parameter key
+    repeated string ParamValue = 2;     //Parameter value
 }

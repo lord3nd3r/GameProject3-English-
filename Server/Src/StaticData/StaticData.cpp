@@ -436,7 +436,7 @@ BOOL CStaticData::ReadAwardData(CppSQLite3Query& QueryData)
         std::string strRatioDrop = QueryData.getStringField(4);
         stValue.bDistinct = QueryData.getIntField(4);
         stValue.dwRatioCount  = QueryData.getIntField(4);
-        //解析固定掉落
+        //Parse fixed drop
         if (strFixDrop != "NULL")
         {
             std::vector<std::string> vtRet;
@@ -584,7 +584,7 @@ BOOL CStaticData::GetItemsFromAwardID(INT32 nAwardID, INT32 nCarrer, std::vector
         }
     }
 
-    //多次可取到同样的物品
+    //Can get the same item multiple times
     for (int  cycle = 0; cycle < AwardItem.dwRatioCount; cycle++ )
     {
         UINT32 dwRandValue = CommonFunc::GetRandNum(0);
@@ -614,7 +614,7 @@ BOOL CStaticData::GetItemsFromAwardID(INT32 nAwardID, INT32 nCarrer, std::vector
         }
     }
 
-    //确保多次都取到不同样的物品
+    //Ensure multiple times get different items
     /*
     bool UsedFlag[100] = { 0 };
     UINT32 UsedValue = 0;
@@ -1079,7 +1079,7 @@ BOOL CStaticData::ReadSkillEvent()
     {
         StSkillEventInfo tSkillEventInfo;
 
-        //取技能ID
+        //Get skill ID
         auto pAttr = pSkillNode->first_attribute("ID", strlen("ID"), false);
         tSkillEventInfo.nSkillID = CommonConvert::StringToInt(pAttr->value());
 
@@ -1140,7 +1140,7 @@ BOOL CStaticData::ReadSkillEvent()
             tEvent.HitDistance = CommonConvert::StringToFloat(pAttr->value());
 
             //////////////////////////////////////////////////////////////////////////
-            //解析子弹
+            //Parse bullet
 
             for (auto pBulletNode = pEventNode->first_node("ActFlyObject"); pBulletNode != NULL; pBulletNode = pBulletNode->next_sibling("ActFlyObject"))
             {

@@ -8,6 +8,6 @@ message ItemData {
 message SkillItem {
     uint32 SkillID = 1;
     int32  Level = 2;
-    int32  KeyPos = 3;   //强化等级
+    int32  KeyPos = 3;   //Enhancement Level
 }
 

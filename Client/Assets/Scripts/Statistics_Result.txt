@@ -1,0 +1,2667 @@
+            File: BTFlipSelector.cs
+            Lines: 53
+            Characters:874
+
+            File: BTParallel.cs
+            Lines: 36
+            Characters:671
+
+            File: BTParallelHybird.cs
+            Lines: 85
+            Characters:1386
+
+            File: BTParallelSelector.cs
+            Lines: 44
+            Characters:788
+
+            File: BTParallelSequence.cs
+            Lines: 44
+            Characters:788
+
+            File: BTRandomSelector.cs
+            Lines: 72
+            Characters:1231
+
+            File: BTRandomSequence.cs
+            Lines: 72
+            Characters:1266
+
+            File: BTSelector.cs
+            Lines: 42
+            Characters:613
+
+            File: BTSequence.cs
+            Lines: 44
+            Characters:646
+
+            File: BTStepIterator.cs
+            Lines: 28
+            Characters:443
+
+            File: BTWeightSelector.cs
+            Lines: 129
+            Characters:2241
+
+            File: CheckBoolean.cs
+            Lines: 38
+            Characters:720
+
+            File: BTComposite.cs
+            Lines: 11
+            Characters:185
+
+            File: BTCondition.cs
+            Lines: 24
+            Characters:299
+
+            File: BTConditionComposite.cs
+            Lines: 59
+            Characters:797
+
+            File: BTDecorator.cs
+            Lines: 18
+            Characters:288
+
+            File: BTTask.cs
+            Lines: 11
+            Characters:180
+
+            File: BTInterrupt.cs
+            Lines: 48
+            Characters:849
+
+            File: BTInverter.cs
+            Lines: 27
+            Characters:429
+
+            File: BTLoop.cs
+            Lines: 118
+            Characters:1868
+
+            File: BTReturnFailure.cs
+            Lines: 24
+            Characters:374
+
+            File: BTReturnSuccess.cs
+            Lines: 24
+            Characters:374
+
+            File: BTTime.cs
+            Lines: 52
+            Characters:895
+
+            File: BTUntilFailure.cs
+            Lines: 26
+            Characters:415
+
+            File: BTUntilSuccess.cs
+            Lines: 26
+            Characters:415
+
+            File: BTLog.cs
+            Lines: 63
+            Characters:886
+
+            File: BTRun.cs
+            Lines: 14
+            Characters:181
+
+            File: BTWait.cs
+            Lines: 75
+            Characters:1660
+
+            File: BTWaitFrames.cs
+            Lines: 77
+            Characters:1623
+
+            File: NodeAttribute.cs
+            Lines: 14
+            Characters:263
+
+            File: NodeDescAttribute.cs
+            Lines: 15
+            Characters:232
+
+            File: NodeNameAttribute.cs
+            Lines: 15
+            Characters:300
+
+            File: NodeVariable.cs
+            Lines: 18
+            Characters:266
+
+            File: BTEventHandler.cs
+            Lines: 73
+            Characters:1163
+
+            File: BTEventID.cs
+            Lines: 8
+            Characters:80
+
+            File: BTHelper.cs
+            Lines: 190
+            Characters:4991
+
+            File: BTMonoSingleton.cs
+            Lines: 28
+            Characters:460
+
+            File: BTSettings.cs
+            Lines: 35
+            Characters:943
+
+            File: BTStyle.cs
+            Lines: 50
+            Characters:1632
+
+            File: BTUndo.cs
+            Lines: 33
+            Characters:519
+
+            File: IBlackboard.cs
+            Lines: 14
+            Characters:280
+
+            File: INode.cs
+            Lines: 15
+            Characters:196
+
+            File: Node.cs
+            Lines: 562
+            Characters:12511
+
+            File: NodeBlackboard.cs
+            Lines: 228
+            Characters:4692
+
+            File: NodeDefine.cs
+            Lines: 30
+            Characters:279
+
+            File: NodeFactory.cs
+            Lines: 34
+            Characters:738
+
+            File: NodeTree.cs
+            Lines: 188
+            Characters:2856
+
+            File: NodeTreeSystem.cs
+            Lines: 18
+            Characters:177
+
+            File: Port.cs
+            Lines: 17
+            Characters:222
+
+                File: ShareValue.cs
+                Lines: 98
+                Characters:1734
+
+                File: ShareBool.cs
+                Lines: 27
+                Characters:288
+
+                File: ShareColor.cs
+                Lines: 26
+                Characters:290
+
+                File: ShareComponent.cs
+                Lines: 26
+                Characters:303
+
+                File: ShareFloat.cs
+                Lines: 26
+                Characters:280
+
+                File: ShareGameObject.cs
+                Lines: 26
+                Characters:308
+
+                File: ShareGameObjectList.cs
+                Lines: 28
+                Characters:371
+
+                File: ShareInt.cs
+                Lines: 28
+                Characters:311
+
+                File: ShareString.cs
+                Lines: 27
+                Characters:299
+
+                File: ShareTransform.cs
+                Lines: 31
+                Characters:448
+
+                File: ShareVector2.cs
+                Lines: 27
+                Characters:310
+
+                File: ShareVector3.cs
+                Lines: 27
+                Characters:310
+
+                File: FValue.cs
+                Lines: 62
+                Characters:951
+
+                File: FValueObj.cs
+                Lines: 21
+                Characters:252
+
+                File: FBool.cs
+                Lines: 14
+                Characters:233
+
+                File: FColor.cs
+                Lines: 14
+                Characters:239
+
+                File: FComponent.cs
+                Lines: 14
+                Characters:285
+
+                File: FFloat.cs
+                Lines: 15
+                Characters:281
+
+                File: FGameObject.cs
+                Lines: 14
+                Characters:289
+
+                File: FGameObjectList.cs
+                Lines: 14
+                Characters:195
+
+                File: FInt.cs
+                Lines: 16
+                Characters:287
+
+                File: FString.cs
+                Lines: 15
+                Characters:285
+
+                File: FTransform.cs
+                Lines: 15
+                Characters:330
+
+                File: FVector2.cs
+                Lines: 14
+                Characters:248
+
+                File: FVector3.cs
+                Lines: 17
+                Characters:302
+
+            File: BTTreeInspector.cs
+            Lines: 66
+            Characters:1594
+
+            File: BTTreeWindow.cs
+            Lines: 649
+            Characters:15067
+
+    File: CameraController.cs
+    Lines: 223
+    Characters:4408
+
+        File: DActor.cs
+        Lines: 89
+        Characters:2942
+
+        File: DActorGroup.cs
+        Lines: 22
+        Characters:378
+
+        File: DActorModel.cs
+        Lines: 21
+        Characters:349
+
+        File: DActorRace.cs
+        Lines: 24
+        Characters:413
+
+        File: DAdventure.cs
+        Lines: 26
+        Characters:491
+
+        File: DAward.cs
+        Lines: 45
+        Characters:826
+
+        File: DHelper.cs
+        Lines: 137
+        Characters:2879
+
+        File: DObj.cs
+        Lines: 9
+        Characters:189
+
+        File: DReadBase.cs
+        Lines: 55
+        Characters:1029
+
+        File: DBuff.cs
+        Lines: 52
+        Characters:1414
+
+        File: DBuffAttr.cs
+        Lines: 36
+        Characters:667
+
+        File: DLocalString.cs
+        Lines: 21
+        Characters:354
+
+        File: DProperty.cs
+        Lines: 27
+        Characters:520
+
+        File: DQuality.cs
+        Lines: 27
+        Characters:517
+
+        File: DCurve.cs
+        Lines: 21
+        Characters:331
+
+        File: DEffect.cs
+        Lines: 22
+        Characters:372
+
+        File: DEquip.cs
+        Lines: 50
+        Characters:1241
+
+        File: DEquipAdvance.cs
+        Lines: 32
+        Characters:702
+
+        File: DEquipAdvanceCost.cs
+        Lines: 34
+        Characters:800
+
+        File: DEquipStar.cs
+        Lines: 34
+        Characters:755
+
+        File: DEquipStreng.cs
+        Lines: 29
+        Characters:609
+
+        File: DEquipStrengLevel.cs
+        Lines: 26
+        Characters:501
+
+        File: DEquipSuit.cs
+        Lines: 39
+        Characters:893
+
+        File: DGem.cs
+        Lines: 39
+        Characters:805
+
+        File: DGemLevel.cs
+        Lines: 35
+        Characters:841
+
+        File: DGemSuit.cs
+        Lines: 33
+        Characters:744
+
+        File: DAction.cs
+        Lines: 21
+        Characters:346
+
+        File: DFashion.cs
+        Lines: 28
+        Characters:568
+
+        File: DItem.cs
+        Lines: 44
+        Characters:1044
+
+        File: DMine.cs
+        Lines: 36
+        Characters:822
+
+        File: DRelics.cs
+        Lines: 63
+        Characters:1508
+
+        File: DRune.cs
+        Lines: 61
+        Characters:1487
+
+        File: GTConfigManager.cs
+        Lines: 60
+        Characters:2481
+
+        File: MapBarrier.cs
+        Lines: 31
+        Characters:685
+
+        File: MapBorn.cs
+        Lines: 29
+        Characters:624
+
+        File: MapConfig.cs
+        Lines: 109
+        Characters:3103
+
+        File: MapDefine.cs
+        Lines: 45
+        Characters:867
+
+        File: MapElement.cs
+        Lines: 18
+        Characters:233
+
+        File: MapEvent.cs
+        Lines: 57
+        Characters:1658
+
+        File: MapEventCondition.cs
+        Lines: 25
+        Characters:505
+
+        File: MapMine.cs
+        Lines: 31
+        Characters:687
+
+        File: MapMineSet.cs
+        Lines: 26
+        Characters:513
+
+        File: MapMonster.cs
+        Lines: 24
+        Characters:434
+
+        File: MapMonsterSet.cs
+        Lines: 32
+        Characters:706
+
+        File: MapNpc.cs
+        Lines: 30
+        Characters:637
+
+        File: MapObj.cs
+        Lines: 37
+        Characters:919
+
+        File: MapPathNode.cs
+        Lines: 26
+        Characters:485
+
+        File: MapPathNodeSet.cs
+        Lines: 26
+        Characters:592
+
+        File: MapPortal.cs
+        Lines: 52
+        Characters:1392
+
+        File: MapRegion.cs
+        Lines: 50
+        Characters:1425
+
+        File: MapWave.cs
+        Lines: 37
+        Characters:935
+
+        File: MapWaveSet.cs
+        Lines: 25
+        Characters:527
+
+        File: DPartner.cs
+        Lines: 34
+        Characters:612
+
+        File: DPartnerAdvance.cs
+        Lines: 53
+        Characters:1182
+
+        File: DPartnerFetter.cs
+        Lines: 31
+        Characters:616
+
+        File: DPartnerLevel.cs
+        Lines: 32
+        Characters:599
+
+        File: DPartnerStar.cs
+        Lines: 31
+        Characters:667
+
+        File: DPartnerWake.cs
+        Lines: 26
+        Characters:499
+
+        File: DPartnerWash.cs
+        Lines: 27
+        Characters:527
+
+        File: DPet.cs
+        Lines: 19
+        Characters:259
+
+        File: DPetLevel.cs
+        Lines: 36
+        Characters:725
+
+        File: DTask.cs
+        Lines: 93
+        Characters:2256
+
+        File: DCopy.cs
+        Lines: 77
+        Characters:1809
+
+        File: DWorld.cs
+        Lines: 57
+        Characters:1249
+
+        File: DRole.cs
+        Lines: 29
+        Characters:546
+
+        File: DRoleLevel.cs
+        Lines: 29
+        Characters:577
+
+        File: DScene.cs
+        Lines: 27
+        Characters:538
+
+        File: DSkill.cs
+        Lines: 35
+        Characters:860
+
+        File: DSkillTalent.cs
+        Lines: 41
+        Characters:998
+
+        File: DStore.cs
+        Lines: 30
+        Characters:607
+
+        File: DStoreType.cs
+        Lines: 30
+        Characters:579
+
+        File: SubCollectItem.cs
+        Lines: 36
+        Characters:594
+
+        File: SubConvoy.cs
+        Lines: 46
+        Characters:911
+
+        File: SubGather.cs
+        Lines: 39
+        Characters:656
+
+        File: SubInterActive.cs
+        Lines: 41
+        Characters:715
+
+        File: SubKillMonster.cs
+        Lines: 41
+        Characters:692
+
+        File: SubTalk.cs
+        Lines: 41
+        Characters:676
+
+        File: SubTaskAttribute.cs
+        Lines: 11
+        Characters:191
+
+        File: SubTaskBase.cs
+        Lines: 24
+        Characters:488
+
+        File: SubTriggerCutScene.cs
+        Lines: 27
+        Characters:410
+
+        File: SubTriggerPlot.cs
+        Lines: 27
+        Characters:399
+
+        File: SubUseItem.cs
+        Lines: 30
+        Characters:474
+
+        File: SubUseSkill.cs
+        Lines: 30
+        Characters:504
+
+        File: TaskCollectionItem.cs
+        Lines: 41
+        Characters:784
+
+        File: TaskConveyNpc.cs
+        Lines: 22
+        Characters:335
+
+        File: TaskData.cs
+        Lines: 96
+        Characters:2362
+
+        File: TaskDefine.cs
+        Lines: 71
+        Characters:1332
+
+        File: TaskDialog.cs
+        Lines: 46
+        Characters:1335
+
+        File: TaskLocation.cs
+        Lines: 29
+        Characters:543
+
+        File: TaskNpc.cs
+        Lines: 35
+        Characters:635
+
+    File: DataFactory.cs
+    Lines: 63
+    Characters:962
+
+    File: DataManager.cs
+    Lines: 672
+    Characters:12652
+
+    File: DataReadBase.cs
+    Lines: 148
+    Characters:4064
+
+    File: DataTimer.cs
+    Lines: 153
+    Characters:3188
+
+    File: GTAudioKey.cs
+    Lines: 17
+    Characters:842
+
+    File: GTDataKey.cs
+    Lines: 33
+    Characters:1331
+
+    File: GTDefine.cs
+    Lines: 10
+    Characters:304
+
+    File: GTEffectKey.cs
+    Lines: 7
+    Characters:133
+
+    File: GTEnum.cs
+    Lines: 164
+    Characters:1450
+
+    File: GTLayer.cs
+    Lines: 24
+    Characters:626
+
+    File: GTPrefabKey.cs
+    Lines: 10
+    Characters:264
+
+    File: GTSceneKey.cs
+    Lines: 13
+    Characters:302
+
+    File: EffectSystem.cs
+    Lines: 41
+    Characters:825
+
+    File: EffectUnit.cs
+    Lines: 84
+    Characters:1886
+
+    File: EffectView.cs
+    Lines: 16
+    Characters:262
+
+    File: ECurve.cs
+    Lines: 26
+    Characters:548
+
+    File: EEffectRenderQueue.cs
+    Lines: 37
+    Characters:728
+
+    File: EFPS.cs
+    Lines: 36
+    Characters:676
+
+    File: EHUDToast.cs
+    Lines: 137
+    Characters:3183
+
+    File: EJoystick.cs
+    Lines: 188
+    Characters:3459
+
+    File: ERender.cs
+    Lines: 99
+    Characters:2377
+
+    File: ESpin.cs
+    Lines: 16
+    Characters:376
+
+    File: ETouch.cs
+    Lines: 40
+    Characters:522
+
+    File: FlywordDefine.cs
+    Lines: 13
+    Characters:222
+
+    File: FlywordSystem.cs
+    Lines: 93
+    Characters:2018
+
+    File: GTAction.cs
+    Lines: 192
+    Characters:3566
+
+    File: GTAudioManager.cs
+    Lines: 190
+    Characters:3819
+
+    File: GTCallback.cs
+    Lines: 33
+    Characters:451
+
+    File: GTCameraManager.cs
+    Lines: 138
+    Characters:3757
+
+    File: GTCoroutinueManager.cs
+    Lines: 9
+    Characters:195
+
+    File: GTEventCenter.cs
+    Lines: 163
+    Characters:3138
+
+    File: GTEventID.cs
+    Lines: 75
+    Characters:2759
+
+    File: GTGUID.cs
+    Lines: 11
+    Characters:127
+
+    File: GTInputManager.cs
+    Lines: 96
+    Characters:1842
+
+    File: GTLog.cs
+    Lines: 46
+    Characters:628
+
+    File: GTLogTag.cs
+    Lines: 6
+    Characters:101
+
+    File: GTMonoSingleton.cs
+    Lines: 29
+    Characters:526
+
+    File: GTObjectPool.cs
+    Lines: 83
+    Characters:1196
+
+    File: GTPoolManager.cs
+    Lines: 66
+    Characters:1228
+
+    File: GTShader.cs
+    Lines: 37
+    Characters:629
+
+    File: GTSingleton.cs
+    Lines: 34
+    Characters:452
+
+    File: GTSingletonObj.cs
+    Lines: 10
+    Characters:163
+
+    File: GTTimer.cs
+    Lines: 17
+    Characters:286
+
+    File: GTTimerManager.cs
+    Lines: 105
+    Characters:1753
+
+    File: GTTools.cs
+    Lines: 967
+    Characters:20001
+
+    File: GTUpdate.cs
+    Lines: 22
+    Characters:433
+
+    File: GTXmlHelper.cs
+    Lines: 221
+    Characters:4839
+
+        File: UIAdventure.cs
+        Lines: 98
+        Characters:2367
+
+        File: UIBag.cs
+        Lines: 324
+        Characters:9319
+
+        File: UIRoleEquip.cs
+        Lines: 212
+        Characters:5666
+
+        File: UIRoleFashion.cs
+        Lines: 36
+        Characters:395
+
+        File: UIRoleFetter.cs
+        Lines: 37
+        Characters:424
+
+        File: UIRoleGem.cs
+        Lines: 189
+        Characters:4830
+
+        File: UIRoleRune.cs
+        Lines: 35
+        Characters:386
+
+        File: UIBoard.cs
+        Lines: 80
+        Characters:1704
+
+        File: GTItemHelper.cs
+        Lines: 500
+        Characters:12926
+
+        File: GTWindow.cs
+        Lines: 125
+        Characters:2096
+
+        File: GTWindowDefine.cs
+        Lines: 103
+        Characters:1134
+
+        File: GTWindowManager.cs
+        Lines: 242
+        Characters:6753
+
+        File: UIAwardBox.cs
+        Lines: 120
+        Characters:2966
+
+        File: UIAwardTip.cs
+        Lines: 71
+        Characters:1624
+
+        File: UIMessageBox.cs
+        Lines: 83
+        Characters:1751
+
+        File: UIMessageTip.cs
+        Lines: 46
+        Characters:700
+
+        File: UIEquip.cs
+        Lines: 514
+        Characters:19521
+
+        File: UIGem.cs
+        Lines: 199
+        Characters:6467
+
+        File: UIGuide.cs
+        Lines: 131
+        Characters:2316
+
+        File: UIHeroInfo.cs
+        Lines: 140
+        Characters:4934
+
+        File: UIHome.cs
+        Lines: 615
+        Characters:17622
+
+        File: UIReborn.cs
+        Lines: 43
+        Characters:691
+
+        File: UIFlyText.cs
+        Lines: 94
+        Characters:1835
+
+        File: UILoading.cs
+        Lines: 55
+        Characters:1095
+
+        File: UILogin.cs
+        Lines: 77
+        Characters:1981
+
+        File: UIMount.cs
+        Lines: 178
+        Characters:3882
+
+        File: UIMountBlood.cs
+        Lines: 36
+        Characters:394
+
+        File: UIMountLibrary.cs
+        Lines: 138
+        Characters:3355
+
+        File: UIMountTame.cs
+        Lines: 36
+        Characters:391
+
+        File: UIMountTurned.cs
+        Lines: 113
+        Characters:2273
+
+        File: UIPartner.cs
+        Lines: 191
+        Characters:5204
+
+        File: UIPartnerAdvance.cs
+        Lines: 31
+        Characters:306
+
+        File: UIPartnerBattle.cs
+        Lines: 67
+        Characters:1341
+
+        File: UIPartnerFetter.cs
+        Lines: 30
+        Characters:305
+
+        File: UIPartnerProperty.cs
+        Lines: 30
+        Characters:307
+
+        File: UIPartnerSkill.cs
+        Lines: 30
+        Characters:304
+
+        File: UIPartnerStar.cs
+        Lines: 30
+        Characters:303
+
+        File: UIPartnerStrength.cs
+        Lines: 114
+        Characters:3106
+
+        File: UIPartnerWake.cs
+        Lines: 30
+        Characters:303
+
+        File: UIPartnerWash.cs
+        Lines: 30
+        Characters:303
+
+        File: UIPet.cs
+        Lines: 335
+        Characters:8997
+
+        File: UIPlotCutscene.cs
+        Lines: 30
+        Characters:304
+
+        File: UIChipInfo.cs
+        Lines: 110
+        Characters:3040
+
+        File: UIEquipInfo.cs
+        Lines: 194
+        Characters:6210
+
+        File: UIGemInfo.cs
+        Lines: 207
+        Characters:6050
+
+        File: UIItemInfo.cs
+        Lines: 102
+        Characters:2679
+
+        File: UIItemUse.cs
+        Lines: 126
+        Characters:3441
+
+        File: UIMainBossHP.cs
+        Lines: 50
+        Characters:913
+
+        File: UIMainGate.cs
+        Lines: 152
+        Characters:4121
+
+        File: UIMainRaid.cs
+        Lines: 181
+        Characters:4795
+
+        File: UIMainResult.cs
+        Lines: 324
+        Characters:8007
+
+        File: UIWorldMap.cs
+        Lines: 242
+        Characters:7120
+
+        File: UIRelics.cs
+        Lines: 582
+        Characters:13780
+
+        File: UIRole.cs
+        Lines: 208
+        Characters:5358
+
+        File: UISkill.cs
+        Lines: 170
+        Characters:5107
+
+        File: UIStore.cs
+        Lines: 179
+        Characters:5195
+
+        File: UISetting.cs
+        Lines: 90
+        Characters:2286
+
+        File: UITask.cs
+        Lines: 255
+        Characters:6195
+
+        File: UITaskInterActive.cs
+        Lines: 59
+        Characters:1091
+
+        File: UITaskTalk.cs
+        Lines: 133
+        Characters:2916
+
+    File: GuideManager.cs
+    Lines: 14
+    Characters:239
+
+    File: IAOIObject.cs
+    Lines: 7
+    Characters:110
+
+    File: ICommand.cs
+    Lines: 10
+    Characters:177
+
+    File: ICtrl.cs
+    Lines: 7
+    Characters:99
+
+    File: IEntiny.cs
+    Lines: 14
+    Characters:247
+
+    File: IGame.cs
+    Lines: 8
+    Characters:105
+
+    File: IGameLoop.cs
+    Lines: 7
+    Characters:95
+
+    File: IModule.cs
+    Lines: 6
+    Characters:77
+
+    File: IObj.cs
+    Lines: 10
+    Characters:158
+
+    File: IState.cs
+    Lines: 27
+    Characters:502
+
+    File: IStateMachine.cs
+    Lines: 124
+    Characters:1678
+
+    File: ITrigger.cs
+    Lines: 8
+    Characters:166
+
+        File: AdventureCtrl.cs
+        Lines: 12
+        Characters:135
+
+        File: AdventureService.cs
+        Lines: 5
+        Characters:100
+
+        File: AwardCtrl.cs
+        Lines: 13
+        Characters:163
+
+        File: AwardModule.cs
+        Lines: 65
+        Characters:1351
+
+        File: BagCtrl.cs
+        Lines: 245
+        Characters:7532
+
+        File: BagModule.cs
+        Lines: 130
+        Characters:2857
+
+        File: BagService.cs
+        Lines: 106
+        Characters:2533
+
+        File: AttrHelper.cs
+        Lines: 323
+        Characters:7386
+
+        File: EquipCtrl.cs
+        Lines: 100
+        Characters:3579
+
+        File: EquipModule.cs
+        Lines: 291
+        Characters:5693
+
+        File: EquipService.cs
+        Lines: 84
+        Characters:2004
+
+        File: GemCtrl.cs
+        Lines: 58
+        Characters:1634
+
+        File: GemModule.cs
+        Lines: 254
+        Characters:4755
+
+        File: GemService.cs
+        Lines: 29
+        Characters:609
+
+        File: LoginCtrl.cs
+        Lines: 59
+        Characters:2281
+
+        File: LoginService.cs
+        Lines: 30
+        Characters:650
+
+        File: MountCtrl.cs
+        Lines: 25
+        Characters:645
+
+        File: MountService.cs
+        Lines: 12
+        Characters:270
+
+        File: PartnerCtrl.cs
+        Lines: 91
+        Characters:2583
+
+        File: PartnerService.cs
+        Lines: 27
+        Characters:701
+
+        File: PetCtrl.cs
+        Lines: 74
+        Characters:2516
+
+        File: PetModule.cs
+        Lines: 61
+        Characters:887
+
+        File: PetService.cs
+        Lines: 69
+        Characters:1301
+
+        File: RaidCtrl.cs
+        Lines: 121
+        Characters:3104
+
+        File: RaidModule.cs
+        Lines: 144
+        Characters:2436
+
+        File: RaidService.cs
+        Lines: 102
+        Characters:2281
+
+        File: RelicsCtrl.cs
+        Lines: 93
+        Characters:3452
+
+        File: RelicsModule.cs
+        Lines: 20
+        Characters:259
+
+        File: RelicsService.cs
+        Lines: 104
+        Characters:2108
+
+        File: RoleCtrl.cs
+        Lines: 51
+        Characters:1288
+
+        File: RoleModule.cs
+        Lines: 116
+        Characters:2173
+
+        File: RoleService.cs
+        Lines: 20
+        Characters:417
+
+        File: SkillCtrl.cs
+        Lines: 15
+        Characters:163
+
+        File: SkillService.cs
+        Lines: 5
+        Characters:92
+
+        File: StoreCtrl.cs
+        Lines: 28
+        Characters:835
+
+        File: StoreModule.cs
+        Lines: 57
+        Characters:1230
+
+        File: StoreService.cs
+        Lines: 28
+        Characters:558
+
+        File: TaskCtrl.cs
+        Lines: 12
+        Characters:130
+
+        File: TaskService.cs
+        Lines: 5
+        Characters:90
+
+        File: LevelElementVariable.cs
+        Lines: 12
+        Characters:186
+
+        File: LevelVariable.cs
+        Lines: 10
+        Characters:169
+
+        File: LevelElement.cs
+        Lines: 31
+        Characters:487
+
+        File: LevelGroup.cs
+        Lines: 10
+        Characters:158
+
+        File: LevelData.cs
+        Lines: 16
+        Characters:337
+
+        File: LevelUtil.cs
+        Lines: 25
+        Characters:399
+
+        File: LevelDefine.cs
+        Lines: 41
+        Characters:475
+
+        File: LevelDropObject.cs
+        Lines: 8
+        Characters:100
+
+        File: LevelBarrier.cs
+        Lines: 10
+        Characters:152
+
+        File: LevelBorn.cs
+        Lines: 10
+        Characters:146
+
+        File: LevelMine.cs
+        Lines: 10
+        Characters:146
+
+        File: LevelMineSet.cs
+        Lines: 10
+        Characters:152
+
+        File: LevelMonster.cs
+        Lines: 10
+        Characters:152
+
+        File: LevelMonsterSet.cs
+        Lines: 10
+        Characters:158
+
+        File: LevelNpc.cs
+        Lines: 10
+        Characters:144
+
+        File: LevelObj.cs
+        Lines: 10
+        Characters:144
+
+        File: LevelPortal.cs
+        Lines: 20
+        Characters:338
+
+        File: LevelRegion.cs
+        Lines: 54
+        Characters:1153
+
+        File: LevelWave.cs
+        Lines: 10
+        Characters:146
+
+        File: LevelWaveSet.cs
+        Lines: 10
+        Characters:149
+
+        File: LevelEventBase.cs
+        Lines: 8
+        Characters:98
+
+        File: GroupBarrier.cs
+        Lines: 8
+        Characters:105
+
+        File: GroupBorn.cs
+        Lines: 8
+        Characters:99
+
+        File: GroupMineSet.cs
+        Lines: 8
+        Characters:102
+
+        File: GroupMonsterSet.cs
+        Lines: 8
+        Characters:111
+
+        File: GroupNpc.cs
+        Lines: 8
+        Characters:97
+
+        File: GroupObj.cs
+        Lines: 8
+        Characters:97
+
+        File: GroupPortal.cs
+        Lines: 8
+        Characters:103
+
+        File: GroupRegion.cs
+        Lines: 8
+        Characters:103
+
+        File: GroupWaveSet.cs
+        Lines: 8
+        Characters:105
+
+        File: ILevelDropObject.cs
+        Lines: 8
+        Characters:88
+
+        File: ILevelElement.cs
+        Lines: 8
+        Characters:90
+
+        File: ILevelEventBase.cs
+        Lines: 8
+        Characters:87
+
+        File: ILevelGroup.cs
+        Lines: 8
+        Characters:83
+
+        File: ILevelRegionComponent.cs
+        Lines: 8
+        Characters:93
+
+        File: LevelManager.cs
+        Lines: 125
+        Characters:2756
+
+        File: LevelWeather.cs
+        Lines: 8
+        Characters:80
+
+    File: GTCtrl.cs
+    Lines: 45
+    Characters:808
+
+    File: GTLauncher.cs
+    Lines: 248
+    Characters:5764
+
+    File: GTTouchEffect.cs
+    Lines: 86
+    Characters:1898
+
+    File: GTWorld.cs
+    Lines: 46
+    Characters:878
+
+        File: NetworkClient.cs
+        Lines: 114
+        Characters:1786
+
+        File: NetworkManager.cs
+        Lines: 147
+        Characters:2736
+
+        File: MessageCenter.cs
+        Lines: 358
+        Characters:14663
+
+        File: MessageHandler.cs
+        Lines: 4
+        Characters:126
+
+        File: MessagePackType.cs
+        Lines: 9
+        Characters:176
+
+        File: MessageRecv.cs
+        Lines: 8
+        Characters:131
+
+        File: MessageSend.cs
+        Lines: 12
+        Characters:229
+
+        File: MessageBag.cs
+        Lines: 467
+        Characters:15211
+
+        File: MessageCommon.cs
+        Lines: 970
+        Characters:29148
+
+        File: MessageCopy.cs
+        Lines: 215
+        Characters:6377
+
+        File: MessageEquip.cs
+        Lines: 145
+        Characters:5107
+
+        File: MessageGem.cs
+        Lines: 63
+        Characters:1901
+
+        File: MessageID.cs
+        Lines: 251
+        Characters:7318
+
+        File: MessageLogin.cs
+        Lines: 247
+        Characters:8296
+
+        File: MessageMount.cs
+        Lines: 49
+        Characters:1207
+
+        File: MessagePacket.cs
+        Lines: 69
+        Characters:1802
+
+        File: MessagePartner.cs
+        Lines: 131
+        Characters:3887
+
+        File: MessagePet.cs
+        Lines: 131
+        Characters:4117
+
+        File: MessagePlayer.cs
+        Lines: 49
+        Characters:1191
+
+        File: MessageRelics.cs
+        Lines: 165
+        Characters:5285
+
+        File: MessageRetCode.cs
+        Lines: 41
+        Characters:736
+
+        File: MessageStore.cs
+        Lines: 77
+        Characters:1971
+
+        File: MessageTask.cs
+        Lines: 63
+        Characters:1531
+
+        File: NEventAttribute.cs
+        Lines: 9
+        Characters:105
+
+        File: NGroupAttribute.cs
+        Lines: 10
+        Characters:136
+
+        File: NTrackAttribute.cs
+        Lines: 9
+        Characters:105
+
+        File: NDelegate.cs
+        Lines: 6
+        Characters:111
+
+        File: NFactory.cs
+        Lines: 22
+        Characters:451
+
+        File: NSettings.cs
+        Lines: 15
+        Characters:246
+
+        File: NStyles.cs
+        Lines: 21
+        Characters:904
+
+        File: NContainer.cs
+        Lines: 119
+        Characters:1509
+
+        File: NEvent.cs
+        Lines: 8
+        Characters:80
+
+        File: NGroup.cs
+        Lines: 9
+        Characters:105
+
+        File: NItem.cs
+        Lines: 86
+        Characters:1058
+
+        File: NSequencer.cs
+        Lines: 237
+        Characters:3434
+
+        File: NTrack.cs
+        Lines: 8
+        Characters:92
+
+        File: NDefine.cs
+        Lines: 13
+        Characters:128
+
+            File: EventContextData.cs
+            Lines: 11
+            Characters:142
+
+            File: GroupContextData.cs
+            Lines: 16
+            Characters:220
+
+            File: TrackContextData.cs
+            Lines: 11
+            Characters:142
+
+            File: NDirectorHelper.cs
+            Lines: 226
+            Characters:4494
+
+            File: NSequencerInspector.cs
+            Lines: 35
+            Characters:840
+
+            File: NSequencerWindow.cs
+            Lines: 350
+            Characters:8859
+
+        File: NGroupSkill.cs
+        Lines: 9
+        Characters:117
+
+        File: NGroupStory.cs
+        Lines: 8
+        Characters:86
+
+        File: INItem.cs
+        Lines: 18
+        Characters:246
+
+        File: INSequencer.cs
+        Lines: 8
+        Characters:83
+
+        File: ActBuff.cs
+        Lines: 155
+        Characters:2728
+
+        File: ActBuffItem.cs
+        Lines: 100
+        Characters:1857
+
+        File: ActBuffSystem.cs
+        Lines: 66
+        Characters:1209
+
+        File: ActDefine.cs
+        Lines: 242
+        Characters:4273
+
+        File: ActHelper.cs
+        Lines: 23
+        Characters:399
+
+        File: ActItem.cs
+        Lines: 265
+        Characters:4384
+
+        File: ActNode.cs
+        Lines: 115
+        Characters:2053
+
+        File: ActSkill.cs
+        Lines: 85
+        Characters:1459
+
+        File: ActSkillSystem.cs
+        Lines: 48
+        Characters:953
+
+        File: ActSystem.cs
+        Lines: 105
+        Characters:2231
+
+        File: ActTree.cs
+        Lines: 48
+        Characters:565
+
+            File: ActAnim.cs
+            Lines: 26
+            Characters:410
+
+            File: ActAudio.cs
+            Lines: 25
+            Characters:394
+
+            File: ActAudioLoop.cs
+            Lines: 40
+            Characters:677
+
+            File: ActBreakSkill.cs
+            Lines: 8
+            Characters:89
+
+            File: ActCameraEffect.cs
+            Lines: 8
+            Characters:91
+
+            File: ActCanMove.cs
+            Lines: 29
+            Characters:404
+
+            File: ActChangeSkill.cs
+            Lines: 8
+            Characters:90
+
+            File: ActClone.cs
+            Lines: 30
+            Characters:392
+
+            File: ActColorSky.cs
+            Lines: 36
+            Characters:607
+
+            File: ActExtendSkillCD.cs
+            Lines: 8
+            Characters:92
+
+            File: ActFaceToTarget.cs
+            Lines: 18
+            Characters:250
+
+            File: ActHideWeapon.cs
+            Lines: 27
+            Characters:398
+
+            File: ActLog.cs
+            Lines: 20
+            Characters:260
+
+            File: ActMove.cs
+            Lines: 67
+            Characters:1421
+
+            File: ActParticle.cs
+            Lines: 29
+            Characters:446
+
+            File: ActProbably.cs
+            Lines: 19
+            Characters:267
+
+            File: ActRandom.cs
+            Lines: 38
+            Characters:461
+
+            File: ActRandomMany.cs
+            Lines: 30
+            Characters:478
+
+            File: ActRay.cs
+            Lines: 52
+            Characters:1010
+
+            File: ActResetSkillCD.cs
+            Lines: 8
+            Characters:91
+
+            File: ActRotate.cs
+            Lines: 8
+            Characters:85
+
+            File: ActScope.cs
+            Lines: 114
+            Characters:1862
+
+            File: ActScopeBox.cs
+            Lines: 81
+            Characters:1364
+
+            File: ActScopeCylinder.cs
+            Lines: 88
+            Characters:1568
+
+            File: ActScopeSphere.cs
+            Lines: 26
+            Characters:360
+
+            File: ActScopeTriangle.cs
+            Lines: 39
+            Characters:694
+
+            File: ActSequence.cs
+            Lines: 49
+            Characters:525
+
+            File: ActShader.cs
+            Lines: 8
+            Characters:85
+
+            File: ActShake.cs
+            Lines: 41
+            Characters:676
+
+            File: ActShortenSkillCD.cs
+            Lines: 9
+            Characters:102
+
+            File: ActSummon.cs
+            Lines: 42
+            Characters:811
+
+            File: ActThroughMove.cs
+            Lines: 30
+            Characters:490
+
+            File: ActThroughMoveEnd.cs
+            Lines: 31
+            Characters:605
+
+            File: ActThroughMoveStart.cs
+            Lines: 20
+            Characters:361
+
+            File: ActTimeScale.cs
+            Lines: 44
+            Characters:586
+
+            File: ActUpSkillResult.cs
+            Lines: 8
+            Characters:92
+
+            File: ActAbsorb.cs
+            Lines: 8
+            Characters:89
+
+            File: ActAddAttr.cs
+            Lines: 54
+            Characters:1156
+
+            File: ActAura.cs
+            Lines: 46
+            Characters:680
+
+            File: ActAuraAddBuff.cs
+            Lines: 23
+            Characters:439
+
+            File: ActAuraDamage.cs
+            Lines: 29
+            Characters:621
+
+            File: ActAuraHeal.cs
+            Lines: 27
+            Characters:551
+
+            File: ActBlendAddAttr.cs
+            Lines: 72
+            Characters:1482
+
+            File: ActBlendDot.cs
+            Lines: 57
+            Characters:1095
+
+            File: ActBlendHot.cs
+            Lines: 51
+            Characters:967
+
+            File: ActBlendSubAttr.cs
+            Lines: 76
+            Characters:1539
+
+            File: ActBlind.cs
+            Lines: 40
+            Characters:510
+
+            File: ActBuffEffect.cs
+            Lines: 65
+            Characters:1118
+
+            File: ActBuffInterval.cs
+            Lines: 12
+            Characters:182
+
+            File: ActDivive.cs
+            Lines: 22
+            Characters:315
+
+            File: ActDot.cs
+            Lines: 47
+            Characters:923
+
+            File: ActFear.cs
+            Lines: 40
+            Characters:506
+
+            File: ActFixBody.cs
+            Lines: 32
+            Characters:432
+
+            File: ActFrozen.cs
+            Lines: 40
+            Characters:511
+
+            File: ActHot.cs
+            Lines: 44
+            Characters:770
+
+            File: ActParaly.cs
+            Lines: 40
+            Characters:514
+
+            File: ActReflex.cs
+            Lines: 8
+            Characters:89
+
+            File: ActScale.cs
+            Lines: 37
+            Characters:527
+
+            File: ActSilent.cs
+            Lines: 25
+            Characters:317
+
+            File: ActSleep.cs
+            Lines: 40
+            Characters:510
+
+            File: ActStealth.cs
+            Lines: 20
+            Characters:328
+
+            File: ActStun.cs
+            Lines: 40
+            Characters:506
+
+            File: ActSubAttr.cs
+            Lines: 54
+            Characters:1175
+
+            File: ActTimedDeath.cs
+            Lines: 20
+            Characters:224
+
+            File: DctField.cs
+            Lines: 9
+            Characters:98
+
+            File: DctSkillContainer.cs
+            Lines: 13
+            Characters:225
+
+                File: DctActSkillContainerInspector.cs
+                Lines: 43
+                Characters:1176
+
+                File: ActSkillWindow.cs
+                Lines: 113
+                Characters:3323
+
+            File: ActAnnular.cs
+            Lines: 25
+            Characters:515
+
+            File: ActBeam.cs
+            Lines: 90
+            Characters:1583
+
+            File: ActEffect.cs
+            Lines: 78
+            Characters:1303
+
+            File: ActFlyAOE.cs
+            Lines: 8
+            Characters:88
+
+            File: ActFlyObj.cs
+            Lines: 79
+            Characters:1399
+
+            File: ActFlyWeapon.cs
+            Lines: 8
+            Characters:90
+
+            File: ActFlyWeaponBind.cs
+            Lines: 25
+            Characters:458
+
+            File: ActLighting.cs
+            Lines: 90
+            Characters:1591
+
+            File: ActMissile.cs
+            Lines: 13
+            Characters:205
+
+            File: ActObj.cs
+            Lines: 24
+            Characters:371
+
+            File: ActWall.cs
+            Lines: 25
+            Characters:390
+
+            File: MoverBase.cs
+            Lines: 64
+            Characters:891
+
+            File: MoverBeam.cs
+            Lines: 59
+            Characters:1213
+
+            File: MoverChase.cs
+            Lines: 41
+            Characters:810
+
+            File: MoverChaseParabol.cs
+            Lines: 37
+            Characters:769
+
+            File: MoverCircle.cs
+            Lines: 48
+            Characters:1094
+
+            File: MoverFixDirection.cs
+            Lines: 20
+            Characters:388
+
+            File: MoverFixPosition.cs
+            Lines: 34
+            Characters:986
+
+            File: MoverFly.cs
+            Lines: 65
+            Characters:1642
+
+            File: MoverFlyWeaponBind.cs
+            Lines: 11
+            Characters:219
+
+            File: MoverLighting.cs
+            Lines: 54
+            Characters:1288
+
+            File: ActAddBuff.cs
+            Lines: 31
+            Characters:455
+
+            File: ActBeatBack.cs
+            Lines: 24
+            Characters:340
+
+            File: ActBeatDown.cs
+            Lines: 22
+            Characters:289
+
+            File: ActBeatFly.cs
+            Lines: 22
+            Characters:287
+
+            File: ActBindEffect.cs
+            Lines: 53
+            Characters:1005
+
+            File: ActDamage.cs
+            Lines: 33
+            Characters:563
+
+            File: ActDispel.cs
+            Lines: 27
+            Characters:383
+
+            File: ActFloat.cs
+            Lines: 22
+            Characters:283
+
+            File: ActHeal.cs
+            Lines: 30
+            Characters:476
+
+            File: ActHit.cs
+            Lines: 22
+            Characters:281
+
+            File: ActResult.cs
+            Lines: 55
+            Characters:767
+
+            File: ActSuckBlood.cs
+            Lines: 28
+            Characters:421
+
+            File: ActTaunt.cs
+            Lines: 25
+            Characters:318
+
+            File: ActTrigger.cs
+            Lines: 75
+            Characters:1381
+
+        File: AICondition.cs
+        Lines: 12
+        Characters:169
+
+        File: AIDefine.cs
+        Lines: 36
+        Characters:507
+
+        File: AIHelper.cs
+        Lines: 71
+        Characters:916
+
+        File: AITask.cs
+        Lines: 12
+        Characters:150
+
+            File: TryBackHome.cs
+            Lines: 22
+            Characters:380
+
+            File: TryCastSkill.cs
+            Lines: 31
+            Characters:474
+
+            File: TryChangeAIState.cs
+            Lines: 38
+            Characters:810
+
+            File: TryClearTarget.cs
+            Lines: 19
+            Characters:302
+
+            File: TryFindTargetNearest.cs
+            Lines: 27
+            Characters:465
+
+            File: TryFollowHost.cs
+            Lines: 23
+            Characters:439
+
+            File: TryIdle.cs
+            Lines: 28
+            Characters:341
+
+            File: TryPursueDestination.cs
+            Lines: 21
+            Characters:440
+
+            File: TryPursueTarget.cs
+            Lines: 23
+            Characters:422
+
+            File: TryStopPursue.cs
+            Lines: 22
+            Characters:288
+
+            File: CheckAIState.cs
+            Lines: 27
+            Characters:606
+
+            File: CheckBeDamage.cs
+            Lines: 9
+            Characters:151
+
+            File: CheckFSM.cs
+            Lines: 36
+            Characters:662
+
+            File: CheckFSMLayer0.cs
+            Lines: 14
+            Characters:258
+
+            File: CheckFSMLayer1.cs
+            Lines: 14
+            Characters:258
+
+            File: CheckFSMLayer2.cs
+            Lines: 14
+            Characters:258
+
+            File: CheckFSMLayer3.cs
+            Lines: 14
+            Characters:258
+
+            File: CheckHomeDist.cs
+            Lines: 49
+            Characters:898
+
+            File: CheckHostAIState.cs
+            Lines: 27
+            Characters:618
+
+            File: CheckHostDist.cs
+            Lines: 43
+            Characters:654
+
+            File: CheckHostFSM.cs
+            Lines: 40
+            Characters:722
+
+            File: CheckMeDead.cs
+            Lines: 22
+            Characters:280
+
+            File: CheckTarAIState.cs
+            Lines: 27
+            Characters:616
+
+            File: CheckTarDead.cs
+            Lines: 26
+            Characters:327
+
+            File: CheckTarDist.cs
+            Lines: 58
+            Characters:970
+
+            File: CheckTarExist.cs
+            Lines: 28
+            Characters:485
+
+            File: CheckTarFSM.cs
+            Lines: 40
+            Characters:724
+
+            File: CheckTarHPPercent.cs
+            Lines: 35
+            Characters:649
+
+            File: CheckTarMPPercent.cs
+            Lines: 36
+            Characters:658
+
+        File: Character.cs
+        Lines: 1946
+        Characters:34046
+
+        File: CharacterAttr.cs
+        Lines: 283
+        Characters:3864
+
+        File: CharacterAvatar.cs
+        Lines: 268
+        Characters:6025
+
+        File: CharacterBoard.cs
+        Lines: 80
+        Characters:1415
+
+        File: CharacterCommand.cs
+        Lines: 26
+        Characters:516
+
+        File: CharacterCtrl.cs
+        Lines: 216
+        Characters:6424
+
+        File: CharacterManager.cs
+        Lines: 184
+        Characters:3439
+
+        File: CharacterMove.cs
+        Lines: 133
+        Characters:2541
+
+        File: CharacterRagdoll.cs
+        Lines: 94
+        Characters:1519
+
+        File: CharacterService.cs
+        Lines: 34
+        Characters:719
+
+        File: CharacterSkill.cs
+        Lines: 261
+        Characters:3944
+
+        File: CharacterTaunt.cs
+        Lines: 7
+        Characters:107
+
+        File: CharacterView.cs
+        Lines: 17
+        Characters:275
+
+        File: CommandAct.cs
+        Lines: 18
+        Characters:290
+
+        File: CommandBeatBack.cs
+        Lines: 20
+        Characters:314
+
+        File: CommandBeatDown.cs
+        Lines: 13
+        Characters:210
+
+        File: CommandBeatFly.cs
+        Lines: 19
+        Characters:288
+
+        File: CommandBlind.cs
+        Lines: 26
+        Characters:443
+
+        File: CommandDance.cs
+        Lines: 10
+        Characters:199
+
+        File: CommandDead.cs
+        Lines: 19
+        Characters:294
+
+        File: CommandFear.cs
+        Lines: 26
+        Characters:438
+
+        File: CommandFixBodyBegin.cs
+        Lines: 27
+        Characters:490
+
+        File: CommandFixBodyLeave.cs
+        Lines: 13
+        Characters:220
+
+        File: CommandFloat.cs
+        Lines: 13
+        Characters:201
+
+        File: CommandFrost.cs
+        Lines: 26
+        Characters:443
+
+        File: CommandGrab.cs
+        Lines: 13
+        Characters:196
+
+        File: CommandHook.cs
+        Lines: 26
+        Characters:438
+
+        File: CommandIdle.cs
+        Lines: 13
+        Characters:196
+
+        File: CommandInterActive.cs
+        Lines: 22
+        Characters:412
+
+        File: CommandJump.cs
+        Lines: 14
+        Characters:219
+
+        File: CommandLoadScene.cs
+        Lines: 19
+        Characters:302
+
+        File: CommandMine.cs
+        Lines: 20
+        Characters:316
+
+        File: CommandMove.cs
+        Lines: 63
+        Characters:1126
+
+        File: CommandParaly.cs
+        Lines: 26
+        Characters:448
+
+        File: CommandReborn.cs
+        Lines: 17
+        Characters:298
+
+        File: CommandRideBegin.cs
+        Lines: 13
+        Characters:248
+
+        File: CommandRideLeave.cs
+        Lines: 13
+        Characters:248
+
+        File: CommandRoll.cs
+        Lines: 19
+        Characters:290
+
+        File: CommandSleep.cs
+        Lines: 26
+        Characters:443
+
+        File: CommandStealthBegin.cs
+        Lines: 19
+        Characters:322
+
+        File: CommandStealthLeave.cs
+        Lines: 13
+        Characters:220
+
+        File: CommandStun.cs
+        Lines: 26
+        Characters:438
+
+        File: CommandTalk.cs
+        Lines: 19
+        Characters:289
+
+        File: CommandTurn.cs
+        Lines: 21
+        Characters:377
+
+        File: CommandUseSkill.cs
+        Lines: 25
+        Characters:384
+
+        File: CommandVariation.cs
+        Lines: 30
+        Characters:586
+
+        File: CommandWound.cs
+        Lines: 13
+        Characters:201
+
+        File: CharacterDefine.cs
+        Lines: 211
+        Characters:4104
+
+        File: CharacterBaseFSM.cs
+        Lines: 27
+        Characters:360
+
+        File: CharacterBeatBackFSM.cs
+        Lines: 30
+        Characters:448
+
+        File: CharacterBeatDownFSM.cs
+        Lines: 30
+        Characters:448
+
+        File: CharacterBeatFlyFSM.cs
+        Lines: 30
+        Characters:441
+
+        File: CharacterBlindFSM.cs
+        Lines: 30
+        Characters:427
+
+        File: CharacterDanceFSM.cs
+        Lines: 9
+        Characters:148
+
+        File: CharacterDeadFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterEmptyFSM.cs
+        Lines: 10
+        Characters:144
+
+        File: CharacterFearFSM.cs
+        Lines: 30
+        Characters:420
+
+        File: CharacterFloatFSM.cs
+        Lines: 30
+        Characters:440
+
+        File: CharacterFrostFSM.cs
+        Lines: 32
+        Characters:476
+
+        File: CharacterGrabFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterHookFSM.cs
+        Lines: 32
+        Characters:474
+
+        File: CharacterIdleFSM.cs
+        Lines: 18
+        Characters:222
+
+        File: CharacterInterActiveFSM.cs
+        Lines: 9
+        Characters:166
+
+        File: CharacterJumpFSM.cs
+        Lines: 13
+        Characters:216
+
+        File: CharacterMineFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterParalyFSM.cs
+        Lines: 32
+        Characters:488
+
+        File: CharacterRebornFSM.cs
+        Lines: 9
+        Characters:151
+
+        File: CharacterRideIdleFSM.cs
+        Lines: 9
+        Characters:137
+
+        File: CharacterRideMoveFSM.cs
+        Lines: 9
+        Characters:137
+
+        File: CharacterRollFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterRunFSM.cs
+        Lines: 9
+        Characters:143
+
+        File: CharacterSkillFSM.cs
+        Lines: 30
+        Characters:445
+
+        File: CharacterSleepFSM.cs
+        Lines: 30
+        Characters:427
+
+        File: CharacterStunFSM.cs
+        Lines: 30
+        Characters:420
+
+        File: CharacterTalkFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterWalkFSM.cs
+        Lines: 9
+        Characters:145
+
+        File: CharacterWoundFSM.cs
+        Lines: 29
+        Characters:414
+
+        File: CharacterHelper.cs
+        Lines: 268
+        Characters:6948
+
+        File: HUDSystem.cs
+        Lines: 51
+        Characters:1005
+
+        File: ICharacter.cs
+        Lines: 7
+        Characters:140
+
+        File: ICharacterComponent.cs
+        Lines: 7
+        Characters:105
+
+        File: IVehicle.cs
+        Lines: 9
+        Characters:147
+
+        File: GTResourceBundle.cs
+        Lines: 13
+        Characters:312
+
+        File: GTResourceDefine.cs
+        Lines: 7
+        Characters:93
+
+        File: GTResourceManager.cs
+        Lines: 439
+        Characters:8412
+
+        File: GTResourceTask.cs
+        Lines: 12
+        Characters:275
+
+        File: GTResourceUnit.cs
+        Lines: 10
+        Characters:236
+
+        File: ResourceTools.cs
+        Lines: 201
+        Characters:4584
+
+        File: SceneCity.cs
+        Lines: 11
+        Characters:208
+
+        File: SceneInit .cs
+        Lines: 10
+        Characters:153
+
+        File: SceneLoading.cs
+        Lines: 85
+        Characters:1761
+
+        File: SceneLogin.cs
+        Lines: 11
+        Characters:210
+
+        File: ScenePVE.cs
+        Lines: 11
+        Characters:207
+
+        File: SceneRole.cs
+        Lines: 16
+        Characters:281
+
+        File: SceneWorld.cs
+        Lines: 11
+        Characters:209
+
+        File: IScene.cs
+        Lines: 12
+        Characters:297
+
+        File: ISceneListener.cs
+        Lines: 6
+        Characters:90
+
+    File: KAttrValue.cs
+    Lines: 9
+    Characters:135
+
+    File: KCallback.cs
+    Lines: 7
+    Characters:332
+
+    File: KEffect.cs
+    Lines: 12
+    Characters:187
+
+    File: KStrengthValue.cs
+    Lines: 17
+    Characters:221
+
+    File: KStruct.cs
+    Lines: 15
+    Characters:156
+
+    File: KTransform.cs
+    Lines: 38
+    Characters:786
+
+        File: ITaskBase.cs
+        Lines: 5
+        Characters:67
+
+        File: ITaskSubBase.cs
+        Lines: 5
+        Characters:70
+
+        File: TaskManager.cs
+        Lines: 6
+        Characters:102
+
+文件总数: 666
+全部行数: 43395
+全部字符数:944694

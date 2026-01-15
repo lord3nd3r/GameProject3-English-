@@ -4,15 +4,15 @@
 enum ETaskEvent
 {
 	TE_NONE = 0,
-	TE_PASS_MAIN_COPY, //挑战主线
+	TE_PASS_MAIN_COPY, //Challenge main line
 };
 
 
 enum ETaskStatue
 {
-	TASK_UNFINISHED = 0, //! 未完成
-	TASK_FINISHED, //! 已完成
-	TASK_ONGOING //! 已领取
+	TASK_UNFINISHED = 0, //! Unfinished
+	TASK_FINISHED, //! Finished
+	TASK_ONGOING //! Received
 };
 
 

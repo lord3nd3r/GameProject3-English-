@@ -1,11 +1,11 @@
 /*
 http://www.cgsoso.com/forum-211-1.html
 
-CG搜搜 Unity3d 每日Unity3d插件免费更新 更有VIP资源！
+CG Search Unity3d daily Unity3d plugin free updates, more VIP resources!
 
-CGSOSO 主打游戏开发，影视设计等CG资源素材。
+CGSOSO focuses on game development, film design and other CG resource materials.
 
-插件如若商用，请务必官网购买！
+If the plugin is used commercially, please be sure to purchase from the official website!
 
 daily assets update for try.
 

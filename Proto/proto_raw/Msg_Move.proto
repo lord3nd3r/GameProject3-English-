@@ -1,6 +1,6 @@
 syntax = "proto3";
 import "Msg_Base.proto";
-//请求释放技能
+//Request to cast skill
 message SkillCastReq
 {    
     uint64   ObjectGuid    = 1;
@@ -16,39 +16,39 @@ message SkillCastReq
     repeated uint64 TargetObjects = 11;
 }
 
-//请求释放技能返回(如要释放是允许则没有这个返回)
+//Skill cast request response (if casting is allowed, this response is not sent)
 message SkillCastAck
 {    
-    uint32    RetCode = 1;  //是否释放成功, 失败原因
-    uint64    ObjectGuid = 2; //释放技能的对象
+    uint32    RetCode = 1;  //Whether casting succeeded, failure reason
+    uint64    ObjectGuid = 2; //Object that cast the skill
 }
 
-//技能释放结果
+//Skill cast result
 message SkillResultItem
 {    
-    uint64  ObjectGuid  = 1;    //目标的ID
-    int32   SkillID     = 2;    //被哪个技能击中了
-    int32   ActionID    = 3;    //现在需要什么动作
-    float   OrgX        = 4;    //被击中时的坐标
-    float   OrgY        = 5;    //被击中时的坐标
-    float   OrgZ        = 6;    //被击中时的坐标
-    float   OrgFt       = 7;    //被击中时的朝向
-    int32   HpChange    = 8;    //变化的血量
-    bool    bCrit       = 9;    //是否爆击
+    uint64  ObjectGuid  = 1;    //Target's ID
+    int32   SkillID     = 2;    //Which skill hit
+    int32   ActionID    = 3;    //What action is needed now
+    float   OrgX        = 4;    //Coordinates when hit
+    float   OrgY        = 5;    //Coordinates when hit
+    float   OrgZ        = 6;    //Coordinates when hit
+    float   OrgFt       = 7;    //Direction when hit
+    int32   HpChange    = 8;    //Changed HP
+    bool    bCrit       = 9;    //Whether critical hit
 }
 
-//技能释放结果
+//Skill cast result
 message SkillResultNtf
 {    
     repeated SkillResultItem ItemList = 1;
 }
 
-//移动动作请求
+//Movement action request
 message ObjectActionReq {
    repeated    ActionReqItem ActionList = 1;
 }
 
-//移动动作请求
+//Movement action request
 message ObjectActionNty {
    repeated ActionNtyItem ActionList = 1;
 }
@@ -70,38 +70,38 @@ message ObjectActionAck {
 message ActionNtyItem {
     uint64   ObjectGuid    = 1;
     int32    ActionID      = 2;        
-    int32    Camp          = 3;        //阵营
-    int32    ObjectStatus  = 4;        //实例状态
+    int32    Camp          = 3;        //Camp
+    int32    ObjectStatus  = 4;        //Object status
     int32     Speed        = 5;
     float    HostX         = 6;
     float    HostY         = 7;
     float    HostZ         = 8;
     float    HostFt        = 9;
     int32    ActorID       = 10;        //Actor ID
-    int32    MountID       = 11;        //坐骑ID
-    int32    Level         = 12;        //等级
-    uint64   ControlerID   = 13;        //AI控制人的GUID
+    int32    MountID       = 11;        //Mount ID
+    int32    Level         = 12;        //Level
+    uint64   ControlerID   = 13;        //AI controller's GUID
     int32    Hp            = 14;
     int32    Mp            = 15;
     int32    HpMax         = 16;
     int32    MpMax         = 17;
-    repeated int32 Equips  = 18;         //装备
+    repeated int32 Equips  = 18;         //Equipment
 }
 
 message NewItem {
-    uint64    ObjectGuid    = 1;        //实例ID
+    uint64    ObjectGuid    = 1;        //Instance ID
     int32     ActionID      = 2;        
-    int32     ObjType       = 3;        //对象类别
-    int32     ObjectStatus  = 4;        //实例状态
+    int32     ObjType       = 3;        //Object type
+    int32     ObjectStatus  = 4;        //Instance status
     int32     ActorID       = 5;        //Actor ID
-    int32     MountID       = 6;        //坐骑ID
-    int32     Camp          = 7;        //阵营
-    string    Name          = 8;        //名字
-    int32     Level         = 9;        //等级
+    int32     MountID       = 6;        //Mount ID
+    int32     Camp          = 7;        //Camp
+    string    Name          = 8;        //Name
+    int32     Level         = 9;        //Level
     int32     Speed         = 10;
-    uint64    HostGuid      = 11;       //主人的GUID
-    uint64    ControlerID   = 12;       //AI控制人的GUID
-    uint64    SummonID      = 13;       //招唤者的GUID
+    uint64    HostGuid      = 11;       //Owner's GUID
+    uint64    ControlerID   = 12;       //AI controller's GUID
+    uint64    SummonID      = 13;       //Summoner's GUID
     float     X             = 14;        
     float     Y             = 15;
     float     Z             = 16;
@@ -110,8 +110,8 @@ message NewItem {
     int32     Mp            = 19;
     int32     HpMax         = 20;
     int32     MpMax         = 21;
-    repeated int32 Equips   = 22;       //装备
-    repeated SkillItem Skills= 23;      //普通技能
+    repeated int32 Equips   = 22;       //Equipment
+    repeated SkillItem Skills= 23;      //Normal skills
 }
 
 message ObjectNewNty {
@@ -122,24 +122,24 @@ message ObjectRemoveNty {
   repeated uint64 RemoveList = 1;
 }
 
-//子弹对象
+//Bullet object
 message BulletItem
 {    
-    uint64  ObjectGuid  = 1;    //对象ID
-    uint64  TargetGuid  = 2;    //目标GUID
-    uint64  CasterGuid  = 3;    //施放GUID
-    int32   BulletID    = 4;    //子弹的ID
-    float   X           = 5;    //坐标X
-    float   Y           = 6;    //坐标Y
-    float   Z           = 7;    //坐标X
-    float   Angle       = 8;    //角度
-    float   Speed       = 9;   //速度
-    float   AccSpeed    = 10;   //加速度
-    float   LifeTime    = 11;   //总生命时间
-    float   LeftTime    = 12;   //剩余时间
+    uint64  ObjectGuid  = 1;    //Object ID
+    uint64  TargetGuid  = 2;    //Target GUID
+    uint64  CasterGuid  = 3;    //Caster GUID
+    int32   BulletID    = 4;    //Bullet's ID
+    float   X           = 5;    //Coordinate X
+    float   Y           = 6;    //Coordinate Y
+    float   Z           = 7;    //Coordinate Z
+    float   Angle       = 8;    //Angle
+    float   Speed       = 9;   //Speed
+    float   AccSpeed    = 10;   //Acceleration
+    float   LifeTime    = 11;   //Total lifetime
+    float   LeftTime    = 12;   //Remaining time
 }
 
-//技能释放结果
+//Skill cast result
 message BulletNewNtf
 {    
     repeated BulletItem ItemList = 1;
@@ -163,7 +163,7 @@ message Msg_RidingMountReq {
 }
 
 message Msg_RidingMountAck {
-  uint32    RetCode = 1;  //是否成功, 失败原因。
+  uint32    RetCode = 1;  //Whether successful, failure reason.
 }
 
 
@@ -173,5 +173,5 @@ message Msg_RoleRebornReq {
 }
 
 message Msg_RoleRebornAck {
-  uint32    RetCode = 1;  //是否成功, 失败原因。
+  uint32    RetCode = 1;  //Whether successful, failure reason.
 }

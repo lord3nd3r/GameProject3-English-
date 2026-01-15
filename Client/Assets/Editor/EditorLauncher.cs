@@ -11,11 +11,11 @@ namespace EDT
             base.OnInspectorGUI();
             GTLauncher manager = target as GTLauncher;
 
-            EditorGUILayout.LabelField("当前场景名",   manager.CurrSceneName);
-            EditorGUILayout.LabelField("当前游戏状态", manager.CurrSceneType.ToString());
-            EditorGUILayout.LabelField("下一游戏状态", manager.NextSceneType.ToString());
+            EditorGUILayout.LabelField("Current scene name",   manager.CurrSceneName);
+            EditorGUILayout.LabelField("Current game status", manager.CurrSceneType.ToString());
+            EditorGUILayout.LabelField("Next game status", manager.NextSceneType.ToString());
 
-            manager.UseGuide     = EditorGUILayout.Toggle("使用新手引导", manager.UseGuide);
+            manager.UseGuide     = EditorGUILayout.Toggle("Use novice guide", manager.UseGuide);
             bool musicActive  = EditorGUILayout.Toggle("关闭音乐", manager.MusicDisable);
             if(manager.MusicDisable != musicActive)
             {

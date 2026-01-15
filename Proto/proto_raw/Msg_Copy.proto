@@ -28,12 +28,12 @@ message BattleResultNty {
     int32   CopyID      = 3;
     int32   CopyType    = 4;
     uint64  LastTime    = 5;
-    repeated ResultPlayer PlayerList = 6;   //玩家列表
-    repeated ResultObject ObjectList = 7;   //宠物，伙伴之类的
+    repeated ResultPlayer PlayerList = 6;   //Player list
+    repeated ResultObject ObjectList = 7;   //Pets, partners, etc.
 }
 
 message MainCopyReq {
-    int32   CopyID  = 1;  //副本类型
+    int32   CopyID  = 1;  //Copy type
 }
 
 message MainCopyAck {
@@ -41,12 +41,12 @@ message MainCopyAck {
 }
 
 message MainCopyResultNty {
-    uint64   RoleID             = 1; //角色ID
-    int32    CopyID             = 2; //副本ID
-    int32    CopyResult         = 3; //胜负结果
-    int32    StarNum            = 4; //星数
-    uint64   LastTime           = 5; //战斗持续时间
-    repeated ItemData ItemList  = 6; //获得道具
+    uint64   RoleID             = 1; //Role ID
+    int32    CopyID             = 2; //Copy ID
+    int32    CopyResult         = 3; //Win/loss result
+    int32    StarNum            = 4; //Star count
+    uint64   LastTime           = 5; //Battle duration
+    repeated ItemData ItemList  = 6; //Obtained items
 }
 
 message Msg_CreateRoomReq{
@@ -97,12 +97,12 @@ message Msg_StartRoomAck{
 }
 
 message Msg_RoomPlayerInfo{
-	uint64 RoleID 			= 1;    //角色ID
-	int32  Level 			= 2;	//等级
-	string Name 			= 3;	//名字
+	uint64 RoleID 			= 1;    //Role ID
+	int32  Level 			= 2;	//Level
+	string Name 			= 3;	//Name
 	int32     ActorID       = 4;	//Actor ID
-    int32     MountID       = 5;	//坐骑ID
-    repeated int32 Equips   = 6;	//装备
+    int32     MountID       = 5;	//Mount ID
+    repeated int32 Equips   = 6;	//Equipment
 }
 
 message Msg_BroadRoomNotify{
