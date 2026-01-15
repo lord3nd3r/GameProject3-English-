@@ -48,11 +48,11 @@ protected:
     INT32               m_nProxyConnID;
     INT32               m_nServerID;
 public:
-    //*********************消息处理定义开始******************************
+    //********************* Message handlers begin ******************************
     BOOL OnMsgDefautReq(NetPacket* pNetPacket);
     BOOL OnMsgRegToProxyAck(NetPacket* pNetPacket);
     BOOL OnMsgWebCommandReq(NetPacket* pNetPacket);
-    //*********************消息处理定义结束******************************
+    //********************* Message handlers end ******************************
 };
 
 #endif

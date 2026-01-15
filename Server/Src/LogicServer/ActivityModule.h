@@ -30,9 +30,9 @@ public:
 
 	BOOL GetRedPoint();
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 	std::map<UINT32, ActivityDataObject*> m_mapActivityData;
 public:
 

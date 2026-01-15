@@ -32,9 +32,9 @@ public:
 	BOOL ProcessSussessPayOrder(PayDataObject* pOrderData);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL        OnMsgCreatePayRecord(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<std::string, PayDataObject*> m_mapPayData;

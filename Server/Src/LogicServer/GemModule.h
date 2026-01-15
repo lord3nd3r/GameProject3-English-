@@ -41,10 +41,10 @@ public:
 	UINT32 UnDressGem(UINT64 uGuid);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSetupGemReq(NetPacket* pNetPacket);  //穿装备请求
 	BOOL OnMsgUnsetGemReq(NetPacket* pNetPacket);  //穿装备请求
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT64, GemDataObject*>m_mapGemData;

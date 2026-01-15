@@ -1,6 +1,6 @@
-﻿// stdafx.h : 标准系统包含文件的包含文件，
-// 或是经常使用但不常更改的
-// 特定于项目的包含文件
+﻿// stdafx.h : Include file for standard system include files,
+// or frequently used but infrequently changed
+// Project specific include files
 //
 
 #pragma once
@@ -33,4 +33,4 @@
 #pragma  comment(lib,"ws2_32")
 #pragma  comment(lib, "Mswsock")
 
-// TODO: 在此处引用程序需要的其他头文件
+// TODO: reference additional headers required by the program here

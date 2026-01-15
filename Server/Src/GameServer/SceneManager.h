@@ -33,10 +33,10 @@ public:
 
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgCreateSceneReq(NetPacket* pNetPack);
 
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 protected:
 	SceneMap	m_mapSceneList;

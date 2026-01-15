@@ -67,13 +67,13 @@ public:
 	UINT32          m_dwDbErrorCount;
 	BOOL            m_bRegSuccessed;
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL        OnMsgRegToLoginAck(NetPacket* pNetPacket);
 	BOOL        OnMsgRegToCenterAck(NetPacket* pNetPacket);
 	BOOL        OnMsgUpdateInfoAck(NetPacket* pNetPacket);
 	BOOL        OnMsgDBWriteErrorNty(NetPacket* pNetPacket);
 	BOOL        OnMsgRegToDBSvrAck(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 };
 
 #endif

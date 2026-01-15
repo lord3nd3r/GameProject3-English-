@@ -34,10 +34,10 @@ public:
 
 	PetDataObject* GetCurrentPetData();
 
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSetupPetReq(NetPacket* pNetPacket);  //出战宠物
 	BOOL OnMsgUnsetPetReq(NetPacket* pNetPacket);  //收回宠物
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	UINT64 AddPet(UINT32 dwPetID);

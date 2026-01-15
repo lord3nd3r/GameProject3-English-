@@ -41,10 +41,10 @@ public:
 	PartnerDataObject* GetPartnerByGuid(UINT64 uGuid);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSetupPartnerReq(NetPacket* pNetPacket);
 	BOOL OnMsgUnsetPartnerReq(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT64, PartnerDataObject*>m_mapPartnerData;

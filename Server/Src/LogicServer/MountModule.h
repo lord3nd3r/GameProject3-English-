@@ -41,10 +41,10 @@ public:
 
 
 
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSetupMountReq(NetPacket* pNetPacket);  //出战坐骑
 	BOOL OnMsgUnsetMountReq(NetPacket* pNetPacket);  //收回坐骑
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT64, MountDataObject*>m_mapMountData;

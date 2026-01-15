@@ -32,9 +32,9 @@ public:
 	SkillDataObject* GetSkillData(UINT32 dwSkillID);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT32, SkillDataObject*> m_mapSkillData;

@@ -133,7 +133,7 @@ public:
 	//////////////////////////////////////////////////////////////////////////
 	BOOL SetBattleResult(UINT32 dwCamp, ECopyResult nBattleResult);
 	BOOL SendBattleResult();
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 public:
 	BOOL OnMsgTransRoleDataReq(NetPacket* pNetPacket);
 	BOOL OnMsgEnterSceneReq(NetPacket* pNetPacket);
@@ -149,7 +149,7 @@ public:
 	BOOL OnMsgObjectChangeNtf(NetPacket* pNetPacket);
 	BOOL OnMsgMountRidingReq(NetPacket* pNetPacket);
 	BOOL OnMsgRoleRebornReq(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 };
 
 #endif //_MAP_H_

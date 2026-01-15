@@ -25,7 +25,7 @@ public:
 	BOOL ProcessGMCommand(UINT64 u64ID, std::vector<std::string>& vtParam);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSelectServerReq(NetPacket* pNetPacket);
 	BOOL OnMsgRoleListReq(NetPacket* pNetPacket);
 	BOOL OnMsgRoleListAck(NetPacket* pNetPacket);
@@ -42,7 +42,7 @@ public:
 	BOOL OnMsgChatMessageReq(NetPacket* pNetPacket);
 	BOOL OnMsgReconnectReq(NetPacket* pNetPacket);
 	BOOL OnMsgSealAccountNtf(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 };
 
 #endif //_LOGIC_MSG_HANDLER_H_

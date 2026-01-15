@@ -20,9 +20,9 @@ public:
 	BOOL   SendWebResult(INT32 nConnID, EWebResult eResult);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgGmCommandReq(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	//*********************WebAction处理定义开始******************************

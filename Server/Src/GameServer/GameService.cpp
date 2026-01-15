@@ -41,7 +41,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
 
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("配制文件加载Failure!");
+        CLog::GetInstancePtr()->LogError("Configuration file load Failure!");
         return FALSE;
     }
 
@@ -59,7 +59,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
     INT32  nMaxConn = CConfigFile::GetInstancePtr()->GetIntValue("game_svr_max_con");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this))
     {
-        CLog::GetInstancePtr()->LogError("启动服务Failure!");
+        CLog::GetInstancePtr()->LogError("Start service Failure!");
         return FALSE;
     }
 
@@ -71,7 +71,7 @@ BOOL CGameService::Init(INT32 nServerID, INT32 nPort)
         return FALSE;
     }
 
-    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动Success!--------");
+    CLog::GetInstancePtr()->LogHiInfo("--------- Server started Success! --------");
     return TRUE;
 }
 
@@ -146,7 +146,7 @@ BOOL CGameService::DispatchPacket(NetPacket* pNetPacket)
 
 BOOL CGameService::Uninit()
 {
-    CLog::GetInstancePtr()->LogHiInfo("==========服务器开始关闭=======================");
+    CLog::GetInstancePtr()->LogHiInfo("========== Server shutting down =======================");
 
     ServiceBase::GetInstancePtr()->StopNetwork();
 
@@ -154,7 +154,7 @@ BOOL CGameService::Uninit()
 
     google::protobuf::ShutdownProtobufLibrary();
 
-    CLog::GetInstancePtr()->LogHiInfo("==========服务器关闭完成=======================");
+    CLog::GetInstancePtr()->LogHiInfo("========== Server shutdown complete =======================");
 
     return TRUE;
 }

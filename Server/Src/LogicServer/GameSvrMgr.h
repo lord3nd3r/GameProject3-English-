@@ -110,7 +110,7 @@ public:
     //////////////////////////////////////////////////////////////////////////
     BOOL        OnMainCopyResult(BattleResultNty& Nty);
 
-    //*********************消息处理定义开始******************************
+    //********************* Message handlers begin ******************************
 public:
     BOOL    OnCloseConnect(INT32 nConnID);
     BOOL    OnMsgGameSvrRegister(NetPacket* pNetPacket); //响应副本服务器注册
@@ -118,7 +118,7 @@ public:
     BOOL    OnMsgTransRoleDataAck(NetPacket* pNetPacket);//响应角色数据传输Success
     BOOL    OnMsgCopyReportReq(NetPacket* pNetPacket);
     BOOL    OnMsgBattleResultNty(NetPacket* pNetPacket);
-    //*********************消息处理定义结束******************************
+    //********************* Message handlers end ******************************
 public:
     std::map<UINT32, GameSvrInfo>   m_mapGameSvr; //服务器ID-->副本Server information
 

@@ -42,9 +42,9 @@ private:
 	CounterDataObject* GetCounterData(UINT32 uID, UINT32 dwIndex, BOOL bCreate = FALSE);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT64, CounterDataObject*> m_mapCounterData;

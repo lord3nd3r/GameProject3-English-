@@ -44,10 +44,10 @@ public:
 	UINT32 UnDressEquip(UINT64 uGuid);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgSetupEquipReq(NetPacket* pNetPacket);  //穿装备请求
 	BOOL OnMsgUnsetEquipReq(NetPacket* pNetPacket);  //穿装备请求
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	std::map<UINT64, EquipDataObject*>m_mapEquipData;

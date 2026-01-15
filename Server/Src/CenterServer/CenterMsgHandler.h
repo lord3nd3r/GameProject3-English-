@@ -15,9 +15,9 @@ public:
     BOOL        DispatchPacket( NetPacket* pNetPacket);
 
 public:
-    //*********************消息处理定义开始******************************
+    //********************* Message handlers begin ******************************
     BOOL        OnMsgLogicSvrRegReq(NetPacket* pPacket);
-    //*********************消息处理定义结束******************************
+    //********************* Message handlers end ******************************
 };
 
 #endif //_CENTER_MSG_HANDLER_H_

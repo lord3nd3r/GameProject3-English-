@@ -31,7 +31,7 @@ public:
     BOOL        IsServerConnID(INT32 nConnID);
 
 public:
-    //*********************消息处理定义开始******************************
+    //********************* Message handlers begin ******************************
     BOOL        OnMsgGameSvrRegister(NetPacket* pPacket);
     BOOL        OnMsgBroadMessageNty(NetPacket* pPacket);
     BOOL        OnMsgNotifyIntoSceneNtf(NetPacket* pPacket);
@@ -43,7 +43,7 @@ public:
     BOOL        OnMsgRelayToLogic(NetPacket* pPacket);
     BOOL        OnMsgReconnectReq(NetPacket* pPacket);
     BOOL        OnMsgReconnectAck(NetPacket* pPacket);
-    //*********************消息处理定义结束******************************
+    //********************* Message handlers end ******************************
 public:
     std::map<INT32, INT32> m_mapSvrIDtoConnID;
 

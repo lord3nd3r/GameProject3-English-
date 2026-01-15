@@ -18,9 +18,9 @@ public:
 	BOOL		DispatchPacket(NetPacket* pNetPacket);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL		OnMsgLogDataNtf(NetPacket* pNetPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 	CppMySQL3DB     m_DBConnection;
 

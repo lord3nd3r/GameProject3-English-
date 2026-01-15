@@ -15,13 +15,13 @@ public:
 
 	BOOL DispatchPacket(NetPacket* pNetPacket);
 
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 public:
 	BOOL OnMsgAccountRegReq(NetPacket* pPacket);
 	BOOL OnMsgAccontLoginReq(NetPacket* pPacket);
 	BOOL OnMsgSealAccountReq(NetPacket* pPacket);
 	BOOL OnMsgSetLastServerNty(NetPacket* pPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 

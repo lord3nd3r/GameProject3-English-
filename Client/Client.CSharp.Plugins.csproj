@@ -563,7 +563,7 @@
     <None Include="Assets\Resources\Text\Skill\90019.xml" />
     <None Include="Assets\Resources\Text\Skill\90020.xml" />
     <None Include="Assets\Resources\Text\Skill\90021.xml" />
-    <None Include="Assets\Scripts\统计结果.txt" />
+    <None Include="Assets\Scripts\Statistics_Result.txt" />
     <None Include="Assets\Standard Assets\Core\Shader\Illumin-DiffuseAndAlphaTest.shader" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GrayscaleEffect.shader" />
     <None Include="Assets\StreamingAssets\Asset.xml" />

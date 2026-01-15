@@ -133,13 +133,13 @@ public:
 
     VOID        RegisterMessageHanler();
 public:
-    //*********************消息处理定义开始******************************
+    //********************* Message handlers begin ******************************
     BOOL    OnMsgCreateRoom(NetPacket* pNetPacket);
     BOOL    OnMsgLeaveRoom(NetPacket* pNetPacket);
     BOOL    OnMsgKickRoom(NetPacket* pNetPacket);
     BOOL    OnMsgJoinRoom(NetPacket* pNetPacket);
     BOOL    OnMsgStartBattle(NetPacket* pNetPacket);
-    //*********************消息处理定义结束******************************
+    //********************* Message handlers end ******************************
 
 public:
 

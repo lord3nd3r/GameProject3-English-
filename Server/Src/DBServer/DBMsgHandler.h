@@ -21,14 +21,14 @@ public:
 	BOOL Run();
 
 	BOOL Uninit();
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 public:
 	BOOL OnMsgRoleListReq(NetPacket* pPacket);
 	BOOL OnMsgRoleLoginReq(NetPacket* pPacket);
 	BOOL OnMsgRoleDeleteReq(NetPacket* pPacket);
 	BOOL OnMsgExeSqlReq(NetPacket* pPacket);
 	BOOL OnMsgLogicSvrRegReq(NetPacket* pPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	//数据库定义

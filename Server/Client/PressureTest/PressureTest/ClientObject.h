@@ -57,7 +57,7 @@ public:
 	BOOL SendMainCopyReq();
 	BOOL SendAbortCopyReq();
 
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 public:
 	BOOL OnCmdNewAccountAck(UINT32 dwMsgID, CHAR* PacketBuf, INT32 BufLen);
 	BOOL OnMsgAccountLoginAck(UINT32 dwMsgID, CHAR* PacketBuf, INT32 BufLen);
@@ -72,7 +72,7 @@ public:
 	BOOL OnMsgObjectChangeNty(UINT32 dwMsgID, CHAR* PacketBuf, INT32 BufLen);
 	BOOL OnMsgObjectRemoveNty(UINT32 dwMsgID, CHAR* PacketBuf, INT32 BufLen);
 
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 	std::vector<UINT64>	m_RoleIDList;
 

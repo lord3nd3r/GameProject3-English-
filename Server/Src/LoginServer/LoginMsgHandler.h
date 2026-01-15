@@ -19,7 +19,7 @@ public:
     BOOL OnCloseConnect(INT32 nConnID);
 
 public:
-	//*********************消息处理定义开始******************************
+	//********************* Message handlers begin ******************************
 	BOOL OnMsgCheckVersionReq(NetPacket* pPacket);
 	BOOL OnMsgAccountRegReq(NetPacket* pPacket);
 	BOOL OnMsgAccountLoginReq(NetPacket* pPacket);
@@ -34,7 +34,7 @@ public:
 	BOOL OnMsgSelectServerAck(NetPacket* pPacket);
 	BOOL OnMsgSealAccountAck(NetPacket* pPacket);
     BOOL OnMsgGameParamReq(NetPacket* pPacket);
-	//*********************消息处理定义结束******************************
+	//********************* Message handlers end ******************************
 
 public:
 	LogicSvrManager m_LogicSvrMgr;

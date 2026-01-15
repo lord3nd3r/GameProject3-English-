@@ -34,7 +34,7 @@ BOOL CGameService::Init()
     CLog::GetInstancePtr()->LogInfo("---------服务器开始启动--------");
     if(!CConfigFile::GetInstancePtr()->Load("servercfg.ini"))
     {
-        CLog::GetInstancePtr()->LogError("配制文件加载Failure!");
+        CLog::GetInstancePtr()->LogError("Configuration file load Failure!");
         return FALSE;
     }
 
@@ -57,7 +57,7 @@ BOOL CGameService::Init()
     std::string strListenIp = CConfigFile::GetInstancePtr()->GetStringValue("center_svr_ip");
     if(!ServiceBase::GetInstancePtr()->StartNetwork(nPort, nMaxConn, this, strListenIp))
     {
-        CLog::GetInstancePtr()->LogError("启动服务Failure!");
+        CLog::GetInstancePtr()->LogError("Start service Failure!");
         return FALSE;
     }
 
@@ -65,7 +65,7 @@ BOOL CGameService::Init()
 
     //AsyncMySQLDB::GetInstancePtr()->Init();
 
-    CLog::GetInstancePtr()->LogHiInfo("---------服务器启动Success!--------");
+    CLog::GetInstancePtr()->LogHiInfo("--------- Server started Success! --------");
     return TRUE;
 }
 
@@ -103,7 +103,7 @@ BOOL CGameService::DispatchPacket(NetPacket* pNetPacket)
 
 BOOL CGameService::Uninit()
 {
-    CLog::GetInstancePtr()->LogHiInfo("==========服务器开始关闭=======================");
+    CLog::GetInstancePtr()->LogHiInfo("========== Server shutting down =======================");
 
     ServiceBase::GetInstancePtr()->StopNetwork();
 
@@ -112,7 +112,7 @@ BOOL CGameService::Uninit()
 
     google::protobuf::ShutdownProtobufLibrary();
 
-    CLog::GetInstancePtr()->LogHiInfo("==========服务器关闭完成=======================");
+    CLog::GetInstancePtr()->LogHiInfo("========== Server shutdown complete =======================");
 
     return TRUE;
 }
